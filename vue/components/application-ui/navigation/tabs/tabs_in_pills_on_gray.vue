@@ -1,55 +1,50 @@
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ]
+  }
+  ```
+-->
 <template>
-    <div class="" style="">
-    <div class="px-4 sm:px-6 lg:px-8 py-6 bg-gray-100">
-      <div class="max-w-7xl mx-auto">
-      
-    <div>
-      <div class="sm:hidden">
-        <label for="tabs" class="sr-only">Select a tab</label>
-        <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
-        
-            <option>My Account</option>
-        
-            <option>Company</option>
-        
-            <option selected="">Team Members</option>
-        
-            <option>Billing</option>
-        
-        </select>
-      </div>
-      <div class="hidden sm:block">
-        <nav class="flex space-x-4" aria-label="Tabs">
-        
-            <a href="#" class="text-gray-600 hover:text-gray-800 px-3 py-2 font-medium text-sm rounded-md" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-gray-200 text-gray-800&quot;, Default: &quot;text-gray-600 hover:text-gray-800&quot;">
-              My Account
-            </a>
-        
-            <a href="#" class="text-gray-600 hover:text-gray-800 px-3 py-2 font-medium text-sm rounded-md" x-state-description="undefined: &quot;bg-gray-200 text-gray-800&quot;, undefined: &quot;text-gray-600 hover:text-gray-800&quot;">
-              Company
-            </a>
-        
-            <a href="#" class="bg-gray-200 text-gray-800 px-3 py-2 font-medium text-sm rounded-md" aria-current="page" x-state-description="undefined: &quot;bg-gray-200 text-gray-800&quot;, undefined: &quot;text-gray-600 hover:text-gray-800&quot;">
-              Team Members
-            </a>
-        
-            <a href="#" class="text-gray-600 hover:text-gray-800 px-3 py-2 font-medium text-sm rounded-md" x-state-description="undefined: &quot;bg-gray-200 text-gray-800&quot;, undefined: &quot;text-gray-600 hover:text-gray-800&quot;">
-              Billing
-            </a>
-        
-        </nav>
-      </div>
+  <div>
+    <div class="sm:hidden">
+      <label for="tabs" class="sr-only">Select a tab</label>
+      <select id="tabs" name="tabs" class="block w-full focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md">
+        <option v-for="tab in tabs" :key="tab.name" :selected="tab.current">{{ tab.name }}</option>
+      </select>
     </div>
-
-      </div>
+    <div class="hidden sm:block">
+      <nav class="flex space-x-4" aria-label="Tabs">
+        <a v-for="tab in tabs" :key="tab.name" :href="tab.href" :class="[tab.current ? 'bg-gray-200 text-gray-800' : 'text-gray-600 hover:text-gray-800', 'px-3 py-2 font-medium text-sm rounded-md']" :aria-current="tab.current ? 'page' : undefined">
+          {{ tab.name }}
+        </a>
+      </nav>
     </div>
   </div>
 </template>
 
 <script>
+const tabs = [
+  { name: 'My Account', href: '#', current: false },
+  { name: 'Company', href: '#', current: false },
+  { name: 'Team Members', href: '#', current: true },
+  { name: 'Billing', href: '#', current: false },
+]
+
 export default {
-  data: () => ({
-	
-  })
+  setup() {
+    return {
+      tabs,
+    }
+  },
 }
 </script>

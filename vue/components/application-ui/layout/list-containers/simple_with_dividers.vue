@@ -1,33 +1,23 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="" style="">
-    <div class="bg-white p-8">
-      <div class="max-w-md mx-auto">
-      
-    <ul class="divide-y divide-gray-200" x-max="1">
-    
-        <li class="py-4">
-          <x-placeholder class="block border-2 border-dashed border-gray-300 rounded bg-white h-16 w-full text-gray-200">
-        </x-placeholder></li>
-    
-        <li class="py-4">
-          <x-placeholder class="block border-2 border-dashed border-gray-300 rounded bg-white h-16 w-full text-gray-200">
-        </x-placeholder></li>
-    
-        <li class="py-4">
-          <x-placeholder class="block border-2 border-dashed border-gray-300 rounded bg-white h-16 w-full text-gray-200">
-        </x-placeholder></li>
-    
-    </ul>
-
-      </div>
-    </div>
-  </div>
+  <ul class="divide-y divide-gray-200">
+    <li v-for="item in items" :key="item.id" class="py-4">
+      <!-- Your content -->
+    </li>
+  </ul>
 </template>
 
 <script>
+const items = [
+  { id: 1 },
+  // More items...
+]
+
 export default {
-  data: () => ({
-	
-  })
+  setup() {
+    return {
+      items,
+    }
+  },
 }
 </script>

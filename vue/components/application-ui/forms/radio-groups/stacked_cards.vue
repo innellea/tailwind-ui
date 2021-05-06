@@ -1,118 +1,62 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="" style="">
-    <div class="p-8 flex justify-center bg-white" style="min-height: 600px;">
-      <div class="w-full max-w-xl mx-auto">
-      
-    <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
-      <legend class="sr-only">
-        Server size
-      </legend>
-      <div class="space-y-4">
-      
-          <label x-radio-group-option="" class="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" x-active-class="ring-1 ring-offset-2 ring-indigo-500">
-  <input type="radio" x-model="value" name="server_size" value="Hobby" class="sr-only" aria-labelledby="server-size-0-label" aria-describedby="server-size-0-description-0 server-size-0-description-1">
-            <div class="flex items-center">
-              <div class="text-sm">
-                <p id="server-size-0-label" class="font-medium text-gray-900">
-                  Hobby
-                </p>
-                <div id="server-size-0-description-0" class="text-gray-500">
-                  <p class="sm:inline">8GB / 4 CPUs</p>
-                  <!-- space -->
-                  <span class="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <!-- space -->
-                  <p class="sm:inline">160 GB SSD disk</p>
-                </div>
-              </div>
+  <RadioGroup v-model="selected">
+    <RadioGroupLabel class="sr-only">
+      Server size
+    </RadioGroupLabel>
+    <div class="space-y-4">
+      <RadioGroupOption as="template" v-for="plan in plans" :key="plan.name" :value="plan" v-slot="{ active, checked }">
+        <div :class="[active ? 'ring-1 ring-offset-2 ring-indigo-500' : '', 'relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between focus:outline-none']">
+          <div class="flex items-center">
+            <div class="text-sm">
+              <RadioGroupLabel as="p" class="font-medium text-gray-900">
+                {{ plan.name }}
+              </RadioGroupLabel>
+              <RadioGroupDescription as="div" class="text-gray-500">
+                <p class="sm:inline">{{ plan.ram }} / {{ plan.cpus }}</p>
+                {{ ' ' }}
+                <span class="hidden sm:inline sm:mx-1" aria-hidden="true">&middot;</span>
+                {{ ' ' }}
+                <p class="sm:inline">{{ plan.disk }}</p>
+              </RadioGroupDescription>
             </div>
-            <div id="server-size-0-description-1" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div class="font-medium text-gray-900">$40</div>
-              <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
-            <div class="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'border-indigo-500': value === 'Hobby', 'border-transparent': !(value === 'Hobby') }"></div>
-          </label>
-      
-          <label x-radio-group-option="" class="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" x-active-class="ring-1 ring-offset-2 ring-indigo-500">
-  <input type="radio" x-model="value" name="server_size" value="Startup" class="sr-only" aria-labelledby="server-size-1-label" aria-describedby="server-size-1-description-0 server-size-1-description-1">
-            <div class="flex items-center">
-              <div class="text-sm">
-                <p id="server-size-1-label" class="font-medium text-gray-900">
-                  Startup
-                </p>
-                <div id="server-size-1-description-0" class="text-gray-500">
-                  <p class="sm:inline">12GB / 6 CPUs</p>
-                  <!-- space -->
-                  <span class="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <!-- space -->
-                  <p class="sm:inline">256 GB SSD disk</p>
-                </div>
-              </div>
-            </div>
-            <div id="server-size-1-description-1" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div class="font-medium text-gray-900">$80</div>
-              <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
-            <div class="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'border-indigo-500': value === 'Startup', 'border-transparent': !(value === 'Startup') }"></div>
-          </label>
-      
-          <label x-radio-group-option="" class="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" x-active-class="ring-1 ring-offset-2 ring-indigo-500">
-  <input type="radio" x-model="value" name="server_size" value="Business" class="sr-only" aria-labelledby="server-size-2-label" aria-describedby="server-size-2-description-0 server-size-2-description-1">
-            <div class="flex items-center">
-              <div class="text-sm">
-                <p id="server-size-2-label" class="font-medium text-gray-900">
-                  Business
-                </p>
-                <div id="server-size-2-description-0" class="text-gray-500">
-                  <p class="sm:inline">16GB / 8 CPUs</p>
-                  <!-- space -->
-                  <span class="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <!-- space -->
-                  <p class="sm:inline">512 GB SSD disk</p>
-                </div>
-              </div>
-            </div>
-            <div id="server-size-2-description-1" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div class="font-medium text-gray-900">$160</div>
-              <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
-            <div class="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'border-indigo-500': value === 'Business', 'border-transparent': !(value === 'Business') }"></div>
-          </label>
-      
-          <label x-radio-group-option="" class="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" x-active-class="ring-1 ring-offset-2 ring-indigo-500">
-  <input type="radio" x-model="value" name="server_size" value="Enterprise" class="sr-only" aria-labelledby="server-size-3-label" aria-describedby="server-size-3-description-0 server-size-3-description-1">
-            <div class="flex items-center">
-              <div class="text-sm">
-                <p id="server-size-3-label" class="font-medium text-gray-900">
-                  Enterprise
-                </p>
-                <div id="server-size-3-description-0" class="text-gray-500">
-                  <p class="sm:inline">32GB / 12 CPUs</p>
-                  <!-- space -->
-                  <span class="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <!-- space -->
-                  <p class="sm:inline">1024 GB SSD disk</p>
-                </div>
-              </div>
-            </div>
-            <div id="server-size-3-description-1" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div class="font-medium text-gray-900">$240</div>
-              <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
-            <div class="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'border-indigo-500': value === 'Enterprise', 'border-transparent': !(value === 'Enterprise') }"></div>
-          </label>
-      
-      </div>
-    </fieldset>
-
-      </div>
+          </div>
+          <RadioGroupDescription as="div" class="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+            <div class="font-medium text-gray-900">{{ plan.price }}</div>
+            <div class="ml-1 text-gray-500 sm:ml-0">/mo</div>
+          </RadioGroupDescription>
+          <div :class="[checked ? 'border-indigo-500' : 'border-transparent', 'absolute -inset-px rounded-lg border-2 pointer-events-none']" aria-hidden="true" />
+        </div>
+      </RadioGroupOption>
     </div>
-  </div>
+  </RadioGroup>
 </template>
 
 <script>
+import { ref } from 'vue'
+import { RadioGroup, RadioGroupDescription, RadioGroupLabel, RadioGroupOption } from '@headlessui/vue'
+
+const plans = [
+  { name: 'Hobby', ram: '8GB', cpus: '4 CPUs', disk: '160 GB SSD disk', price: '$40' },
+  { name: 'Startup', ram: '12GB', cpus: '6 CPUs', disk: '256 GB SSD disk', price: '$80' },
+  { name: 'Business', ram: '16GB', cpus: '8 CPUs', disk: '512 GB SSD disk', price: '$160' },
+  { name: 'Enterprise', ram: '32GB', cpus: '12 CPUs', disk: '1024 GB SSD disk', price: '$240' },
+]
+
 export default {
-  data: () => ({
-	
-  })
+  components: {
+    RadioGroup,
+    RadioGroupDescription,
+    RadioGroupLabel,
+    RadioGroupOption,
+  },
+  setup() {
+    const selected = ref(plans[0])
+
+    return {
+      plans,
+      selected,
+    }
+  },
 }
 </script>

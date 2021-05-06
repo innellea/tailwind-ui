@@ -1,69 +1,32 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
 <template>
-    <div class="" style="">
-    <div class="bg-white p-8">
-      <div class="w-64 mx-auto">
-      
-    <nav class="space-y-1" aria-label="Sidebar">
-    
-        <a href="#" class="bg-gray-100 text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state:on="Current" x-state:off="Default" aria-current="page" x-state-description="Current: &quot;bg-gray-100 text-gray-900&quot;, Default: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Dashboard
-          </span>
-        
-            <span class="bg-white ml-auto inline-block py-0.5 px-3 text-xs rounded-full" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-white&quot;, Default: &quot;bg-gray-100 text-gray-600 group-hover:bg-gray-200&quot;">
-              5
-            </span>
-          </a>
-    
-        <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Team
-          </span>
-          </a>
-    
-        <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Projects
-          </span>
-        
-            <span class="bg-gray-100 text-gray-600 group-hover:bg-gray-200 ml-auto inline-block py-0.5 px-3 text-xs rounded-full" x-state-description="undefined: &quot;bg-white&quot;, undefined: &quot;bg-gray-100 text-gray-600 group-hover:bg-gray-200&quot;">
-              19
-            </span>
-          </a>
-    
-        <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Calendar
-          </span>
-        
-            <span class="bg-gray-100 text-gray-600 group-hover:bg-gray-200 ml-auto inline-block py-0.5 px-3 text-xs rounded-full" x-state-description="undefined: &quot;bg-white&quot;, undefined: &quot;bg-gray-100 text-gray-600 group-hover:bg-gray-200&quot;">
-              20+
-            </span>
-          </a>
-    
-        <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Documents
-          </span>
-          </a>
-    
-        <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-3 py-2 text-sm font-medium rounded-md" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
-          <span class="truncate">
-            Reports
-          </span>
-          </a>
-    
-    </nav>
-
-      </div>
-    </div>
-  </div>
+  <nav class="space-y-1" aria-label="Sidebar">
+    <a v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900', 'group flex items-center px-3 py-2 text-sm font-medium rounded-md']" :aria-current="item.current ? 'page' : undefined">
+      <span class="truncate">
+        {{ item.name }}
+      </span>
+      <span v-if="item.count" :class="[item.current ? 'bg-white' : 'bg-gray-100 text-gray-600 group-hover:bg-gray-200', 'ml-auto inline-block py-0.5 px-3 text-xs rounded-full']">
+        {{ item.count }}
+      </span>
+    </a>
+  </nav>
 </template>
 
 <script>
+const navigation = [
+  { name: 'Dashboard', href: '#', current: true, count: '5' },
+  { name: 'Team', href: '#', current: false },
+  { name: 'Projects', href: '#', current: false, count: '19' },
+  { name: 'Calendar', href: '#', current: false, count: '20+' },
+  { name: 'Documents', href: '#', current: false },
+  { name: 'Reports', href: '#', current: false },
+]
+
 export default {
-  data: () => ({
-	
-  })
+  setup() {
+    return {
+      navigation,
+    }
+  },
 }
 </script>
