@@ -1,0 +1,2298 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#marketing" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Marketing
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#marketing-page-examples" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Page Examples
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Contact Pages
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-e7c257b98e6b1f8fabdba00cdd32454e944b18ca" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-e7c257b98e6b1f8fabdba00cdd32454e944b18ca">Simple with brand contact panel</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;" class="overflow-y-auto">
+    
+  &lt;div class="min-h-screen bg-white">
+    &lt;header class="relative" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;div class="bg-warm-gray-50">
+        &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-6 px-6 xl:px-8" aria-label="Global">
+          &lt;div class="flex items-center flex-1">
+            &lt;div class="flex items-center justify-between w-full lg:w-auto">
+              &lt;a href="#">
+                &lt;span class="sr-only">Workflow&lt;/span>
+                &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=teal&amp;amp;shade=500" alt="">
+              &lt;/a>
+              &lt;div class="-mr-2 flex items-center lg:hidden">
+                &lt;button type="button" class="bg-warm-gray-50 rounded-md p-2 inline-flex items-center justify-center text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-teal-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                  &lt;span class="sr-only">Open main menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="hidden space-x-10 lg:flex lg:ml-10">
+              
+                &lt;a href="#" class="text-base font-medium text-warm-gray-500 hover:text-warm-gray-900">Changelog&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-warm-gray-500 hover:text-warm-gray-900">About&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-warm-gray-500 hover:text-warm-gray-900">Partners&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-warm-gray-500 hover:text-warm-gray-900">News&lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden lg:flex lg:items-center lg:space-x-6">
+            &lt;a href="#" class="py-2 px-6 bg-warm-gray-100 border border-transparent rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-200">
+              Login
+            &lt;/a>
+          &lt;/div>
+        &lt;/nav>
+      &lt;/div>
+
+      
+        &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            &lt;div class="px-5 pt-4 flex items-center justify-between">
+              &lt;div>
+                &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=teal&amp;amp;shade=500" alt="">
+              &lt;/div>
+              &lt;div class="-mr-2">
+                &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-teal-500" @click="toggle">
+                  &lt;span class="sr-only">Close menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="pt-5 pb-6">
+              &lt;div class="px-2 space-y-1">
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Changelog&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">About&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Partners&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">News&lt;/a>
+                
+              &lt;/div>
+              &lt;div class="mt-6 px-5">
+                &lt;a href="#" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow bg-teal-500 text-white font-medium hover:bg-teal-600">Login&lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+    &lt;/header>
+
+    &lt;main>
+      &lt;!-- Header -->
+      &lt;div class="bg-warm-gray-50">
+        &lt;div class="py-24 lg:py-32">
+          &lt;div class="max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
+            &lt;h1 class="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Get in touch&lt;/h1>
+            &lt;p class="mt-6 text-xl text-warm-gray-500 max-w-3xl">Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet consequat.&lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- Contact section -->
+      &lt;section class="relative bg-white" aria-labelledby="contactHeading">
+        &lt;div class="absolute w-full h-1/2 bg-warm-gray-50" aria-hidden="true">&lt;/div>
+        &lt;div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          &lt;svg class="absolute top-0 right-0 transform -translate-y-16 translate-x-1/2 sm:translate-x-1/4 md:-translate-y-24 lg:-translate-y-72" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+            &lt;defs>
+              &lt;pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                &lt;rect x="0" y="0" width="4" height="4" class="text-warm-gray-200" fill="currentColor">&lt;/rect>
+              &lt;/pattern>
+            &lt;/defs>
+            &lt;rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)">&lt;/rect>
+          &lt;/svg>
+        &lt;/div>
+        &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          &lt;div class="relative bg-white shadow-xl">
+            &lt;h2 id="contactHeading" class="sr-only">Contact us&lt;/h2>
+
+            &lt;div class="grid grid-cols-1 lg:grid-cols-3">
+              &lt;!-- Contact information -->
+              &lt;div class="relative overflow-hidden py-10 px-6 bg-gradient-to-b from-teal-500 to-teal-600 sm:px-10 xl:p-12">
+                &lt;div class="absolute inset-0 pointer-events-none sm:hidden" aria-hidden="true">
+                  &lt;svg class="absolute inset-0 w-full h-full" width="343" height="388" viewBox="0 0 343 388" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    &lt;path d="M-99 461.107L608.107-246l707.103 707.107-707.103 707.103L-99 461.107z" fill="url(#linear1)" fill-opacity=".1">&lt;/path>
+                    &lt;defs>
+                      &lt;linearGradient id="linear1" x1="254.553" y1="107.554" x2="961.66" y2="814.66" gradientUnits="userSpaceOnUse">
+                        &lt;stop stop-color="#fff">&lt;/stop>
+                        &lt;stop offset="1" stop-color="#fff" stop-opacity="0">&lt;/stop>
+                      &lt;/linearGradient>
+                    &lt;/defs>
+                  &lt;/svg>
+                &lt;/div>
+                &lt;div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none sm:block lg:hidden" aria-hidden="true">
+                  &lt;svg class="absolute inset-0 w-full h-full" width="359" height="339" viewBox="0 0 359 339" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    &lt;path d="M-161 382.107L546.107-325l707.103 707.107-707.103 707.103L-161 382.107z" fill="url(#linear2)" fill-opacity=".1">&lt;/path>
+                    &lt;defs>
+                      &lt;linearGradient id="linear2" x1="192.553" y1="28.553" x2="899.66" y2="735.66" gradientUnits="userSpaceOnUse">
+                        &lt;stop stop-color="#fff">&lt;/stop>
+                        &lt;stop offset="1" stop-color="#fff" stop-opacity="0">&lt;/stop>
+                      &lt;/linearGradient>
+                    &lt;/defs>
+                  &lt;/svg>
+                &lt;/div>
+                &lt;div class="hidden absolute top-0 right-0 bottom-0 w-1/2 pointer-events-none lg:block" aria-hidden="true">
+                  &lt;svg class="absolute inset-0 w-full h-full" width="160" height="678" viewBox="0 0 160 678" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    &lt;path d="M-161 679.107L546.107-28l707.103 707.107-707.103 707.103L-161 679.107z" fill="url(#linear3)" fill-opacity=".1">&lt;/path>
+                    &lt;defs>
+                      &lt;linearGradient id="linear3" x1="192.553" y1="325.553" x2="899.66" y2="1032.66" gradientUnits="userSpaceOnUse">
+                        &lt;stop stop-color="#fff">&lt;/stop>
+                        &lt;stop offset="1" stop-color="#fff" stop-opacity="0">&lt;/stop>
+                      &lt;/linearGradient>
+                    &lt;/defs>
+                  &lt;/svg>
+                &lt;/div>
+                &lt;h3 class="text-lg font-medium text-white">Contact information&lt;/h3>
+                &lt;p class="mt-6 text-base text-teal-50 max-w-3xl">Nullam risus blandit ac aliquam justo ipsum. Quam mauris volutpat massa dictumst amet. Sapien tortor lacus arcu.&lt;/p>
+                &lt;dl class="mt-8 space-y-6">
+                  &lt;dt>&lt;span class="sr-only">Phone number&lt;/span>&lt;/dt>
+                  &lt;dd class="flex text-base text-teal-50">
+                    &lt;svg class="flex-shrink-0 w-6 h-6 text-teal-200" x-description="Heroicon name: outline/phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">&lt;/path>
+&lt;/svg>
+                    &lt;span class="ml-3">+1 (555) 123-4567&lt;/span>
+                  &lt;/dd>
+                  &lt;dt>&lt;span class="sr-only">Email&lt;/span>&lt;/dt>
+                  &lt;dd class="flex text-base text-teal-50">
+                    &lt;svg class="flex-shrink-0 w-6 h-6 text-teal-200" x-description="Heroicon name: outline/mail" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">&lt;/path>
+&lt;/svg>
+                    &lt;span class="ml-3">support@workcation.com&lt;/span>
+                  &lt;/dd>
+                &lt;/dl>
+                &lt;ul class="mt-8 flex space-x-12" role="list">
+                  &lt;li>
+                    &lt;a class="text-teal-200 hover:text-teal-100" href="#">
+                      &lt;span class="sr-only">Facebook&lt;/span>
+                      &lt;svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                    &lt;/a>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;a class="text-teal-200 hover:text-teal-100" href="#">
+                      &lt;span class="sr-only">GitHub&lt;/span>
+                      &lt;svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                    &lt;/a>
+                  &lt;/li>
+                  &lt;li>
+                    &lt;a class="text-teal-200 hover:text-teal-100" href="#">
+                      &lt;span class="sr-only">Twitter&lt;/span>
+                      &lt;svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                    &lt;/a>
+                  &lt;/li>
+                &lt;/ul>
+              &lt;/div>
+
+              &lt;!-- Contact form -->
+              &lt;div class="py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12">
+                &lt;h3 class="text-lg font-medium text-warm-gray-900">Send us a message&lt;/h3>
+                &lt;form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                  &lt;div>
+                    &lt;label for="first_name" class="block text-sm font-medium text-warm-gray-900">First name&lt;/label>
+                    &lt;div class="mt-1">
+                      &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md">
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div>
+                    &lt;label for="last_name" class="block text-sm font-medium text-warm-gray-900">Last name&lt;/label>
+                    &lt;div class="mt-1">
+                      &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md">
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div>
+                    &lt;label for="email" class="block text-sm font-medium text-warm-gray-900">Email&lt;/label>
+                    &lt;div class="mt-1">
+                      &lt;input id="email" name="email" type="email" autocomplete="email" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md">
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div>
+                    &lt;div class="flex justify-between">
+                      &lt;label for="phone" class="block text-sm font-medium text-warm-gray-900">Phone&lt;/label>
+                      &lt;span id="phone-optional" class="text-sm text-warm-gray-500">Optional&lt;/span>
+                    &lt;/div>
+                    &lt;div class="mt-1">
+                      &lt;input type="text" name="phone" id="phone" autocomplete="tel" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md" aria-describedby="phone-optional">
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2">
+                    &lt;label for="subject" class="block text-sm font-medium text-warm-gray-900">Subject&lt;/label>
+                    &lt;div class="mt-1">
+                      &lt;input type="text" name="subject" id="subject" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md">
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2">
+                    &lt;div class="flex justify-between">
+                      &lt;label for="message" class="block text-sm font-medium text-warm-gray-900">Message&lt;/label>
+                      &lt;span id="message-max" class="text-sm text-warm-gray-500">Max. 500 characters&lt;/span>
+                    &lt;/div>
+                    &lt;div class="mt-1">
+                      &lt;textarea id="message" name="message" rows="4" class="py-3 px-4 block w-full shadow-sm text-warm-gray-900 focus:ring-teal-500 focus:border-teal-500 border-warm-gray-300 rounded-md" aria-describedby="message-max">&lt;/textarea>
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2 sm:flex sm:justify-end">
+                    &lt;button type="submit" class="mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-teal-500 hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 sm:w-auto">
+                      Submit
+                    &lt;/button>
+                  &lt;/div>
+                &lt;/form>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+
+      &lt;!-- Contact grid -->
+      &lt;section aria-labelledby="officesHeading">
+        &lt;div class="max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+          &lt;h2 id="officesHeading" class="text-3xl font-extrabold text-warm-gray-900">Our offices&lt;/h2>
+          &lt;p class="mt-6 text-lg text-warm-gray-500 max-w-3xl">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.&lt;/p>
+          &lt;div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            
+              &lt;div>
+                &lt;h3 class="text-lg font-medium text-warm-gray-900">Los Angeles&lt;/h3>
+                &lt;p class="mt-2 text-base text-warm-gray-500">
+                  
+                    &lt;span class="block">4556 Brendan Ferry&lt;/span>
+                  
+                    &lt;span class="block">Los Angeles, CA 90210&lt;/span>
+                  
+                &lt;/p>
+              &lt;/div>
+            
+              &lt;div>
+                &lt;h3 class="text-lg font-medium text-warm-gray-900">New York&lt;/h3>
+                &lt;p class="mt-2 text-base text-warm-gray-500">
+                  
+                    &lt;span class="block">886 Walter Streets&lt;/span>
+                  
+                    &lt;span class="block">New York, NY 12345&lt;/span>
+                  
+                &lt;/p>
+              &lt;/div>
+            
+              &lt;div>
+                &lt;h3 class="text-lg font-medium text-warm-gray-900">Toronto&lt;/h3>
+                &lt;p class="mt-2 text-base text-warm-gray-500">
+                  
+                    &lt;span class="block">7363 Cynthia Pass&lt;/span>
+                  
+                    &lt;span class="block">Toronto, ON N3Y 4H8&lt;/span>
+                  
+                &lt;/p>
+              &lt;/div>
+            
+              &lt;div>
+                &lt;h3 class="text-lg font-medium text-warm-gray-900">London&lt;/h3>
+                &lt;p class="mt-2 text-base text-warm-gray-500">
+                  
+                    &lt;span class="block">114 Cobble Lane&lt;/span>
+                  
+                    &lt;span class="block">London N1 2EF&lt;/span>
+                  
+                &lt;/p>
+              &lt;/div>
+            
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+    &lt;/main>
+
+    &lt;footer class="bg-warm-gray-900" aria-labelledby="footerHeading">
+      &lt;h2 id="footerHeading" class="sr-only">Footer&lt;/h2>
+      &lt;div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+        &lt;div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          &lt;div class="space-y-8 xl:col-span-1">
+            &lt;img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=warmGray&amp;amp;shade=400" alt="Company name">
+            &lt;p class="text-warm-gray-400 text-base">
+              Making the world a better place through constructing elegant hierarchies.
+            &lt;/p>
+            &lt;div class="flex space-x-6">
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-300">
+                  &lt;span class="sr-only">Facebook&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-300">
+                  &lt;span class="sr-only">Instagram&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-300">
+                  &lt;span class="sr-only">Twitter&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-300">
+                  &lt;span class="sr-only">GitHub&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-300">
+                  &lt;span class="sr-only">Dribbble&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-warm-gray-200 tracking-wider uppercase">
+                  Solutions
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Marketing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Analytics
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Commerce
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Insights
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-warm-gray-200 tracking-wider uppercase">
+                  Support
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Pricing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Documentation
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Guides
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        API Status
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-warm-gray-200 tracking-wider uppercase">
+                  Company
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        About
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Blog
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Jobs
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Press
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Partners
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-warm-gray-200 tracking-wider uppercase">
+                  Legal
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Claim
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Privacy
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-400 hover:text-warm-gray-300">
+                        Terms
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="mt-12 border-t border-warm-gray-700 pt-8">
+          &lt;p class="text-base text-warm-gray-400 xl:text-center">
+            © 2020 Workflow, Inc. All rights reserved.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="e7c257b98e6b1f8fabdba00cdd32454e944b18ca" src="/components/marketing/page-examples/contact-pages/simple_with_brand_contact_panel.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-af6689274d3641656f9d9d64673209e40ac01c50" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-af6689274d3641656f9d9d64673209e40ac01c50">Side-by-side grid and newsletter</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;">
+    
+  &lt;div class="min-h-screen bg-white">
+    &lt;header class="relative pb-24 bg-light-blue-800 sm:pb-32">
+      &lt;div class="absolute inset-0">
+        &lt;img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1920&amp;amp;q=60&amp;amp;&amp;amp;sat=-100" alt="">
+        &lt;div class="absolute inset-0 bg-gradient-to-l from-light-blue-800 to-cyan-700" style="mix-blend-mode: multiply;" aria-hidden="true">&lt;/div>
+      &lt;/div>
+      &lt;div class="relative z-10" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+        &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-6 pb-2 px-4 sm:px-6 lg:px-8" aria-label="Global">
+          &lt;div class="flex items-center justify-between w-full lg:w-auto">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&amp;amp;shade=300" alt="">
+            &lt;/a>
+            &lt;div class="-mr-2 flex items-center lg:hidden">
+              &lt;button type="button" class="bg-light-blue-800 bg-opacity-0 rounded-md p-2 inline-flex items-center justify-center text-cyan-100 hover:bg-opacity-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span class="sr-only">Open main menu&lt;/span>
+                &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden space-x-10 lg:flex lg:ml-10">
+            
+              &lt;a href="#" class="text-base font-medium text-white hover:text-cyan-100">Changelog&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-white hover:text-cyan-100">About&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-white hover:text-cyan-100">Partners&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-white hover:text-cyan-100">News&lt;/a>
+            
+          &lt;/div>
+          &lt;div class="hidden lg:flex lg:items-center lg:space-x-6">
+            &lt;a href="#" class="py-2 px-6 bg-white bg-opacity-10 border border-transparent rounded-md text-base font-medium text-white hover:bg-opacity-20">
+              Login
+            &lt;/a>
+          &lt;/div>
+        &lt;/nav>
+
+        
+          &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              &lt;div class="px-5 pt-4 flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&amp;amp;shade=400" alt="">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-warm-gray-400 hover:bg-warm-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" @click="toggle">
+                    &lt;span class="sr-only">Close menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="pt-5 pb-6">
+                &lt;div class="px-2 space-y-1">
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Changelog&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">About&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">Partners&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-warm-gray-900 hover:bg-warm-gray-50">News&lt;/a>
+                  
+                &lt;/div>
+                &lt;div class="mt-6 px-5">
+                  &lt;a href="#" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow bg-green-400 text-white font-medium hover:bg-green-500">Login&lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+      &lt;/div>
+
+      &lt;div class="relative mt-24 max-w-md mx-auto px-4 sm:max-w-3xl sm:mt-32 sm:px-6 lg:max-w-7xl lg:px-8">
+        &lt;h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get in touch&lt;/h1>
+        &lt;p class="mt-6 text-xl text-cyan-100 max-w-3xl">Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque lacus nisi urna, arcu sociis eu. Orci vel lectus nisl eget eget ut consectetur. Sit justo viverra non adipisicing elit distinctio.&lt;/p>
+      &lt;/div>
+    &lt;/header>
+
+    &lt;main>
+      &lt;!-- Side-by-side grid -->
+      &lt;div class="bg-white">
+        &lt;div class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
+          &lt;div class="divide-y divide-warm-gray-200">
+            &lt;section class="lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="contactHeading">
+              &lt;h2 id="contactHeading" class="text-2xl font-extrabold text-warm-gray-900 sm:text-3xl">
+                Get in touch
+              &lt;/h2>
+              &lt;div class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Collaborate
+                    &lt;/h3>
+                    &lt;dl class="mt-2 text-base text-warm-gray-500">
+                      &lt;div>
+                        &lt;dt class="sr-only">
+                          Email
+                        &lt;/dt>
+                        &lt;dd>
+                          support@example.com
+                        &lt;/dd>
+                      &lt;/div>
+                      &lt;div class="mt-1">
+                        &lt;dt class="sr-only">
+                          Phone number
+                        &lt;/dt>
+                        &lt;dd>
+                          +1 (555) 123-4567
+                        &lt;/dd>
+                      &lt;/div>
+                    &lt;/dl>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Press
+                    &lt;/h3>
+                    &lt;dl class="mt-2 text-base text-warm-gray-500">
+                      &lt;div>
+                        &lt;dt class="sr-only">
+                          Email
+                        &lt;/dt>
+                        &lt;dd>
+                          support@example.com
+                        &lt;/dd>
+                      &lt;/div>
+                      &lt;div class="mt-1">
+                        &lt;dt class="sr-only">
+                          Phone number
+                        &lt;/dt>
+                        &lt;dd>
+                          +1 (555) 123-4567
+                        &lt;/dd>
+                      &lt;/div>
+                    &lt;/dl>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Join our team
+                    &lt;/h3>
+                    &lt;dl class="mt-2 text-base text-warm-gray-500">
+                      &lt;div>
+                        &lt;dt class="sr-only">
+                          Email
+                        &lt;/dt>
+                        &lt;dd>
+                          support@example.com
+                        &lt;/dd>
+                      &lt;/div>
+                      &lt;div class="mt-1">
+                        &lt;dt class="sr-only">
+                          Phone number
+                        &lt;/dt>
+                        &lt;dd>
+                          +1 (555) 123-4567
+                        &lt;/dd>
+                      &lt;/div>
+                    &lt;/dl>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Say hello
+                    &lt;/h3>
+                    &lt;dl class="mt-2 text-base text-warm-gray-500">
+                      &lt;div>
+                        &lt;dt class="sr-only">
+                          Email
+                        &lt;/dt>
+                        &lt;dd>
+                          support@example.com
+                        &lt;/dd>
+                      &lt;/div>
+                      &lt;div class="mt-1">
+                        &lt;dt class="sr-only">
+                          Phone number
+                        &lt;/dt>
+                        &lt;dd>
+                          +1 (555) 123-4567
+                        &lt;/dd>
+                      &lt;/div>
+                    &lt;/dl>
+                  &lt;/div>
+                
+              &lt;/div>
+            &lt;/section>
+            &lt;section class="mt-16 pt-16 lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="locationHeading">
+              &lt;h2 id="locationHeading" class="text-2xl font-extrabold text-warm-gray-900 sm:text-3xl">
+                Locations
+              &lt;/h2>
+              &lt;div class="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Los Angeles
+                    &lt;/h3>
+                    &lt;div class="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        &lt;p>
+                          4556 Brendan Ferry
+                        &lt;/p>
+                      
+                        &lt;p>
+                          Los Angeles, CA 90210
+                        &lt;/p>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      New York
+                    &lt;/h3>
+                    &lt;div class="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        &lt;p>
+                          886 Walter Streets
+                        &lt;/p>
+                      
+                        &lt;p>
+                          New York, NY 12345
+                        &lt;/p>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Toronto
+                    &lt;/h3>
+                    &lt;div class="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        &lt;p>
+                          7363 Cynthia Pass
+                        &lt;/p>
+                      
+                        &lt;p>
+                          Toronto, ON N3Y 4H8
+                        &lt;/p>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;h3 class="text-lg font-medium text-warm-gray-900">
+                      Chicago
+                    &lt;/h3>
+                    &lt;div class="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        &lt;p>
+                          726 Mavis Island
+                        &lt;/p>
+                      
+                        &lt;p>
+                          Chicago, IL 60601
+                        &lt;/p>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                
+              &lt;/div>
+            &lt;/section>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- FAQ -->
+      &lt;div class="bg-warm-gray-50">
+        &lt;div class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
+          &lt;div class="lg:grid lg:grid-cols-3 lg:gap-8">
+            &lt;div>
+              &lt;h2 class="text-3xl font-extrabold text-warm-gray-900">
+                Frequently asked questions
+              &lt;/h2>
+              &lt;p class="mt-4 text-lg text-warm-gray-500">Can’t find the answer you’re looking for? Reach out to our &lt;a href="#" class="font-medium text-cyan-700 hover:text-cyan-600">customer support&lt;/a> team.&lt;/p>
+            &lt;/div>
+            &lt;div class="mt-12 lg:mt-0 lg:col-span-2">
+              &lt;dl class="space-y-12">
+                
+                  &lt;div>
+                    &lt;dt class="text-lg font-medium text-warm-gray-900">
+                      How do you make holy water?
+                    &lt;/dt>
+                    &lt;dd class="mt-2 text-base text-warm-gray-500">
+                      You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    &lt;/dd>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;dt class="text-lg font-medium text-warm-gray-900">
+                      What's the best thing about Switzerland?
+                    &lt;/dt>
+                    &lt;dd class="mt-2 text-base text-warm-gray-500">
+                      I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    &lt;/dd>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;dt class="text-lg font-medium text-warm-gray-900">
+                      What do you call someone with no body and no nose?
+                    &lt;/dt>
+                    &lt;dd class="mt-2 text-base text-warm-gray-500">
+                      Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    &lt;/dd>
+                  &lt;/div>
+                
+                  &lt;div>
+                    &lt;dt class="text-lg font-medium text-warm-gray-900">
+                      Why do you never see elephants hiding in trees?
+                    &lt;/dt>
+                    &lt;dd class="mt-2 text-base text-warm-gray-500">
+                      Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                    &lt;/dd>
+                  &lt;/div>
+                
+              &lt;/dl>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- Newsletter -->
+      &lt;div class="relative">
+        &lt;div class="absolute left-0 right-0 h-1/2 bg-warm-gray-50" aria-hidden="true">&lt;/div>
+        &lt;div class="relative max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+          &lt;div class="py-10 px-6 bg-gradient-to-l from-light-blue-800 to-cyan-700 rounded-3xl sm:py-16 sm:px-12 lg:py-20 lg:px-20 lg:flex lg:items-center">
+            &lt;div class="lg:w-0 lg:flex-1">
+              &lt;h2 class="text-3xl font-extrabold tracking-tight text-white">
+                Sign up for our newsletter
+              &lt;/h2>
+              &lt;p class="mt-4 max-w-3xl text-lg text-cyan-100">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat.
+              &lt;/p>
+            &lt;/div>
+            &lt;div class="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">
+              &lt;form class="sm:flex">
+                &lt;label for="emailAddress" class="sr-only">Email address&lt;/label>
+                &lt;input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required="" class="w-full border-white px-5 py-3 placeholder-warm-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyan-700 focus:ring-white rounded-md" placeholder="Enter your email">
+                &lt;button type="submit" class="mt-3 w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-cyan-700 focus:ring-green-400 sm:mt-0 sm:ml-3 sm:w-auto sm:flex-shrink-0">
+                  Notify me
+                &lt;/button>
+              &lt;/form>
+              &lt;p class="mt-3 text-sm text-cyan-100">
+                We care about the protection of your data. Read our
+                &lt;!-- space -->
+                &lt;a href="#" class="text-white font-medium underline">
+                  Privacy Policy.
+                &lt;/a>
+              &lt;/p>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/main>
+
+    &lt;footer class="bg-white" aria-labelledby="footerHeading">
+      &lt;h2 id="footerHeading" class="sr-only">Footer&lt;/h2>
+      &lt;div class="max-w-md mx-auto py-12 px-4 sm:max-w-3xl sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+        &lt;div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          &lt;div class="space-y-8 xl:col-span-1">
+            &lt;img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=emerald&amp;amp;shade=400" alt="Company name">
+            &lt;p class="text-warm-gray-500 text-base">
+              Making the world a better place through constructing elegant hierarchies.
+            &lt;/p>
+            &lt;div class="flex space-x-6">
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-500">
+                  &lt;span class="sr-only">Facebook&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-500">
+                  &lt;span class="sr-only">Instagram&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-500">
+                  &lt;span class="sr-only">Twitter&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-500">
+                  &lt;span class="sr-only">GitHub&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-warm-gray-400 hover:text-warm-gray-500">
+                  &lt;span class="sr-only">Dribbble&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-warm-gray-700 tracking-wider uppercase">
+                  Solutions
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Marketing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Analytics
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Commerce
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Insights
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-warm-gray-700 tracking-wider uppercase">
+                  Support
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Pricing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Documentation
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Guides
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        API Status
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-warm-gray-700 tracking-wider uppercase">
+                  Company
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        About
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Blog
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Jobs
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Press
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Partners
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-warm-gray-700 tracking-wider uppercase">
+                  Legal
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Claim
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Privacy
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-warm-gray-500 hover:text-warm-gray-900">
+                        Terms
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="mt-12 border-t border-warm-gray-200 pt-8">
+          &lt;p class="text-base text-warm-gray-400 xl:text-center">
+            © 2020 Workflow, Inc. All rights reserved.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="af6689274d3641656f9d9d64673209e40ac01c50" src="/components/marketing/page-examples/contact-pages/side_by_side_grid_and_newsletter.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-39a9df2417f0570bc41ae3e4862b4a7c23777cfd" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-39a9df2417f0570bc41ae3e4862b4a7c23777cfd">Split with image and centered CTA section</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;" class="overflow-y-auto">
+    
+  &lt;div class="min-h-screen bg-white">
+    &lt;header class="relative z-10" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;div class="bg-gray-50">
+        &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-8 px-6 xl:px-8" aria-label="Global">
+          &lt;div class="flex items-center justify-between w-full lg:w-auto">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;amp;shade=600" alt="">
+            &lt;/a>
+            &lt;div class="-mr-2 flex items-center lg:hidden">
+              &lt;button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-grape-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span class="sr-only">Open main menu&lt;/span>
+                &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden space-x-10 lg:flex lg:ml-10">
+            
+              &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-600">Work&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-600">Services&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-600">About&lt;/a>
+            
+              &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-600">Blog&lt;/a>
+            
+          &lt;/div>
+          &lt;div class="hidden lg:flex lg:items-center lg:space-x-6">
+            &lt;a href="#" class="py-2 px-6 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-gray-50">
+              Contact
+            &lt;/a>
+          &lt;/div>
+        &lt;/nav>
+      &lt;/div>
+
+      
+        &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            &lt;div class="px-5 pt-4 flex items-center justify-between">
+              &lt;div>
+                &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;amp;shade=600" alt="">
+              &lt;/div>
+              &lt;div class="-mr-2">
+                &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grape-500" @click="toggle">
+                  &lt;span class="sr-only">Close menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="pt-5 pb-6">
+              &lt;div class="px-2 space-y-1">
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Work&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Services&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">About&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Blog&lt;/a>
+                
+              &lt;/div>
+              &lt;div class="mt-6 px-5">
+                &lt;a href="#" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow bg-grape-500 text-white font-medium hover:bg-grape-600">Contact&lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+    &lt;/header>
+
+    &lt;main>
+      &lt;!-- Header -->
+      &lt;div class="py-24 bg-gray-50 sm:py-32">
+        &lt;div class="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
+          &lt;h1 class="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl sm:leading-none lg:text-6xl">Get in touch&lt;/h1>
+          &lt;p class="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">Convallis feugiat et aliquet pellentesque dictum nisi, velit. Egestas fermentum adipiscing risus quam ac consectetur mattis turpis tristique.&lt;/p>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- Contact Section -->
+      &lt;div class="relative bg-white">
+        &lt;div class="lg:absolute lg:inset-0">
+          &lt;div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            &lt;img class="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1567&amp;amp;q=80" alt="">
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
+          &lt;div class="lg:pr-8">
+            &lt;div class="max-w-md mx-auto sm:max-w-lg lg:mx-0">
+              &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                Let's work together
+              &lt;/h2>
+              &lt;p class="mt-4 text-lg text-gray-500 sm:mt-3">
+                We’d love to hear from you! Send us a message using the form opposite, or email us. We’d love to hear from you! Send us a message using the form opposite, or email us.
+              &lt;/p>
+              &lt;form action="#" method="POST" class="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                &lt;div>
+                  &lt;label for="first_name" class="block text-sm font-medium text-gray-700">First name&lt;/label>
+                  &lt;div class="mt-1">
+                    &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div>
+                  &lt;label for="last_name" class="block text-sm font-medium text-gray-700">Last name&lt;/label>
+                  &lt;div class="mt-1">
+                    &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;label for="email" class="block text-sm font-medium text-gray-700">Email&lt;/label>
+                  &lt;div class="mt-1">
+                    &lt;input id="email" name="email" type="email" autocomplete="email" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;label for="company" class="block text-sm font-medium text-gray-700">Company&lt;/label>
+                  &lt;div class="mt-1">
+                    &lt;input type="text" name="company" id="company" autocomplete="organization" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="flex justify-between">
+                    &lt;label for="phone" class="block text-sm font-medium text-gray-700">Phone&lt;/label>
+                    &lt;span id="phone_description" class="text-sm text-gray-500">Optional&lt;/span>
+                  &lt;/div>
+                  &lt;div class="mt-1">
+                    &lt;input type="text" name="phone" id="phone" autocomplete="tel" aria-describedby="phone_description" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="flex justify-between">
+                    &lt;label for="how_can_we_help" class="block text-sm font-medium text-gray-700">How can we help you?&lt;/label>
+                    &lt;span id="how_can_we_help_description" class="text-sm text-gray-500">Max. 500 characters&lt;/span>
+                  &lt;/div>
+                  &lt;div class="mt-1">
+                    &lt;textarea id="how_can_we_help" name="how_can_we_help" aria-describedby="how_can_we_help_description" rows="4" class="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border-gray-300 rounded-md">&lt;/textarea>
+                  &lt;/div>
+                &lt;/div>
+                &lt;fieldset class="sm:col-span-2">
+                  &lt;legend class="block text-sm font-medium text-gray-700">
+                    Expected budget
+                  &lt;/legend>
+                  &lt;div class="mt-4 grid grid-cols-1 gap-y-4">
+                    &lt;div class="flex items-center">
+                      &lt;input id="budget_under_25k" name="budget" value="under_25k" type="radio" class="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300">
+                      &lt;label for="budget_under_25k" class="ml-3">
+                        &lt;span class="block text-sm text-gray-700">Less than $25K&lt;/span>
+                      &lt;/label>
+                    &lt;/div>
+                    &lt;div class="flex items-center">
+                      &lt;input id="budget_25k-50k" name="budget" value="25k-50k" type="radio" class="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300">
+                      &lt;label for="budget_25k-50k" class="ml-3">
+                        &lt;span class="block text-sm text-gray-700">$25K – $50K&lt;/span>
+                      &lt;/label>
+                    &lt;/div>
+                    &lt;div class="flex items-center">
+                      &lt;input id="budget_50k-100k" name="budget" value="50k-100k" type="radio" class="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300">
+                      &lt;label for="budget_50k-100k" class="ml-3">
+                        &lt;span class="block text-sm text-gray-700">$50K – $100K&lt;/span>
+                      &lt;/label>
+                    &lt;/div>
+                    &lt;div class="flex items-center">
+                      &lt;input id="budget_over_100k" name="budget" value="over_100k" type="radio" class="focus:ring-grape-500 h-4 w-4 text-grape-600 border-gray-300">
+                      &lt;label for="budget_over_100k" class="ml-3">
+                        &lt;span class="block text-sm text-gray-700">$100K+&lt;/span>
+                      &lt;/label>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/fieldset>
+                &lt;div class="sm:col-span-2">
+                  &lt;label for="how_did_you_hear_about_us" class="block text-sm font-medium text-gray-700">How did you hear about us?&lt;/label>
+                  &lt;div class="mt-1">
+                    &lt;input type="text" name="how_did_you_hear_about_us" id="how_did_you_hear_about_us" class="shadow-sm focus:ring-grape-500 focus:border-grape-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="text-right sm:col-span-2">
+                  &lt;button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-grape-600 hover:bg-grape-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-grape-500">
+                    Submit
+                  &lt;/button>
+                &lt;/div>
+              &lt;/form>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- CTA Section -->
+      &lt;div class="bg-grape-400">
+        &lt;div class="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
+          &lt;h2 class="text-3xl font-extrabold sm:text-4xl">
+            &lt;span class="block text-white">Looking for a new career?&lt;/span>
+            &lt;span class="block text-grape-900">We’re hiring.&lt;/span>
+          &lt;/h2>
+          &lt;a href="#" class="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto">
+            &lt;span>See open positions&lt;/span>
+            &lt;svg class="ml-3 h-5 w-5 flex-shrink-0 text-gray-400" x-description="Heroicon name: solid/external-link" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z">&lt;/path>
+  &lt;path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z">&lt;/path>
+&lt;/svg>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    &lt;/main>
+
+    &lt;footer class="bg-gray-900" aria-labelledby="footerHeading">
+      &lt;h2 id="footerHeading" class="sr-only">Footer&lt;/h2>
+      &lt;div class="max-w-md mx-auto py-12 px-4 sm:max-w-lg sm:pt-16 sm:px-6 lg:max-w-7xl lg:pt-24 lg:pb-16 lg:px-8">
+        &lt;div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          &lt;div class="space-y-8 xl:col-span-1">
+            &lt;img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=gray&amp;amp;shade=400" alt="Company name">
+            &lt;p class="text-gray-400 text-base">
+              Making the world a better place through constructing elegant hierarchies.
+            &lt;/p>
+            &lt;div class="flex space-x-6">
+              
+                &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                  &lt;span class="sr-only">Facebook&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                  &lt;span class="sr-only">Instagram&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                  &lt;span class="sr-only">Twitter&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                  &lt;span class="sr-only">GitHub&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                  &lt;span class="sr-only">Dribbble&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                  Solutions
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Marketing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Analytics
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Commerce
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Insights
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                  Support
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Pricing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Documentation
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Guides
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        API Status
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                  Company
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        About
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Blog
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Jobs
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Press
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Partners
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-gray-200 tracking-wider uppercase">
+                  Legal
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Claim
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Privacy
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-gray-400 hover:text-gray-300">
+                        Terms
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="mt-12 border-t border-gray-700 pt-8">
+          &lt;p class="text-base text-gray-400 xl:text-center">
+            © 2020 Workflow, Inc. All rights reserved.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="39a9df2417f0570bc41ae3e4862b4a7c23777cfd" src="/components/marketing/page-examples/contact-pages/split_with_image_and_centered_cta_section.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-b77b9219c4c31a6631d5d1cb7c2019f469adf80e" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-b77b9219c4c31a6631d5d1cb7c2019f469adf80e">With overlapping cards</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;">
+    
+  &lt;div class="min-h-screen bg-white">
+    &lt;header class="relative pb-36 bg-blue-gray-800">
+      &lt;div class="absolute inset-0">
+        &lt;img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1920&amp;amp;q=60&amp;amp;&amp;amp;sat=-100" alt="">
+        &lt;div class="absolute inset-0 bg-blue-gray-800" style="mix-blend-mode: multiply;" aria-hidden="true">&lt;/div>
+      &lt;/div>
+      &lt;div class="relative z-10" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+        &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-6 pb-2 px-4 sm:px-6 lg:px-8" aria-label="Global">
+          &lt;div class="flex items-center flex-1">
+            &lt;div class="flex items-center justify-between w-full lg:w-auto">
+              &lt;a href="#">
+                &lt;span class="sr-only">Workflow&lt;/span>
+                &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&amp;amp;shade=500" alt="">
+              &lt;/a>
+              &lt;div class="-mr-2 flex items-center lg:hidden">
+                &lt;button type="button" class="bg-blue-gray-900 bg-opacity-0 rounded-md p-2 inline-flex items-center justify-center text-white hover:bg-opacity-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                  &lt;span class="sr-only">Open main menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="hidden space-x-10 lg:flex lg:ml-10">
+              
+                &lt;a href="#" class="text-base font-medium text-white hover:text-blue-100">Changelog&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-white hover:text-blue-100">About&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-white hover:text-blue-100">Partners&lt;/a>
+              
+                &lt;a href="#" class="text-base font-medium text-white hover:text-blue-100">News&lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden lg:flex lg:items-center lg:space-x-6">
+            &lt;a href="#" class="py-2 px-6 bg-blue-500 border border-transparent rounded-md shadow-md text-base font-medium text-white hover:bg-blue-600">
+              Login
+            &lt;/a>
+          &lt;/div>
+        &lt;/nav>
+
+        
+          &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              &lt;div class="px-5 pt-4 flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&amp;amp;shade=500" alt="">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-blue-gray-400 hover:bg-blue-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" @click="toggle">
+                    &lt;span class="sr-only">Close menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="pt-5 pb-6">
+                &lt;div class="px-2 space-y-1">
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-gray-900 hover:bg-blue-gray-50">Changelog&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-gray-900 hover:bg-blue-gray-50">About&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-gray-900 hover:bg-blue-gray-50">Partners&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-blue-gray-900 hover:bg-blue-gray-50">News&lt;/a>
+                  
+                &lt;/div>
+                &lt;div class="mt-6 px-5">
+                  &lt;a href="#" class="block text-center w-full py-2 px-4 border border-transparent rounded-md shadow bg-blue-500 text-white font-medium hover:bg-blue-600">Login&lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+      &lt;/div>
+
+      &lt;div class="relative mt-24 max-w-md mx-auto px-4 pb-32 sm:max-w-3xl sm:px-6 md:mt-32 lg:max-w-7xl lg:px-8">
+        &lt;h1 class="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">Support&lt;/h1>
+        &lt;p class="mt-6 max-w-3xl text-xl text-blue-gray-300">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames. Dui, amet, nec sit pulvinar.&lt;/p>
+      &lt;/div>
+    &lt;/header>
+
+    &lt;main>
+      &lt;div class="bg-blue-gray-50">
+        &lt;!-- Cards -->
+        &lt;section class="-mt-32 max-w-md mx-auto relative z-10 px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8" aria-labelledby="contact-heading">
+          &lt;h2 class="sr-only" id="contact-heading">Contact us&lt;/h2>
+          &lt;div class="grid grid-cols-1 gap-y-20 lg:grid-cols-3 lg:gap-y-0 lg:gap-x-8">
+            
+              &lt;div class="bg-white rounded-2xl shadow-xl">
+                &lt;div class="relative pt-16 px-6 pb-8 md:px-8">
+                  &lt;div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
+                    &lt;svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">&lt;/path>
+&lt;/svg>
+                  &lt;/div>
+                  &lt;h3 class="text-xl font-medium text-blue-gray-900">Sales&lt;/h3>
+                  &lt;p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.&lt;/p>
+                &lt;/div>
+                &lt;div class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+                  &lt;a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us&lt;span aria-hidden="true"> →&lt;/span>&lt;/a>
+                &lt;/div>
+              &lt;/div>
+            
+              &lt;div class="bg-white rounded-2xl shadow-xl">
+                &lt;div class="relative pt-16 px-6 pb-8 md:px-8">
+                  &lt;div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
+                    &lt;svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/support" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+&lt;/svg>
+                  &lt;/div>
+                  &lt;h3 class="text-xl font-medium text-blue-gray-900">Technical Support&lt;/h3>
+                  &lt;p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.&lt;/p>
+                &lt;/div>
+                &lt;div class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+                  &lt;a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us&lt;span aria-hidden="true"> →&lt;/span>&lt;/a>
+                &lt;/div>
+              &lt;/div>
+            
+              &lt;div class="bg-white rounded-2xl shadow-xl">
+                &lt;div class="relative pt-16 px-6 pb-8 md:px-8">
+                  &lt;div class="absolute top-0 p-5 inline-block bg-blue-600 rounded-xl shadow-lg transform -translate-y-1/2">
+                    &lt;svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/newspaper" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z">&lt;/path>
+&lt;/svg>
+                  &lt;/div>
+                  &lt;h3 class="text-xl font-medium text-blue-gray-900">Media Inquiries&lt;/h3>
+                  &lt;p class="mt-4 text-base text-blue-gray-500">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.&lt;/p>
+                &lt;/div>
+                &lt;div class="p-6 bg-blue-gray-50 rounded-bl-2xl rounded-br-2xl md:px-8">
+                  &lt;a href="#" class="text-base font-medium text-blue-700 hover:text-blue-600">Contact us&lt;span aria-hidden="true"> →&lt;/span>&lt;/a>
+                &lt;/div>
+              &lt;/div>
+            
+          &lt;/div>
+        &lt;/section>
+
+        &lt;!-- FAQ -->
+        &lt;section class="max-w-md mx-auto py-24 px-4 divide-y-2 divide-blue-gray-200 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:py-32 lg:px-8" aria-labelledby="faq-heading">
+          &lt;h2 class="text-3xl font-extrabold text-blue-gray-900" id="faq-heading">
+            Frequently asked questions
+          &lt;/h2>
+          &lt;div class="mt-6 pt-10">
+            &lt;dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12">
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    What's the best thing about Switzerland?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    Why do you never see elephants hiding in trees?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    Because they're so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    How do you make holy water?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    Why can't you hear a pterodactyl go to the bathroom?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    Because the pee is silent. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    What do you call someone with no body and no nose?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+                &lt;div>
+                  &lt;dt class="text-lg font-medium text-blue-gray-900">
+                    Why did the invisible man turn down the job offer?
+                  &lt;/dt>
+                  &lt;dd class="mt-2 text-base text-blue-gray-500">
+                    He couldn't see himself doing it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                  &lt;/dd>
+                &lt;/div>
+              
+            &lt;/dl>
+          &lt;/div>
+        &lt;/section>
+      &lt;/div>
+
+      &lt;!-- CTA Section -->
+      &lt;section class="relative bg-white" aria-labelledby="join-heading">
+        &lt;div class="hidden absolute inset-x-0 h-1/2 bg-blue-gray-50 lg:block" aria-hidden="true">&lt;/div>
+        &lt;div class="max-w-7xl mx-auto bg-blue-600 lg:bg-transparent lg:px-8">
+          &lt;div class="lg:grid lg:grid-cols-12">
+            &lt;div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
+              &lt;div class="absolute inset-x-0 h-1/2 bg-blue-gray-50 lg:hidden" aria-hidden="true">&lt;/div>
+              &lt;div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
+                &lt;div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
+                  &lt;img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=934&amp;amp;q=80" alt="">
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div class="relative bg-blue-600 lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
+              &lt;div class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block" aria-hidden="true">
+                &lt;svg class="absolute bottom-full left-full transform translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                  &lt;defs>
+                    &lt;pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                      &lt;rect x="0" y="0" width="4" height="4" class="text-blue-500" fill="currentColor">&lt;/rect>
+                    &lt;/pattern>
+                  &lt;/defs>
+                  &lt;rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)">&lt;/rect>
+                &lt;/svg>
+                &lt;svg class="absolute top-full transform -translate-y-1/3 -translate-x-1/3 xl:-translate-y-1/2" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+                  &lt;defs>
+                    &lt;pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                      &lt;rect x="0" y="0" width="4" height="4" class="text-blue-500" fill="currentColor">&lt;/rect>
+                    &lt;/pattern>
+                  &lt;/defs>
+                  &lt;rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)">&lt;/rect>
+                &lt;/svg>
+              &lt;/div>
+              &lt;div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
+                &lt;h2 class="text-3xl font-extrabold text-white" id="join-heading">Join our team&lt;/h2>
+                &lt;p class="text-lg text-white">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.&lt;/p>
+                &lt;a class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-blue-700 hover:bg-blue-gray-50 sm:inline-block sm:w-auto" href="#">Explore open positions&lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/section>
+
+      &lt;!-- Newsletter Section -->
+      &lt;section class="max-w-md mx-auto py-24 px-4 sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:py-32 lg:px-8 lg:flex lg:items-center" aria-labelledby="newsletter-heading">
+        &lt;div class="lg:w-0 lg:flex-1">
+          &lt;h2 class="text-3xl font-extrabold text-blue-gray-900 sm:text-4xl" id="newsletter-heading">
+            Sign up for our newsletter
+          &lt;/h2>
+          &lt;p class="mt-3 max-w-3xl text-lg text-blue-gray-500">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-8 lg:mt-0 lg:ml-8">
+          &lt;form class="sm:flex">
+            &lt;label for="emailAddress" class="sr-only">Email address&lt;/label>
+            &lt;input id="emailAddress" name="emailAddress" type="email" autocomplete="email" required="" class="w-full px-5 py-3 border border-blue-gray-300 shadow-sm placeholder-blue-gray-400 focus:ring-1 focus:ring-blue-500 focus:border-blue-500 sm:max-w-xs rounded-md" placeholder="Enter your email">
+            &lt;div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+              &lt;button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                Notify me
+              &lt;/button>
+            &lt;/div>
+          &lt;/form>
+          &lt;p class="mt-3 text-sm text-blue-gray-500">
+            We care about the protection of your data. Read our
+            &lt;!-- space -->
+            &lt;a href="#" class="font-medium underline">
+              Privacy Policy.
+            &lt;/a>
+          &lt;/p>
+        &lt;/div>
+      &lt;/section>
+    &lt;/main>
+
+    &lt;footer class="bg-blue-gray-50" aria-labelledby="footerHeading">
+      &lt;h2 id="footerHeading" class="sr-only">Footer&lt;/h2>
+      &lt;div class="max-w-md mx-auto py-12 px-4 sm:max-w-7xl sm:px-6 lg:py-16 lg:px-8">
+        &lt;div class="xl:grid xl:grid-cols-3 xl:gap-8">
+          &lt;div class="space-y-8 xl:col-span-1">
+            &lt;img class="h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blueGray&amp;amp;shade=300" alt="Company name">
+            &lt;p class="text-blue-gray-500 text-base">
+              Making the world a better place through constructing elegant hierarchies.
+            &lt;/p>
+            &lt;div class="flex space-x-6">
+              
+                &lt;a href="#" class="text-blue-gray-400 hover:text-blue-gray-500">
+                  &lt;span class="sr-only">Facebook&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-blue-gray-400 hover:text-blue-gray-500">
+                  &lt;span class="sr-only">Instagram&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-blue-gray-400 hover:text-blue-gray-500">
+                  &lt;span class="sr-only">Twitter&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-blue-gray-400 hover:text-blue-gray-500">
+                  &lt;span class="sr-only">GitHub&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+                &lt;a href="#" class="text-blue-gray-400 hover:text-blue-gray-500">
+                  &lt;span class="sr-only">Dribbble&lt;/span>
+                  &lt;svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c5.51 0 10-4.48 10-10S17.51 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+              
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-blue-gray-400 tracking-wider uppercase">
+                  Solutions
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Marketing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Analytics
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Commerce
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Insights
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-blue-gray-400 tracking-wider uppercase">
+                  Support
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Pricing
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Documentation
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Guides
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        API Status
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="md:grid md:grid-cols-2 md:gap-8">
+              &lt;div>
+                &lt;h3 class="text-sm font-semibold text-blue-gray-400 tracking-wider uppercase">
+                  Company
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        About
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Blog
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Jobs
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Press
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Partners
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+              &lt;div class="mt-12 md:mt-0">
+                &lt;h3 class="text-sm font-semibold text-blue-gray-400 tracking-wider uppercase">
+                  Legal
+                &lt;/h3>
+                &lt;ul class="mt-4 space-y-4">
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Claim
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Privacy
+                      &lt;/a>
+                    &lt;/li>
+                  
+                    &lt;li>
+                      &lt;a href="#" class="text-base text-blue-gray-500 hover:text-blue-gray-900">
+                        Terms
+                      &lt;/a>
+                    &lt;/li>
+                  
+                &lt;/ul>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="mt-12 border-t border-blue-gray-200 pt-8">
+          &lt;p class="text-base text-blue-gray-400 xl:text-center">
+            © 2020 Workflow, Inc. All rights reserved.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+    &lt;/footer>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="b77b9219c4c31a6631d5d1cb7c2019f469adf80e" src="/components/marketing/page-examples/contact-pages/with_overlapping_cards.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

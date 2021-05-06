@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-200 py-8">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -172,6 +173,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100" style="min-height: 1032px;">
     
     <div class="z-0 relative" x-data="Components.popover({ open: true, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
@@ -126,36 +127,39 @@
                   From the blog
                 </h3>
                 <ul class="mt-6 space-y-6">
-                  <li class="flow-root">
-                    <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                      <div class="hidden sm:block flex-shrink-0">
-                        <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2849&amp;q=80" alt="">
-                      </div>
-                      <div class="min-w-0 flex-1 sm:ml-8">
-                        <h4 class="text-base font-medium text-gray-900 truncate">
-                          Boost your conversion rate
-                        </h4>
-                        <p class="mt-1 text-sm text-gray-500">
-                          Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
-                        </p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="flow-root">
-                    <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                      <div class="hidden sm:block flex-shrink-0">
-                        <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="">
-                      </div>
-                      <div class="min-w-0 flex-1 sm:ml-8">
-                        <h4 class="text-base font-medium text-gray-900 truncate">
-                          How to use search engine optimization to drive traffic to your site
-                        </h4>
-                        <p class="mt-1 text-sm text-gray-500">
-                          Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
-                        </p>
-                      </div>
-                    </a>
-                  </li>
+                
+                    <li class="flow-root">
+                      <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                        <div class="hidden sm:block flex-shrink-0">
+                          <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2849&amp;q=80" alt="">
+                        </div>
+                        <div class="min-w-0 flex-1 sm:ml-8">
+                          <h4 class="text-base font-medium text-gray-900 truncate">
+                            Boost your conversion rate
+                          </h4>
+                          <p class="mt-1 text-sm text-gray-500">
+                            Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                
+                    <li class="flow-root">
+                      <a href="#" class="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                        <div class="hidden sm:block flex-shrink-0">
+                          <img class="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="">
+                        </div>
+                        <div class="min-w-0 flex-1 sm:ml-8">
+                          <h4 class="text-base font-medium text-gray-900 truncate">
+                            How to use search engine optimization to drive traffic to your site
+                          </h4>
+                          <p class="mt-1 text-sm text-gray-500">
+                            Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
+                          </p>
+                        </div>
+                      </a>
+                    </li>
+                
                 </ul>
               </div>
               <div class="mt-6 text-sm font-medium">
@@ -168,6 +172,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

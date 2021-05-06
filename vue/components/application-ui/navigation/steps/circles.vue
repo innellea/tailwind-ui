@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white">
       <div class="flex justify-center mx-auto py-12">
       
@@ -7,8 +8,7 @@
       
           <li class="relative pr-8 sm:pr-20">
           
-              <!-- Completed Step -->
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true" x-description="Completed Step">
                 <div class="h-0.5 w-full bg-indigo-600"></div>
               </div>
               <a href="#" class="relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900">
@@ -21,8 +21,7 @@
       
           <li class="relative pr-8 sm:pr-20">
           
-              <!-- Completed Step -->
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true" x-description="Completed Step">
                 <div class="h-0.5 w-full bg-indigo-600"></div>
               </div>
               <a href="#" class="relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900">
@@ -35,8 +34,7 @@
       
           <li class="relative pr-8 sm:pr-20">
           
-              <!-- Current Step -->
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true" x-description="Current Step">
                 <div class="h-0.5 w-full bg-gray-200"></div>
               </div>
               <a href="#" class="relative w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full" aria-current="step">
@@ -47,8 +45,7 @@
       
           <li class="relative pr-8 sm:pr-20">
           
-              <!-- Upcoming Step -->
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true" x-description="Upcoming Step">
                 <div class="h-0.5 w-full bg-gray-200"></div>
               </div>
               <a href="#" class="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400">
@@ -59,8 +56,7 @@
       
           <li class="relative ">
           
-              <!-- Upcoming Step -->
-              <div class="absolute inset-0 flex items-center" aria-hidden="true">
+              <div class="absolute inset-0 flex items-center" aria-hidden="true" x-description="Upcoming Step">
                 <div class="h-0.5 w-full bg-gray-200"></div>
               </div>
               <a href="#" class="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400">
@@ -74,6 +70,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

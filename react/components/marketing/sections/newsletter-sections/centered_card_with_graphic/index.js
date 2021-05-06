@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}}>
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}}>
     
   <div className="bg-white py-16 sm:py-24">
     <div className="relative sm:py-16">
@@ -51,6 +52,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

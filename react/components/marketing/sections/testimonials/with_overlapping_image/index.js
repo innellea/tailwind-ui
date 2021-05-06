@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}} className="overflow-y-auto">
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}} className="overflow-y-auto">
     
   <div className="bg-white pt-16 lg:py-24">
     <div className="pb-16 bg-indigo-600 lg:pb-0 lg:z-10 lg:relative">
@@ -12,7 +13,7 @@ const Component = (props) => (
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1/2 bg-white lg:hidden"></div>
           <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:p-0 lg:h-full">
             <div className="aspect-w-10 aspect-h-6 rounded-xl shadow-xl overflow-hidden sm:aspect-w-16 sm:aspect-h-7 lg:aspect-none lg:h-full">
-              <img className="object-cover lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" alt="">
+              <img className="object-cover lg:h-full lg:w-full" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80" alt="">
             </div>
           </div>
         </div>
@@ -39,6 +40,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

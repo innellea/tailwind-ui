@@ -1,10 +1,11 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;">
     
     <div class="min-h-screen bg-white">
       <header class="relative pb-36 bg-blue-gray-800">
         <div class="absolute inset-0">
-          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
+          <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
           <div class="absolute inset-0 bg-blue-gray-800" style="mix-blend-mode: multiply;" aria-hidden="true"></div>
         </div>
         <div class="relative z-10" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
@@ -30,7 +31,7 @@
               
                   <a href="#" class="text-base font-medium text-white hover:text-blue-100">About</a>
               
-                  <a href="#" class="text-base font-medium text-white hover:text-blue-100">Parnters</a>
+                  <a href="#" class="text-base font-medium text-white hover:text-blue-100">Partners</a>
               
                   <a href="#" class="text-base font-medium text-white hover:text-blue-100">News</a>
               
@@ -217,7 +218,7 @@
                 <div class="absolute inset-x-0 h-1/2 bg-blue-gray-50 lg:hidden" aria-hidden="true"></div>
                 <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
                   <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-                    <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="">
+                    <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="">
                   </div>
                 </div>
               </div>
@@ -475,6 +476,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}} className="overflow-y-auto">
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}} className="overflow-y-auto">
     
   <div className="min-h-screen bg-white">
     <header className="relative z-10" data-todo-x-data="Components.popover({ open: false, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -12,7 +13,7 @@ const Component = (props) => (
           <div className="flex items-center justify-between w-full lg:w-auto">
             <a href="/">
               <span className="sr-only">Workflow</span>
-              <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-grape-600.svg" alt="">
+              <img className="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;shade=600" alt="">
             </a>
             <div className="-mr-2 flex items-center lg:hidden">
               <button type="button" className="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-grape-500" data-todo-at-click="toggle" data-todo-at-mousedown="if (open) $event.preventDefault()" aria-expanded="false" data-todo-colon-aria-expanded="open.toString()">
@@ -47,7 +48,7 @@ const Component = (props) => (
           <div className="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div className="px-5 pt-4 flex items-center justify-between">
               <div>
-                <img className="h-8 w-auto" src="ttps://tailwindui.com/img/logos/workflow-mark-grape-600.svg" alt="">
+                <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;shade=600" alt="">
               </div>
               <div className="-mr-2">
                 <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grape-500" data-todo-at-click="toggle">
@@ -92,7 +93,7 @@ const Component = (props) => (
       <div className="relative bg-white">
         <div className="lg:absolute lg:inset-0">
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-            <img className="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80" alt="">
+            <img className="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80" alt="">
           </div>
         </div>
         <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
@@ -406,6 +407,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

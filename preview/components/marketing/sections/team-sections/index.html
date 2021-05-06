@@ -1,0 +1,1947 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#marketing" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Marketing
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#marketing-page-sections" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Page Sections
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Team Sections
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-410c1806a507465d2c4b675ff49cea0779639006" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-410c1806a507465d2c4b675ff49cea0779639006">With small images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
+        &lt;div class="space-y-5 sm:space-y-4">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our leadership&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse. Vivamus fringilla.&lt;/p>
+        &lt;/div>
+        &lt;div class="lg:col-span-2">
+          &lt;ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8" x-max="1">
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Leslie Alexander&lt;/h3>
+                    &lt;p class="text-indigo-600">Co-Founder / CEO&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Michael Foster&lt;/h3>
+                    &lt;p class="text-indigo-600">Co-Founder / CTO&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Dries Vincent&lt;/h3>
+                    &lt;p class="text-indigo-600">Manager, Business Relations&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Lindsay Walton&lt;/h3>
+                    &lt;p class="text-indigo-600">Front-end Developer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Courtney Henry&lt;/h3>
+                    &lt;p class="text-indigo-600">Designer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="flex items-center space-x-4 lg:space-x-6">
+                  &lt;img class="w-16 h-16 rounded-full lg:w-20 lg:h-20" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3>Tom Cook&lt;/h3>
+                    &lt;p class="text-indigo-600">Director, Product Development&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+          &lt;/ul>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="410c1806a507465d2c4b675ff49cea0779639006" src="/components/marketing/sections/team-sections/with_small_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-48de2da4b7ff3fa9e6498cda6b08625e290b061a" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-48de2da4b7ff3fa9e6498cda6b08625e290b061a">With large images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12">
+        &lt;div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec risus sodales. Tempus quis et.&lt;/p>
+        &lt;/div>
+        &lt;ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8" x-max="1">
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Lindsay Walton&lt;/h3>
+                    &lt;p class="text-indigo-600">Front-end Developer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Courtney Henry&lt;/h3>
+                    &lt;p class="text-indigo-600">Designer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Tom Cook&lt;/h3>
+                    &lt;p class="text-indigo-600">Director, Product Development&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Whitney Francis&lt;/h3>
+                    &lt;p class="text-indigo-600">Copywriter&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Leonard Krasner&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Designer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;div class="aspect-w-3 aspect-h-2">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Floyd Miles&lt;/h3>
+                    &lt;p class="text-indigo-600">Principal Designer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="48de2da4b7ff3fa9e6498cda6b08625e290b061a" src="/components/marketing/sections/team-sections/with_large_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-4b4b64a41ec6d3955f927a39b7af452ae782681d" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-4b4b64a41ec6d3955f927a39b7af452ae782681d">Grid with round images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-8 sm:space-y-12">
+        &lt;div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">The People&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Risus velit condimentum vitae tincidunt tincidunt. Mauris ridiculus fusce amet urna nunc. Ut nisl ornare diam in.&lt;/p>
+        &lt;/div>
+        &lt;ul class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6" x-max="1">
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Michael Foster&lt;/h3>
+                    &lt;p class="text-indigo-600">Co-Founder / CTO&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Dries Vincent&lt;/h3>
+                    &lt;p class="text-indigo-600">Manager, Business Relations&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Lindsay Walton&lt;/h3>
+                    &lt;p class="text-indigo-600">Front-end Developer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Courtney Henry&lt;/h3>
+                    &lt;p class="text-indigo-600">Designer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Tom Cook&lt;/h3>
+                    &lt;p class="text-indigo-600">Director, Product Development&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Whitney Francis&lt;/h3>
+                    &lt;p class="text-indigo-600">Copywriter&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Leonard Krasner&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Designer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Floyd Miles&lt;/h3>
+                    &lt;p class="text-indigo-600">Principal Designer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Emily Selman&lt;/h3>
+                    &lt;p class="text-indigo-600">VP, User Experience&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Kristin Watson&lt;/h3>
+                    &lt;p class="text-indigo-600">VP, Human Resources&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Emma Dorsey&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Front-end Developer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Alicia Bell&lt;/h3>
+                    &lt;p class="text-indigo-600">Junior Copywriter&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Jenny Wilson&lt;/h3>
+                    &lt;p class="text-indigo-600">Studio Artist&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Anna Roberts&lt;/h3>
+                    &lt;p class="text-indigo-600">Partner, Creative&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Benjamin Russel&lt;/h3>
+                    &lt;p class="text-indigo-600">Director, Print Operations&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Jeffrey Webb&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Art Director&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Kathryn Murphy&lt;/h3>
+                    &lt;p class="text-indigo-600">Associate Creative Director&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1513910367299-bce8d8a0ebf6?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Lawrence Hunter&lt;/h3>
+                    &lt;p class="text-indigo-600">Content Specialist&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1506980595904-70325b7fdd90?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Yvette Armstrong&lt;/h3>
+                    &lt;p class="text-indigo-600">Studio Artist&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1501031170107-cfd33f0cbdcc?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Angela Fisher&lt;/h3>
+                    &lt;p class="text-indigo-600">Chief Strategy Officer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Blake Reid&lt;/h3>
+                    &lt;p class="text-indigo-600">Account Coordinator&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Hector Gibbons&lt;/h3>
+                    &lt;p class="text-indigo-600">VP, Marketing&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Fabricio Mendes&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Art Director&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Jillian Steward&lt;/h3>
+                    &lt;p class="text-indigo-600">Designer&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4">
+                &lt;img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-xs font-medium lg:text-sm">
+                    &lt;h3>Chelsea Hagon&lt;/h3>
+                    &lt;p class="text-indigo-600">Human Resources Manager&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="4b4b64a41ec6d3955f927a39b7af452ae782681d" src="/components/marketing/sections/team-sections/grid_with_round_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-03ae9702b1d9ed5fce369e70e95eff23bfcdfb74" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-03ae9702b1d9ed5fce369e70e95eff23bfcdfb74">Dark version with large images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-900">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12">
+        &lt;div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
+          &lt;h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">Meet our team&lt;/h2>
+          &lt;p class="text-xl text-gray-300">Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet lectus sit pretium egestas vel mattis neque.&lt;/p>
+        &lt;/div>
+        &lt;ul class="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8" x-max="1">
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Leonard Krasner&lt;/h3>
+                    &lt;p class="text-indigo-400">Senior Designer&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Floyd Miles&lt;/h3>
+                    &lt;p class="text-indigo-400">Principal Designer&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Emily Selman&lt;/h3>
+                    &lt;p class="text-indigo-400">VP, User Experience&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Kristin Watson&lt;/h3>
+                    &lt;p class="text-indigo-400">VP, Human Resources&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Emma Dorsey&lt;/h3>
+                    &lt;p class="text-indigo-400">Senior Front-end Developer&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="py-10 px-6 bg-gray-800 text-center rounded-lg xl:px-10 xl:text-left">
+              &lt;div class="space-y-6 xl:space-y-10">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2 xl:flex xl:items-center xl:justify-between">
+                  &lt;div class="font-medium text-lg leading-6 space-y-1">
+                    &lt;h3 class="text-white">Alicia Bell&lt;/h3>
+                    &lt;p class="text-indigo-400">Junior Copywriter&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-300">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="03ae9702b1d9ed5fce369e70e95eff23bfcdfb74" src="/components/marketing/sections/team-sections/dark_version_with_large_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-fcaaaa4b1a971f902c57e1b2105b38210247fede" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-fcaaaa4b1a971f902c57e1b2105b38210247fede">With image and short paragraph</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+        &lt;div class="space-y-5 sm:space-y-4">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Our Team&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.&lt;/p>
+        &lt;/div>
+        &lt;div class="lg:col-span-2">
+          &lt;ul class="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:gap-x-8" x-max="1">
+            
+              &lt;li>
+                &lt;div class="space-y-4">
+                  &lt;div class="aspect-w-3 aspect-h-2">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Emma Dorsey&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Front-end Developer&lt;/p>
+                  &lt;/div>
+                  &lt;div class="text-lg">
+                    &lt;p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="space-y-4">
+                  &lt;div class="aspect-w-3 aspect-h-2">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Alicia Bell&lt;/h3>
+                    &lt;p class="text-indigo-600">Junior Copywriter&lt;/p>
+                  &lt;/div>
+                  &lt;div class="text-lg">
+                    &lt;p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="space-y-4">
+                  &lt;div class="aspect-w-3 aspect-h-2">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Jenny Wilson&lt;/h3>
+                    &lt;p class="text-indigo-600">Studio Artist&lt;/p>
+                  &lt;/div>
+                  &lt;div class="text-lg">
+                    &lt;p class="text-gray-500">Aliquet adipiscing lectus praesent cras sed quis lectus egestas erat. Bibendum curabitur eget habitant feugiat nec faucibus eu lorem suscipit. Vitae vitae tempor enim eget lacus nulla leo.&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li>
+                &lt;div class="space-y-4">
+                  &lt;div class="aspect-w-3 aspect-h-2">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Anna Roberts&lt;/h3>
+                    &lt;p class="text-indigo-600">Partner, Creative&lt;/p>
+                  &lt;/div>
+                  &lt;div class="text-lg">
+                    &lt;p class="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna.&lt;/p>
+                  &lt;/div>
+
+                  &lt;ul class="flex space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/li>
+            
+          &lt;/ul>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="fcaaaa4b1a971f902c57e1b2105b38210247fede" src="/components/marketing/sections/team-sections/with_image_and_short_paragraph.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-bdf88b83dfccd6b49203cbbea7cb99f234ed2261" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-bdf88b83dfccd6b49203cbbea7cb99f234ed2261">With vertical images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+        &lt;div class="space-y-5 sm:space-y-4">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">About Us&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Nulla quam felis, enim faucibus proin velit, ornare id pretium. Augue ultrices sed arcu condimentum vestibulum suspendisse. Volutpat eu faucibus vivamus eget bibendum cras.&lt;/p>
+        &lt;/div>
+        &lt;div class="lg:col-span-2">
+          &lt;ul class="space-y-12 sm:divide-y sm:divide-gray-200 sm:space-y-0 sm:-mt-8 lg:gap-x-8 lg:space-y-0" x-max="1">
+            
+              &lt;li class="sm:py-8">
+                &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                  &lt;div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2">
+                    &lt;div class="space-y-4">
+                      &lt;div class="text-lg leading-6 font-medium space-y-1">
+                        &lt;h3>Leslie Alexander&lt;/h3>
+                        &lt;p class="text-indigo-600">Co-Founder / CEO&lt;/p>
+                      &lt;/div>
+                      &lt;div class="text-lg">
+                        &lt;p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.&lt;/p>
+                      &lt;/div>
+                      &lt;ul class="flex space-x-5">
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">Twitter&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">LinkedIn&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                      &lt;/ul>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li class="sm:py-8">
+                &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                  &lt;div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2">
+                    &lt;div class="space-y-4">
+                      &lt;div class="text-lg leading-6 font-medium space-y-1">
+                        &lt;h3>Michael Foster&lt;/h3>
+                        &lt;p class="text-indigo-600">Co-Founder / CTO&lt;/p>
+                      &lt;/div>
+                      &lt;div class="text-lg">
+                        &lt;p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.&lt;/p>
+                      &lt;/div>
+                      &lt;ul class="flex space-x-5">
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">Twitter&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">LinkedIn&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                      &lt;/ul>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+              &lt;li class="sm:py-8">
+                &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                  &lt;div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                    &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                  &lt;/div>
+                  &lt;div class="sm:col-span-2">
+                    &lt;div class="space-y-4">
+                      &lt;div class="text-lg leading-6 font-medium space-y-1">
+                        &lt;h3>Dries Vincent&lt;/h3>
+                        &lt;p class="text-indigo-600">Manager, Business Relations&lt;/p>
+                      &lt;/div>
+                      &lt;div class="text-lg">
+                        &lt;p class="text-gray-500">Aliquet adipiscing lectus praesent cras sed quis lectus egestas erat. Bibendum curabitur eget habitant feugiat nec faucibus eu lorem suscipit. Vitae vitae tempor enim eget lacus nulla leo.&lt;/p>
+                      &lt;/div>
+                      &lt;ul class="flex space-x-5">
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">Twitter&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                        &lt;li>
+                          &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                            &lt;span class="sr-only">LinkedIn&lt;/span>
+                            &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                          &lt;/a>
+                        &lt;/li>
+                      &lt;/ul>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/li>
+            
+          &lt;/ul>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="bdf88b83dfccd6b49203cbbea7cb99f234ed2261" src="/components/marketing/sections/team-sections/with_vertical_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-42b6c53cf2ac8c3ab3406a99905b101d8c1d9469" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-42b6c53cf2ac8c3ab3406a99905b101d8c1d9469">Full width with vertical images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12">
+        &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our leadership&lt;/h2>
+
+        &lt;ul class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0" x-max="1">
+          
+            &lt;li>
+              &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                &lt;div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="space-y-4">
+                    &lt;div class="text-lg leading-6 font-medium space-y-1">
+                      &lt;h3>Whitney Francis&lt;/h3>
+                      &lt;p class="text-indigo-600">Copywriter&lt;/p>
+                    &lt;/div>
+                    &lt;div class="text-lg">
+                      &lt;p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                &lt;div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="space-y-4">
+                    &lt;div class="text-lg leading-6 font-medium space-y-1">
+                      &lt;h3>Leonard Krasner&lt;/h3>
+                      &lt;p class="text-indigo-600">Senior Designer&lt;/p>
+                    &lt;/div>
+                    &lt;div class="text-lg">
+                      &lt;p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                &lt;div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="space-y-4">
+                    &lt;div class="text-lg leading-6 font-medium space-y-1">
+                      &lt;h3>Floyd Miles&lt;/h3>
+                      &lt;p class="text-indigo-600">Principal Designer&lt;/p>
+                    &lt;/div>
+                    &lt;div class="text-lg">
+                      &lt;p class="text-gray-500">Aliquet adipiscing lectus praesent cras sed quis lectus egestas erat. Bibendum curabitur eget habitant feugiat nec faucibus eu lorem suscipit. Vitae vitae tempor enim eget lacus nulla leo.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
+                &lt;div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                  &lt;img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="space-y-4">
+                    &lt;div class="text-lg leading-6 font-medium space-y-1">
+                      &lt;h3>Emily Selman&lt;/h3>
+                      &lt;p class="text-indigo-600">VP, User Experience&lt;/p>
+                    &lt;/div>
+                    &lt;div class="text-lg">
+                      &lt;p class="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="42b6c53cf2ac8c3ab3406a99905b101d8c1d9469" src="/components/marketing/sections/team-sections/full_width_with_vertical_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-84a3824d9207b8f43221ee0a3b13b34d9c32a019" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-84a3824d9207b8f43221ee0a3b13b34d9c32a019">Grid with large round images</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
+      &lt;div class="space-y-12">
+        &lt;div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
+          &lt;h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Meet our team&lt;/h2>
+          &lt;p class="text-xl text-gray-500">Ornare sagittis, suspendisse in hendrerit quis. Sed dui aliquet lectus sit pretium egestas vel mattis neque.&lt;/p>
+        &lt;/div>
+        &lt;ul class="mx-auto space-y-16 sm:grid sm:grid-cols-2 sm:gap-16 sm:space-y-0 lg:grid-cols-3 lg:max-w-5xl" x-max="1">
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Whitney Francis&lt;/h3>
+                    &lt;p class="text-indigo-600">Copywriter&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Leonard Krasner&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Designer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Floyd Miles&lt;/h3>
+                    &lt;p class="text-indigo-600">Principal Designer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Emily Selman&lt;/h3>
+                    &lt;p class="text-indigo-600">VP, User Experience&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Kristin Watson&lt;/h3>
+                    &lt;p class="text-indigo-600">VP, Human Resources&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li>
+              &lt;div class="space-y-6">
+                &lt;img class="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=8&amp;amp;w=1024&amp;amp;h=1024&amp;amp;q=80" alt="">
+                &lt;div class="space-y-2">
+                  &lt;div class="text-lg leading-6 font-medium space-y-1">
+                    &lt;h3>Emma Dorsey&lt;/h3>
+                    &lt;p class="text-indigo-600">Senior Front-end Developer&lt;/p>
+                  &lt;/div>
+                  &lt;ul class="flex justify-center space-x-5">
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">Twitter&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                    &lt;li>
+                      &lt;a href="#" class="text-gray-400 hover:text-gray-500">
+                        &lt;span class="sr-only">LinkedIn&lt;/span>
+                        &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;/a>
+                    &lt;/li>
+                  &lt;/ul>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="84a3824d9207b8f43221ee0a3b13b34d9c32a019" src="/components/marketing/sections/team-sections/grid_with_large_round_images.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

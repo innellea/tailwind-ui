@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100" style="min-height: 772px;">
     
     <div class="z-0 relative" x-data="Components.popover({ open: true, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
@@ -150,6 +151,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

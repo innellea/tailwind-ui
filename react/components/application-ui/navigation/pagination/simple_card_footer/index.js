@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100">
+<div className="" style={{}}>
+  
+
+  <div className="bg-gray-100">
     <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div className="max-w-none mx-auto">
         <div className="bg-white overflow-hidden shadow sm:rounded-lg">
@@ -28,7 +31,7 @@ const Component = (props) => (
                           <svg className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
 </svg>
-                          Full-time
+                          Engineering
                         </div>
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
@@ -47,7 +50,7 @@ const Component = (props) => (
                   <div className="px-4 py-4 sm:px-6">
                     <div className="flex items-center justify-between">
                       <div className="text-sm font-medium text-indigo-600 truncate">
-                        Back End Developer
+                        Front End Developer
                       </div>
                       <div className="ml-2 flex-shrink-0 flex">
                         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -61,7 +64,7 @@ const Component = (props) => (
                           <svg className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
 </svg>
-                          Full-time
+                          Engineering
                         </div>
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
@@ -80,7 +83,7 @@ const Component = (props) => (
                   <div className="px-4 py-4 sm:px-6">
                     <div className="flex items-center justify-between">
                       <div className="text-sm font-medium text-indigo-600 truncate">
-                        Back End Developer
+                        User Interface Designer
                       </div>
                       <div className="ml-2 flex-shrink-0 flex">
                         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -94,7 +97,7 @@ const Component = (props) => (
                           <svg className="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
 </svg>
-                          Full-time
+                          Design
                         </div>
                       </div>
                       <div className="flex items-center text-sm text-gray-500">
@@ -142,6 +145,7 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+</div>
 </>
 );
 

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="px-4 py-8 bg-white">
+<div className="" style={{}}>
+  <div className="px-4 py-8 bg-white">
     <div className="max-w-3xl mx-auto space-y-4 flex flex-col items-center justify-start sm:space-y-0 sm:flex-row sm:items-end sm:justify-around">
       
   <button type="button" className="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
@@ -24,6 +25,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

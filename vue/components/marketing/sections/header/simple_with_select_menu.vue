@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:flex lg:justify-between">
         <div class="max-w-xl">
@@ -28,6 +30,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

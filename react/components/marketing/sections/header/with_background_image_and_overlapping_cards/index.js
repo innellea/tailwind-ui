@@ -3,11 +3,13 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  
+  <div className="bg-white">
     {/* Header */}
     <div className="relative pb-32 bg-gray-800">
       <div className="absolute inset-0">
-        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
+        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
         <div className="absolute inset-0 bg-gray-800" style={{mixBlendMode: "multiply"}} aria-hidden="true"></div>
       </div>
       <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
@@ -69,6 +71,8 @@ const Component = (props) => (
       </div>
     </section>
   </div>
+
+</div>
 </>
 );
 

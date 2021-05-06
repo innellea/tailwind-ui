@@ -1,10 +1,11 @@
 <template>
+    <div class="" style="">
     <div>
     
     <div class="min-h-screen bg-gray-100">
       <header class="bg-white shadow">
         <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-          <div class="flex justify-between h-16">
+          <div class="flex justify-between h-16" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
             <div class="flex px-2 lg:px-0">
               <div class="flex-shrink-0 flex items-center">
                 <a href="#">
@@ -12,18 +13,23 @@
                 </a>
               </div>
               <nav aria-label="Global" class="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">
-                <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
-                  Dashboard
-                </a>
-                <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
-                  Jobs
-                </a>
-                <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
-                  Applicants
-                </a>
-                <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
-                  Company
-                </a>
+              
+                  <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
+                    Dashboard
+                  </a>
+              
+                  <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
+                    Jobs
+                  </a>
+              
+                  <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
+                    Applicants
+                  </a>
+              
+                  <a href="#" class="px-3 py-2 text-gray-900 text-sm font-medium">
+                    Company
+                  </a>
+              
               </nav>
             </div>
             <div class="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
@@ -41,18 +47,79 @@
             </div>
             <div class="flex items-center lg:hidden">
               <!-- Mobile menu button -->
-              <button type="button" @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" x-bind:aria-expanded="open" aria-expanded="false">
+              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
                 <span class="sr-only">Open main menu</span>
-                <!-- Icon when menu is closed. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg class="block h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-  </svg>
-                <!-- Icon when menu is open. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
   </svg>
               </button>
             </div>
+          
+              <div class="lg:hidden" x-description="Mobile menu, show/hide based on mobile menu state.">
+              
+                  <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0" enter-to-class="opacity-100" leave-active-class="duration-150 ease-in" leave-class="opacity-100" leave-to-class="opacity-0"><div v-if="open" x-description="Mobile menu overlay, show/hide based on mobile menu state." class="z-20 fixed inset-0 bg-black bg-opacity-25" aria-hidden="true" @click="toggle"></div></transition>
+              
+
+              
+                  <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-150 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95"><div v-if="open" x-description="Mobile menu, show/hide based on mobile menu state." class="z-30 absolute top-0 right-0 max-w-none w-full p-2 transition transform origin-top" x-ref="panel" @click.away="open = false">
+                    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
+                      <div class="pt-3 pb-2">
+                        <div class="flex items-center justify-between px-4">
+                          <div>
+                            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow">
+                          </div>
+                          <div class="-mr-2">
+                            <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" @click="toggle">
+                              <span class="sr-only">Close menu</span>
+                              <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+  </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="mt-3 px-2 space-y-1">
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Dashboard</a>
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Jobs</a>
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Applicants</a>
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company</a>
+                        
+                        </div>
+                      </div>
+                      <div class="pt-4 pb-2">
+                        <div class="flex items-center px-5">
+                          <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
+                          </div>
+                          <div class="ml-3">
+                            <div class="text-base font-medium text-gray-800">Whitney Francis</div>
+                            <div class="text-sm font-medium text-gray-500">whitney@example.com</div>
+                          </div>
+                          <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            <span class="sr-only">View notifications</span>
+                            <svg class="h-6 w-6" x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+  </svg>
+                          </button>
+                        </div>
+                        <div class="mt-3 px-2 space-y-1">
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
+                        
+                            <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                        
+                        </div>
+                      </div>
+                    </div>
+                  </div></transition>
+              
+              </div>
+          
             <div class="hidden lg:ml-4 lg:flex lg:items-center">
               <button type="button" class="flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 <span class="sr-only">View notifications</span>
@@ -71,9 +138,13 @@
                 </div>
               
                   <transition enter-active-class="transition ease-out duration-100" enter-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95"><div x-description="Dropdown menu, show/hide based on menu state." v-if="open" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
                   </div></transition>
               
               </div>
@@ -104,85 +175,39 @@
                       </a>
                     </div>
                   </li>
-                  <li>
-                    <div class="flex items-center">
-                      <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                      </svg>
-                      <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="flex items-center">
-                      <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                      </svg>
-                      <a href="#" aria-current="page" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Front End Developer</a>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="flex items-center">
-                      <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                      </svg>
-                      <a href="#" aria-current="page" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Applicants</a>
-                    </div>
-                  </li>
+                
+                    <li>
+                      <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                        </svg>
+                        <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
+                      </div>
+                    </li>
+                
+                    <li>
+                      <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                        </svg>
+                        <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Front End Developer</a>
+                      </div>
+                    </li>
+                
+                    <li>
+                      <div class="flex items-center">
+                        <svg class="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                        </svg>
+                        <a href="#" class="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Applicants</a>
+                      </div>
+                    </li>
+                
                 </ol>
               </div>
             </nav>
           </div>
         </div>
-
-        <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0" enter-to-class="opacity-100" leave-active-class="duration-150 ease-in" leave-class="opacity-100" leave-to-class="opacity-0"><div x-description="Mobile menu overlay, show/hide based on mobile menu state." v-if="open" class="z-20 fixed inset-0 bg-black bg-opacity-25 lg:hidden" aria-hidden="true"></div></transition>
-
-        <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-150 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95"><div x-description="Mobile menu, show/hide based on mobile menu state." v-if="open" class="z-30 absolute top-0 right-0 max-w-none w-full p-2 transition transform origin-top lg:hidden">
-          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
-            <div class="pt-3 pb-2">
-              <div class="flex items-center justify-between px-4">
-                <div>
-                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow">
-                </div>
-                <div class="-mr-2">
-                  <button @click="open = false" type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                    <span class="sr-only">Close menu</span>
-                    <svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-  </svg>
-                  </button>
-                </div>
-              </div>
-              <div class="mt-3 px-2 space-y-1">
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Dashboard</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Jobs</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Applicants</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company</a>
-              </div>
-            </div>
-            <div class="pt-4 pb-2">
-              <div class="flex items-center px-5">
-                <div class="flex-shrink-0">
-                  <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
-                </div>
-                <div class="ml-3">
-                  <div class="text-base font-medium text-gray-800">Whitney Francis</div>
-                  <div class="text-sm font-medium text-gray-500">whitney@example.com</div>
-                </div>
-                <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                  <span class="sr-only">View notifications</span>
-                  <svg class="h-6 w-6" x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-  </svg>
-                </button>
-              </div>
-              <div class="mt-3 px-2 space-y-1">
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
-                <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
-              </div>
-            </div>
-          </div>
-        </div></transition>
       </header>
 
       <main class="py-10">
@@ -271,36 +296,39 @@
                       </dt>
                       <dd class="mt-1 text-sm text-gray-900">
                         <ul class="border border-gray-200 rounded-md divide-y divide-gray-200">
-                          <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                            <div class="w-0 flex-1 flex items-center">
-                              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        
+                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                              <div class="w-0 flex-1 flex items-center">
+                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd"></path>
   </svg>
-                              <span class="ml-2 flex-1 w-0 truncate">
-                                resume_back_end_developer.pdf
-                              </span>
-                            </div>
-                            <div class="ml-4 flex-shrink-0">
-                              <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
-                                Download
-                              </a>
-                            </div>
-                          </li>
-                          <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                            <div class="w-0 flex-1 flex items-center">
-                              <svg class="flex-shrink-0 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <span class="ml-2 flex-1 w-0 truncate">
+                                  resume_front_end_developer.pdf
+                                </span>
+                              </div>
+                              <div class="ml-4 flex-shrink-0">
+                                <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                                  Download
+                                </a>
+                              </div>
+                            </li>
+                        
+                            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                              <div class="w-0 flex-1 flex items-center">
+                                <svg class="flex-shrink-0 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clip-rule="evenodd"></path>
   </svg>
-                              <span class="ml-2 flex-1 w-0 truncate">
-                                coverletter_back_end_developer.pdf
-                              </span>
-                            </div>
-                            <div class="ml-4 flex-shrink-0">
-                              <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
-                                Download
-                              </a>
-                            </div>
-                          </li>
+                                <span class="ml-2 flex-1 w-0 truncate">
+                                  coverletter_front_end_developer.pdf
+                                </span>
+                              </div>
+                              <div class="ml-4 flex-shrink-0">
+                                <a href="#" class="font-medium text-blue-600 hover:text-blue-500">
+                                  Download
+                                </a>
+                              </div>
+                            </li>
+                        
                         </ul>
                       </dd>
                     </div>
@@ -325,7 +353,7 @@
                         <li>
                           <div class="flex space-x-3">
                             <div class="flex-shrink-0">
-                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                             </div>
                             <div>
                               <div class="text-sm">
@@ -336,7 +364,9 @@
                               </div>
                               <div class="mt-2 text-sm space-x-2">
                                 <span class="text-gray-500 font-medium">4d ago</span>
+                                <!-- space -->
                                 <span class="text-gray-500 font-medium">·</span>
+                                <!-- space -->
                                 <button type="button" class="text-gray-900 font-medium">Reply</button>
                               </div>
                             </div>
@@ -346,7 +376,7 @@
                         <li>
                           <div class="flex space-x-3">
                             <div class="flex-shrink-0">
-                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                             </div>
                             <div>
                               <div class="text-sm">
@@ -357,7 +387,9 @@
                               </div>
                               <div class="mt-2 text-sm space-x-2">
                                 <span class="text-gray-500 font-medium">4d ago</span>
+                                <!-- space -->
                                 <span class="text-gray-500 font-medium">·</span>
+                                <!-- space -->
                                 <button type="button" class="text-gray-900 font-medium">Reply</button>
                               </div>
                             </div>
@@ -367,7 +399,7 @@
                         <li>
                           <div class="flex space-x-3">
                             <div class="flex-shrink-0">
-                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                              <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                             </div>
                             <div>
                               <div class="text-sm">
@@ -378,7 +410,9 @@
                               </div>
                               <div class="mt-2 text-sm space-x-2">
                                 <span class="text-gray-500 font-medium">4d ago</span>
+                                <!-- space -->
                                 <span class="text-gray-500 font-medium">·</span>
+                                <!-- space -->
                                 <button type="button" class="text-gray-900 font-medium">Reply</button>
                               </div>
                             </div>
@@ -435,11 +469,10 @@
                         <div class="relative flex space-x-3">
                           <div>
                             <span class="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                            
-                                <svg class="h-5 w-5 text-white" x-description="Heroicon name: solid/user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
   </svg>
-                              </span>
+                            </span>
                           </div>
                           <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                             <div>
@@ -460,11 +493,10 @@
                         <div class="relative flex space-x-3">
                           <div>
                             <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                            
-                                <svg class="h-5 w-5 text-white" x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path>
   </svg>
-                              </span>
+                            </span>
                           </div>
                           <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                             <div>
@@ -485,11 +517,10 @@
                         <div class="relative flex space-x-3">
                           <div>
                             <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            
-                                <svg class="h-5 w-5 text-white" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
-                              </span>
+                            </span>
                           </div>
                           <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                             <div>
@@ -510,11 +541,10 @@
                         <div class="relative flex space-x-3">
                           <div>
                             <span class="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                            
-                                <svg class="h-5 w-5 text-white" x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path>
   </svg>
-                              </span>
+                            </span>
                           </div>
                           <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                             <div>
@@ -533,11 +563,10 @@
                         <div class="relative flex space-x-3">
                           <div>
                             <span class="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            
-                                <svg class="h-5 w-5 text-white" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
-                              </span>
+                            </span>
                           </div>
                           <div class="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                             <div>
@@ -565,13 +594,13 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
 	open: false,
-    open: false,
   })
 }
 </script>

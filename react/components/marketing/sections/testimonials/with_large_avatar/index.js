@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<section className="bg-white overflow-hidden">
+<div className="" style={{}}>
+  
+  <section className="bg-white overflow-hidden">
     <div className="relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20">
       <svg className="absolute top-full left-0 transform translate-x-80 -translate-y-24 lg:hidden" width="784" height="404" fill="none" viewBox="0 0 784 404" aria-hidden="true">
         <defs>
@@ -25,7 +27,7 @@ const Component = (props) => (
 
       <div className="relative lg:flex lg:items-center">
         <div className="hidden lg:block lg:flex-shrink-0">
-          <img className="h-64 w-64 rounded-full xl:h-80 xl:w-80" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+          <img className="h-64 w-64 rounded-full xl:h-80 xl:w-80" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
         </div>
 
         <div className="relative lg:ml-10">
@@ -41,7 +43,7 @@ const Component = (props) => (
             <footer className="mt-8">
               <div className="flex">
                 <div className="flex-shrink-0 lg:hidden">
-                  <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                  <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                 </div>
                 <div className="ml-4 lg:ml-0">
                   <div className="text-base font-medium text-gray-900">Judith Black</div>
@@ -54,6 +56,8 @@ const Component = (props) => (
       </div>
     </div>
   </section>
+
+</div>
 </>
 );
 

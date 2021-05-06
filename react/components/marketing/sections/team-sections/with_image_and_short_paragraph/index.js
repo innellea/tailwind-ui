@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  
+  <div className="bg-white">
     <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
         <div className="space-y-5 sm:space-y-4">
@@ -57,7 +59,7 @@ const Component = (props) => (
                     <p className="text-indigo-600">Junior Copywriter</p>
                   </div>
                   <div className="text-lg">
-                    <p className="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est. </p>
+                    <p className="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.</p>
                   </div>
 
                   <ul className="flex space-x-5">
@@ -125,7 +127,7 @@ const Component = (props) => (
                     <p className="text-indigo-600">Partner, Creative</p>
                   </div>
                   <div className="text-lg">
-                    <p className="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna. </p>
+                    <p className="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna.</p>
                   </div>
 
                   <ul className="flex space-x-5">
@@ -154,6 +156,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

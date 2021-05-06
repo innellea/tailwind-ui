@@ -1,105 +1,103 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100" style="min-height: 900px;">
     
-    <div class="h-screen bg-white overflow-hidden flex" @keydown.window.escape="sidebarOpen = false">
-      <div v-if="sidebarOpen" class="md:hidden" x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state.">
-        <div class="fixed inset-0 z-40 flex">
-          <transition enter-active-class="transition-opacity ease-linear duration-300" enter-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition-opacity ease-linear duration-300" leave-class="opacity-100" leave-to-class="opacity-0"><div @click="sidebarOpen = false" v-if="sidebarOpen" x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." class="fixed inset-0" aria-hidden="true">
-            <div class="absolute inset-0 bg-gray-600 opacity-75"></div>
-          </div></transition>
-          <transition enter-active-class="transition ease-in-out duration-300 transform" enter-class="-translate-x-full" enter-to-class="translate-x-0" leave-active-class="transition ease-in-out duration-300 transform" leave-class="translate-x-0" leave-to-class="-translate-x-full"><div v-if="sidebarOpen" x-description="Off-canvas menu, show/hide based on off-canvas menu state." class="relative max-w-xs w-full bg-white pt-5 pb-4 flex-1 flex flex-col">
-            <div class="absolute top-0 right-0 -mr-14 p-1">
-              <button v-if="sidebarOpen" @click="sidebarOpen = false" class="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:bg-gray-600">
-                <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    <div @keydown.window.escape="open = false" class="h-screen bg-white overflow-hidden flex">
+    
+        <div v-if="open" class="fixed inset-0 z-40 flex md:hidden" x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." x-ref="dialog" role="dialog" aria-modal="true">
+        
+            <transition enter-active-class="transition-opacity ease-linear duration-300" enter-class="opacity-0" enter-to-class="opacity-100" leave-active-class="transition-opacity ease-linear duration-300" leave-class="opacity-100" leave-to-class="opacity-0"><div v-if="open" x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." class="fixed inset-0 bg-gray-600 bg-opacity-75" @click="open = false" aria-hidden="true"></div></transition>
+        
+        
+            <transition enter-active-class="transition ease-in-out duration-300 transform" enter-class="-translate-x-full" enter-to-class="translate-x-0" leave-active-class="transition ease-in-out duration-300 transform" leave-class="translate-x-0" leave-to-class="-translate-x-full"><div v-if="open" x-description="Off-canvas menu, show/hide based on off-canvas menu state." class="relative max-w-xs w-full bg-white pt-5 pb-4 flex-1 flex flex-col">
+            
+                <transition enter-active-class="ease-in-out duration-300" enter-class="opacity-0" enter-to-class="opacity-100" leave-active-class="ease-in-out duration-300" leave-class="opacity-100" leave-to-class="opacity-0"><div v-if="open" x-description="Close button, show/hide based on off-canvas menu state." class="absolute top-0 right-0 -mr-14 p-1">
+                  <button class="h-12 w-12 rounded-full flex items-center justify-center focus:outline-none focus:bg-gray-600" @click="open = false">
+                    <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
   </svg>
-                <span class="sr-only">Close sidebar</span>
-              </button>
-            </div>
-            <div class="flex-shrink-0 px-4 flex items-center">
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/easywire-logo-purple-600-mark-gray-900-text.svg" alt="Easywire">
-            </div>
-            <div class="mt-5 flex-1 h-0 overflow-y-auto">
-              <nav class="h-full flex flex-col">
-                <div class="space-y-1">
-                
+                    <span class="sr-only">Close sidebar</span>
+                  </button>
+                </div></transition>
+            
+              <div class="flex-shrink-0 px-4 flex items-center">
+                <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/easywire-logo-purple-600-mark-gray-900-text.svg" alt="Easywire">
+              </div>
+              <div class="mt-5 flex-1 h-0 overflow-y-auto">
+                <nav class="h-full flex flex-col">
+                  <div class="space-y-1">
                   
-                      <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-4 flex items-center text-base font-medium">
-                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900 group border-l-4 py-2 px-3 flex items-center text-base font-medium" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, Default: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
   </svg>
                         Home
                       </a>
                   
-                  
-                      <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-4 flex items-center text-base font-medium">
-                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/briefcase" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900 group border-l-4 py-2 px-3 flex items-center text-base font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/briefcase" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
   </svg>
                         Jobs
                       </a>
                   
-                  
-                      <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-4 flex items-center text-base font-medium">
-                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/document-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900 group border-l-4 py-2 px-3 flex items-center text-base font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/document-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"></path>
   </svg>
                         Applications
                       </a>
                   
-                  
-                      <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-4 flex items-center text-base font-medium">
-                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900 group border-l-4 py-2 px-3 flex items-center text-base font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
   </svg>
                         Messages
                       </a>
                   
-                  
-                      <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group rounded-md py-2 px-4 flex items-center text-base font-medium">
-                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900 group border-l-4 py-2 px-3 flex items-center text-base font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-gray-400 group-hover:text-gray-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
   </svg>
                         Team
                       </a>
                   
-                  
-                      <!-- Current: "bg-purple-50 border-purple-600 text-purple-600", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-                      <a href="#" class="bg-purple-50 border-purple-600 text-purple-600 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                        <svg class="mr-3 h-6 w-6 text-purple-500" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <a href="#" class="bg-purple-50 border-purple-600 text-purple-600 group border-l-4 py-2 px-3 flex items-center text-base font-medium" aria-current="page" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:bg-gray-50 hover:text-gray-900&quot;">
+                        <svg class="text-purple-500 mr-4 h-6 w-6" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
   </svg>
                         Settings
                       </a>
                   
-                </div>
-                <div class="mt-auto pt-10 space-y-1">
-                
-                    <a href="#" class="group rounded-md py-2 px-4 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/question-mark-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  </div>
+                  <div class="mt-auto pt-10 space-y-1">
+                  
+                      <a href="#" class="group border-l-4 border-transparent py-2 px-3 flex items-center text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/question-mark-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
   </svg>
-                      Help
-                    </a>
-                
-                    <a href="#" class="group rounded-md py-2 px-4 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        Help
+                      </a>
+                  
+                      <a href="#" class="group border-l-4 border-transparent py-2 px-3 flex items-center text-base font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                        <svg class="mr-4 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
   </svg>
-                      Logout
-                    </a>
-                
-                </div>
-              </nav>
-            </div>
-          </div></transition>
+                        Logout
+                      </a>
+                  
+                  </div>
+                </nav>
+              </div>
+            </div></transition>
+        
           <div class="flex-shrink-0 w-14" aria-hidden="true">
             <!-- Dummy element to force sidebar to shrink to fit close icon -->
           </div>
         </div>
-      </div>
+    
 
       <!-- Static sidebar for desktop -->
       <div class="hidden md:flex md:flex-shrink-0">
@@ -112,69 +110,61 @@
             <div class="flex-grow mt-5 flex flex-col">
               <div class="flex-1 space-y-1">
               
-                
-                    <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, Default: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;text-purple-500&quot;, Default: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
   </svg>
-                      Home
-                    </a>
-                
-                
-                    <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/briefcase" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Home
+                  </a>
+              
+                  <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-state-description="undefined: &quot;text-purple-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/briefcase" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
   </svg>
-                      Jobs
-                    </a>
-                
-                
-                    <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/document-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Jobs
+                  </a>
+              
+                  <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-state-description="undefined: &quot;text-purple-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/document-search" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"></path>
   </svg>
-                      Applications
-                    </a>
-                
-                
-                    <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Applications
+                  </a>
+              
+                  <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-state-description="undefined: &quot;text-purple-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/chat" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
   </svg>
-                      Messages
-                    </a>
-                
-                
-                    <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium">
-                      <svg class="mr-3 h-6 w-6 text-gray-400 group-hover:text-gray-500" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Messages
+                  </a>
+              
+                  <a href="#" class="border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-state-description="undefined: &quot;text-purple-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
   </svg>
-                      Team
-                    </a>
-                
-                
-                    <!-- Current: "bg-purple-50 border-purple-600 text-purple-600", Default: "border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50" -->
-                    <a href="#" class="bg-purple-50 border-purple-600 text-purple-600 group border-l-4 flex items-center py-2 px-3 text-sm font-medium" aria-current="page">
-                      <!-- Current: "text-purple-500", Default: "text-gray-400 group-hover:text-gray-500" -->
-                      <svg class="text-purple-500 mr-3 h-6 w-6" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Team
+                  </a>
+              
+                  <a href="#" class="bg-purple-50 border-purple-600 text-purple-600 group border-l-4 py-2 px-3 flex items-center text-sm font-medium" x-state-description="undefined: &quot;bg-purple-50 border-purple-600 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50&quot;">
+                    <svg class="text-purple-500 mr-3 h-6 w-6" x-state-description="undefined: &quot;text-purple-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
   </svg>
-                      Settings
-                    </a>
-                
+                    Settings
+                  </a>
+              
               </div>
             </div>
             <div class="flex-shrink-0 block w-full">
             
-                <a href="#" class="group py-2 px-4 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                <a href="#" class="group border-l-4 border-transparent py-2 px-3 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
                   <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-description="Heroicon name: outline/question-mark-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
   </svg>
                   Help
                 </a>
             
-                <a href="#" class="group py-2 px-4 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
+                <a href="#" class="group border-l-4 border-transparent py-2 px-3 flex items-center text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-50">
                   <svg class="text-gray-400 group-hover:text-gray-500 mr-3 h-6 w-6" x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -191,7 +181,7 @@
       <div class="flex-1 flex flex-col">
         <div class="w-full max-w-4xl mx-auto md:px-8 xl:px-0">
           <div class="relative z-10 flex-shrink-0 h-16 bg-white border-b border-gray-200 flex">
-            <button @click.stop="sidebarOpen = true" class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 md:hidden">
+            <button class="border-r border-gray-200 px-4 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 md:hidden" @click="open = true">
               <span class="sr-only">Open sidebar</span>
               <svg class="h-6 w-6" x-description="Heroicon name: outline/menu-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path>
@@ -237,61 +227,48 @@
                     <label for="selected-tab" class="sr-only">Select a tab</label>
                     <select id="selected-tab" name="selected-tab" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-purple-500 focus:border-purple-500 sm:text-sm rounded-md">
                     
-                      
-                          <option selected="">General</option>
-                      
-                      
-                          <option>Password</option>
-                      
-                      
-                          <option>Notifications</option>
-                      
-                      
-                          <option>Plan</option>
-                      
-                      
-                          <option>Billing</option>
-                      
-                      
-                          <option>Team Members</option>
-                      
+                        <option>General</option>
+                    
+                        <option>Password</option>
+                    
+                        <option>Notifications</option>
+                    
+                        <option>Plan</option>
+                    
+                        <option>Billing</option>
+                    
+                        <option>Team Members</option>
+                    
                     </select>
                   </div>
                   <div class="hidden lg:block">
                     <div class="border-b border-gray-200">
-                      <nav class="-mb-px flex">
+                      <nav class="-mb-px flex space-x-8">
                       
-                        
-                            <!-- Current: "border-purple-500 text-purple-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-                            <a href="#" class="border-purple-500 text-purple-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                              General
-                            </a>
-                        
-                        
-                            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm">
-                              Password
-                            </a>
-                        
-                        
-                            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm">
-                              Notifications
-                            </a>
-                        
-                        
-                            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm">
-                              Plan
-                            </a>
-                        
-                        
-                            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm">
-                              Billing
-                            </a>
-                        
-                        
-                            <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap ml-8 py-4 px-1 border-b-2 font-medium text-sm">
-                              Team Members
-                            </a>
-                        
+                          <a href="#" class="border-purple-500 text-purple-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;border-purple-500 text-purple-600&quot;, Default: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            General
+                          </a>
+                      
+                          <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state-description="undefined: &quot;border-purple-500 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            Password
+                          </a>
+                      
+                          <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state-description="undefined: &quot;border-purple-500 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            Notifications
+                          </a>
+                      
+                          <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state-description="undefined: &quot;border-purple-500 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            Plan
+                          </a>
+                      
+                          <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state-description="undefined: &quot;border-purple-500 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            Billing
+                          </a>
+                      
+                          <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm" x-state-description="undefined: &quot;border-purple-500 text-purple-600&quot;, undefined: &quot;border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700&quot;">
+                            Team Members
+                          </a>
+                      
                       </nav>
                     </div>
                   </div>
@@ -327,7 +304,7 @@
                           </dt>
                           <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
                             <span class="flex-grow">
-                              <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                              <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                             </span>
                             <span class="ml-4 flex-shrink-0 flex items-start space-x-4">
                               <button type="button" class="bg-white rounded-md font-medium text-purple-600 hover:text-purple-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500">
@@ -445,12 +422,13 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
-	sidebarOpen: false,
+	open: false,
     on: true,
     on: false,
   })

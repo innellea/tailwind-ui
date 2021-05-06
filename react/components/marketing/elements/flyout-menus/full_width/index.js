@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100" style={{minHeight: "772px"}}>
+<div className="" style={{}}>
+  <div className="bg-gray-100" style={{minHeight: "772px"}}>
     
   <div className="z-0 relative" data-todo-x-data="Components.popover({ open: true, focus: false })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
     <div className="relative z-10 bg-white shadow">
@@ -154,6 +155,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

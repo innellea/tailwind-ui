@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100">
+<div className="" style={{}}>
+  <div className="bg-gray-100">
     
   <div>
     <div data-todo-x-data="{ open: false }" className="relative bg-light-blue-700 pb-32 overflow-hidden">
@@ -17,19 +18,14 @@ const Component = (props) => (
               <div className="hidden lg:block lg:ml-6 lg:space-x-4">
                 <div className="flex">
                   
-                    
-                      {/* Current: "bg-black bg-opacity-25", Default: "hover:bg-light-blue-800" */}
-                      <a href="/" className="bg-black bg-opacity-25 rounded-md py-2 px-3 text-sm font-medium text-white" aria-current="page">Dashboard</a>
-                    
-                    
-                      <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white">Jobs</a>
-                    
-                    
-                      <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white">Applicants</a>
-                    
-                    
-                      <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white">Company</a>
-                    
+                    <a href="/" className="bg-black bg-opacity-25 rounded-md py-2 px-3 text-sm font-medium text-white" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;bg-black bg-opacity-25&quot;, Default: &quot;hover:bg-light-blue-800&quot;">Dashboard</a>
+                  
+                    <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Jobs</a>
+                  
+                    <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Applicants</a>
+                  
+                    <a href="/" className="hover:bg-light-blue-800 rounded-md py-2 px-3 text-sm font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Company</a>
+                  
                 </div>
               </div>
             </div>
@@ -76,7 +72,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
                   <div>
                     <button type="button" className="rounded-full flex text-sm text-white focus:outline-none focus:bg-light-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-900 focus:ring-white" id="user-menu" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                       <span className="sr-only">Open user menu</span>
-                      <img className="rounded-full h-8 w-8" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="">
+                      <img className="rounded-full h-8 w-8" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=320&amp;h=320&amp;q=80" alt="">
                     </button>
                   </div>
                   
@@ -99,24 +95,19 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
         <div data-todo-x-description="Mobile menu, show/hide based on menu state." className="bg-light-blue-900 lg:hidden" id="mobile-menu" data-todo-x-show="open">
           <div className="pt-2 pb-3 px-2 space-y-1">
             
-              
-                {/* Current: "bg-black bg-opacity-25", Default: "hover:bg-light-blue-800" */}
-                <a href="/" className="bg-black bg-opacity-25 block rounded-md py-2 px-3 text-base font-medium text-white" aria-current="page">Dashboard</a>
-              
-              
-                <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white">Jobs</a>
-              
-              
-                <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white">Applicants</a>
-              
-              
-                <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white">Company</a>
-              
+              <a href="/" className="bg-black bg-opacity-25 block rounded-md py-2 px-3 text-base font-medium text-white" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;bg-black bg-opacity-25&quot;, Default: &quot;hover:bg-light-blue-800&quot;">Dashboard</a>
+            
+              <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Jobs</a>
+            
+              <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Applicants</a>
+            
+              <a href="/" className="hover:bg-light-blue-800 block rounded-md py-2 px-3 text-base font-medium text-white" data-todo-x-state-description="undefined: &quot;bg-black bg-opacity-25&quot;, undefined: &quot;hover:bg-light-blue-800&quot;">Company</a>
+            
           </div>
           <div className="pt-4 pb-3 border-t border-light-blue-800">
             <div className="flex items-center px-4">
               <div className="flex-shrink-0">
-                <img className="rounded-full h-10 w-10" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80h" alt="">
+                <img className="rounded-full h-10 w-10" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=320&amp;h=320&amp;q=80" alt="">
               </div>
               <div className="ml-3">
                 <div className="text-base font-medium text-white">Debbie Lewis</div>
@@ -163,71 +154,63 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
         <div className="bg-white rounded-lg shadow overflow-hidden">
           <div className="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x">
             <aside className="py-6 lg:col-span-3">
-              <nav>
+              <nav className="space-y-1">
                 
-                  
-                    {/* Current: "bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700", Default: "border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900" */}
-                    <a href="/" className="bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" aria-current="page">
-                      {/* Current: "text-teal-500 group-hover:text-teal-500", Default: "text-gray-400 group-hover:text-gray-500" */}
-                      <svg className="text-teal-500 group-hover:text-teal-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <a href="/" className="bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-on="Current" data-todo-x-state-off="Default" aria-current="page" data-todo-x-state-description="Current: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, Default: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-teal-500 group-hover:text-teal-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;text-teal-500 group-hover:text-teal-500&quot;, Default: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
-                      <span className="truncate">
-                        Profile
-                      </span>
-                    </a>
-                  
-                  
-                    <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium">
-                      <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <span className="truncate">
+                      Profile
+                    </span>
+                  </a>
+                
+                  <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-description="undefined: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, undefined: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-teal-500 group-hover:text-teal-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/cog" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
 </svg>
-                      <span className="truncate">
-                        Account
-                      </span>
-                    </a>
-                  
-                  
-                    <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium">
-                      <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/key" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <span className="truncate">
+                      Account
+                    </span>
+                  </a>
+                
+                  <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-description="undefined: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, undefined: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-teal-500 group-hover:text-teal-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/key" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path>
 </svg>
-                      <span className="truncate">
-                        Password
-                      </span>
-                    </a>
-                  
-                  
-                    <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium">
-                      <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <span className="truncate">
+                      Password
+                    </span>
+                  </a>
+                
+                  <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-description="undefined: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, undefined: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-teal-500 group-hover:text-teal-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
 </svg>
-                      <span className="truncate">
-                        Notifications
-                      </span>
-                    </a>
-                  
-                  
-                    <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium">
-                      <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/credit-card" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <span className="truncate">
+                      Notifications
+                    </span>
+                  </a>
+                
+                  <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-description="undefined: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, undefined: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-teal-500 group-hover:text-teal-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/credit-card" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
 </svg>
-                      <span className="truncate">
-                        Billing
-                      </span>
-                    </a>
-                  
-                  
-                    <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium">
-                      <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/view-grid-add" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <span className="truncate">
+                      Billing
+                    </span>
+                  </a>
+                
+                  <a href="/" className="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" data-todo-x-state-description="undefined: &quot;bg-teal-50 border-teal-500 text-teal-700 hover:bg-teal-50 hover:text-teal-700&quot;, undefined: &quot;border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-teal-500 group-hover:text-teal-500&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-500&quot;" data-todo-x-description="Heroicon name: outline/view-grid-add" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"></path>
 </svg>
-                      <span className="truncate">
-                        Integrations
-                      </span>
-                    </a>
-                  
+                    <span className="truncate">
+                      Integrations
+                    </span>
+                  </a>
+                
               </nav>
             </aside>
 
@@ -251,7 +234,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
                         <span className="bg-gray-50 border border-r-0 border-gray-300 rounded-l-md px-3 inline-flex items-center text-gray-500 sm:text-sm">
                           workcation.com/
                         </span>
-                        <input type="text" name="username" id="username" autocomplete="username" className="focus:ring-light-blue-500 focus:border-light-blue-500 flex-grow block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300" value="lisamarie">
+                        <input type="text" name="username" id="username" autocomplete="username" className="focus:ring-light-blue-500 focus:border-light-blue-500 flex-grow block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300" value="deblewis">
                       </div>
                     </div>
 
@@ -275,7 +258,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
                     <div className="mt-1 lg:hidden">
                       <div className="flex items-center">
                         <div className="flex-shrink-0 inline-block rounded-full overflow-hidden h-12 w-12" aria-hidden="true">
-                          <img className="rounded-full h-full w-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80h" alt="">
+                          <img className="rounded-full h-full w-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=320&amp;h=320&amp;q=80" alt="">
                         </div>
                         <div className="ml-5 rounded-md shadow-sm">
                           <div className="group relative border border-gray-300 rounded-md py-2 px-3 flex items-center justify-center hover:bg-gray-50 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-light-blue-500">
@@ -408,6 +391,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
   </div>
 
   </div>
+</div>
 </>
 );
 

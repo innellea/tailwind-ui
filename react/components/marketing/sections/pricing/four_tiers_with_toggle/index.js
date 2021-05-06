@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  
+  <div className="bg-white">
     <div className="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <div className="sm:flex sm:flex-col sm:align-center">
         <h1 className="text-5xl font-extrabold text-gray-900 sm:text-center">Pricing Plans</h1>
@@ -21,6 +23,7 @@ const Component = (props) => (
               <p className="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
               <p className="mt-8">
                 <span className="text-4xl font-extrabold text-gray-900">$12</span>
+                {/* space */}
                 <span className="text-base font-medium text-gray-500">/mo</span>
               </p>
               <a href="/" className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Hobby</a>
@@ -53,6 +56,7 @@ const Component = (props) => (
               <p className="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
               <p className="mt-8">
                 <span className="text-4xl font-extrabold text-gray-900">$24</span>
+                {/* space */}
                 <span className="text-base font-medium text-gray-500">/mo</span>
               </p>
               <a href="/" className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Freelancer</a>
@@ -92,6 +96,7 @@ const Component = (props) => (
               <p className="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
               <p className="mt-8">
                 <span className="text-4xl font-extrabold text-gray-900">$32</span>
+                {/* space */}
                 <span className="text-base font-medium text-gray-500">/mo</span>
               </p>
               <a href="/" className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Startup</a>
@@ -138,6 +143,7 @@ const Component = (props) => (
               <p className="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
               <p className="mt-8">
                 <span className="text-4xl font-extrabold text-gray-900">$48</span>
+                {/* space */}
                 <span className="text-base font-medium text-gray-500">/mo</span>
               </p>
               <a href="/" className="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Enterprise</a>
@@ -202,6 +208,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

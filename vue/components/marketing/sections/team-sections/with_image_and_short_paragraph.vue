@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
@@ -53,7 +55,7 @@
                       <p class="text-indigo-600">Junior Copywriter</p>
                     </div>
                     <div class="text-lg">
-                      <p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est. </p>
+                      <p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.</p>
                     </div>
 
                     <ul class="flex space-x-5">
@@ -121,7 +123,7 @@
                       <p class="text-indigo-600">Partner, Creative</p>
                     </div>
                     <div class="text-lg">
-                      <p class="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna. </p>
+                      <p class="text-gray-500">Quis bibendum velit diam tellus sed ut. Faucibus posuere enim, vitae enim eget neque tortor. Metus lectus mattis id id. Tellus ornare etiam id velit ut enim lacinia congue ultrices. Sit morbi vel elit a maecenas mauris elit lectus magna.</p>
                     </div>
 
                     <ul class="flex space-x-5">
@@ -150,6 +152,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

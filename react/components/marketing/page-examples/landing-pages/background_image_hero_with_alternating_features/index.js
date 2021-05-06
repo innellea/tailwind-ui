@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}} _className="overflow-y-auto">
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}} _className="overflow-y-auto">
     
   <div className="bg-white">
     <header>
@@ -196,19 +197,15 @@ const Component = (props) => (
               </div>
               <div className="py-6 px-5">
                 <div className="grid grid-cols-2 gap-4">
-                  
-                    <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Pricing
-                    </a>
-                  
-                    <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Partners
-                    </a>
-                  
-                    <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                      Company
-                    </a>
-                  
+                  <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Pricing
+                  </a>
+                  <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Partners
+                  </a>
+                  <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Company
+                  </a>
                 </div>
                 <div className="mt-6">
                   <a href="/" className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
@@ -522,7 +519,7 @@ const Component = (props) => (
 
       {/* Stats section */}
       <div className="relative bg-gray-900">
-        <div className="h-80 absolute bottom-0 xl:inset-0 xl:h-full xl:w-full">
+        <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
           <div className="h-full w-full xl:grid xl:grid-cols-2">
             <div className="h-full xl:relative xl:col-start-2">
               <img className="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2830&amp;q=80&amp;sat=-100" alt="People working on laptops">
@@ -787,6 +784,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

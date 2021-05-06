@@ -3,109 +3,114 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="p-8 flex justify-center bg-white" style={{minHeight: "600px"}}>
-    
+<div className="" style={{}}>
+  <div className="p-8 flex justify-center bg-white" style={{minHeight: "600px"}}>
     <div className="w-full max-w-xl mx-auto">
       
-  <fieldset data-todo-x-data="radioGroup()">
-    <legend id="radiogroup-label" className="sr-only">
+  <fieldset data-todo-x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" data-todo-x-init="init()">
+    <legend className="sr-only">
       Server size
     </legend>
-    <ul className="space-y-4" role="radiogroup" aria-labelledby="radiogroup-label" data-todo-x-ref="radiogroup">
+    <div className="space-y-4">
       
-        <li id="radiogroup-option-0" data-todo-colon-tabIndex={active === 0 || active === null ? '0' : '-1'} tabIndex={0} data-todo-at-click="select(0)" data-todo-at-keydown-space-stop-prevent="select(0)" role="radio" aria-checked="true" :aria-checked="active === 0" data-todo-at-keydown-arrow-up-stop-prevent="onArrowUp(0)" data-todo-at-keydown-arrow-down-stop-prevent="onArrowDown(0)" className="group relative bg-white rounded-lg shadow-sm cursor-pointer focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500">
-          <div className="rounded-lg border border-gray-300 bg-white px-6 py-4 hover:border-gray-400 sm:flex sm:justify-between">
-            <div className="flex items-center">
-              <div className="text-sm">
-                <p className="font-medium text-gray-900">
-                  Hobby
-                </p>
-                <div className="text-gray-500">
-                  <p className="sm:inline">8GB / 4 CPUs</p>
-                  <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <p className="sm:inline">160 GB SSD disk</p>
-                </div>
+        <label data-todo-x-radio-group-option="" className="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" data-todo-x-active-className="ring-1 ring-offset-2 ring-indigo-500">
+<input type="radio" data-todo-x-model="value" name="server_size" value="Hobby" className="sr-only" aria-labelledby="server-size-0-label" aria-describedby="server-size-0-description-0 server-size-0-description-1">
+          <div className="flex items-center">
+            <div className="text-sm">
+              <p id="server-size-0-label" className="font-medium text-gray-900">
+                Hobby
+              </p>
+              <div id="server-size-0-description-0" className="text-gray-500">
+                <p className="sm:inline">8GB / 4 CPUs</p>
+                {/* space */}
+                <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
+                {/* space */}
+                <p className="sm:inline">160 GB SSD disk</p>
               </div>
             </div>
-            <div className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div className="font-medium text-gray-900">$40</div>
-              <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
           </div>
-          <div data-todo-colon-className="{ 'border-indigo-500': active === 0, 'border-transparent': !(active === 0) }" className="border-indigo-500 absolute inset-0 rounded-lg border-2 pointer-events-none" aria-hidden="true"></div>
-        </li>
+          <div id="server-size-0-description-1" className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+            <div className="font-medium text-gray-900">$40</div>
+            <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
+          </div>
+          <div className="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'border-indigo-500': value === 'Hobby', 'border-transparent': !(value === 'Hobby') }"></div>
+        </label>
       
-        <li id="radiogroup-option-1" data-todo-colon-tabIndex={active === 1 || active === null ? '0' : '-1'} tabIndex={-1} data-todo-at-click="select(1)" data-todo-at-keydown-space-stop-prevent="select(1)" role="radio" aria-checked="false" :aria-checked="active === 1" data-todo-at-keydown-arrow-up-stop-prevent="onArrowUp(1)" data-todo-at-keydown-arrow-down-stop-prevent="onArrowDown(1)" className="group relative bg-white rounded-lg shadow-sm cursor-pointer focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500">
-          <div className="rounded-lg border border-gray-300 bg-white px-6 py-4 hover:border-gray-400 sm:flex sm:justify-between">
-            <div className="flex items-center">
-              <div className="text-sm">
-                <p className="font-medium text-gray-900">
-                  Startup
-                </p>
-                <div className="text-gray-500">
-                  <p className="sm:inline">12GB / 6 CPUs</p>
-                  <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <p className="sm:inline">256 GB SSD disk</p>
-                </div>
+        <label data-todo-x-radio-group-option="" className="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" data-todo-x-active-className="ring-1 ring-offset-2 ring-indigo-500">
+<input type="radio" data-todo-x-model="value" name="server_size" value="Startup" className="sr-only" aria-labelledby="server-size-1-label" aria-describedby="server-size-1-description-0 server-size-1-description-1">
+          <div className="flex items-center">
+            <div className="text-sm">
+              <p id="server-size-1-label" className="font-medium text-gray-900">
+                Startup
+              </p>
+              <div id="server-size-1-description-0" className="text-gray-500">
+                <p className="sm:inline">12GB / 6 CPUs</p>
+                {/* space */}
+                <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
+                {/* space */}
+                <p className="sm:inline">256 GB SSD disk</p>
               </div>
             </div>
-            <div className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div className="font-medium text-gray-900">$80</div>
-              <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
           </div>
-          <div data-todo-colon-className="{ 'border-indigo-500': active === 1, 'border-transparent': !(active === 1) }" className="border-transparent absolute inset-0 rounded-lg border-2 pointer-events-none" aria-hidden="true"></div>
-        </li>
+          <div id="server-size-1-description-1" className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+            <div className="font-medium text-gray-900">$80</div>
+            <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
+          </div>
+          <div className="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'border-indigo-500': value === 'Startup', 'border-transparent': !(value === 'Startup') }"></div>
+        </label>
       
-        <li id="radiogroup-option-2" data-todo-colon-tabIndex={active === 2 || active === null ? '0' : '-1'} tabIndex={-1} data-todo-at-click="select(2)" data-todo-at-keydown-space-stop-prevent="select(2)" role="radio" aria-checked="false" :aria-checked="active === 2" data-todo-at-keydown-arrow-up-stop-prevent="onArrowUp(2)" data-todo-at-keydown-arrow-down-stop-prevent="onArrowDown(2)" className="group relative bg-white rounded-lg shadow-sm cursor-pointer focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500">
-          <div className="rounded-lg border border-gray-300 bg-white px-6 py-4 hover:border-gray-400 sm:flex sm:justify-between">
-            <div className="flex items-center">
-              <div className="text-sm">
-                <p className="font-medium text-gray-900">
-                  Business
-                </p>
-                <div className="text-gray-500">
-                  <p className="sm:inline">16GB / 8 CPUs</p>
-                  <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <p className="sm:inline">512 GB SSD disk</p>
-                </div>
+        <label data-todo-x-radio-group-option="" className="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" data-todo-x-active-className="ring-1 ring-offset-2 ring-indigo-500">
+<input type="radio" data-todo-x-model="value" name="server_size" value="Business" className="sr-only" aria-labelledby="server-size-2-label" aria-describedby="server-size-2-description-0 server-size-2-description-1">
+          <div className="flex items-center">
+            <div className="text-sm">
+              <p id="server-size-2-label" className="font-medium text-gray-900">
+                Business
+              </p>
+              <div id="server-size-2-description-0" className="text-gray-500">
+                <p className="sm:inline">16GB / 8 CPUs</p>
+                {/* space */}
+                <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
+                {/* space */}
+                <p className="sm:inline">512 GB SSD disk</p>
               </div>
             </div>
-            <div className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div className="font-medium text-gray-900">$160</div>
-              <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
           </div>
-          <div data-todo-colon-className="{ 'border-indigo-500': active === 2, 'border-transparent': !(active === 2) }" className="border-transparent absolute inset-0 rounded-lg border-2 pointer-events-none" aria-hidden="true"></div>
-        </li>
+          <div id="server-size-2-description-1" className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+            <div className="font-medium text-gray-900">$160</div>
+            <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
+          </div>
+          <div className="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'border-indigo-500': value === 'Business', 'border-transparent': !(value === 'Business') }"></div>
+        </label>
       
-        <li id="radiogroup-option-3" data-todo-colon-tabIndex={active === 3 || active === null ? '0' : '-1'} tabIndex={-1} data-todo-at-click="select(3)" data-todo-at-keydown-space-stop-prevent="select(3)" role="radio" aria-checked="false" :aria-checked="active === 3" data-todo-at-keydown-arrow-up-stop-prevent="onArrowUp(3)" data-todo-at-keydown-arrow-down-stop-prevent="onArrowDown(3)" className="group relative bg-white rounded-lg shadow-sm cursor-pointer focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-indigo-500">
-          <div className="rounded-lg border border-gray-300 bg-white px-6 py-4 hover:border-gray-400 sm:flex sm:justify-between">
-            <div className="flex items-center">
-              <div className="text-sm">
-                <p className="font-medium text-gray-900">
-                  Enterprise
-                </p>
-                <div className="text-gray-500">
-                  <p className="sm:inline">32GB / 12 CPUs</p>
-                  <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
-                  <p className="sm:inline">1024 GB SSD disk</p>
-                </div>
+        <label data-todo-x-radio-group-option="" className="relative block rounded-lg border border-gray-300 bg-white shadow-sm px-6 py-4 cursor-pointer hover:border-gray-400 sm:flex sm:justify-between  focus-within:ring-1 focus-within:ring-offset-2 focus-within:ring-indigo-500" data-todo-x-active-className="ring-1 ring-offset-2 ring-indigo-500">
+<input type="radio" data-todo-x-model="value" name="server_size" value="Enterprise" className="sr-only" aria-labelledby="server-size-3-label" aria-describedby="server-size-3-description-0 server-size-3-description-1">
+          <div className="flex items-center">
+            <div className="text-sm">
+              <p id="server-size-3-label" className="font-medium text-gray-900">
+                Enterprise
+              </p>
+              <div id="server-size-3-description-0" className="text-gray-500">
+                <p className="sm:inline">32GB / 12 CPUs</p>
+                {/* space */}
+                <span className="hidden sm:inline sm:mx-1" aria-hidden="true">·</span>
+                {/* space */}
+                <p className="sm:inline">1024 GB SSD disk</p>
               </div>
             </div>
-            <div className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
-              <div className="font-medium text-gray-900">$240</div>
-              <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
-            </div>
           </div>
-          <div data-todo-colon-className="{ 'border-indigo-500': active === 3, 'border-transparent': !(active === 3) }" className="border-transparent absolute inset-0 rounded-lg border-2 pointer-events-none" aria-hidden="true"></div>
-        </li>
+          <div id="server-size-3-description-1" className="mt-2 flex text-sm sm:mt-0 sm:block sm:ml-4 sm:text-right">
+            <div className="font-medium text-gray-900">$240</div>
+            <div className="ml-1 text-gray-500 sm:ml-0">/mo</div>
+          </div>
+          <div className="border-transparent absolute -inset-px rounded-lg border-2 pointer-events-none" aria-hidden="true" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'border-indigo-500': value === 'Enterprise', 'border-transparent': !(value === 'Enterprise') }"></div>
+        </label>
       
-    </ul>
+    </div>
   </fieldset>
 
     </div>
   </div>
+</div>
 </>
 );
 

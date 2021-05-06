@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="relative bg-gray-900">
@@ -45,6 +46,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

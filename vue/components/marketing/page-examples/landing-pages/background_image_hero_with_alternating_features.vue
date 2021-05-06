@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" _class="overflow-y-auto">
     
     <div class="bg-white">
@@ -192,19 +193,15 @@
                 </div>
                 <div class="py-6 px-5">
                   <div class="grid grid-cols-2 gap-4">
-                  
-                      <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Pricing
-                      </a>
-                  
-                      <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Partners
-                      </a>
-                  
-                      <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                        Company
-                      </a>
-                  
+                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Pricing
+                    </a>
+                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Partners
+                    </a>
+                    <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Company
+                    </a>
                   </div>
                   <div class="mt-6">
                     <a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700">
@@ -518,7 +515,7 @@
 
         <!-- Stats section -->
         <div class="relative bg-gray-900">
-          <div class="h-80 absolute bottom-0 xl:inset-0 xl:h-full xl:w-full">
+          <div class="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
             <div class="h-full w-full xl:grid xl:grid-cols-2">
               <div class="h-full xl:relative xl:col-start-2">
                 <img class="h-full w-full object-cover opacity-25 xl:absolute xl:inset-0" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=2830&amp;q=80&amp;sat=-100" alt="People working on laptops">
@@ -783,6 +780,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

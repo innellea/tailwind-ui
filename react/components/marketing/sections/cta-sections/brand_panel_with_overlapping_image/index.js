@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="relative py-16 bg-white">
+<div className="" style={{}}>
+  
+  <div className="relative py-16 bg-white">
     <div className="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 lg:block" aria-hidden="true"></div>
     <div className="max-w-7xl mx-auto bg-indigo-600 lg:bg-transparent lg:px-8">
       <div className="lg:grid lg:grid-cols-12">
@@ -11,7 +13,7 @@ const Component = (props) => (
           <div className="absolute inset-x-0 h-1/2 bg-gray-50 lg:hidden" aria-hidden="true"></div>
           <div className="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
             <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-              <img className="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="">
+              <img className="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;auto=format&amp;fit=crop&amp;w=934&amp;q=80" alt="">
             </div>
           </div>
         </div>
@@ -44,6 +46,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

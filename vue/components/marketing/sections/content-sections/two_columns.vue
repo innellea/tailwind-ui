@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="py-16 xl:py-36 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div class="max-w-max lg:max-w-7xl mx-auto">
         <div class="relative z-10 mb-8 md:mb-2 md:px-6">
@@ -50,6 +52,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  
+  <div className="bg-white">
     <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-8">
         <div className="space-y-5 sm:space-y-4">
@@ -11,7 +13,7 @@ const Component = (props) => (
           <p className="text-xl text-gray-500">Libero fames augue nisl porttitor nisi, quis. Id ac elit odio vitae elementum enim vitae ullamcorper suspendisse. Vivamus fringilla.</p>
         </div>
         <div className="lg:col-span-2">
-          <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8">
+          <ul className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-12 sm:space-y-0 lg:gap-x-8" data-todo-x-max="1">
             
               <li>
                 <div className="flex items-center space-x-4 lg:space-x-6">
@@ -78,6 +80,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

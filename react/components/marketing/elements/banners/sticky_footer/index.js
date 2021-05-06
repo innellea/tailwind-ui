@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white" style={{minHeight: "16rem"}}>
+<div className="" style={{}}>
+  <div className="bg-white" style={{minHeight: "16rem"}}>
     
   <!--
     Make sure you add some bottom padding to pages that include a sticky banner like this to prevent
@@ -47,6 +48,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

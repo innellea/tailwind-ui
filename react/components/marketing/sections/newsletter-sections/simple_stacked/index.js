@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  
+  <div className="bg-white">
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <h2 className="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
         Want product news and updates?
@@ -20,6 +22,8 @@ const Component = (props) => (
       </form>
     </div>
   </div>
+
+</div>
 </>
 );
 

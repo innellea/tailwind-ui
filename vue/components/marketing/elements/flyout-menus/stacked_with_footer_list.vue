@@ -1,10 +1,11 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 772px;">
       <div class="flex items-center justify-center p-8">
       
     <div class="relative" x-data="Components.popover({ open: true, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
       <button type="button" x-state:on="Item active" x-state:off="Item inactive" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="{ 'text-gray-900': open, 'text-gray-500': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
-        <span>Solutions</span>
+        <span>Resources</span>
         <svg x-state:on="Item active" x-state:off="Item inactive" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" :class="{ 'text-gray-600': open, 'text-gray-400': !(open) }" x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
   </svg>
@@ -110,6 +111,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white">
       <div class="max-w-sm mx-auto py-6">
       
@@ -98,6 +99,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

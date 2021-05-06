@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="min-h-screen">
@@ -136,6 +137,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

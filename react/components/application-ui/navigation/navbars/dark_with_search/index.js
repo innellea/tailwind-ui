@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100" style={{minHeight: "192px"}}>
+<div className="" style={{}}>
+  <div className="bg-gray-100" style={{minHeight: "192px"}}>
     
   <nav data-todo-x-data="{ open: false }" className="bg-gray-800">
     <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -66,7 +67,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
               <div>
                 <button type="button" className="bg-gray-800 rounded-full flex text-sm text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                   <span className="sr-only">Open user menu</span>
-                  <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                  <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                 </button>
               </div>
               
@@ -93,7 +94,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
       <div className="pt-4 pb-3 border-t border-gray-700">
         <div className="flex items-center px-5">
           <div className="flex-shrink-0">
-            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
           </div>
           <div className="ml-3">
             <div className="text-base font-medium text-white">Tom Cook</div>
@@ -116,6 +117,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
   </nav>
 
   </div>
+</div>
 </>
 );
 

@@ -1,4 +1,7 @@
 <template>
+    <div class="" style="">
+  
+
     <div class="bg-gray-100">
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
         <div class="max-w-none mx-auto">
@@ -9,7 +12,7 @@
         <div class="ml-4 mt-4">
           <div class="flex items-center">
             <div class="flex-shrink-0">
-              <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+              <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
             </div>
             <div class="ml-4">
               <h3 class="text-lg leading-6 font-medium text-gray-900">
@@ -85,7 +88,7 @@
                     <div class="px-4 py-4 sm:px-6">
                       <div class="flex items-center justify-between">
                         <div class="text-sm font-medium text-indigo-600 truncate">
-                          Back End Developer
+                          Front End Developer
                         </div>
                         <div class="ml-2 flex-shrink-0 flex">
                           <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -118,7 +121,7 @@
                     <div class="px-4 py-4 sm:px-6">
                       <div class="flex items-center justify-between">
                         <div class="text-sm font-medium text-indigo-600 truncate">
-                          Back End Developer
+                          User Interface Designer
                         </div>
                         <div class="ml-2 flex-shrink-0 flex">
                           <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
@@ -132,7 +135,7 @@
                             <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"></path>
   </svg>
-                            Engineering
+                            Design
                           </div>
                         </div>
                         <div class="ml-2 flex items-center text-sm text-gray-500">
@@ -151,6 +154,7 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

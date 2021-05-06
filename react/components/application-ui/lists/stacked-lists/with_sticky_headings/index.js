@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white py-6">
+<div className="" style={{}}>
+  <div className="bg-white py-6">
     <div className="max-w-xl mx-auto sm:px-6 lg:px-8" style={{height: "26rem"}}>
       
   <nav className="h-full overflow-y-auto" aria-label="Directory">
@@ -622,6 +623,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

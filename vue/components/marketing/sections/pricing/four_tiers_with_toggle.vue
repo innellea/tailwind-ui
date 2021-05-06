@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="max-w-7xl mx-auto py-24 px-4 sm:px-6 lg:px-8">
         <div class="sm:flex sm:flex-col sm:align-center">
@@ -17,6 +19,7 @@
                 <p class="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
                 <p class="mt-8">
                   <span class="text-4xl font-extrabold text-gray-900">$12</span>
+                  <!-- space -->
                   <span class="text-base font-medium text-gray-500">/mo</span>
                 </p>
                 <a href="#" class="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Hobby</a>
@@ -49,6 +52,7 @@
                 <p class="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
                 <p class="mt-8">
                   <span class="text-4xl font-extrabold text-gray-900">$24</span>
+                  <!-- space -->
                   <span class="text-base font-medium text-gray-500">/mo</span>
                 </p>
                 <a href="#" class="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Freelancer</a>
@@ -88,6 +92,7 @@
                 <p class="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
                 <p class="mt-8">
                   <span class="text-4xl font-extrabold text-gray-900">$32</span>
+                  <!-- space -->
                   <span class="text-base font-medium text-gray-500">/mo</span>
                 </p>
                 <a href="#" class="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Startup</a>
@@ -134,6 +139,7 @@
                 <p class="mt-4 text-sm text-gray-500">All the basics for starting a new business</p>
                 <p class="mt-8">
                   <span class="text-4xl font-extrabold text-gray-900">$48</span>
+                  <!-- space -->
                   <span class="text-base font-medium text-gray-500">/mo</span>
                 </p>
                 <a href="#" class="mt-8 block w-full bg-gray-800 border border-gray-800 rounded-md py-2 text-sm font-semibold text-white text-center hover:bg-gray-900">Buy Enterprise</a>
@@ -198,6 +204,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

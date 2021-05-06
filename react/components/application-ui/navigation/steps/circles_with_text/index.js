@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  <div className="bg-white">
     <div className="px-4 flex justify-center sm:px-6 lg:px-8 py-12">
       <div className="min-w-0">
         
@@ -12,9 +13,9 @@ const Component = (props) => (
       
         <li className="relative pb-10">
           
-            {/* Complete Step */}
-            <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-indigo-600" aria-hidden="true"></div>
-            <a href="/" className="relative flex items-start group">
+            
+              <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-indigo-600" aria-hidden="true"></div>
+            <a href="/" className="relative flex items-start group" data-todo-x-description="Complete Step">
               <span className="h-9 flex items-center">
                 <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full group-hover:bg-indigo-800">
                   <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -31,9 +32,9 @@ const Component = (props) => (
       
         <li className="relative pb-10">
           
-            {/* Current Step */}
-            <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-            <a href="/" className="relative flex items-start group" aria-current="step">
+            
+              <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
+            <a href="/" className="relative flex items-start group" aria-current="step" data-todo-x-description="Current Step">
               <span className="h-9 flex items-center" aria-hidden="true">
                 <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full">
                   <span className="h-2.5 w-2.5 bg-indigo-600 rounded-full"></span>
@@ -50,7 +51,7 @@ const Component = (props) => (
           
             
               <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-            <a href="/" className="relative flex items-start group">
+            <a href="/" className="relative flex items-start group" data-todo-x-description="Upcoming Step">
               <span className="h-9 flex items-center" aria-hidden="true">
                 <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                   <span className="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -67,7 +68,7 @@ const Component = (props) => (
           
             
               <div className="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-            <a href="/" className="relative flex items-start group">
+            <a href="/" className="relative flex items-start group" data-todo-x-description="Upcoming Step">
               <span className="h-9 flex items-center" aria-hidden="true">
                 <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                   <span className="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -82,7 +83,7 @@ const Component = (props) => (
       
         <li className="relative ">
           
-            <a href="/" className="relative flex items-start group">
+            <a href="/" className="relative flex items-start group" data-todo-x-description="Upcoming Step">
               <span className="h-9 flex items-center" aria-hidden="true">
                 <span className="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                   <span className="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -101,6 +102,7 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+</div>
 </>
 );
 

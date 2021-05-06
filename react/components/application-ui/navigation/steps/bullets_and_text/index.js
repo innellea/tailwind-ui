@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  <div className="bg-white">
     
   <div className="py-12 px-4 sm:px-6 lg:px-8">
     <nav className="flex justify-center" aria-label="Progress">
@@ -11,8 +12,7 @@ const Component = (props) => (
         
           <li>
             
-              {/* Complete Step */}
-              <a href="/" className="group">
+              <a href="/" className="group" data-todo-x-description="Complete Step">
                 <span className="flex items-start">
                   <span className="flex-shrink-0 relative h-5 w-5 flex items-center justify-center">
                     <svg className="h-full w-full text-indigo-600 group-hover:text-indigo-800" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -26,8 +26,7 @@ const Component = (props) => (
         
           <li>
             
-              {/* Current Step */}
-              <a href="/" className="flex items-start" aria-current="step">
+              <a href="/" className="flex items-start" aria-current="step" data-todo-x-description="Current Step">
                 <span className="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true">
                   <span className="absolute h-4 w-4 rounded-full bg-indigo-200"></span>
                   <span className="relative block w-2 h-2 bg-indigo-600 rounded-full"></span>
@@ -38,8 +37,7 @@ const Component = (props) => (
         
           <li>
             
-              {/* Upcoming Step */}
-              <a href="/" className="group">
+              <a href="/" className="group" data-todo-x-description="Upcoming Step">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true">
                     <div className="h-2 w-2 bg-gray-300 rounded-full group-hover:bg-gray-400"></div>
@@ -51,8 +49,7 @@ const Component = (props) => (
         
           <li>
             
-              {/* Upcoming Step */}
-              <a href="/" className="group">
+              <a href="/" className="group" data-todo-x-description="Upcoming Step">
                 <div className="flex items-start">
                   <div className="flex-shrink-0 h-5 w-5 relative flex items-center justify-center" aria-hidden="true">
                     <div className="h-2 w-2 bg-gray-300 rounded-full group-hover:bg-gray-400"></div>
@@ -67,6 +64,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

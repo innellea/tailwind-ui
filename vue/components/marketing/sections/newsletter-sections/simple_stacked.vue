@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
         <h2 class="inline text-3xl font-extrabold tracking-tight text-gray-900 sm:block sm:text-4xl">
@@ -16,6 +18,8 @@
         </form>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

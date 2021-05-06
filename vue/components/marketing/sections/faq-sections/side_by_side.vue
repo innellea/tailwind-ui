@@ -1,11 +1,13 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-gray-50">
       <div class="max-w-7xl mx-auto py-12 px-4 divide-y-2 divide-gray-200 sm:px-6 lg:py-16 lg:px-8">
         <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
           Frequently asked questions
         </h2>
         <div class="mt-6">
-          <dl class="space-y-8 divide-y divide-gray-200">
+          <dl class="space-y-8 divide-y divide-gray-200" x-max="1">
           
               <div class="pt-6 md:grid md:grid-cols-12 md:gap-8">
                 <dt class="text-base font-medium text-gray-900 md:col-span-5">
@@ -77,6 +79,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

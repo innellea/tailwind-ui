@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="p-8 bg-gray-100" style="min-height: 360px;">
       <div class="mx-auto w-64 text-right">
       
@@ -40,6 +41,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

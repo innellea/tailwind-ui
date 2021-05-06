@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
-    
+<div className="" style={{}}>
+  <div className="bg-white">
     
   <nav data-todo-x-data="{ open: false }" className="bg-light-blue-500" aria-label="Global">
     <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -75,7 +75,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
             <div>
               <button type="button" className="bg-light-blue-500 rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-500 focus:ring-white" id="user-menu" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                 <span className="sr-only">Open user menu</span>
-                <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="">
+                <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
               </button>
             </div>
             
@@ -109,11 +109,11 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
       <div className="pt-4 pb-3 border-t border-light-blue-500">
         <div className="flex items-center px-4">
           <div className="flex-shrink-0">
-            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="">
+            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
           </div>
           <div className="ml-3">
-            <div className="text-base font-medium text-white">Tom Cook</div>
-            <div className="text-sm font-medium text-light-blue-200">tom@example.com</div>
+            <div className="text-base font-medium text-white">Floyd Miles</div>
+            <div className="text-sm font-medium text-light-blue-200">floydmiles@example.com</div>
           </div>
           <button className="ml-auto flex-shrink-0 bg-light-blue-500 rounded-full p-1 text-light-blue-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-500 focus:ring-white">
             <span className="sr-only">View notifications</span>
@@ -148,22 +148,25 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
           </a>
         </div>
       </li>
-      <li className="flex">
-        <div className="flex items-center">
-          <svg className="flex-shrink-0 w-6 h-full text-gray-200" preserveraspectratio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
-          </svg>
-          <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Projects</a>
-        </div>
-      </li>
-      <li className="flex">
-        <div className="flex items-center">
-          <svg className="flex-shrink-0 w-6 h-full text-gray-200" preserveraspectratio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
-          </svg>
-          <a href="/" aria-current="page" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Project Nero</a>
-        </div>
-      </li>
+      
+        <li className="flex">
+          <div className="flex items-center">
+            <svg className="flex-shrink-0 w-6 h-full text-gray-200" preserveraspectratio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
+            </svg>
+            <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Projects</a>
+          </div>
+        </li>
+      
+        <li className="flex">
+          <div className="flex items-center">
+            <svg className="flex-shrink-0 w-6 h-full text-gray-200" preserveraspectratio="none" viewBox="0 0 24 44" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M.293 0l22 22-22 22h1.414l22-22-22-22H.293z"></path>
+            </svg>
+            <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Project Nero</a>
+          </div>
+        </li>
+      
     </ol>
   </nav>
 
@@ -249,58 +252,49 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
           </div>
         </div>
 
-        <fieldset data-todo-x-data="radioGroup()">
+        <fieldset data-todo-x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" data-todo-x-init="init()">
           <legend className="text-sm font-medium text-gray-900">
             Privacy
           </legend>
 
-          <div className="mt-1 bg-white rounded-md shadow-sm -space-y-px" data-todo-x-ref="radiogroup">
+          <div className="mt-1 bg-white rounded-md shadow-sm -space-y-px">
             
-              
-                <div data-todo-colon-className="{ 'border-gray-200': !(active === 0), 'bg-light-blue-50 border-light-blue-200 z-10': active === 0 }" className="relative border rounded-tl-md rounded-tr-md p-4 flex">
-                  <div className="flex items-center h-5">
-                    <input id="settings-option-0" name="privacy_setting" type="radio" data-todo-at-click="select(0)" data-todo-at-keydown-space="select(0)" data-todo-at-keydown-arrow-up="onArrowUp(0)" data-todo-at-keydown-arrow-down="onArrowDown(0)" className="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300" checked="">
-                  </div>
-                  <label htmlFor="settings-option-0" className="ml-3 flex flex-col cursor-pointer">
-                    <span data-todo-colon-className="{ 'text-light-blue-900': active === 0, 'text-gray-900': !(active === 0) }" className="block text-sm font-medium">
-                      Public access
-                    </span>
-                    <span data-todo-colon-className="{ 'text-light-blue-700': active === 0, 'text-gray-500': !(active === 0) }" className="block text-sm">
-                      This project would be available to anyone who has the link
-                    </span>
-                  </label>
+              <label data-todo-x-radio-group-option="" className="border-gray-200 rounded-tl-md rounded-tr-md  relative border p-4 flex cursor-pointer " data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'bg-light-blue-50 border-light-blue-200 z-10': value === 'Public access', 'border-gray-200': !(value === 'Public access') }">
+                <input type="radio" data-todo-x-model="value" name="privacy_setting" value="Public access" className="h-4 w-4 mt-0.5 cursor-pointer text-light-blue-600 border-gray-300 focus:ring-light-blue-500" aria-labelledby="privacy-setting-0-label" aria-describedby="privacy-setting-0-description">
+                <div className="ml-3 flex flex-col">
+                  <span id="privacy-setting-0-label" className="text-gray-900 block text-sm font-medium" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-900': value === 'Public access', 'text-gray-900': !(value === 'Public access') }">
+                    Public access
+                  </span>
+                  <span id="privacy-setting-0-description" className="text-gray-500 block text-sm" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-700': value === 'Public access', 'text-gray-500': !(value === 'Public access') }">
+                    This project would be available to anyone who has the link
+                  </span>
                 </div>
-              
-              
-                <div data-todo-colon-className="{ 'border-gray-200': !(active === 1), 'bg-light-blue-50 border-light-blue-200 z-10': active === 1 }" className="relative border border-gray-200 p-4 flex">
-                  <div className="flex items-center h-5">
-                    <input id="settings-option-1" name="privacy_setting" type="radio" data-todo-at-click="select(1)" data-todo-at-keydown-space="select(1)" data-todo-at-keydown-arrow-up="onArrowUp(1)" data-todo-at-keydown-arrow-down="onArrowDown(1)" className="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300">
-                  </div>
-                  <label htmlFor="settings-option-1" className="ml-3 flex flex-col cursor-pointer">
-                    <span data-todo-colon-className="{ 'text-light-blue-900': active === 1, 'text-gray-900': !(active === 1) }" className="block text-sm font-medium">
-                      Private to Project Members
-                    </span>
-                    <span data-todo-colon-className="{ 'text-light-blue-700': active === 1, 'text-gray-500': !(active === 1) }" className="block text-sm">
-                      Only members of this project would be able to access
-                    </span>
-                  </label>
+              </label>
+            
+              <label data-todo-x-radio-group-option="" className="border-gray-200   relative border p-4 flex cursor-pointer " data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'bg-light-blue-50 border-light-blue-200 z-10': value === 'Private to Project Members', 'border-gray-200': !(value === 'Private to Project Members') }">
+                <input type="radio" data-todo-x-model="value" name="privacy_setting" value="Private to Project Members" className="h-4 w-4 mt-0.5 cursor-pointer text-light-blue-600 border-gray-300 focus:ring-light-blue-500" aria-labelledby="privacy-setting-1-label" aria-describedby="privacy-setting-1-description">
+                <div className="ml-3 flex flex-col">
+                  <span id="privacy-setting-1-label" className="text-gray-900 block text-sm font-medium" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-900': value === 'Private to Project Members', 'text-gray-900': !(value === 'Private to Project Members') }">
+                    Private to Project Members
+                  </span>
+                  <span id="privacy-setting-1-description" className="text-gray-500 block text-sm" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-700': value === 'Private to Project Members', 'text-gray-500': !(value === 'Private to Project Members') }">
+                    Only members of this project would be able to access
+                  </span>
                 </div>
-              
-              
-                <div data-todo-colon-className="{ 'border-gray-200': !(active === 2), 'bg-light-blue-50 border-light-blue-200 z-10': active === 2 }" className="relative border border-gray-200 rounded-bl-md rounded-br-md p-4 flex">
-                  <div className="flex items-center h-5">
-                    <input id="settings-option-2" name="privacy_setting" type="radio" data-todo-at-click="select(2)" data-todo-at-keydown-space="select(2)" data-todo-at-keydown-arrow-up="onArrowUp(2)" data-todo-at-keydown-arrow-down="onArrowDown(2)" className="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300">
-                  </div>
-                  <label htmlFor="settings-option-2" className="ml-3 flex flex-col cursor-pointer">
-                    <span data-todo-colon-className="{ 'text-light-blue-900': active === 2, 'text-gray-900': !(active === 2) }" className="block text-sm font-medium">
-                      Private to you
-                    </span>
-                    <span data-todo-colon-className="{ 'text-light-blue-700': active === 2, 'text-gray-500': !(active === 2) }" className="block text-sm">
-                      You are the only one able to access this project
-                    </span>
-                  </label>
+              </label>
+            
+              <label data-todo-x-radio-group-option="" className="border-gray-200  rounded-bl-md rounded-br-md relative border p-4 flex cursor-pointer " data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'bg-light-blue-50 border-light-blue-200 z-10': value === 'Private to you', 'border-gray-200': !(value === 'Private to you') }">
+                <input type="radio" data-todo-x-model="value" name="privacy_setting" value="Private to you" className="h-4 w-4 mt-0.5 cursor-pointer text-light-blue-600 border-gray-300 focus:ring-light-blue-500" aria-labelledby="privacy-setting-2-label" aria-describedby="privacy-setting-2-description">
+                <div className="ml-3 flex flex-col">
+                  <span id="privacy-setting-2-label" className="text-gray-900 block text-sm font-medium" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-900': value === 'Private to you', 'text-gray-900': !(value === 'Private to you') }">
+                    Private to you
+                  </span>
+                  <span id="privacy-setting-2-description" className="text-gray-500 block text-sm" data-todo-x-state-on="Checked" data-todo-x-state-off="Not Checked" data-todo-colon-className="{ 'text-light-blue-700': value === 'Private to you', 'text-gray-500': !(value === 'Private to you') }">
+                    You are the only one able to access this project
+                  </span>
                 </div>
-              
+              </label>
+            
           </div>
         </fieldset>
 
@@ -324,6 +318,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
   </main>
 
   </div>
+</div>
 </>
 );
 

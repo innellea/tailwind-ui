@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div class="pb-16 xl:flex xl:items-center xl:justify-between">
@@ -68,7 +70,7 @@
                     <svg class="flex-shrink-0 h-6 w-6 text-green-500" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
   </svg>
-                    <span class="ml-3 text-base text-gray-500">Vitae in pulvinar odio id utobortis in inter.</span>
+                    <span class="ml-3 text-base text-gray-500">Dolor quo assumenda.</span>
                   </li>
               
               
@@ -76,7 +78,7 @@
                     <svg class="flex-shrink-0 h-6 w-6 text-green-500" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
   </svg>
-                    <span class="ml-3 text-base text-gray-500">Sed sed id viverra viverra augue eget massa.</span>
+                    <span class="ml-3 text-base text-gray-500">Esse rerum distinctio maiores maiores.</span>
                   </li>
               
               
@@ -84,7 +86,7 @@
                     <svg class="flex-shrink-0 h-6 w-6 text-green-500" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
   </svg>
-                    <span class="ml-3 text-base text-gray-500">Urna, gravida amet, a, integer venenatis.</span>
+                    <span class="ml-3 text-base text-gray-500">Eos enim officiis ratione.</span>
                   </li>
               
               
@@ -92,7 +94,7 @@
                     <svg class="flex-shrink-0 h-6 w-6 text-green-500" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
   </svg>
-                    <span class="ml-3 text-base text-gray-500">Lobortis sed pharetra amet vitae eleifend.</span>
+                    <span class="ml-3 text-base text-gray-500">Tempore molestiae aliquid excepturi.</span>
                   </li>
               
               
@@ -100,7 +102,7 @@
                     <svg class="flex-shrink-0 h-6 w-6 text-green-500" x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
   </svg>
-                    <span class="ml-3 text-base text-gray-500">Ullamcorper blandit a consequat donec elit aoreet.</span>
+                    <span class="ml-3 text-base text-gray-500">Perspiciatis eveniet inventore eum et aliquam.</span>
                   </li>
               
             </ul>
@@ -108,6 +110,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 16rem;">
     
     <div class="fixed bottom-0 inset-x-0 pb-2 sm:pb-5">
@@ -39,6 +40,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

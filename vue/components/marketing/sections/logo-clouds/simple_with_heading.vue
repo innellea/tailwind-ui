@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white">
     
     <div class="bg-indigo-200 bg-opacity-25">
@@ -25,6 +26,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="p-8 flex items-center justify-center bg-white">
       <div class="max-w-xl w-full -mx-auto">
       
@@ -15,6 +16,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div>
+<div className="" style={{}}>
+  <div>
     
   <div className="min-h-screen bg-gray-100">
-    <header data-todo-x-data="{ open: false }" className="bg-white shadow">
+    <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-16" data-todo-x-data="Components.popover({ open: false, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
           <div className="flex px-2 lg:px-0">
             <div className="flex-shrink-0 flex items-center">
               <a href="/">
@@ -16,18 +17,23 @@ const Component = (props) => (
               </a>
             </div>
             <nav aria-label="Global" className="hidden lg:ml-6 lg:flex lg:items-center lg:space-x-4">
-              <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
-                Dashboard
-              </a>
-              <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
-                Jobs
-              </a>
-              <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
-                Applicants
-              </a>
-              <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
-                Company
-              </a>
+              
+                <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
+                  Dashboard
+                </a>
+              
+                <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
+                  Jobs
+                </a>
+              
+                <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
+                  Applicants
+                </a>
+              
+                <a href="/" className="px-3 py-2 text-gray-900 text-sm font-medium">
+                  Company
+                </a>
+              
             </nav>
           </div>
           <div className="flex-1 flex items-center justify-center px-2 lg:ml-6 lg:justify-end">
@@ -45,18 +51,79 @@ const Component = (props) => (
           </div>
           <div className="flex items-center lg:hidden">
             {/* Mobile menu button */}
-            <button type="button" data-todo-at-click="open = !open" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
+            <button type="button" className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" data-todo-at-click="toggle" data-todo-at-mousedown="if (open) $event.preventDefault()" aria-expanded="false" data-todo-colon-aria-expanded="open.toString()">
               <span className="sr-only">Open main menu</span>
-              {/* Icon when menu is closed. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': open, 'block': !open }" className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
-</svg>
-              {/* Icon when menu is open. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': !open, 'block': open }" className="hidden h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
             </button>
           </div>
+          
+            <div className="lg:hidden" data-todo-x-description="Mobile menu, show/hide based on mobile menu state.">
+              
+                <div data-todo-x-show="open" data-todo-x-transition-enter="duration-150 ease-out" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="duration-150 ease-in" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" data-todo-x-description="Mobile menu overlay, show/hide based on mobile menu state." className="z-20 fixed inset-0 bg-black bg-opacity-25" aria-hidden="true" data-todo-at-click="toggle"></div>
+              
+
+              
+                <div data-todo-x-show="open" data-todo-x-transition-enter="duration-150 ease-out" data-todo-x-transition-enter-start="opacity-0 scale-95" data-todo-x-transition-enter-end="opacity-100 scale-100" data-todo-x-transition-leave="duration-150 ease-in" data-todo-x-transition-leave-start="opacity-100 scale-100" data-todo-x-transition-leave-end="opacity-0 scale-95" data-todo-x-description="Mobile menu, show/hide based on mobile menu state." className="z-30 absolute top-0 right-0 max-w-none w-full p-2 transition transform origin-top" data-todo-x-ref="panel" data-todo-at-click-away="open = false">
+                  <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
+                    <div className="pt-3 pb-2">
+                      <div className="flex items-center justify-between px-4">
+                        <div>
+                          <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow">
+                        </div>
+                        <div className="-mr-2">
+                          <button type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" data-todo-at-click="toggle">
+                            <span className="sr-only">Close menu</span>
+                            <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+</svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div className="mt-3 px-2 space-y-1">
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Dashboard</a>
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Jobs</a>
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Applicants</a>
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company</a>
+                        
+                      </div>
+                    </div>
+                    <div className="pt-4 pb-2">
+                      <div className="flex items-center px-5">
+                        <div className="flex-shrink-0">
+                          <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
+                        </div>
+                        <div className="ml-3">
+                          <div className="text-base font-medium text-gray-800">Whitney Francis</div>
+                          <div className="text-sm font-medium text-gray-500">whitney@example.com</div>
+                        </div>
+                        <button className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                          <span className="sr-only">View notifications</span>
+                          <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+</svg>
+                        </button>
+                      </div>
+                      <div className="mt-3 px-2 space-y-1">
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
+                        
+                          <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+          
           <div className="hidden lg:ml-4 lg:flex lg:items-center">
             <button type="button" className="flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
               <span className="sr-only">View notifications</span>
@@ -75,9 +142,13 @@ const Component = (props) => (
               </div>
               
                 <div data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-show="open" data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
                 </div>
               
             </div>
@@ -108,83 +179,37 @@ const Component = (props) => (
                     </a>
                   </div>
                 </li>
-                <li>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                    </svg>
-                    <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                    </svg>
-                    <a href="/" aria-current="page" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Front End Developer</a>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-center">
-                    <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                      <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
-                    </svg>
-                    <a href="/" aria-current="page" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Applicants</a>
-                  </div>
-                </li>
+                
+                  <li>
+                    <div className="flex items-center">
+                      <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                      </svg>
+                      <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Jobs</a>
+                    </div>
+                  </li>
+                
+                  <li>
+                    <div className="flex items-center">
+                      <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                      </svg>
+                      <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700">Front End Developer</a>
+                    </div>
+                  </li>
+                
+                  <li>
+                    <div className="flex items-center">
+                      <svg className="flex-shrink-0 h-5 w-5 text-gray-300" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                        <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z"></path>
+                      </svg>
+                      <a href="/" className="ml-4 text-sm font-medium text-gray-500 hover:text-gray-700" aria-current="page">Applicants</a>
+                    </div>
+                  </li>
+                
               </ol>
             </div>
           </nav>
-        </div>
-      </div>
-
-      <div data-todo-x-description="Mobile menu overlay, show/hide based on mobile menu state." data-todo-x-show="open" data-todo-x-transition-enter="duration-150 ease-out" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="duration-150 ease-in" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" className="z-20 fixed inset-0 bg-black bg-opacity-25 lg:hidden" aria-hidden="true"></div>
-
-      <div data-todo-x-description="Mobile menu, show/hide based on mobile menu state." data-todo-x-show="open" data-todo-x-transition-enter="duration-150 ease-out" data-todo-x-transition-enter-start="opacity-0 scale-95" data-todo-x-transition-enter-end="opacity-100 scale-100" data-todo-x-transition-leave="duration-150 ease-in" data-todo-x-transition-leave-start="opacity-100 scale-100" data-todo-x-transition-leave-end="opacity-0 scale-95" className="z-30 absolute top-0 right-0 max-w-none w-full p-2 transition transform origin-top lg:hidden">
-        <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y divide-gray-200">
-          <div className="pt-3 pb-2">
-            <div className="flex items-center justify-between px-4">
-              <div>
-                <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg" alt="Workflow">
-              </div>
-              <div className="-mr-2">
-                <button data-todo-at-click="open = false" type="button" className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
-                  <span className="sr-only">Close menu</span>
-                  <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-</svg>
-                </button>
-              </div>
-            </div>
-            <div className="mt-3 px-2 space-y-1">
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Dashboard</a>
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Jobs</a>
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Applicants</a>
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company</a>
-            </div>
-          </div>
-          <div className="pt-4 pb-2">
-            <div className="flex items-center px-5">
-              <div className="flex-shrink-0">
-                <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
-              </div>
-              <div className="ml-3">
-                <div className="text-base font-medium text-gray-800">Whitney Francis</div>
-                <div className="text-sm font-medium text-gray-500">whitney@example.com</div>
-              </div>
-              <button className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
-                <span className="sr-only">View notifications</span>
-                <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
-</svg>
-              </button>
-            </div>
-            <div className="mt-3 px-2 space-y-1">
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
-              <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
-            </div>
-          </div>
         </div>
       </div>
     </header>
@@ -275,36 +300,39 @@ const Component = (props) => (
                     </dt>
                     <dd className="mt-1 text-sm text-gray-900">
                       <ul className="border border-gray-200 rounded-md divide-y divide-gray-200">
-                        <li className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                          <div className="w-0 flex-1 flex items-center">
-                            <svg className="flex-shrink-0 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        
+                          <li className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                            <div className="w-0 flex-1 flex items-center">
+                              <svg className="flex-shrink-0 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clipRule="evenodd"></path>
 </svg>
-                            <span className="ml-2 flex-1 w-0 truncate">
-                              resume_back_end_developer.pdf
-                            </span>
-                          </div>
-                          <div className="ml-4 flex-shrink-0">
-                            <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
-                              Download
-                            </a>
-                          </div>
-                        </li>
-                        <li className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
-                          <div className="w-0 flex-1 flex items-center">
-                            <svg className="flex-shrink-0 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <span className="ml-2 flex-1 w-0 truncate">
+                                resume_front_end_developer.pdf
+                              </span>
+                            </div>
+                            <div className="ml-4 flex-shrink-0">
+                              <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
+                                Download
+                              </a>
+                            </div>
+                          </li>
+                        
+                          <li className="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+                            <div className="w-0 flex-1 flex items-center">
+                              <svg className="flex-shrink-0 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/paper-clip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 0110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z" clipRule="evenodd"></path>
 </svg>
-                            <span className="ml-2 flex-1 w-0 truncate">
-                              coverletter_back_end_developer.pdf
-                            </span>
-                          </div>
-                          <div className="ml-4 flex-shrink-0">
-                            <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
-                              Download
-                            </a>
-                          </div>
-                        </li>
+                              <span className="ml-2 flex-1 w-0 truncate">
+                                coverletter_front_end_developer.pdf
+                              </span>
+                            </div>
+                            <div className="ml-4 flex-shrink-0">
+                              <a href="/" className="font-medium text-blue-600 hover:text-blue-500">
+                                Download
+                              </a>
+                            </div>
+                          </li>
+                        
                       </ul>
                     </dd>
                   </div>
@@ -329,7 +357,7 @@ const Component = (props) => (
                       <li>
                         <div className="flex space-x-3">
                           <div className="flex-shrink-0">
-                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                           </div>
                           <div>
                             <div className="text-sm">
@@ -340,7 +368,9 @@ const Component = (props) => (
                             </div>
                             <div className="mt-2 text-sm space-x-2">
                               <span className="text-gray-500 font-medium">4d ago</span>
+                              {/* space */}
                               <span className="text-gray-500 font-medium">·</span>
+                              {/* space */}
                               <button type="button" className="text-gray-900 font-medium">Reply</button>
                             </div>
                           </div>
@@ -350,7 +380,7 @@ const Component = (props) => (
                       <li>
                         <div className="flex space-x-3">
                           <div className="flex-shrink-0">
-                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                           </div>
                           <div>
                             <div className="text-sm">
@@ -361,7 +391,9 @@ const Component = (props) => (
                             </div>
                             <div className="mt-2 text-sm space-x-2">
                               <span className="text-gray-500 font-medium">4d ago</span>
+                              {/* space */}
                               <span className="text-gray-500 font-medium">·</span>
+                              {/* space */}
                               <button type="button" className="text-gray-900 font-medium">Reply</button>
                             </div>
                           </div>
@@ -371,7 +403,7 @@ const Component = (props) => (
                       <li>
                         <div className="flex space-x-3">
                           <div className="flex-shrink-0">
-                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                            <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                           </div>
                           <div>
                             <div className="text-sm">
@@ -382,7 +414,9 @@ const Component = (props) => (
                             </div>
                             <div className="mt-2 text-sm space-x-2">
                               <span className="text-gray-500 font-medium">4d ago</span>
+                              {/* space */}
                               <span className="text-gray-500 font-medium">·</span>
+                              {/* space */}
                               <button type="button" className="text-gray-900 font-medium">Reply</button>
                             </div>
                           </div>
@@ -439,11 +473,10 @@ const Component = (props) => (
                       <div className="relative flex space-x-3">
                         <div>
                           <span className="h-8 w-8 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white">
-                            
-                              <svg className="h-5 w-5 text-white" data-todo-x-description="Heroicon name: solid/user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/user" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd"></path>
 </svg>
-                            </span>
+                          </span>
                         </div>
                         <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
@@ -464,11 +497,10 @@ const Component = (props) => (
                       <div className="relative flex space-x-3">
                         <div>
                           <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                            
-                              <svg className="h-5 w-5 text-white" data-todo-x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path>
 </svg>
-                            </span>
+                          </span>
                         </div>
                         <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
@@ -489,11 +521,10 @@ const Component = (props) => (
                       <div className="relative flex space-x-3">
                         <div>
                           <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            
-                              <svg className="h-5 w-5 text-white" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
-                            </span>
+                          </span>
                         </div>
                         <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
@@ -514,11 +545,10 @@ const Component = (props) => (
                       <div className="relative flex space-x-3">
                         <div>
                           <span className="h-8 w-8 rounded-full bg-blue-500 flex items-center justify-center ring-8 ring-white">
-                            
-                              <svg className="h-5 w-5 text-white" data-todo-x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/thumb-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z"></path>
 </svg>
-                            </span>
+                          </span>
                         </div>
                         <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
@@ -537,11 +567,10 @@ const Component = (props) => (
                       <div className="relative flex space-x-3">
                         <div>
                           <span className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center ring-8 ring-white">
-                            
-                              <svg className="h-5 w-5 text-white" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="w-5 h-5 text-white" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
-                            </span>
+                          </span>
                         </div>
                         <div className="min-w-0 flex-1 pt-1.5 flex justify-between space-x-4">
                           <div>
@@ -569,6 +598,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

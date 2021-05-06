@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+<div className="" style={{}}>
+  
+  <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
     <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <svg className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img" aria-labelledby="svg-workcation">
         <title id="svg-workcation">Workcation</title>
@@ -26,7 +28,7 @@ const Component = (props) => (
           <footer className="mt-8">
             <div className="md:flex md:items-center md:justify-center">
               <div className="md:flex-shrink-0">
-                <img className="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                <img className="mx-auto h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
               </div>
               <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
                 <div className="text-base font-medium text-gray-900">Judith Black</div>
@@ -43,6 +45,8 @@ const Component = (props) => (
       </div>
     </div>
   </section>
+
+</div>
 </>
 );
 

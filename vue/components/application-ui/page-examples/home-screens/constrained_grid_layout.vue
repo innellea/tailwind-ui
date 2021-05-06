@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="min-h-screen bg-gray-100">
@@ -35,9 +36,13 @@
                 </div>
               
                   <transition enter-active-class="undefined" enter-class="undefined" enter-to-class="undefined" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95"><div x-description="Dropdown menu, show/hide based on menu state." v-if="open" class="origin-top-right z-40 absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                  
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
                   </div></transition>
               
               </div>
@@ -53,19 +58,19 @@
                         Home
                       </a>
                   
-                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                         Profile
                       </a>
                   
-                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                         Resources
                       </a>
                   
-                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                         Company Directory
                       </a>
                   
-                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                      <a href="#" class="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                         Openings
                       </a>
                   
@@ -128,11 +133,17 @@
                       </div>
                     </div>
                     <div class="mt-3 px-2 space-y-1">
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Home</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Profile</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Resources</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company Directory</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Openings</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Home</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Profile</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Resources</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company Directory</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Openings</a>
+                    
                     </div>
                   </div>
                   <div class="pt-4 pb-2">
@@ -141,8 +152,8 @@
                         <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                       </div>
                       <div class="ml-3 min-w-0 flex-1">
-                        <div class="text-base font-medium text-gray-800 truncate">Rebecca Nicholas</div>
-                        <div class="text-sm font-medium text-gray-500 truncate">rebecca.nicholas@example.com</div>
+                        <div class="text-base font-medium text-gray-800 truncate">Chelsea Hagon</div>
+                        <div class="text-sm font-medium text-gray-500 truncate">chelseahagon@example.com</div>
                       </div>
                       <button class="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                         <span class="sr-only">View notifications</span>
@@ -152,9 +163,13 @@
                       </button>
                     </div>
                     <div class="mt-3 px-2 space-y-1">
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
-                      <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
+                    
+                        <a href="#" class="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                    
                     </div>
                   </div>
                 </div>
@@ -182,8 +197,8 @@
                         </div>
                         <div class="mt-4 text-center sm:mt-0 sm:pt-1 sm:text-left">
                           <p class="text-sm font-medium text-gray-600">Welcome back,</p>
-                          <p class="text-xl font-bold text-gray-900 sm:text-2xl">Rebecca Nicholas</p>
-                          <p class="text-sm font-medium text-gray-600">Product Designer</p>
+                          <p class="text-xl font-bold text-gray-900 sm:text-2xl">Chelsea Hagon</p>
+                          <p class="text-sm font-medium text-gray-600">Human Resources Manager</p>
                         </div>
                       </div>
                       <div class="mt-5 flex justify-center sm:mt-0">
@@ -570,6 +585,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

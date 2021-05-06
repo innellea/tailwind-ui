@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-white">
       <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
@@ -11,7 +13,6 @@
             
                 <li class="sm:py-8">
                   <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                    <!-- Image -->
                     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                       <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=1024&amp;h=1024&amp;q=80" alt="">
                     </div>
@@ -49,7 +50,6 @@
             
                 <li class="sm:py-8">
                   <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                    <!-- Image -->
                     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                       <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=1024&amp;h=1024&amp;q=80" alt="">
                     </div>
@@ -60,7 +60,7 @@
                           <p class="text-indigo-600">Co-Founder / CTO</p>
                         </div>
                         <div class="text-lg">
-                          <p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
+                          <p class="text-gray-500">Turpis lectus et amet elementum. Mi duis integer sed in vitae consequat. Nam vitae, in felis mi dui tempus. Porta at turpis eu odio. Et, sed duis in blandit bibendum accumsan. Purus viverra facilisi suspendisse quis est.</p>
                         </div>
                         <ul class="flex space-x-5">
                           <li>
@@ -87,7 +87,6 @@
             
                 <li class="sm:py-8">
                   <div class="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
-                    <!-- Image -->
                     <div class="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
                       <img class="object-cover shadow-lg rounded-lg" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=1024&amp;h=1024&amp;q=80" alt="">
                     </div>
@@ -98,7 +97,7 @@
                           <p class="text-indigo-600">Manager, Business Relations</p>
                         </div>
                         <div class="text-lg">
-                          <p class="text-gray-500">Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.</p>
+                          <p class="text-gray-500">Aliquet adipiscing lectus praesent cras sed quis lectus egestas erat. Bibendum curabitur eget habitant feugiat nec faucibus eu lorem suscipit. Vitae vitae tempor enim eget lacus nulla leo.</p>
                         </div>
                         <ul class="flex space-x-5">
                           <li>
@@ -128,6 +127,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

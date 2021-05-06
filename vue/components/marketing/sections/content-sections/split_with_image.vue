@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="relative bg-white">
       <div class="lg:absolute lg:inset-0">
         <div class="lg:absolute lg:inset-y-0 lg:left-0 lg:w-1/2">
@@ -29,6 +31,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

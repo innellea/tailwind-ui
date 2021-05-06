@@ -3,13 +3,15 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-50">
+<div className="" style={{}}>
+  
+  <div className="bg-gray-50">
     <div className="max-w-7xl mx-auto py-12 px-4 divide-y-2 divide-gray-200 sm:px-6 lg:py-16 lg:px-8">
       <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
         Frequently asked questions
       </h2>
       <div className="mt-6">
-        <dl className="space-y-8 divide-y divide-gray-200">
+        <dl className="space-y-8 divide-y divide-gray-200" data-todo-x-max="1">
           
             <div className="pt-6 md:grid md:grid-cols-12 md:gap-8">
               <dt className="text-base font-medium text-gray-900 md:col-span-5">
@@ -81,6 +83,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

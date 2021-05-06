@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="relative bg-white overflow-hidden">
+<div className="" style={{}}>
+  
+  <div className="relative bg-white overflow-hidden">
     <div className="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
       <svg className="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8" width="640" height="784" fill="none" viewBox="0 0 640 784">
         <defs>
@@ -144,6 +146,8 @@ const Component = (props) => (
       </main>
     </div>
   </div>
+
+</div>
 </>
 );
 

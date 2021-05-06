@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="pb-6 bg-white">
     
     <div>
@@ -42,6 +43,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

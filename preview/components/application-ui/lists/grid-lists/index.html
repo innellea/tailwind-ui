@@ -1,0 +1,1430 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#application-ui" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Application UI
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#application-ui-lists" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Lists
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Grid Lists
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-ec103cc4cd97e8f609f8cce60b8abdd5de1509cb" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-ec103cc4cd97e8f609f8cce60b8abdd5de1509cb">Contact cards with small portraits</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-8">
+    &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+  &lt;ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3" x-max="1">
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Jane Cooper&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Regional Paradigm Technician&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:janecooper@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0170" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Cody Fisher&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Product Directives Officer&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:codyfisher@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0114" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Esther Howard&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Forward Response Developer&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:estherhoward@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0143" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Jenny Wilson&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Central Security Manager&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:jennywilson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0184" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Kristin Watson&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Lead Implementation Liaison&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:kristinwatson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0191" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="w-full flex items-center justify-between p-6 space-x-6">
+          &lt;div class="flex-1 truncate">
+            &lt;div class="flex items-center space-x-3">
+              &lt;h3 class="text-gray-900 text-sm font-medium truncate">Cameron Williamson&lt;/h3>
+              &lt;span class="flex-shrink-0 inline-block px-2 py-0.5 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/div>
+            &lt;p class="mt-1 text-gray-500 text-sm truncate">Internal Applications Engineer&lt;/p>
+          &lt;/div>
+          &lt;img class="w-10 h-10 bg-gray-300 rounded-full flex-shrink-0" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:cameronwilliamson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0108" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+  &lt;/ul>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="ec103cc4cd97e8f609f8cce60b8abdd5de1509cb" src="/components/application-ui/lists/grid-lists/contact_cards_with_small_portraits.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-379feaf16a01a0937a383d6646155cdf13753a95" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-379feaf16a01a0937a383d6646155cdf13753a95">Contact cards</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-8">
+    &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+  &lt;ul class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" x-max="1">
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Jane Cooper&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Paradigm Representative&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:janecooper@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0170" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Cody Fisher&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Lead Security Associate&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:codyfisher@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0114" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1520813792240-56fc4a3765a7?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Esther Howard&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Assurance Administrator&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:estherhoward@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0143" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1498551172505-8ee7ad69f235?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Jenny Wilson&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Chief Accountability Analyst&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:jennywilson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0184" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1532417344469-368f9ae6d187?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Kristin Watson&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Investor Data Orchestrator&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:kristinwatson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0191" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Cameron Williamson&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Product Infrastructure Executive&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:cameronwilliamson@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0108" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1534751516642-a1af1ef26a56?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Courtney Henry&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Investor Factors Associate&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:courtneyhenry@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0104" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
+        &lt;div class="flex-1 flex flex-col p-8">
+          &lt;img class="w-32 h-32 flex-shrink-0 mx-auto bg-black rounded-full" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=4&amp;amp;w=256&amp;amp;h=256&amp;amp;q=60" alt="">
+          &lt;h3 class="mt-6 text-gray-900 text-sm font-medium">Theresa Webb&lt;/h3>
+          &lt;dl class="mt-1 flex-grow flex flex-col justify-between">
+            &lt;dt class="sr-only">Title&lt;/dt>
+            &lt;dd class="text-gray-500 text-sm">Global Division Officer&lt;/dd>
+            &lt;dt class="sr-only">Role&lt;/dt>
+            &lt;dd class="mt-3">
+              &lt;span class="px-2 py-1 text-green-800 text-xs font-medium bg-green-100 rounded-full">Admin&lt;/span>
+            &lt;/dd>
+          &lt;/dl>
+        &lt;/div>
+        &lt;div>
+          &lt;div class="-mt-px flex divide-x divide-gray-200">
+            &lt;div class="w-0 flex-1 flex">
+              &lt;a href="mailto:theresawebb@example.com" class="relative -mr-px w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-bl-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Email&lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="-ml-px w-0 flex-1 flex">
+              &lt;a href="tel:+1-202-555-0138" class="relative w-0 flex-1 inline-flex items-center justify-center py-4 text-sm text-gray-700 font-medium border border-transparent rounded-br-lg hover:text-gray-500">
+                &lt;svg class="w-5 h-5 text-gray-400" x-description="Heroicon name: solid/phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">&lt;/path>
+&lt;/svg>
+                &lt;span class="ml-3">Call&lt;/span>
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/li>
+    
+  &lt;/ul>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="379feaf16a01a0937a383d6646155cdf13753a95" src="/components/application-ui/lists/grid-lists/contact_cards.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-5fd92159d938eba1d36bf0cf3dd744eedf945a42" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-5fd92159d938eba1d36bf0cf3dd744eedf945a42">Simple cards</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-8">
+    &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+  &lt;div>
+    &lt;h2 class="text-gray-500 text-xs font-medium uppercase tracking-wide">Pinned Projects&lt;/h2>
+    &lt;ul class="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      
+        &lt;li class="col-span-1 flex shadow-sm rounded-md">
+          &lt;div class="flex-shrink-0 flex items-center justify-center w-16 bg-pink-600 text-white text-sm font-medium rounded-l-md">
+            GA
+          &lt;/div>
+          &lt;div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+            &lt;div class="flex-1 px-4 py-2 text-sm truncate">
+              &lt;a href="#" class="text-gray-900 font-medium hover:text-gray-600">Graph API&lt;/a>
+              &lt;p class="text-gray-500">16 Members&lt;/p>
+            &lt;/div>
+            &lt;div class="flex-shrink-0 pr-2">
+              &lt;button class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                &lt;span class="sr-only">Open options&lt;/span>
+                &lt;svg class="w-5 h-5" x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      
+        &lt;li class="col-span-1 flex shadow-sm rounded-md">
+          &lt;div class="flex-shrink-0 flex items-center justify-center w-16 bg-purple-600 text-white text-sm font-medium rounded-l-md">
+            CD
+          &lt;/div>
+          &lt;div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+            &lt;div class="flex-1 px-4 py-2 text-sm truncate">
+              &lt;a href="#" class="text-gray-900 font-medium hover:text-gray-600">Component Design&lt;/a>
+              &lt;p class="text-gray-500">12 Members&lt;/p>
+            &lt;/div>
+            &lt;div class="flex-shrink-0 pr-2">
+              &lt;button class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                &lt;span class="sr-only">Open options&lt;/span>
+                &lt;svg class="w-5 h-5" x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      
+        &lt;li class="col-span-1 flex shadow-sm rounded-md">
+          &lt;div class="flex-shrink-0 flex items-center justify-center w-16 bg-yellow-500 text-white text-sm font-medium rounded-l-md">
+            T
+          &lt;/div>
+          &lt;div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+            &lt;div class="flex-1 px-4 py-2 text-sm truncate">
+              &lt;a href="#" class="text-gray-900 font-medium hover:text-gray-600">Templates&lt;/a>
+              &lt;p class="text-gray-500">16 Members&lt;/p>
+            &lt;/div>
+            &lt;div class="flex-shrink-0 pr-2">
+              &lt;button class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                &lt;span class="sr-only">Open options&lt;/span>
+                &lt;svg class="w-5 h-5" x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      
+        &lt;li class="col-span-1 flex shadow-sm rounded-md">
+          &lt;div class="flex-shrink-0 flex items-center justify-center w-16 bg-green-500 text-white text-sm font-medium rounded-l-md">
+            RC
+          &lt;/div>
+          &lt;div class="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
+            &lt;div class="flex-1 px-4 py-2 text-sm truncate">
+              &lt;a href="#" class="text-gray-900 font-medium hover:text-gray-600">React Components&lt;/a>
+              &lt;p class="text-gray-500">8 Members&lt;/p>
+            &lt;/div>
+            &lt;div class="flex-shrink-0 pr-2">
+              &lt;button class="w-8 h-8 bg-white inline-flex items-center justify-center text-gray-400 rounded-full bg-transparent hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                &lt;span class="sr-only">Open options&lt;/span>
+                &lt;svg class="w-5 h-5" x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/li>
+      
+    &lt;/ul>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="5fd92159d938eba1d36bf0cf3dd744eedf945a42" src="/components/application-ui/lists/grid-lists/simple_cards.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-a0f1ef120e2ede7af9fea50f381d8b72bde6f8c3" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-a0f1ef120e2ede7af9fea50f381d8b72bde6f8c3">Horizontal link cards</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-8">
+    &lt;div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+  &lt;div class="grid grid-cols-1 gap-4 sm:grid-cols-2" x-max="1">
+    
+      &lt;div class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+        &lt;div class="flex-shrink-0">
+          &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;/div>
+        &lt;div class="flex-1 min-w-0">
+          &lt;a href="#" class="focus:outline-none">
+            &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+            &lt;p class="text-sm font-medium text-gray-900">
+              Leslie Alexander
+            &lt;/p>
+            &lt;p class="text-sm text-gray-500 truncate">
+              Co-Founder / CEO
+            &lt;/p>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    
+      &lt;div class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+        &lt;div class="flex-shrink-0">
+          &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;/div>
+        &lt;div class="flex-1 min-w-0">
+          &lt;a href="#" class="focus:outline-none">
+            &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+            &lt;p class="text-sm font-medium text-gray-900">
+              Michael Foster
+            &lt;/p>
+            &lt;p class="text-sm text-gray-500 truncate">
+              Co-Founder / CTO
+            &lt;/p>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    
+      &lt;div class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+        &lt;div class="flex-shrink-0">
+          &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;/div>
+        &lt;div class="flex-1 min-w-0">
+          &lt;a href="#" class="focus:outline-none">
+            &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+            &lt;p class="text-sm font-medium text-gray-900">
+              Dries Vincent
+            &lt;/p>
+            &lt;p class="text-sm text-gray-500 truncate">
+              Manager, Business Relations
+            &lt;/p>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    
+      &lt;div class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+        &lt;div class="flex-shrink-0">
+          &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;/div>
+        &lt;div class="flex-1 min-w-0">
+          &lt;a href="#" class="focus:outline-none">
+            &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+            &lt;p class="text-sm font-medium text-gray-900">
+              Lindsay Walton
+            &lt;/p>
+            &lt;p class="text-sm text-gray-500 truncate">
+              Front-end Developer
+            &lt;/p>
+          &lt;/a>
+        &lt;/div>
+      &lt;/div>
+    
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="a0f1ef120e2ede7af9fea50f381d8b72bde6f8c3" src="/components/application-ui/lists/grid-lists/horizontal_link_cards.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-e7b2dc9d3b8518faf5ed29592ff8295dadde0c7d" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-e7b2dc9d3b8518faf5ed29592ff8295dadde0c7d">Actions with shared borders</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-200 py-8">
+    &lt;div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+  &lt;div class="rounded-lg bg-gray-200 overflow-hidden shadow divide-y divide-gray-200 sm:divide-y-0 sm:grid sm:grid-cols-2 sm:gap-px">
+    
+      &lt;div class="rounded-tl-lg rounded-tr-lg sm:rounded-tr-none    relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-teal-50 text-teal-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Request time off
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+      &lt;div class=" sm:rounded-tr-lg   relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-purple-50 text-purple-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/badge-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Benefits
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+      &lt;div class="    relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-light-blue-50 text-light-blue-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Schedule a one-on-one
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+      &lt;div class="    relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-yellow-50 text-yellow-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/cash" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Payroll
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+      &lt;div class="  sm:rounded-bl-lg  relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-rose-50 text-rose-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/receipt-refund" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 15v-1a4 4 0 00-4-4H8m0 0l3 3m-3-3l3-3m9 14V5a2 2 0 00-2-2H6a2 2 0 00-2 2v16l4-2 4 2 4-2 4 2z">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Submit an expense
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+      &lt;div class="   rounded-bl-lg rounded-br-lg sm:rounded-bl-none relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+        &lt;div>
+          &lt;span class="rounded-lg inline-flex p-3 bg-indigo-50 text-indigo-700 ring-4 ring-white">
+            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/academic-cap" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path fill="#fff" d="M12 14l9-5-9-5-9 5 9 5z">&lt;/path>
+  &lt;path fill="#fff" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z">&lt;/path>
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222">&lt;/path>
+&lt;/svg>
+          &lt;/span>
+        &lt;/div>
+        &lt;div class="mt-8">
+          &lt;h3 class="text-lg font-medium">
+            &lt;a href="#" class="focus:outline-none">
+              &lt;!-- Extend touch target to entire panel -->
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              Training
+            &lt;/a>
+          &lt;/h3>
+          &lt;p class="mt-2 text-sm text-gray-500">
+            Doloribus dolores nostrum quia qui natus officia quod et dolorem. Sit repellendus qui ut at blanditiis et quo et molestiae.
+          &lt;/p>
+        &lt;/div>
+        &lt;span class="pointer-events-none absolute top-6 right-6 text-gray-300 group-hover:text-gray-400" aria-hidden="true">
+          &lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            &lt;path d="M20 4h1a1 1 0 00-1-1v1zm-1 12a1 1 0 102 0h-2zM8 3a1 1 0 000 2V3zM3.293 19.293a1 1 0 101.414 1.414l-1.414-1.414zM19 4v12h2V4h-2zm1-1H8v2h12V3zm-.707.293l-16 16 1.414 1.414 16-16-1.414-1.414z">&lt;/path>
+          &lt;/svg>
+        &lt;/span>
+      &lt;/div>
+    
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="e7b2dc9d3b8518faf5ed29592ff8295dadde0c7d" src="/components/application-ui/lists/grid-lists/actions_with_shared_borders.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-9917e36b4e7058bfd1cc60bfdcb5a48d1c9f17b8" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-9917e36b4e7058bfd1cc60bfdcb5a48d1c9f17b8">Images with details</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100">
+    &lt;div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+      
+  &lt;ul role="list" class="grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+    &lt;!-- Current: "ring-2 ring-offset-2 ring-indigo-500", Default: "focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500" -->
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_4985.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_4985.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">3.9 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1614926857083-7be149266cda?ixlib=rb-1.2.1&amp;amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_5214.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_5214.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">4 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1614705827065-62c3dc488f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_3851.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_3851.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">3.8 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_4278.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_4278.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">4.1 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_6842.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_6842.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">4 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-1.2.1&amp;amp;ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_3284.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_3284.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">3.9 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_4841.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_4841.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">3.8 MB&lt;/p>
+      &lt;/li>
+    
+      &lt;li class="relative">
+        &lt;div class="focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 group block w-full aspect-w-10 aspect-h-7 rounded-lg overflow-hidden">
+          &lt;img src="https://images.unsplash.com/photo-1492724724894-7464c27d0ceb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=512&amp;amp;q=80" alt="" class="group-hover:opacity-75 object-cover pointer-events-none">
+          &lt;button type="button" class="absolute inset-0">
+            &lt;span class="sr-only">View details for IMG_5644.HEIC&lt;/span>
+          &lt;/button>
+        &lt;/div>
+        &lt;p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">IMG_5644.HEIC&lt;/p>
+        &lt;p class="block text-sm font-medium text-gray-500 pointer-events-none">4 MB&lt;/p>
+      &lt;/li>
+    
+  &lt;/ul>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="9917e36b4e7058bfd1cc60bfdcb5a48d1c9f17b8" src="/components/application-ui/lists/grid-lists/images_with_details.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

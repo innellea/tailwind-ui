@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white">
       <div class="px-4 flex justify-center sm:px-6 lg:px-8 py-12">
         <div class="min-w-0">
@@ -8,9 +9,9 @@
       
           <li class="relative pb-10">
           
-              <!-- Complete Step -->
-              <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-indigo-600" aria-hidden="true"></div>
-              <a href="#" class="relative flex items-start group">
+            
+                <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-indigo-600" aria-hidden="true"></div>
+              <a href="#" class="relative flex items-start group" x-description="Complete Step">
                 <span class="h-9 flex items-center">
                   <span class="relative z-10 w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full group-hover:bg-indigo-800">
                     <svg class="w-5 h-5 text-white" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -27,9 +28,9 @@
       
           <li class="relative pb-10">
           
-              <!-- Current Step -->
-              <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-              <a href="#" class="relative flex items-start group" aria-current="step">
+            
+                <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
+              <a href="#" class="relative flex items-start group" aria-current="step" x-description="Current Step">
                 <span class="h-9 flex items-center" aria-hidden="true">
                   <span class="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full">
                     <span class="h-2.5 w-2.5 bg-indigo-600 rounded-full"></span>
@@ -46,7 +47,7 @@
           
             
                 <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-              <a href="#" class="relative flex items-start group">
+              <a href="#" class="relative flex items-start group" x-description="Upcoming Step">
                 <span class="h-9 flex items-center" aria-hidden="true">
                   <span class="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                     <span class="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -63,7 +64,7 @@
           
             
                 <div class="-ml-px absolute mt-0.5 top-4 left-4 w-0.5 h-full bg-gray-300" aria-hidden="true"></div>
-              <a href="#" class="relative flex items-start group">
+              <a href="#" class="relative flex items-start group" x-description="Upcoming Step">
                 <span class="h-9 flex items-center" aria-hidden="true">
                   <span class="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                     <span class="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -78,7 +79,7 @@
       
           <li class="relative ">
           
-              <a href="#" class="relative flex items-start group">
+              <a href="#" class="relative flex items-start group" x-description="Upcoming Step">
                 <span class="h-9 flex items-center" aria-hidden="true">
                   <span class="relative z-10 w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full group-hover:border-gray-400">
                     <span class="h-2.5 w-2.5 bg-transparent rounded-full group-hover:bg-gray-300"></span>
@@ -97,6 +98,7 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

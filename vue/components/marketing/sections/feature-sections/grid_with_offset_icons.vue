@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="relative bg-white py-16 sm:py-24 lg:py-32">
@@ -128,6 +129,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

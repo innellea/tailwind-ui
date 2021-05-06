@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100">
+<div className="" style={{}}>
+  <div className="bg-gray-100">
     <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
       <div className="max-w-none mx-auto">
         <div className="bg-white overflow-hidden sm:rounded-lg sm:shadow">
@@ -11,7 +12,7 @@ const Component = (props) => (
   <div className="bg-white px-4 py-5 sm:px-6">
     <div className="flex space-x-3">
       <div className="flex-shrink-0">
-        <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+        <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
       </div>
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-gray-900">
@@ -68,6 +69,7 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+</div>
 </>
 );
 

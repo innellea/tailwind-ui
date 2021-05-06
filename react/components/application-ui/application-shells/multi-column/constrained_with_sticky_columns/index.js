@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div style={{maxHeight: "800px"}} _className="overflow-y-auto">
+<div className="" style={{}}>
+  <div style={{maxHeight: "800px"}} _className="overflow-y-auto">
     
   <div className="min-h-screen bg-gray-100">
-    {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
-    <header data-todo-x-data="{ open: false }" data-todo-colon-className="{'fixed inset-0 z-40 overflow-y-auto': open, '': !open}" className="bg-white shadow-sm lg:static lg:overflow-y-visible">
+    <header className="bg-white shadow-sm lg:static lg:overflow-y-visible" data-todo-x-description="When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-colon-className="{ 'fixed inset-0 z-40 overflow-y-auto': open }" data-todo-x-data="Components.popover({ open: false, focus: false })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
           <div className="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
@@ -34,14 +34,16 @@ const Component = (props) => (
           </div>
           <div className="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
             {/* Mobile menu button */}
-            <button type="button" data-todo-at-click="open = !open" className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
+            <button type="button" className="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" data-todo-at-click="toggle" data-todo-at-mousedown="if (open) $event.preventDefault()" aria-expanded="false" data-todo-colon-aria-expanded="open.toString()">
               <span className="sr-only">Open menu</span>
-              {/* Icon when menu is closed. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': open, 'block': !open }" className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg data-todo-x-description="Icon when menu is closed.
+
+Heroicon name: outline/menu" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" className="block h-6 w-6" data-todo-colon-className="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
-              {/* Icon when menu is open. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': !open, 'block': open }" className="hidden h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg data-todo-x-description="Icon when menu is open.
+
+Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" className="hidden h-6 w-6" data-todo-colon-className="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
             </button>
@@ -82,16 +84,16 @@ const Component = (props) => (
         </div>
       </div>
 
-      <nav data-todo-x-description="Mobile menu, toggle classes based on menu state." data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'block': open, 'hidden': !open }" className="hidden lg:hidden" aria-label="Global">
+      <nav data-todo-x-description="Mobile menu, show/hide based on menu state." className="lg:hidden" aria-label="Global" data-todo-x-ref="panel" data-todo-x-show="open" data-todo-at-click-away="open = false">
         <div className="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4">
           
-            <a href="/" aria-current="page" className="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Dashboard</a>
+            <a href="/" aria-current="page" className="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;bg-gray-100 text-gray-900&quot;, Default: &quot;hover:bg-gray-50&quot;">Dashboard</a>
           
-            <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Calendar</a>
+            <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Calendar</a>
           
-            <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Teams</a>
+            <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Teams</a>
           
-            <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Directory</a>
+            <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Directory</a>
           
         </div>
         <div className="border-t border-gray-200 pt-4 pb-3">
@@ -151,6 +153,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="p-8 bg-gray-100" style={{minHeight: "360px"}}>
+<div className="" style={{}}>
+  <div className="p-8 bg-gray-100" style={{minHeight: "360px"}}>
     <div className="mx-auto w-64 text-right">
       
   <div data-todo-x-data="{ open: true }" data-todo-at-keydown-escape-stop="open = false" data-todo-at-click-away="open = false" className="relative inline-block text-left">
@@ -34,6 +35,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

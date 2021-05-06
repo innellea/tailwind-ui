@@ -1,65 +1,56 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100 py-12 px-4 flex justify-center sm:px-6 lg:py-16 lg:px-8">
-    
       <div class="w-full max-w-3xl mx-auto">
       
-    <fieldset x-data="radioGroup()">
+    <fieldset x-data="window.Components.radioGroup({ initialCheckedIndex: 0 })" x-init="init()">
       <legend class="sr-only">
         Privacy setting
       </legend>
-
-      <div class="bg-white rounded-md -space-y-px" x-ref="radiogroup">
+      <div class="bg-white rounded-md -space-y-px">
       
-        
-            <div :class="{ 'border-gray-200': !(active === 0), 'bg-indigo-50 border-indigo-200 z-10': active === 0 }" class="relative border rounded-tl-md rounded-tr-md p-4 flex">
-              <div class="flex items-center h-5">
-                <input id="settings-option-0" name="privacy_setting" type="radio" @click="select(0)" @keydown.space="select(0)" @keydown.arrow-up="onArrowUp(0)" @keydown.arrow-down="onArrowDown(0)" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 cursor-pointer border-gray-300" checked="">
-              </div>
-              <label for="settings-option-0" class="ml-3 flex flex-col cursor-pointer">
-                <span :class="{ 'text-indigo-900': active === 0, 'text-gray-900': !(active === 0) }" class="block text-sm font-medium">
-                  Public access
-                </span>
-                <span :class="{ 'text-indigo-700': active === 0, 'text-gray-500': !(active === 0) }" class="block text-sm">
-                  This project would be available to anyone who has the link
-                </span>
-              </label>
+          <label x-radio-group-option="" class="border-gray-200 rounded-tl-md rounded-tr-md  relative border p-4 flex cursor-pointer " x-state:on="Checked" x-state:off="Not Checked" :class="{ 'bg-indigo-50 border-indigo-200 z-10': value === 'Public access', 'border-gray-200': !(value === 'Public access') }">
+            <input type="radio" x-model="value" name="privacy_setting" value="Public access" class="h-4 w-4 mt-0.5 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-500" aria-labelledby="privacy-setting-0-label" aria-describedby="privacy-setting-0-description">
+            <div class="ml-3 flex flex-col">
+              <span id="privacy-setting-0-label" class="text-gray-900 block text-sm font-medium" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-900': value === 'Public access', 'text-gray-900': !(value === 'Public access') }">
+                Public access
+              </span>
+              <span id="privacy-setting-0-description" class="text-gray-500 block text-sm" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-700': value === 'Public access', 'text-gray-500': !(value === 'Public access') }">
+                This project would be available to anyone who has the link
+              </span>
             </div>
-        
-        
-            <div :class="{ 'border-gray-200': !(active === 1), 'bg-indigo-50 border-indigo-200 z-10': active === 1 }" class="relative border border-gray-200 p-4 flex">
-              <div class="flex items-center h-5">
-                <input id="settings-option-1" name="privacy_setting" type="radio" @click="select(1)" @keydown.space="select(1)" @keydown.arrow-up="onArrowUp(1)" @keydown.arrow-down="onArrowDown(1)" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 cursor-pointer border-gray-300">
-              </div>
-              <label for="settings-option-1" class="ml-3 flex flex-col cursor-pointer">
-                <span :class="{ 'text-indigo-900': active === 1, 'text-gray-900': !(active === 1) }" class="block text-sm font-medium">
-                  Private to Project Members
-                </span>
-                <span :class="{ 'text-indigo-700': active === 1, 'text-gray-500': !(active === 1) }" class="block text-sm">
-                  Only members of this project would be able to access
-                </span>
-              </label>
+          </label>
+      
+          <label x-radio-group-option="" class="border-gray-200   relative border p-4 flex cursor-pointer " x-state:on="Checked" x-state:off="Not Checked" :class="{ 'bg-indigo-50 border-indigo-200 z-10': value === 'Private to Project Members', 'border-gray-200': !(value === 'Private to Project Members') }">
+            <input type="radio" x-model="value" name="privacy_setting" value="Private to Project Members" class="h-4 w-4 mt-0.5 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-500" aria-labelledby="privacy-setting-1-label" aria-describedby="privacy-setting-1-description">
+            <div class="ml-3 flex flex-col">
+              <span id="privacy-setting-1-label" class="text-gray-900 block text-sm font-medium" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-900': value === 'Private to Project Members', 'text-gray-900': !(value === 'Private to Project Members') }">
+                Private to Project Members
+              </span>
+              <span id="privacy-setting-1-description" class="text-gray-500 block text-sm" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-700': value === 'Private to Project Members', 'text-gray-500': !(value === 'Private to Project Members') }">
+                Only members of this project would be able to access
+              </span>
             </div>
-        
-        
-            <div :class="{ 'border-gray-200': !(active === 2), 'bg-indigo-50 border-indigo-200 z-10': active === 2 }" class="relative border border-gray-200 rounded-bl-md rounded-br-md p-4 flex">
-              <div class="flex items-center h-5">
-                <input id="settings-option-2" name="privacy_setting" type="radio" @click="select(2)" @keydown.space="select(2)" @keydown.arrow-up="onArrowUp(2)" @keydown.arrow-down="onArrowDown(2)" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 cursor-pointer border-gray-300">
-              </div>
-              <label for="settings-option-2" class="ml-3 flex flex-col cursor-pointer">
-                <span :class="{ 'text-indigo-900': active === 2, 'text-gray-900': !(active === 2) }" class="block text-sm font-medium">
-                  Private to you
-                </span>
-                <span :class="{ 'text-indigo-700': active === 2, 'text-gray-500': !(active === 2) }" class="block text-sm">
-                  You are the only one able to access this project
-                </span>
-              </label>
+          </label>
+      
+          <label x-radio-group-option="" class="border-gray-200  rounded-bl-md rounded-br-md relative border p-4 flex cursor-pointer " x-state:on="Checked" x-state:off="Not Checked" :class="{ 'bg-indigo-50 border-indigo-200 z-10': value === 'Private to you', 'border-gray-200': !(value === 'Private to you') }">
+            <input type="radio" x-model="value" name="privacy_setting" value="Private to you" class="h-4 w-4 mt-0.5 cursor-pointer text-indigo-600 border-gray-300 focus:ring-indigo-500" aria-labelledby="privacy-setting-2-label" aria-describedby="privacy-setting-2-description">
+            <div class="ml-3 flex flex-col">
+              <span id="privacy-setting-2-label" class="text-gray-900 block text-sm font-medium" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-900': value === 'Private to you', 'text-gray-900': !(value === 'Private to you') }">
+                Private to you
+              </span>
+              <span id="privacy-setting-2-description" class="text-gray-500 block text-sm" x-state:on="Checked" x-state:off="Not Checked" :class="{ 'text-indigo-700': value === 'Private to you', 'text-gray-500': !(value === 'Private to you') }">
+                You are the only one able to access this project
+              </span>
             </div>
-        
+          </label>
+      
       </div>
     </fieldset>
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

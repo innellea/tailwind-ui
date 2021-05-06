@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;">
     
     <div class="bg-white">
@@ -203,24 +204,31 @@
                 </div>
               </div>
               <div class="mt-12 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Workcation">
-                </div>
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
-                </div>
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
-                </div>
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel">
-                </div>
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
-                </div>
-                <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-                  <img class="max-h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Statamic">
-                </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
+                  </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+                  </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                  </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg" alt="Laravel">
+                  </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+                  </div>
+              
+                  <div class="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
+                    <img class="max-h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+                  </div>
+              
               </div>
             </div>
           </div>
@@ -359,6 +367,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

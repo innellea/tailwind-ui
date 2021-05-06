@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 16rem;">
     
     <!--
@@ -43,6 +44,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

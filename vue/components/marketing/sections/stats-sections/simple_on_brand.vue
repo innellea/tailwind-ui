@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-indigo-800">
       <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8 lg:py-20">
         <div class="max-w-4xl mx-auto text-center">
@@ -37,6 +39,8 @@
         </dl>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="p-8 flex items-center justify-center bg-white">
     
     <button type="button" class="flex-shrink-0 group relative rounded-full inline-flex items-center justify-center h-5 w-10 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-pressed="false" :aria-pressed="on.toString()" @click="on = !on">
@@ -9,6 +10,7 @@
     </button>
 
     </div>
+  </div>
 </template>
 
 <script>

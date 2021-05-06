@@ -1,0 +1,1939 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#application-ui" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Application UI
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#application-ui-lists" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Lists
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Stacked Lists
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-5d5c9335587f9c81301891160e2cb16662109cff" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-5d5c9335587f9c81301891160e2cb16662109cff">Narrow with avatar group</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-md mx-auto py-12 px-4 sm:px-0 md:py-16">
+      
+  &lt;ul class="divide-y divide-gray-200">
+    
+      &lt;li class="py-4 flex">
+        &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;div class="ml-3">
+          &lt;p class="text-sm font-medium text-gray-900">Calvin Hawkins&lt;/p>
+          &lt;p class="text-sm text-gray-500">calvin.hawkins@example.com&lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="py-4 flex">
+        &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;div class="ml-3">
+          &lt;p class="text-sm font-medium text-gray-900">Kristen Ramos&lt;/p>
+          &lt;p class="text-sm text-gray-500">kristen.ramos@example.com&lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="py-4 flex">
+        &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+        &lt;div class="ml-3">
+          &lt;p class="text-sm font-medium text-gray-900">Ted Fox&lt;/p>
+          &lt;p class="text-sm text-gray-500">ted.fox@example.com&lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+  &lt;/ul>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="5d5c9335587f9c81301891160e2cb16662109cff" src="/components/application-ui/lists/stacked-lists/narrow_with_avatar_group.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-7f3feb83008a942ddd8fb02d6509b2f2d39bea57" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-7f3feb83008a942ddd8fb02d6509b2f2d39bea57">Two-column with avatar</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-6">
+    &lt;div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      
+  &lt;div class="bg-white shadow overflow-hidden sm:rounded-md">
+    &lt;ul class="divide-y divide-gray-200">
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="flex items-center px-4 py-4 sm:px-6">
+              &lt;div class="min-w-0 flex-1 flex items-center">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                  &lt;div>
+                    &lt;p class="text-sm font-medium text-indigo-600 truncate">Ricardo Cooper&lt;/p>
+                    &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="truncate">ricardo.cooper@example.com&lt;/span>
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="hidden md:block">
+                    &lt;div>
+                      &lt;p class="text-sm text-gray-900">
+                        Applied on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                      &lt;/p>
+                      &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                        &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                        Completed phone screening
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div>
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="flex items-center px-4 py-4 sm:px-6">
+              &lt;div class="min-w-0 flex-1 flex items-center">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                  &lt;div>
+                    &lt;p class="text-sm font-medium text-indigo-600 truncate">Kristen Ramos&lt;/p>
+                    &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="truncate">kristen.ramos@example.com&lt;/span>
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="hidden md:block">
+                    &lt;div>
+                      &lt;p class="text-sm text-gray-900">
+                        Applied on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                      &lt;/p>
+                      &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                        &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                        Completed phone screening
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div>
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="flex items-center px-4 py-4 sm:px-6">
+              &lt;div class="min-w-0 flex-1 flex items-center">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
+                  &lt;div>
+                    &lt;p class="text-sm font-medium text-indigo-600 truncate">Ted Fox&lt;/p>
+                    &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/mail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z">&lt;/path>
+  &lt;path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="truncate">ted.fox@example.com&lt;/span>
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="hidden md:block">
+                    &lt;div>
+                      &lt;p class="text-sm text-gray-900">
+                        Applied on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                      &lt;/p>
+                      &lt;p class="mt-2 flex items-center text-sm text-gray-500">
+                        &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-green-400" x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                        Completed phone screening
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div>
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+    &lt;/ul>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="7f3feb83008a942ddd8fb02d6509b2f2d39bea57" src="/components/application-ui/lists/stacked-lists/two_column_with_avatar.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-aaeb337624dc0ce1a27dc2767ff48200b65faa65" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-aaeb337624dc0ce1a27dc2767ff48200b65faa65">With right-justified avatar group</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-6">
+    &lt;div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      
+  &lt;div class="bg-white shadow overflow-hidden sm:rounded-md">
+    &lt;ul class="divide-y divide-gray-200">
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 flex items-center sm:px-6">
+              &lt;div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+                &lt;div class="truncate">
+                  &lt;div class="flex text-sm">
+                    &lt;p class="font-medium text-indigo-600 truncate">Back End Developer&lt;/p>
+                    &lt;p class="ml-1 flex-shrink-0 font-normal text-gray-500">
+                      in Engineering
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="mt-2 flex">
+                    &lt;div class="flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;p>
+                        Closing on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
+                  &lt;div class="flex overflow-hidden -space-x-1">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Dries Vincent">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Lindsay Walton">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Courtney Henry">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Tom Cook">
+                    
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="ml-5 flex-shrink-0">
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 flex items-center sm:px-6">
+              &lt;div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+                &lt;div class="truncate">
+                  &lt;div class="flex text-sm">
+                    &lt;p class="font-medium text-indigo-600 truncate">Front End Developer&lt;/p>
+                    &lt;p class="ml-1 flex-shrink-0 font-normal text-gray-500">
+                      in Engineering
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="mt-2 flex">
+                    &lt;div class="flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;p>
+                        Closing on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
+                  &lt;div class="flex overflow-hidden -space-x-1">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Whitney Francis">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Leonard Krasner">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Floyd Miles">
+                    
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="ml-5 flex-shrink-0">
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 flex items-center sm:px-6">
+              &lt;div class="min-w-0 flex-1 sm:flex sm:items-center sm:justify-between">
+                &lt;div class="truncate">
+                  &lt;div class="flex text-sm">
+                    &lt;p class="font-medium text-indigo-600 truncate">User Interface Designer&lt;/p>
+                    &lt;p class="ml-1 flex-shrink-0 font-normal text-gray-500">
+                      in Design
+                    &lt;/p>
+                  &lt;/div>
+                  &lt;div class="mt-2 flex">
+                    &lt;div class="flex items-center text-sm text-gray-500">
+                      &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                      &lt;p>
+                        Closing on
+                        &lt;!-- space -->
+                        &lt;time datetime="2020-01-14">January 14, 2020&lt;/time>
+                      &lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="mt-4 flex-shrink-0 sm:mt-0 sm:ml-5">
+                  &lt;div class="flex overflow-hidden -space-x-1">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Emily Selman">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Kristin Watson">
+                    
+                      &lt;img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="Emma Dorsey">
+                    
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="ml-5 flex-shrink-0">
+                &lt;svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+    &lt;/ul>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="aaeb337624dc0ce1a27dc2767ff48200b65faa65" src="/components/application-ui/lists/stacked-lists/with_right_justified_avatar_group.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-58462958c66e7d8192807885f180c13b72852f69" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-58462958c66e7d8192807885f180c13b72852f69">With right-justified second column</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100 py-6">
+    &lt;div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+      
+  &lt;div class="bg-white shadow overflow-hidden sm:rounded-md">
+    &lt;ul class="divide-y divide-gray-200">
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 sm:px-6">
+              &lt;div class="flex items-center justify-between">
+                &lt;p class="text-sm font-medium text-indigo-600 truncate">
+                  Back End Developer
+                &lt;/p>
+                &lt;div class="ml-2 flex-shrink-0 flex">
+                  &lt;p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                    Full-time
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="mt-2 sm:flex sm:justify-between">
+                &lt;div class="sm:flex">
+                  &lt;p class="flex items-center text-sm text-gray-500">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">&lt;/path>
+&lt;/svg>
+                    Engineering
+                  &lt;/p>
+                  &lt;p class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/location-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                    Remote
+                  &lt;/p>
+                &lt;/div>
+                &lt;div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                  &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                  &lt;p>
+                    Closing on
+                    &lt;!-- space -->
+                    &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 sm:px-6">
+              &lt;div class="flex items-center justify-between">
+                &lt;p class="text-sm font-medium text-indigo-600 truncate">
+                  Front End Developer
+                &lt;/p>
+                &lt;div class="ml-2 flex-shrink-0 flex">
+                  &lt;p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                    Full-time
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="mt-2 sm:flex sm:justify-between">
+                &lt;div class="sm:flex">
+                  &lt;p class="flex items-center text-sm text-gray-500">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">&lt;/path>
+&lt;/svg>
+                    Engineering
+                  &lt;/p>
+                  &lt;p class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/location-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                    Remote
+                  &lt;/p>
+                &lt;/div>
+                &lt;div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                  &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                  &lt;p>
+                    Closing on
+                    &lt;!-- space -->
+                    &lt;time datetime="2020-01-07">January 7, 2020&lt;/time>
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+        &lt;li>
+          &lt;a href="#" class="block hover:bg-gray-50">
+            &lt;div class="px-4 py-4 sm:px-6">
+              &lt;div class="flex items-center justify-between">
+                &lt;p class="text-sm font-medium text-indigo-600 truncate">
+                  User Interface Designer
+                &lt;/p>
+                &lt;div class="ml-2 flex-shrink-0 flex">
+                  &lt;p class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                    Full-time
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="mt-2 sm:flex sm:justify-between">
+                &lt;div class="sm:flex">
+                  &lt;p class="flex items-center text-sm text-gray-500">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/users" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z">&lt;/path>
+&lt;/svg>
+                    Design
+                  &lt;/p>
+                  &lt;p class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0 sm:ml-6">
+                    &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/location-marker" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                    Remote
+                  &lt;/p>
+                &lt;/div>
+                &lt;div class="mt-2 flex items-center text-sm text-gray-500 sm:mt-0">
+                  &lt;svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                  &lt;p>
+                    Closing on
+                    &lt;!-- space -->
+                    &lt;time datetime="2020-01-14">January 14, 2020&lt;/time>
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/a>
+        &lt;/li>
+      
+    &lt;/ul>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="58462958c66e7d8192807885f180c13b72852f69" src="/components/application-ui/lists/stacked-lists/with_right_justified_second_column.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-da2661f6659b48cfc66247c5a2ab7ea06b0574a8" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-da2661f6659b48cfc66247c5a2ab7ea06b0574a8">With sticky headings</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white py-6">
+    &lt;div class="max-w-xl mx-auto sm:px-6 lg:px-8" style="height: 26rem;">
+      
+  &lt;nav class="h-full overflow-y-auto" aria-label="Directory">
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>A&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Leslie Abbott
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Co-Founder / CEO
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Hector Adams
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      VP, Marketing
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Blake Alexander
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Account Coordinator
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Fabricio Andrews
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Senior Art Director
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>B&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1501031170107-cfd33f0cbdcc?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Angela Beaver
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Chief Strategy Officer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506980595904-70325b7fdd90?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Yvette Blanchard
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Studio Artist
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1513910367299-bce8d8a0ebf6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Lawrence Brooks
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Content Specialist
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>C&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517070208541-6ddc4d3efbcb?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Jeffrey Clark
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Senior Art Director
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Kathryn Cooper
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Associate Creative Director
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>E&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Alicia Edwards
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Junior Copywriter
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Benjamin Emerson
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Director, Print Operations
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Jillian Erics
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Designer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Chelsea Evans
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Human Resources Manager
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>G&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Michael Gillard
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Co-Founder / CTO
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Dries Giuessepe
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Manager, Business Relations
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>M&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Jenny Harrison
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Studio Artist
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Lindsay Hatley
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Front-end Developer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Anna Hill
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Partner, Creative
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>S&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Courtney Samuels
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Designer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Tom Simpson
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Director, Product Development
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>T&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Floyd Thompson
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Principal Designer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Leonard Timmons
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Senior Designer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Whitney Trudeau
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Copywriter
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>W&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Kristin Watson
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      VP, Human Resources
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Emily Wilson
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      VP, User Experience
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+      &lt;div class="relative">
+        &lt;div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-6 py-1 text-sm font-medium text-gray-500">
+          &lt;h3>Y&lt;/h3>
+        &lt;/div>
+        &lt;ul class="relative z-0 divide-y divide-gray-200">
+          
+            &lt;li class="bg-white">
+              &lt;div class="relative px-6 py-5 flex items-center space-x-3 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500">
+                &lt;div class="flex-shrink-0">
+                  &lt;img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1505840717430-882ce147ef2d?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+                &lt;/div>
+                &lt;div class="flex-1 min-w-0">
+                  &lt;a href="#" class="focus:outline-none">
+                    &lt;!-- Extend touch target to entire panel -->
+                    &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                    &lt;p class="text-sm font-medium text-gray-900">
+                      Emma Young
+                    &lt;/p>
+                    &lt;p class="text-sm text-gray-500 truncate">
+                      Senior Front-end Developer
+                    &lt;/p>
+                  &lt;/a>
+                &lt;/div>
+              &lt;/div>
+            &lt;/li>
+          
+        &lt;/ul>
+      &lt;/div>
+    
+  &lt;/nav>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="da2661f6659b48cfc66247c5a2ab7ea06b0574a8" src="/components/application-ui/lists/stacked-lists/with_sticky_headings.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-4803dc264b6c70bd98c8d323b8de5a5fcc8df178" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-4803dc264b6c70bd98c8d323b8de5a5fcc8df178">Avatar groups with actions</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
+      
+  &lt;div>
+    &lt;div class="flow-root mt-6">
+      &lt;ul class="-my-5 divide-y divide-gray-200">
+        
+          &lt;li class="py-4">
+            &lt;div class="flex items-center space-x-4">
+              &lt;div class="flex-shrink-0">
+                &lt;img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+              &lt;/div>
+              &lt;div class="flex-1 min-w-0">
+                &lt;p class="text-sm font-medium text-gray-900 truncate">
+                  Leonard Krasner
+                &lt;/p>
+                &lt;p class="text-sm text-gray-500 truncate">
+                  @leonardkrasner
+                &lt;/p>
+              &lt;/div>
+              &lt;div>
+                &lt;a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+                  View
+                &lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/li>
+        
+          &lt;li class="py-4">
+            &lt;div class="flex items-center space-x-4">
+              &lt;div class="flex-shrink-0">
+                &lt;img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+              &lt;/div>
+              &lt;div class="flex-1 min-w-0">
+                &lt;p class="text-sm font-medium text-gray-900 truncate">
+                  Floyd Miles
+                &lt;/p>
+                &lt;p class="text-sm text-gray-500 truncate">
+                  @floydmiles
+                &lt;/p>
+              &lt;/div>
+              &lt;div>
+                &lt;a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+                  View
+                &lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/li>
+        
+          &lt;li class="py-4">
+            &lt;div class="flex items-center space-x-4">
+              &lt;div class="flex-shrink-0">
+                &lt;img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+              &lt;/div>
+              &lt;div class="flex-1 min-w-0">
+                &lt;p class="text-sm font-medium text-gray-900 truncate">
+                  Emily Selman
+                &lt;/p>
+                &lt;p class="text-sm text-gray-500 truncate">
+                  @emilyselman
+                &lt;/p>
+              &lt;/div>
+              &lt;div>
+                &lt;a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+                  View
+                &lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/li>
+        
+          &lt;li class="py-4">
+            &lt;div class="flex items-center space-x-4">
+              &lt;div class="flex-shrink-0">
+                &lt;img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?ixlib=rb-1.2.1&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=facearea&amp;amp;facepad=2&amp;amp;w=256&amp;amp;h=256&amp;amp;q=80" alt="">
+              &lt;/div>
+              &lt;div class="flex-1 min-w-0">
+                &lt;p class="text-sm font-medium text-gray-900 truncate">
+                  Kristin Watson
+                &lt;/p>
+                &lt;p class="text-sm text-gray-500 truncate">
+                  @kristinwatson
+                &lt;/p>
+              &lt;/div>
+              &lt;div>
+                &lt;a href="#" class="inline-flex items-center shadow-sm px-2.5 py-0.5 border border-gray-300 text-sm leading-5 font-medium rounded-full text-gray-700 bg-white hover:bg-gray-50">
+                  View
+                &lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/li>
+        
+      &lt;/ul>
+    &lt;/div>
+    &lt;div class="mt-6">
+      &lt;a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+        View all
+      &lt;/a>
+    &lt;/div>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="4803dc264b6c70bd98c8d323b8de5a5fcc8df178" src="/components/application-ui/lists/stacked-lists/avatar_groups_with_actions.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-2d637203882a6c9e0ee335ef998ec328f8d5bbe9" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-2d637203882a6c9e0ee335ef998ec328f8d5bbe9">Content links with action</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-sm mx-auto py-12 px-4 sm:px-0 md:py-16">
+      
+  &lt;div>
+    &lt;div class="flow-root mt-6">
+      &lt;ul class="-my-5 divide-y divide-gray-200">
+        
+          &lt;li class="py-5">
+            &lt;div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+              &lt;h3 class="text-sm font-semibold text-gray-800">
+                &lt;a href="#" class="hover:underline focus:outline-none">
+                  &lt;!-- Extend touch target to entire panel -->
+                  &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                  Office closed on July 2nd
+                &lt;/a>
+              &lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                Cum qui rem deleniti. Suscipit in dolor veritatis sequi aut. Vero ut earum quis deleniti. Ut a sunt eum cum ut repudiandae possimus. Nihil ex tempora neque cum consectetur dolores.
+              &lt;/p>
+            &lt;/div>
+          &lt;/li>
+        
+          &lt;li class="py-5">
+            &lt;div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+              &lt;h3 class="text-sm font-semibold text-gray-800">
+                &lt;a href="#" class="hover:underline focus:outline-none">
+                  &lt;!-- Extend touch target to entire panel -->
+                  &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                  New password policy
+                &lt;/a>
+              &lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                Alias inventore ut autem optio voluptas et repellendus. Facere totam quaerat quam quo laudantium cumque eaque excepturi vel. Accusamus maxime ipsam reprehenderit rerum id repellendus rerum. Culpa cum vel natus. Est sit autem mollitia.
+              &lt;/p>
+            &lt;/div>
+          &lt;/li>
+        
+          &lt;li class="py-5">
+            &lt;div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+              &lt;h3 class="text-sm font-semibold text-gray-800">
+                &lt;a href="#" class="hover:underline focus:outline-none">
+                  &lt;!-- Extend touch target to entire panel -->
+                  &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+                  Office closed on July 2nd
+                &lt;/a>
+              &lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                Tenetur libero voluptatem rerum occaecati qui est molestiae exercitationem. Voluptate quisquam iure assumenda consequatur ex et recusandae. Alias consectetur voluptatibus. Accusamus a ab dicta et. Consequatur quis dignissimos voluptatem nisi.
+              &lt;/p>
+            &lt;/div>
+          &lt;/li>
+        
+      &lt;/ul>
+    &lt;/div>
+    &lt;div class="mt-6">
+      &lt;a href="#" class="w-full flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+        View all
+      &lt;/a>
+    &lt;/div>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="2d637203882a6c9e0ee335ef998ec328f8d5bbe9" src="/components/application-ui/lists/stacked-lists/content_links_with_action.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-34267db402b7075762fde768d68349a08d05f0eb" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-34267db402b7075762fde768d68349a08d05f0eb">With truncated content preview</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-sm mx-auto py-6">
+      
+  &lt;ul class="divide-y divide-gray-200" x-max="1">
+    
+      &lt;li class="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+        &lt;div class="flex justify-between space-x-3">
+          &lt;div class="min-w-0 flex-1">
+            &lt;a href="#" class="block focus:outline-none">
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              &lt;p class="text-sm font-medium text-gray-900 truncate">Gloria Roberston&lt;/p>
+              &lt;p class="text-sm text-gray-500 truncate">Velit placeat sit ducimus non sed&lt;/p>
+            &lt;/a>
+          &lt;/div>
+          &lt;time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">1d ago&lt;/time>
+        &lt;/div>
+        &lt;div class="mt-1">
+          &lt;p class="line-clamp-2 text-sm text-gray-600">
+            Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.
+          &lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+        &lt;div class="flex justify-between space-x-3">
+          &lt;div class="min-w-0 flex-1">
+            &lt;a href="#" class="block focus:outline-none">
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              &lt;p class="text-sm font-medium text-gray-900 truncate">Virginia Abshire&lt;/p>
+              &lt;p class="text-sm text-gray-500 truncate">Nemo mollitia repudiandae adipisci explicabo optio consequatur tempora ut nihil&lt;/p>
+            &lt;/a>
+          &lt;/div>
+          &lt;time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">1d ago&lt;/time>
+        &lt;/div>
+        &lt;div class="mt-1">
+          &lt;p class="line-clamp-2 text-sm text-gray-600">
+            Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.
+          &lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+        &lt;div class="flex justify-between space-x-3">
+          &lt;div class="min-w-0 flex-1">
+            &lt;a href="#" class="block focus:outline-none">
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              &lt;p class="text-sm font-medium text-gray-900 truncate">Kyle Gulgowski&lt;/p>
+              &lt;p class="text-sm text-gray-500 truncate">Doloremque reprehenderit et harum quas explicabo nulla architecto dicta voluptatibus&lt;/p>
+            &lt;/a>
+          &lt;/div>
+          &lt;time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">1d ago&lt;/time>
+        &lt;/div>
+        &lt;div class="mt-1">
+          &lt;p class="line-clamp-2 text-sm text-gray-600">
+            Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.
+          &lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+        &lt;div class="flex justify-between space-x-3">
+          &lt;div class="min-w-0 flex-1">
+            &lt;a href="#" class="block focus:outline-none">
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              &lt;p class="text-sm font-medium text-gray-900 truncate">Hattie Haag&lt;/p>
+              &lt;p class="text-sm text-gray-500 truncate">Eos sequi et aut ex impedit&lt;/p>
+            &lt;/a>
+          &lt;/div>
+          &lt;time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">1d ago&lt;/time>
+        &lt;/div>
+        &lt;div class="mt-1">
+          &lt;p class="line-clamp-2 text-sm text-gray-600">
+            Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.
+          &lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+      &lt;li class="relative bg-white py-5 px-4 hover:bg-gray-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
+        &lt;div class="flex justify-between space-x-3">
+          &lt;div class="min-w-0 flex-1">
+            &lt;a href="#" class="block focus:outline-none">
+              &lt;span class="absolute inset-0" aria-hidden="true">&lt;/span>
+              &lt;p class="text-sm font-medium text-gray-900 truncate">Wilma Glover&lt;/p>
+              &lt;p class="text-sm text-gray-500 truncate">Quisquam veniam explicabo&lt;/p>
+            &lt;/a>
+          &lt;/div>
+          &lt;time datetime="2021-01-27T16:35" class="flex-shrink-0 whitespace-nowrap text-sm text-gray-500">1d ago&lt;/time>
+        &lt;/div>
+        &lt;div class="mt-1">
+          &lt;p class="line-clamp-2 text-sm text-gray-600">
+            Doloremque dolorem maiores assumenda dolorem facilis. Velit vel in a rerum natus facere. Enim rerum eaque qui facilis. Numquam laudantium sed id dolores omnis in. Eos reiciendis deserunt maiores et accusamus quod dolor.
+          &lt;/p>
+        &lt;/div>
+      &lt;/li>
+    
+  &lt;/ul>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="34267db402b7075762fde768d68349a08d05f0eb" src="/components/application-ui/lists/stacked-lists/with_truncated_content_preview.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="p-8 flex items-center justify-center bg-white">
+<div className="" style={{}}>
+  <div className="p-8 flex items-center justify-center bg-white">
     
   <button type="button" className="flex-shrink-0 group relative rounded-full inline-flex items-center justify-center h-5 w-10 cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" data-todo-x-data="{ on: false }" aria-pressed="false" data-todo-colon-aria-pressed="on.toString()" data-todo-at-click="on = !on">
     <span className="sr-only">Use setting</span>
@@ -13,6 +14,7 @@ const Component = (props) => (
   </button>
 
   </div>
+</div>
 </>
 );
 

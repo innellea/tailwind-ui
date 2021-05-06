@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div>
+<div className="" style={{}}>
+  <div>
     
   <div className="min-h-screen bg-white">
     <header>
@@ -294,6 +295,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

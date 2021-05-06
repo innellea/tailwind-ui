@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div style="min-height: 712px;" class="overflow-y-auto">
     
     <div class="min-h-screen bg-gray-100">
@@ -215,6 +216,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

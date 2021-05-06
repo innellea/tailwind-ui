@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="p-8 bg-gray-800" style="min-height: 384px;">
       <div class="max-w-7xl mx-auto">
       
@@ -82,6 +83,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

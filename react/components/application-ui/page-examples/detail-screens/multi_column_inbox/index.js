@@ -3,11 +3,12 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div style={{minHeight: "768px"}}>
+<div className="" style={{}}>
+  <div style={{minHeight: "768px"}}>
     
   <div className="h-screen overflow-hidden bg-gray-100 flex flex-col">
     <!-- Top nav-->
-    <header data-todo-x-data="{ open: false }" className="flex-shrink-0 relative h-16 bg-white flex items-center">
+    <header data-todo-x-data="{ open: false }" data-todo-at-keydown-window-escape="open = false" className="flex-shrink-0 relative h-16 bg-white flex items-center">
       {/* Logo area */}
       <div className="absolute inset-y-0 left-0 lg:static lg:flex-shrink-0">
         <a href="/" className="flex items-center justify-center h-16 w-16 bg-cyan-400 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600 lg:w-20">
@@ -38,7 +39,7 @@ const Component = (props) => (
       {/* Menu button area */}
       <div className="absolute inset-y-0 right-0 pr-4 flex items-center sm:pr-6 lg:hidden">
         {/* Mobile menu button */}
-        <button type="button" data-todo-at-click="open = !open" className="-mr-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
+        <button type="button" className="-mr-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600" data-todo-at-click="open = true">
           <span className="sr-only">Open main menu</span>
           <svg className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -61,32 +62,43 @@ const Component = (props) => (
         </div>
         <div className="ml-10 pr-4 flex-shrink-0 flex items-center space-x-10">
           <nav aria-label="Global" className="flex space-x-10">
-            <div data-todo-x-data="{ open: false }" data-todo-at-keydown-escape-stop="open = false" data-todo-at-click-away="open = false" className="relative text-left">
-              <button type="button" className="flex items-center text-sm font-medium text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" id="menu-1" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
-                <span>Inboxes</span>
-                <svg className="ml-1 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            
+              
+                <div data-todo-x-data="{ open: false }" data-todo-at-keydown-escape-stop="open = false" data-todo-at-click-away="open = false" className="relative text-left">
+                  <button type="button" className="flex items-center text-sm font-medium text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600" id="menu-1" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
+                    <span>Inboxes</span>
+                    <svg className="ml-1 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd"></path>
 </svg>
-              </button>
+                  </button>
 
-              
-                <div data-todo-x-show="open" data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute z-30 right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-1">
-                  <div className="py-1" role="none">
-                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-                        Sales
-                      </a>
-                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-                        Support
-                      </a>
-                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
-                        Internal
-                      </a>
-                  </div>
+                  
+                    <div data-todo-x-show="open" data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute z-30 right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-1">
+                      <div className="py-1" role="none">
+                        
+                          <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                              Technical Support
+                            </a>
+                        
+                          <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                              Sales
+                            </a>
+                        
+                          <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                              General
+                            </a>
+                        
+                      </div>
+                    </div>
+                  
                 </div>
               
-            </div>
-            <a href="/" className="text-sm font-medium text-gray-900">Reporting</a>
-            <a href="/" className="text-sm font-medium text-gray-900">Settings</a>
+              
+                <a href="/" className="text-sm font-medium text-gray-900">Reporting</a>
+              
+              
+                <a href="/" className="text-sm font-medium text-gray-900">Settings</a>
+              
           </nav>
           <div className="flex items-center space-x-8">
             <span className="inline-flex">
@@ -122,80 +134,82 @@ const Component = (props) => (
       </div>
 
       {/* Mobile menu, show/hide this `div` based on menu open/closed state */}
-      <div data-todo-x-show="open" className="fixed inset-0 z-40">
-        <div data-todo-at-click="open = false" data-todo-x-show="open" data-todo-x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." data-todo-x-transition-enter="transition-opacity ease-linear duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="transition-opacity ease-linear duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" className="hidden sm:block sm:fixed sm:inset-0 lg:hidden" aria-hidden="true">
-          <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-        </div>
+      
+        <div data-todo-x-show="open" className="fixed inset-0 z-40 lg:hidden" data-todo-x-ref="dialog" role="dialog" aria-modal="true">
+          
+            <div data-todo-x-show="open" data-todo-x-transition-enter="transition-opacity ease-linear duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="transition-opacity ease-linear duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" data-todo-x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." className="hidden sm:block sm:fixed sm:inset-0 sm:bg-gray-600 sm:bg-opacity-75" data-todo-at-click="open = false" aria-hidden="true"></div>
+          
 
-        
-          <nav data-todo-x-show="open" data-todo-x-transition-enter="transition ease-out duration-150 sm:ease-in-out sm:duration-300" data-todo-x-transition-enter-start="transform opacity-0 scale-110 sm:translate-x-full sm:scale-100 sm:opacity-100" data-todo-x-transition-enter-end="transform opacity-100 scale-100  sm:translate-x-0 sm:scale-100 sm:opacity-100" data-todo-x-transition-leave="transition ease-in duration-150 sm:ease-in-out sm:duration-300" data-todo-x-transition-leave-start="transform opacity-100 scale-100 sm:translate-x-0 sm:scale-100 sm:opacity-100" data-todo-x-transition-leave-end="transform opacity-0 scale-110  sm:translate-x-full sm:scale-100 sm:opacity-100" data-todo-x-description="Mobile menu, toggle classes based on menu state." data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" className="fixed z-40 inset-0 h-full w-full bg-white sm:inset-y-0 sm:left-auto sm:right-0 sm:max-w-sm sm:w-full sm:shadow-lg lg:hidden" aria-label="Global">
-            <div className="h-16 flex items-center justify-between px-4 sm:px-6">
-              <a href="/">
-                <img className="block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=cyan&amp;shade=400" alt="Workflow">
-              </a>
-              <button type="button" data-todo-at-click="open = !open" className="-mr-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
-                <span className="sr-only">Open main menu</span>
-                <svg className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          
+            <nav data-todo-x-show="open" data-todo-x-transition-enter="transition ease-out duration-150 sm:ease-in-out sm:duration-300" data-todo-x-transition-enter-start="transform opacity-0 scale-110 sm:translate-x-full sm:scale-100 sm:opacity-100" data-todo-x-transition-enter-end="transform opacity-100 scale-100 sm:translate-x-0 sm:scale-100 sm:opacity-100" data-todo-x-transition-leave="transition ease-in duration-150 sm:ease-in-out sm:duration-300" data-todo-x-transition-leave-start="transform opacity-100 scale-100 sm:translate-x-0 sm:scale-100 sm:opacity-100" data-todo-x-transition-leave-end="transform opacity-0 scale-110 sm:translate-x-full sm:scale-100 sm:opacity-100" data-todo-x-description="Mobile menu, toggle classes based on menu state." className="fixed z-40 inset-0 h-full w-full bg-white sm:inset-y-0 sm:left-auto sm:right-0 sm:max-w-sm sm:w-full sm:shadow-lg" aria-label="Global">
+              <div className="h-16 flex items-center justify-between px-4 sm:px-6">
+                <a href="/">
+                  <img className="block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=cyan&amp;shade=400" alt="Workflow">
+                </a>
+                <button type="button" className="-mr-2 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600" data-todo-at-click="open = false">
+                  <span className="sr-only">Close main menu</span>
+                  <svg className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
-              </button>
-            </div>
-            <div className="mt-2 max-w-8xl mx-auto px-4 sm:px-6">
-              <div className="relative text-gray-400 focus-within:text-gray-500">
-                <label htmlFor="search" className="sr-only">Search all inboxes</label>
-                <input id="search" type="search" placeholder="Search all inboxes" className="block w-full border-gray-300 rounded-md pl-10 placeholder-gray-500 focus:border-blue-600 focus:ring-blue-600">
-                <div className="absolute inset-y-0 left-0 flex items-center justify-center pl-3">
-                  <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                </button>
+              </div>
+              <div className="mt-2 max-w-8xl mx-auto px-4 sm:px-6">
+                <div className="relative text-gray-400 focus-within:text-gray-500">
+                  <label htmlFor="search" className="sr-only">Search all inboxes</label>
+                  <input id="search" type="search" placeholder="Search all inboxes" className="block w-full border-gray-300 rounded-md pl-10 placeholder-gray-500 focus:border-blue-600 focus:ring-blue-600">
+                  <div className="absolute inset-y-0 left-0 flex items-center justify-center pl-3">
+                    <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
 </svg>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="max-w-8xl mx-auto py-3 px-2 sm:px-4">
-              
-                <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Inboxes</a>
+              <div className="max-w-8xl mx-auto py-3 px-2 sm:px-4">
                 
-                  <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">Technical Support</a>
+                  <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Inboxes</a>
+                  
+                    <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">Technical Support</a>
+                  
+                    <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">Sales</a>
+                  
+                    <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">General</a>
+                  
                 
-                  <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">Sales</a>
+                  <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Reporting</a>
+                  
                 
-                  <a href="/" className="block rounded-md py-2 pl-5 pr-3 text-base font-medium text-gray-500 hover:bg-gray-100">General</a>
+                  <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Settings</a>
+                  
                 
-              
-                <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Reporting</a>
-                
-              
-                <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-100">Settings</a>
-                
-              
-            </div>
-            <div className="border-t border-gray-200 pt-4 pb-3">
-              <div className="max-w-8xl mx-auto px-4 flex items-center sm:px-6">
-                <div className="flex-shrink-0">
-                  <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
-                </div>
-                <div className="ml-3 min-w-0 flex-1">
-                  <div className="text-base font-medium text-gray-800 truncate">Whitney Francis</div>
-                  <div className="text-sm font-medium text-gray-500 truncate">whitneyfrancis@example.com</div>
-                </div>
-                <a href="/" className="ml-auto flex-shrink-0 bg-white p-2 text-gray-400 hover:text-gray-500">
-                  <span className="sr-only">View notifications</span>
-                  <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              </div>
+              <div className="border-t border-gray-200 pt-4 pb-3">
+                <div className="max-w-8xl mx-auto px-4 flex items-center sm:px-6">
+                  <div className="flex-shrink-0">
+                    <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                  </div>
+                  <div className="ml-3 min-w-0 flex-1">
+                    <div className="text-base font-medium text-gray-800 truncate">Whitney Francis</div>
+                    <div className="text-sm font-medium text-gray-500 truncate">whitneyfrancis@example.com</div>
+                  </div>
+                  <a href="/" className="ml-auto flex-shrink-0 bg-white p-2 text-gray-400 hover:text-gray-500">
+                    <span className="sr-only">View notifications</span>
+                    <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/bell" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
 </svg>
-                </a>
+                  </a>
+                </div>
+                <div className="mt-3 max-w-8xl mx-auto px-2 space-y-1 sm:px-4">
+                  
+                    <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-50">Your Profile</a>
+                  
+                    <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-50">Sign out</a>
+                  
+                </div>
               </div>
-              <div className="mt-3 max-w-8xl mx-auto px-2 space-y-1 sm:px-4">
-                
-                  <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-50">Your Profile</a>
-                
-                  <a href="/" className="block rounded-md py-2 px-3 text-base font-medium text-gray-900 hover:bg-gray-50">Sign out</a>
-                
-              </div>
-            </div>
-          </nav>
-        
-      </div>
+            </nav>
+          
+        </div>
+      
     </header>
 
     {/* Bottom section */}
@@ -313,23 +327,18 @@ const Component = (props) => (
                         
                           <div data-todo-x-show="open" data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-3">
                             <div className="py-1" role="none">
-                              
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                    Note
-                                  </a>
-                              
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                    Assign
-                                  </a>
-                              
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                    Archive
-                                  </a>
-                              
-                                <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
-                                    Move
-                                  </a>
-                              
+                              <a href="/" className="block sm:hidden px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                  Note
+                                </a>
+                              <a href="/" className="block sm:hidden px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                  Assign
+                                </a>
+                              <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                  Archive
+                                </a>
+                              <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">
+                                  Move
+                                </a>
                             </div>
                           </div>
                         
@@ -487,8 +496,8 @@ const Component = (props) => (
             <div className="flex-shrink-0">
               <div className="h-16 bg-white px-6 flex flex-col justify-center">
                 <div className="flex items-baseline space-x-3">
-                  <h2 className="text-ls font-medium text-gray-900">Inbox</h2>
-                  <p className="text-sm font-medium text-gray-500">12 messages</p>
+                  <h2 className="text-lg font-medium text-gray-900">Inbox</h2>
+                  <p className="text-sm font-medium text-gray-500">10 messages</p>
                 </div>
               </div>
               <div className="border-t border-b border-gray-200 bg-gray-50 px-6 py-2 text-sm font-medium text-gray-500">
@@ -687,6 +696,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

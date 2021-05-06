@@ -1,0 +1,1736 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#application-ui" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Application UI
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#application-ui-forms" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Forms
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Form Layouts
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-ab33d0c5e660257b69460298cbcd3f85d9fa29ca" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-ab33d0c5e660257b69460298cbcd3f85d9fa29ca">Labels on left</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      
+  &lt;form class="space-y-8 divide-y divide-gray-200">
+    &lt;div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
+      &lt;div>
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Profile
+          &lt;/h3>
+          &lt;p class="mt-1 max-w-2xl text-sm text-gray-500">
+            This information will be displayed publicly so be careful what you share.
+          &lt;/p>
+        &lt;/div>
+
+        &lt;div class="mt-6 sm:mt-5 space-y-6 sm:space-y-5">
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="username" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Username
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;div class="max-w-lg flex rounded-md shadow-sm">
+                &lt;span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
+                  workcation.com/
+                &lt;/span>
+                &lt;input type="text" name="username" id="username" autocomplete="username" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              About
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;textarea id="about" name="about" rows="3" class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">&lt;/textarea>
+              &lt;p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.&lt;/p>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-center sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="photo" class="block text-sm font-medium text-gray-700">
+              Photo
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;div class="flex items-center">
+                &lt;span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                  &lt;svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                    &lt;path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+                  &lt;/svg>
+                &lt;/span>
+                &lt;button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Change
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="cover_photo" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Cover photo
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;div class="max-w-lg flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                &lt;div class="space-y-1 text-center">
+                  &lt;svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                    &lt;path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                  &lt;/svg>
+                  &lt;div class="flex text-sm text-gray-600">
+                    &lt;label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                      &lt;span>Upload a file&lt;/span>
+                      &lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+                    &lt;/label>
+                    &lt;p class="pl-1">or drag and drop&lt;/p>
+                  &lt;/div>
+                  &lt;p class="text-xs text-gray-500">
+                    PNG, JPG, GIF up to 10MB
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Personal Information
+          &lt;/h3>
+          &lt;p class="mt-1 max-w-2xl text-sm text-gray-500">
+            Use a permanent address where you can receive mail.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="space-y-6 sm:space-y-5">
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="first_name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              First name
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="last_name" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Last name
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="email" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Email address
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="country" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Country / Region
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;select id="country" name="country" autocomplete="country" class="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+                &lt;option>United States&lt;/option>
+                &lt;option>Canada&lt;/option>
+                &lt;option>Mexico&lt;/option>
+              &lt;/select>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="street_address" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              Street address
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="street_address" id="street_address" autocomplete="street-address" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="city" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              City
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="city" id="city" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="state" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              State / Province
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="state" id="state" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+            &lt;label for="zip" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+              ZIP / Postal
+            &lt;/label>
+            &lt;div class="mt-1 sm:mt-0 sm:col-span-2">
+              &lt;input type="text" name="zip" id="zip" autocomplete="postal-code" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Notifications
+          &lt;/h3>
+          &lt;p class="mt-1 max-w-2xl text-sm text-gray-500">
+            We'll always let you know about important changes, but you pick what else you want to hear about.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="space-y-6 sm:space-y-5 divide-y divide-gray-200">
+          &lt;div class="pt-6 sm:pt-5">
+            &lt;div role="group" aria-labelledby="label-email">
+              &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                &lt;div>
+                  &lt;div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-email">
+                    By Email
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="mt-4 sm:mt-0 sm:col-span-2">
+                  &lt;div class="max-w-lg space-y-4">
+                    &lt;div class="relative flex items-start">
+                      &lt;div class="flex items-center h-5">
+                        &lt;input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                      &lt;/div>
+                      &lt;div class="ml-3 text-sm">
+                        &lt;label for="comments" class="font-medium text-gray-700">Comments&lt;/label>
+                        &lt;p class="text-gray-500">Get notified when someones posts a comment on a posting.&lt;/p>
+                      &lt;/div>
+                    &lt;/div>
+                    &lt;div>
+                      &lt;div class="relative flex items-start">
+                        &lt;div class="flex items-center h-5">
+                          &lt;input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        &lt;/div>
+                        &lt;div class="ml-3 text-sm">
+                          &lt;label for="candidates" class="font-medium text-gray-700">Candidates&lt;/label>
+                          &lt;p class="text-gray-500">Get notified when a candidate applies for a job.&lt;/p>
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                    &lt;div>
+                      &lt;div class="relative flex items-start">
+                        &lt;div class="flex items-center h-5">
+                          &lt;input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                        &lt;/div>
+                        &lt;div class="ml-3 text-sm">
+                          &lt;label for="offers" class="font-medium text-gray-700">Offers&lt;/label>
+                          &lt;p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.&lt;/p>
+                        &lt;/div>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="pt-6 sm:pt-5">
+            &lt;div role="group" aria-labelledby="label-notifications">
+              &lt;div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-baseline">
+                &lt;div>
+                  &lt;div class="text-base font-medium text-gray-900 sm:text-sm sm:text-gray-700" id="label-notifications">
+                    Push Notifications
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="sm:col-span-2">
+                  &lt;div class="max-w-lg">
+                    &lt;p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.&lt;/p>
+                    &lt;div class="mt-4 space-y-4">
+                      &lt;div class="flex items-center">
+                        &lt;input id="push_everything" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        &lt;label for="push_everything" class="ml-3 block text-sm font-medium text-gray-700">
+                          Everything
+                        &lt;/label>
+                      &lt;/div>
+                      &lt;div class="flex items-center">
+                        &lt;input id="push_email" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        &lt;label for="push_email" class="ml-3 block text-sm font-medium text-gray-700">
+                          Same as email
+                        &lt;/label>
+                      &lt;/div>
+                      &lt;div class="flex items-center">
+                        &lt;input id="push_nothing" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                        &lt;label for="push_nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                          No push notifications
+                        &lt;/label>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="pt-5">
+      &lt;div class="flex justify-end">
+        &lt;button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Cancel
+        &lt;/button>
+        &lt;button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Save
+        &lt;/button>
+      &lt;/div>
+    &lt;/div>
+  &lt;/form>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="ab33d0c5e660257b69460298cbcd3f85d9fa29ca" src="/components/application-ui/forms/form-layouts/labels_on_left.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-beccbeee7f717cae5b36348d48bd99b64f128130" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-beccbeee7f717cae5b36348d48bd99b64f128130">Simple stacked</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-white">
+    &lt;div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      &lt;div class="max-w-3xl mx-auto">
+        
+  &lt;form class="space-y-8 divide-y divide-gray-200">
+    &lt;div class="space-y-8 divide-y divide-gray-200">
+      &lt;div>
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Profile
+          &lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            This information will be displayed publicly so be careful what you share.
+          &lt;/p>
+        &lt;/div>
+
+        &lt;div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+          &lt;div class="sm:col-span-4">
+            &lt;label for="username" class="block text-sm font-medium text-gray-700">
+              Username
+            &lt;/label>
+            &lt;div class="mt-1 flex rounded-md shadow-sm">
+              &lt;span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
+                workcation.com/
+              &lt;/span>
+              &lt;input type="text" name="username" id="username" autocomplete="username" class="flex-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-6">
+            &lt;label for="about" class="block text-sm font-medium text-gray-700">
+              About
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">&lt;/textarea>
+            &lt;/div>
+            &lt;p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.&lt;/p>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-6">
+            &lt;label for="photo" class="block text-sm font-medium text-gray-700">
+              Photo
+            &lt;/label>
+            &lt;div class="mt-1 flex items-center">
+              &lt;span class="h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                &lt;svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                  &lt;path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+                &lt;/svg>
+              &lt;/span>
+              &lt;button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Change
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-6">
+            &lt;label for="cover_photo" class="block text-sm font-medium text-gray-700">
+              Cover photo
+            &lt;/label>
+            &lt;div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+              &lt;div class="space-y-1 text-center">
+                &lt;svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                  &lt;path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                &lt;/svg>
+                &lt;div class="flex text-sm text-gray-600">
+                  &lt;label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                    &lt;span>Upload a file&lt;/span>
+                    &lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+                  &lt;/label>
+                  &lt;p class="pl-1">or drag and drop&lt;/p>
+                &lt;/div>
+                &lt;p class="text-xs text-gray-500">
+                  PNG, JPG, GIF up to 10MB
+                &lt;/p>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="pt-8">
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Personal Information
+          &lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            Use a permanent address where you can receive mail.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-6 grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
+          &lt;div class="sm:col-span-3">
+            &lt;label for="first_name" class="block text-sm font-medium text-gray-700">
+              First name
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-3">
+            &lt;label for="last_name" class="block text-sm font-medium text-gray-700">
+              Last name
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-4">
+            &lt;label for="email" class="block text-sm font-medium text-gray-700">
+              Email address
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input id="email" name="email" type="email" autocomplete="email" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-3">
+            &lt;label for="country" class="block text-sm font-medium text-gray-700">
+              Country / Region
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;select id="country" name="country" autocomplete="country" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+                &lt;option>United States&lt;/option>
+                &lt;option>Canada&lt;/option>
+                &lt;option>Mexico&lt;/option>
+              &lt;/select>
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-6">
+            &lt;label for="street_address" class="block text-sm font-medium text-gray-700">
+              Street address
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="street_address" id="street_address" autocomplete="street-address" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-2">
+            &lt;label for="city" class="block text-sm font-medium text-gray-700">
+              City
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="city" id="city" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-2">
+            &lt;label for="state" class="block text-sm font-medium text-gray-700">
+              State / Province
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="state" id="state" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+
+          &lt;div class="sm:col-span-2">
+            &lt;label for="zip" class="block text-sm font-medium text-gray-700">
+              ZIP / Postal
+            &lt;/label>
+            &lt;div class="mt-1">
+              &lt;input type="text" name="zip" id="zip" autocomplete="postal-code" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md">
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="pt-8">
+        &lt;div>
+          &lt;h3 class="text-lg leading-6 font-medium text-gray-900">
+            Notifications
+          &lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            We'll always let you know about important changes, but you pick what else you want to hear about.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-6">
+          &lt;fieldset>
+            &lt;legend class="text-base font-medium text-gray-900">
+              By Email
+            &lt;/legend>
+            &lt;div class="mt-4 space-y-4">
+              &lt;div class="relative flex items-start">
+                &lt;div class="flex items-center h-5">
+                  &lt;input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                &lt;/div>
+                &lt;div class="ml-3 text-sm">
+                  &lt;label for="comments" class="font-medium text-gray-700">Comments&lt;/label>
+                  &lt;p class="text-gray-500">Get notified when someones posts a comment on a posting.&lt;/p>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="relative flex items-start">
+                &lt;div class="flex items-center h-5">
+                  &lt;input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                &lt;/div>
+                &lt;div class="ml-3 text-sm">
+                  &lt;label for="candidates" class="font-medium text-gray-700">Candidates&lt;/label>
+                  &lt;p class="text-gray-500">Get notified when a candidate applies for a job.&lt;/p>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="relative flex items-start">
+                &lt;div class="flex items-center h-5">
+                  &lt;input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                &lt;/div>
+                &lt;div class="ml-3 text-sm">
+                  &lt;label for="offers" class="font-medium text-gray-700">Offers&lt;/label>
+                  &lt;p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.&lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/fieldset>
+          &lt;fieldset class="mt-6">
+            &lt;div>
+              &lt;legend class="text-base font-medium text-gray-900">
+                Push Notifications
+              &lt;/legend>
+              &lt;p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.&lt;/p>
+            &lt;/div>
+            &lt;div class="mt-4 space-y-4">
+              &lt;div class="flex items-center">
+                &lt;input id="push_everything" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                &lt;label for="push_everything" class="ml-3 block text-sm font-medium text-gray-700">
+                  Everything
+                &lt;/label>
+              &lt;/div>
+              &lt;div class="flex items-center">
+                &lt;input id="push_email" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                &lt;label for="push_email" class="ml-3 block text-sm font-medium text-gray-700">
+                  Same as email
+                &lt;/label>
+              &lt;/div>
+              &lt;div class="flex items-center">
+                &lt;input id="push_nothing" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                &lt;label for="push_nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                  No push notifications
+                &lt;/label>
+              &lt;/div>
+            &lt;/div>
+          &lt;/fieldset>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="pt-5">
+      &lt;div class="flex justify-end">
+        &lt;button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Cancel
+        &lt;/button>
+        &lt;button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Save
+        &lt;/button>
+      &lt;/div>
+    &lt;/div>
+  &lt;/form>
+
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="beccbeee7f717cae5b36348d48bd99b64f128130" src="/components/application-ui/forms/form-layouts/simple_stacked.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-79979c76e7ef60fa4fa086e9ef77f95d126cb501" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-79979c76e7ef60fa4fa086e9ef77f95d126cb501">Two-column cards with separate submit actions</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100">
+    &lt;div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      
+  &lt;div>
+    &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+      &lt;div class="md:col-span-1">
+        &lt;div class="px-4 sm:px-0">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Profile&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-600">
+            This information will be displayed publicly so be careful what you share.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="mt-5 md:mt-0 md:col-span-2">
+        &lt;form action="#" method="POST">
+          &lt;div class="shadow sm:rounded-md sm:overflow-hidden">
+            &lt;div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+              &lt;div class="grid grid-cols-3 gap-6">
+                &lt;div class="col-span-3 sm:col-span-2">
+                  &lt;label for="company_website" class="block text-sm font-medium text-gray-700">
+                    Website
+                  &lt;/label>
+                  &lt;div class="mt-1 flex rounded-md shadow-sm">
+                    &lt;span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                      http://
+                    &lt;/span>
+                    &lt;input type="text" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="www.example.com">
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div>
+                &lt;label for="about" class="block text-sm font-medium text-gray-700">
+                  About
+                &lt;/label>
+                &lt;div class="mt-1">
+                  &lt;textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">&lt;/textarea>
+                &lt;/div>
+                &lt;p class="mt-2 text-sm text-gray-500">
+                  Brief description for your profile. URLs are hyperlinked.
+                &lt;/p>
+              &lt;/div>
+
+              &lt;div>
+                &lt;label class="block text-sm font-medium text-gray-700">
+                  Photo
+                &lt;/label>
+                &lt;div class="mt-1 flex items-center">
+                  &lt;span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                    &lt;svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                      &lt;path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+                    &lt;/svg>
+                  &lt;/span>
+                  &lt;button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Change
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div>
+                &lt;label class="block text-sm font-medium text-gray-700">
+                  Cover photo
+                &lt;/label>
+                &lt;div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                  &lt;div class="space-y-1 text-center">
+                    &lt;svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                      &lt;path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                    &lt;/svg>
+                    &lt;div class="flex text-sm text-gray-600">
+                      &lt;label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        &lt;span>Upload a file&lt;/span>
+                        &lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+                      &lt;/label>
+                      &lt;p class="pl-1">or drag and drop&lt;/p>
+                    &lt;/div>
+                    &lt;p class="text-xs text-gray-500">
+                      PNG, JPG, GIF up to 10MB
+                    &lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              &lt;button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Save
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="hidden sm:block" aria-hidden="true">
+    &lt;div class="py-5">
+      &lt;div class="border-t border-gray-200">&lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="mt-10 sm:mt-0">
+    &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+      &lt;div class="md:col-span-1">
+        &lt;div class="px-4 sm:px-0">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-600">
+            Use a permanent address where you can receive mail.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="mt-5 md:mt-0 md:col-span-2">
+        &lt;form action="#" method="POST">
+          &lt;div class="shadow overflow-hidden sm:rounded-md">
+            &lt;div class="px-4 py-5 bg-white sm:p-6">
+              &lt;div class="grid grid-cols-6 gap-6">
+                &lt;div class="col-span-6 sm:col-span-3">
+                  &lt;label for="first_name" class="block text-sm font-medium text-gray-700">First name&lt;/label>
+                  &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-3">
+                  &lt;label for="last_name" class="block text-sm font-medium text-gray-700">Last name&lt;/label>
+                  &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-4">
+                  &lt;label for="email_address" class="block text-sm font-medium text-gray-700">Email address&lt;/label>
+                  &lt;input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-3">
+                  &lt;label for="country" class="block text-sm font-medium text-gray-700">Country / Region&lt;/label>
+                  &lt;select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    &lt;option>United States&lt;/option>
+                    &lt;option>Canada&lt;/option>
+                    &lt;option>Mexico&lt;/option>
+                  &lt;/select>
+                &lt;/div>
+
+                &lt;div class="col-span-6">
+                  &lt;label for="street_address" class="block text-sm font-medium text-gray-700">Street address&lt;/label>
+                  &lt;input type="text" name="street_address" id="street_address" autocomplete="street-address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                  &lt;label for="city" class="block text-sm font-medium text-gray-700">City&lt;/label>
+                  &lt;input type="text" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                  &lt;label for="state" class="block text-sm font-medium text-gray-700">State / Province&lt;/label>
+                  &lt;input type="text" name="state" id="state" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+
+                &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                  &lt;label for="postal_code" class="block text-sm font-medium text-gray-700">ZIP / Postal&lt;/label>
+                  &lt;input type="text" name="postal_code" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              &lt;button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Save
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="hidden sm:block" aria-hidden="true">
+    &lt;div class="py-5">
+      &lt;div class="border-t border-gray-200">&lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;div class="mt-10 sm:mt-0">
+    &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+      &lt;div class="md:col-span-1">
+        &lt;div class="px-4 sm:px-0">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Notifications&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-600">
+            Decide which communications you'd like to receive and how.
+          &lt;/p>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="mt-5 md:mt-0 md:col-span-2">
+        &lt;form action="#" method="POST">
+          &lt;div class="shadow overflow-hidden sm:rounded-md">
+            &lt;div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+              &lt;fieldset>
+                &lt;legend class="text-base font-medium text-gray-900">By Email&lt;/legend>
+                &lt;div class="mt-4 space-y-4">
+                  &lt;div class="flex items-start">
+                    &lt;div class="flex items-center h-5">
+                      &lt;input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    &lt;/div>
+                    &lt;div class="ml-3 text-sm">
+                      &lt;label for="comments" class="font-medium text-gray-700">Comments&lt;/label>
+                      &lt;p class="text-gray-500">Get notified when someones posts a comment on a posting.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div class="flex items-start">
+                    &lt;div class="flex items-center h-5">
+                      &lt;input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    &lt;/div>
+                    &lt;div class="ml-3 text-sm">
+                      &lt;label for="candidates" class="font-medium text-gray-700">Candidates&lt;/label>
+                      &lt;p class="text-gray-500">Get notified when a candidate applies for a job.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                  &lt;div class="flex items-start">
+                    &lt;div class="flex items-center h-5">
+                      &lt;input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    &lt;/div>
+                    &lt;div class="ml-3 text-sm">
+                      &lt;label for="offers" class="font-medium text-gray-700">Offers&lt;/label>
+                      &lt;p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/fieldset>
+              &lt;fieldset>
+                &lt;div>
+                  &lt;legend class="text-base font-medium text-gray-900">Push Notifications&lt;/legend>
+                  &lt;p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.&lt;/p>
+                &lt;/div>
+                &lt;div class="mt-4 space-y-4">
+                  &lt;div class="flex items-center">
+                    &lt;input id="push_everything" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                    &lt;label for="push_everything" class="ml-3 block text-sm font-medium text-gray-700">
+                      Everything
+                    &lt;/label>
+                  &lt;/div>
+                  &lt;div class="flex items-center">
+                    &lt;input id="push_email" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                    &lt;label for="push_email" class="ml-3 block text-sm font-medium text-gray-700">
+                      Same as email
+                    &lt;/label>
+                  &lt;/div>
+                  &lt;div class="flex items-center">
+                    &lt;input id="push_nothing" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                    &lt;label for="push_nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                      No push notifications
+                    &lt;/label>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/fieldset>
+            &lt;/div>
+            &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+              &lt;button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                Save
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="79979c76e7ef60fa4fa086e9ef77f95d126cb501" src="/components/application-ui/forms/form-layouts/two_column_cards_with_separate_submit_actions.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-5bd5ba00a5ed6730f549e9fd5c7151d322993fce" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-5bd5ba00a5ed6730f549e9fd5c7151d322993fce">Two-column in full-width cards</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100">
+    &lt;div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      
+  &lt;div class="space-y-6">
+    &lt;div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+      &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+        &lt;div class="md:col-span-1">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Profile&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            This information will be displayed publicly so be careful what you share.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-5 md:mt-0 md:col-span-2">
+          &lt;form class="space-y-6" action="#" method="POST">
+            &lt;div class="grid grid-cols-3 gap-6">
+              &lt;div class="col-span-3 sm:col-span-2">
+                &lt;label for="company_website" class="block text-sm font-medium text-gray-700">
+                  Website
+                &lt;/label>
+                &lt;div class="mt-1 flex rounded-md shadow-sm">
+                  &lt;span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 text-sm">
+                    http://
+                  &lt;/span>
+                  &lt;input type="text" name="company_website" id="company_website" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="www.example.com">
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label for="about" class="block text-sm font-medium text-gray-700">
+                About
+              &lt;/label>
+              &lt;div class="mt-1">
+                &lt;textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">&lt;/textarea>
+              &lt;/div>
+              &lt;p class="mt-2 text-sm text-gray-500">
+                Brief description for your profile. URLs are hyperlinked.
+              &lt;/p>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label class="block text-sm font-medium text-gray-700">
+                Photo
+              &lt;/label>
+              &lt;div class="mt-1 flex items-center space-x-5">
+                &lt;span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100">
+                  &lt;svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                    &lt;path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+                  &lt;/svg>
+                &lt;/span>
+                &lt;button type="button" class="bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Change
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+
+            &lt;div>
+              &lt;label class="block text-sm font-medium text-gray-700">
+                Cover photo
+              &lt;/label>
+              &lt;div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                &lt;div class="space-y-1 text-center">
+                  &lt;svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                    &lt;path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                  &lt;/svg>
+                  &lt;div class="flex text-sm text-gray-600">
+                    &lt;label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                      &lt;span>Upload a file&lt;/span>
+                      &lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+                    &lt;/label>
+                    &lt;p class="pl-1">or drag and drop&lt;/p>
+                  &lt;/div>
+                  &lt;p class="text-xs text-gray-500">
+                    PNG, JPG, GIF up to 10MB
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+      &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+        &lt;div class="md:col-span-1">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Personal Information&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            Use a permanent address where you can receive mail.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-5 md:mt-0 md:col-span-2">
+          &lt;form action="#" method="POST">
+            &lt;div class="grid grid-cols-6 gap-6">
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="first_name" class="block text-sm font-medium text-gray-700">First name&lt;/label>
+                &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="last_name" class="block text-sm font-medium text-gray-700">Last name&lt;/label>
+                &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-4">
+                &lt;label for="email_address" class="block text-sm font-medium text-gray-700">Email address&lt;/label>
+                &lt;input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="country" class="block text-sm font-medium text-gray-700">Country / Region&lt;/label>
+                &lt;select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  &lt;option>United States&lt;/option>
+                  &lt;option>Canada&lt;/option>
+                  &lt;option>Mexico&lt;/option>
+                &lt;/select>
+              &lt;/div>
+
+              &lt;div class="col-span-6">
+                &lt;label for="street_address" class="block text-sm font-medium text-gray-700">Street address&lt;/label>
+                &lt;input type="text" name="street_address" id="street_address" autocomplete="street-address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                &lt;label for="city" class="block text-sm font-medium text-gray-700">City&lt;/label>
+                &lt;input type="text" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                &lt;label for="state" class="block text-sm font-medium text-gray-700">State / Province&lt;/label>
+                &lt;input type="text" name="state" id="state" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                &lt;label for="postal_code" class="block text-sm font-medium text-gray-700">ZIP / Postal&lt;/label>
+                &lt;input type="text" name="postal_code" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              &lt;/div>
+            &lt;/div>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="bg-white shadow px-4 py-5 sm:rounded-lg sm:p-6">
+      &lt;div class="md:grid md:grid-cols-3 md:gap-6">
+        &lt;div class="md:col-span-1">
+          &lt;h3 class="text-lg font-medium leading-6 text-gray-900">Notifications&lt;/h3>
+          &lt;p class="mt-1 text-sm text-gray-500">
+            Decide which communications you'd like to receive and how.
+          &lt;/p>
+        &lt;/div>
+        &lt;div class="mt-5 md:mt-0 md:col-span-2">
+          &lt;form class="space-y-6" action="#" method="POST">
+            &lt;fieldset>
+              &lt;legend class="text-base font-medium text-gray-900">By Email&lt;/legend>
+              &lt;div class="mt-4 space-y-4">
+                &lt;div class="flex items-start">
+                  &lt;div class="h-5 flex items-center">
+                    &lt;input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  &lt;/div>
+                  &lt;div class="ml-3 text-sm">
+                    &lt;label for="comments" class="font-medium text-gray-700">Comments&lt;/label>
+                    &lt;p class="text-gray-500">Get notified when someones posts a comment on a posting.&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="flex items-start">
+                  &lt;div class="flex items-center h-5">
+                    &lt;input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  &lt;/div>
+                  &lt;div class="ml-3 text-sm">
+                    &lt;label for="candidates" class="font-medium text-gray-700">Candidates&lt;/label>
+                    &lt;p class="text-gray-500">Get notified when a candidate applies for a job.&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="flex items-start">
+                  &lt;div class="flex items-center h-5">
+                    &lt;input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  &lt;/div>
+                  &lt;div class="ml-3 text-sm">
+                    &lt;label for="offers" class="font-medium text-gray-700">Offers&lt;/label>
+                    &lt;p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/fieldset>
+            &lt;fieldset>
+              &lt;div>
+                &lt;legend class="text-base font-medium text-gray-900">Push Notifications&lt;/legend>
+                &lt;p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.&lt;/p>
+              &lt;/div>
+              &lt;div class="mt-4 space-y-4">
+                &lt;div class="flex items-center">
+                  &lt;input id="push_everything" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_everything" class="ml-3 block text-sm font-medium text-gray-700">
+                    Everything
+                  &lt;/label>
+                &lt;/div>
+                &lt;div class="flex items-center">
+                  &lt;input id="push_email" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_email" class="ml-3 block text-sm font-medium text-gray-700">
+                    Same as email
+                  &lt;/label>
+                &lt;/div>
+                &lt;div class="flex items-center">
+                  &lt;input id="push_nothing" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_nothing" class="ml-3 block text-sm font-medium text-gray-700">
+                    No push notifications
+                  &lt;/label>
+                &lt;/div>
+              &lt;/div>
+            &lt;/fieldset>
+          &lt;/form>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="flex justify-end">
+      &lt;button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Cancel
+      &lt;/button>
+      &lt;button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Save
+      &lt;/button>
+    &lt;/div>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="5bd5ba00a5ed6730f549e9fd5c7151d322993fce" src="/components/application-ui/forms/form-layouts/two_column_in_full_width_cards.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-a0e69b223e81eacb7c5acc5bd63818efa095a35a" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-a0e69b223e81eacb7c5acc5bd63818efa095a35a">Two-column cards with sidebar</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-100">
+    &lt;div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+      
+  &lt;div class="lg:grid lg:grid-cols-12 lg:gap-x-5">
+    &lt;aside class="py-6 px-2 sm:px-6 lg:py-0 lg:px-0 lg:col-span-3">
+      &lt;nav class="space-y-1">
+        
+          &lt;a href="#" class="bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white group rounded-md px-3 py-2 flex items-center text-sm font-medium" x-state:on="Current" x-state:off="Default" aria-current="page" x-state-description="Current: &amp;quot;bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white&amp;quot;, Default: &amp;quot;text-gray-900 hover:text-gray-900 hover:bg-gray-50&amp;quot;">
+            &lt;svg class="text-indigo-500 group-hover:text-indigo-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" x-state:on="Current" x-state:off="Default" x-state-description="Current: &amp;quot;text-indigo-500 group-hover:text-indigo-500&amp;quot;, Default: &amp;quot;text-gray-400 group-hover:text-gray-500&amp;quot;" x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z">&lt;/path>
+&lt;/svg>
+            &lt;span class="truncate">
+              Account
+            &lt;/span>
+          &lt;/a>
+        
+          &lt;a href="#" class="text-gray-900 hover:text-gray-900 hover:bg-gray-50 group rounded-md px-3 py-2 flex items-center text-sm font-medium" x-state-description="undefined: &amp;quot;bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white&amp;quot;, undefined: &amp;quot;text-gray-900 hover:text-gray-900 hover:bg-gray-50&amp;quot;">
+            &lt;svg class="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" x-state-description="undefined: &amp;quot;text-indigo-500 group-hover:text-indigo-500&amp;quot;, undefined: &amp;quot;text-gray-400 group-hover:text-gray-500&amp;quot;" x-description="Heroicon name: outline/key" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z">&lt;/path>
+&lt;/svg>
+            &lt;span class="truncate">
+              Password
+            &lt;/span>
+          &lt;/a>
+        
+          &lt;a href="#" class="text-gray-900 hover:text-gray-900 hover:bg-gray-50 group rounded-md px-3 py-2 flex items-center text-sm font-medium" x-state-description="undefined: &amp;quot;bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white&amp;quot;, undefined: &amp;quot;text-gray-900 hover:text-gray-900 hover:bg-gray-50&amp;quot;">
+            &lt;svg class="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" x-state-description="undefined: &amp;quot;text-indigo-500 group-hover:text-indigo-500&amp;quot;, undefined: &amp;quot;text-gray-400 group-hover:text-gray-500&amp;quot;" x-description="Heroicon name: outline/credit-card" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z">&lt;/path>
+&lt;/svg>
+            &lt;span class="truncate">
+              Plan &amp;amp; Billing
+            &lt;/span>
+          &lt;/a>
+        
+          &lt;a href="#" class="text-gray-900 hover:text-gray-900 hover:bg-gray-50 group rounded-md px-3 py-2 flex items-center text-sm font-medium" x-state-description="undefined: &amp;quot;bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white&amp;quot;, undefined: &amp;quot;text-gray-900 hover:text-gray-900 hover:bg-gray-50&amp;quot;">
+            &lt;svg class="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" x-state-description="undefined: &amp;quot;text-indigo-500 group-hover:text-indigo-500&amp;quot;, undefined: &amp;quot;text-gray-400 group-hover:text-gray-500&amp;quot;" x-description="Heroicon name: outline/user-group" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">&lt;/path>
+&lt;/svg>
+            &lt;span class="truncate">
+              Team
+            &lt;/span>
+          &lt;/a>
+        
+          &lt;a href="#" class="text-gray-900 hover:text-gray-900 hover:bg-gray-50 group rounded-md px-3 py-2 flex items-center text-sm font-medium" x-state-description="undefined: &amp;quot;bg-gray-50 text-indigo-700 hover:text-indigo-700 hover:bg-white&amp;quot;, undefined: &amp;quot;text-gray-900 hover:text-gray-900 hover:bg-gray-50&amp;quot;">
+            &lt;svg class="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6" x-state-description="undefined: &amp;quot;text-indigo-500 group-hover:text-indigo-500&amp;quot;, undefined: &amp;quot;text-gray-400 group-hover:text-gray-500&amp;quot;" x-description="Heroicon name: outline/view-grid-add" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z">&lt;/path>
+&lt;/svg>
+            &lt;span class="truncate">
+              Integrations
+            &lt;/span>
+          &lt;/a>
+        
+      &lt;/nav>
+    &lt;/aside>
+
+    &lt;div class="space-y-6 sm:px-6 lg:px-0 lg:col-span-9">
+      &lt;form action="#" method="POST">
+        &lt;div class="shadow sm:rounded-md sm:overflow-hidden">
+          &lt;div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+            &lt;div>
+              &lt;h3 class="text-lg leading-6 font-medium text-gray-900">Profile&lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-500">This information will be displayed publicly so be careful what you share.&lt;/p>
+            &lt;/div>
+
+            &lt;div class="grid grid-cols-3 gap-6">
+              &lt;div class="col-span-3 sm:col-span-2">
+                &lt;label for="company_website" class="block text-sm font-medium text-gray-700">
+                  Username
+                &lt;/label>
+                &lt;div class="mt-1 rounded-md shadow-sm flex">
+                  &lt;span class="bg-gray-50 border border-r-0 border-gray-300 rounded-l-md px-3 inline-flex items-center text-gray-500 sm:text-sm">
+                    workcation.com/
+                  &lt;/span>
+                  &lt;input type="text" name="username" id="username" autocomplete="username" class="focus:ring-indigo-500 focus:border-indigo-500 flex-grow block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div class="col-span-3">
+                &lt;label for="about" class="block text-sm font-medium text-gray-700">
+                  About
+                &lt;/label>
+                &lt;div class="mt-1">
+                  &lt;textarea id="about" name="about" rows="3" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com">&lt;/textarea>
+                &lt;/div>
+                &lt;p class="mt-2 text-sm text-gray-500">
+                  Brief description for your profile. URLs are hyperlinked.
+                &lt;/p>
+              &lt;/div>
+
+              &lt;div class="col-span-3">
+                &lt;label class="block text-sm font-medium text-gray-700">
+                  Photo
+                &lt;/label>
+                &lt;div class="mt-1 flex items-center">
+                  &lt;span class="inline-block bg-gray-100 rounded-full overflow-hidden h-12 w-12">
+                    &lt;svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                      &lt;path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+                    &lt;/svg>
+                  &lt;/span>
+                  &lt;button type="button" class="ml-5 bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Change
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+
+              &lt;div class="col-span-3">
+                &lt;label class="block text-sm font-medium text-gray-700">
+                  Cover photo
+                &lt;/label>
+                &lt;div class="mt-1 border-2 border-gray-300 border-dashed rounded-md px-6 pt-5 pb-6 flex justify-center">
+                  &lt;div class="space-y-1 text-center">
+                    &lt;svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor" fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                      &lt;path d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">&lt;/path>
+                    &lt;/svg>
+                    &lt;div class="flex text-sm text-gray-600">
+                      &lt;label for="file-upload" class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                        &lt;span>Upload a file&lt;/span>
+                        &lt;input id="file-upload" name="file-upload" type="file" class="sr-only">
+                      &lt;/label>
+                      &lt;p class="pl-1">or drag and drop&lt;/p>
+                    &lt;/div>
+                    &lt;p class="text-xs text-gray-500">
+                      PNG, JPG, GIF up to 10MB
+                    &lt;/p>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            &lt;button type="submit" class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Save
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+
+      &lt;form action="#" method="POST">
+        &lt;div class="shadow sm:rounded-md sm:overflow-hidden">
+          &lt;div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+            &lt;div>
+              &lt;h3 class="text-lg leading-6 font-medium text-gray-900">Personal Information&lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-500">Use a permanent address where you can recieve mail.&lt;/p>
+            &lt;/div>
+
+            &lt;div class="grid grid-cols-6 gap-6">
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="first_name" class="block text-sm font-medium text-gray-700">First name&lt;/label>
+                &lt;input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="last_name" class="block text-sm font-medium text-gray-700">Last name&lt;/label>
+                &lt;input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-4">
+                &lt;label for="email_address" class="block text-sm font-medium text-gray-700">Email address&lt;/label>
+                &lt;input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3">
+                &lt;label for="country" class="block text-sm font-medium text-gray-700">Country / Region&lt;/label>
+                &lt;select id="country" name="country" autocomplete="country" class="mt-1 block w-full bg-white border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  &lt;option>United States&lt;/option>
+                  &lt;option>Canada&lt;/option>
+                  &lt;option>Mexico&lt;/option>
+                &lt;/select>
+              &lt;/div>
+
+              &lt;div class="col-span-6">
+                &lt;label for="street_address" class="block text-sm font-medium text-gray-700">Street address&lt;/label>
+                &lt;input type="text" name="street_address" id="street_address" autocomplete="street-address" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                &lt;label for="city" class="block text-sm font-medium text-gray-700">City&lt;/label>
+                &lt;input type="text" name="city" id="city" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                &lt;label for="state" class="block text-sm font-medium text-gray-700">State / Province&lt;/label>
+                &lt;input type="text" name="state" id="state" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+
+              &lt;div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                &lt;label for="postal_code" class="block text-sm font-medium text-gray-700">ZIP / Postal&lt;/label>
+                &lt;input type="text" name="postal_code" id="postal_code" autocomplete="postal-code" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            &lt;button type="submit" class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Save
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+
+      &lt;form action="#" method="POST">
+        &lt;div class="shadow sm:rounded-md sm:overflow-hidden">
+          &lt;div class="bg-white py-6 px-4 space-y-6 sm:p-6">
+            &lt;div>
+              &lt;h3 class="text-lg leading-6 font-medium text-gray-900">Notifications&lt;/h3>
+              &lt;p class="mt-1 text-sm text-gray-500">Provide basic informtion about the job. Be specific with the job title.&lt;/p>
+            &lt;/div>
+
+            &lt;fieldset>
+              &lt;legend class="text-base font-medium text-gray-900">By Email&lt;/legend>
+              &lt;div class="mt-4 space-y-4">
+                &lt;div class="flex items-start">
+                  &lt;div class="h-5 flex items-center">
+                    &lt;input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                  &lt;/div>
+                  &lt;div class="ml-3 text-sm">
+                    &lt;label for="comments" class="font-medium text-gray-700">Comments&lt;/label>
+                    &lt;p class="text-gray-500">Get notified when someones posts a comment on a posting.&lt;/p>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div>
+                  &lt;div class="flex items-start">
+                    &lt;div class="h-5 flex items-center">
+                      &lt;input id="candidates" name="candidates" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    &lt;/div>
+                    &lt;div class="ml-3 text-sm">
+                      &lt;label for="candidates" class="font-medium text-gray-700">Candidates&lt;/label>
+                      &lt;p class="text-gray-500">Get notified when a candidate applies for a job.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div>
+                  &lt;div class="flex items-start">
+                    &lt;div class="h-5 flex items-center">
+                      &lt;input id="offers" name="offers" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
+                    &lt;/div>
+                    &lt;div class="ml-3 text-sm">
+                      &lt;label for="offers" class="font-medium text-gray-700">Offers&lt;/label>
+                      &lt;p class="text-gray-500">Get notified when a candidate accepts or rejects an offer.&lt;/p>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/fieldset>
+            &lt;fieldset class="mt-6">
+              &lt;legend class="text-base font-medium text-gray-900">Push Notifications&lt;/legend>
+              &lt;p class="text-sm text-gray-500">These are delivered via SMS to your mobile phone.&lt;/p>
+              &lt;div class="mt-4 space-y-4">
+                &lt;div class="flex items-center">
+                  &lt;input id="push_everything" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_everything" class="ml-3">
+                    &lt;span class="block text-sm font-medium text-gray-700">Everything&lt;/span>
+                  &lt;/label>
+                &lt;/div>
+                &lt;div class="flex items-center">
+                  &lt;input id="push_email" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_email" class="ml-3">
+                    &lt;span class="block text-sm font-medium text-gray-700">Same as email&lt;/span>
+                  &lt;/label>
+                &lt;/div>
+                &lt;div class="flex items-center">
+                  &lt;input id="push_nothing" name="push_notifications" type="radio" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300">
+                  &lt;label for="push_nothing" class="ml-3">
+                    &lt;span class="block text-sm font-medium text-gray-700">No push notifications&lt;/span>
+                  &lt;/label>
+                &lt;/div>
+              &lt;/div>
+            &lt;/fieldset>
+          &lt;/div>
+          &lt;div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            &lt;button type="submit" class="bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600">
+              Save
+            &lt;/button>
+          &lt;/div>
+        &lt;/div>
+      &lt;/form>
+    &lt;/div>
+  &lt;/div>
+
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="a0e69b223e81eacb7c5acc5bd63818efa095a35a" src="/components/application-ui/forms/form-layouts/two_column_cards_with_sidebar.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white">
       <div class="mx-auto py-12">
       
@@ -8,16 +9,14 @@
       
           <li>
           
-              <!-- Completed Step -->
-              <a href="#" class="block w-2.5 h-2.5 bg-indigo-600 rounded-full hover:bg-indigo-900">
+              <a href="#" class="block w-2.5 h-2.5 bg-indigo-600 rounded-full hover:bg-indigo-900" x-description="Completed Step">
                 <span class="sr-only">Step 1</span>
               </a>
             </li>
       
           <li>
           
-              <!-- Current Step -->
-              <a href="#" class="relative flex items-center justify-center" aria-current="step">
+              <a href="#" class="relative flex items-center justify-center" aria-current="step" x-description="Current Step">
                 <span class="absolute w-5 h-5 p-px flex" aria-hidden="true">
                   <span class="w-full h-full rounded-full bg-indigo-200"></span>
                 </span>
@@ -28,16 +27,14 @@
       
           <li>
           
-              <!-- Upcoming Step -->
-              <a href="#" class="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400">
+              <a href="#" class="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400" x-description="Upcoming Step">
                 <span class="sr-only">Step 3</span>
               </a>
             </li>
       
           <li>
           
-              <!-- Upcoming Step -->
-              <a href="#" class="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400">
+              <a href="#" class="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400" x-description="Upcoming Step">
                 <span class="sr-only">Step 4</span>
               </a>
             </li>
@@ -47,6 +44,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

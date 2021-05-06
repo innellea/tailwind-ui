@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="min-h-screen bg-white" style={{minHeight: "830px"}}>
+<div className="" style={{}}>
+  <div className="min-h-screen bg-white" style={{minHeight: "830px"}}>
     
   <div className="relative bg-white" data-todo-x-data="Components.popover({ open: true, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
     <div className="flex justify-between items-center px-4 py-6 sm:px-6 md:justify-start md:space-x-10">
@@ -316,22 +317,17 @@ const Component = (props) => (
           </div>
           <div className="py-6 px-5">
             <div className="grid grid-cols-2 gap-4">
-              
-                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Pricing
-                </a>
-              
-                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Docs
-                </a>
-              
-                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Enterprise
-                </a>
-              
-                <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Blog
-                </a>
+              <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                Pricing
+              </a>
+
+              <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                Docs
+              </a>
+
+              <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
+                Enterprise
+              </a>
               
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
                   Help Center
@@ -342,11 +338,11 @@ const Component = (props) => (
                 </a>
               
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Security
+                  Events
                 </a>
               
                 <a href="/" className="text-base font-medium text-gray-900 hover:text-gray-700">
-                  Events
+                  Security
                 </a>
               
             </div>
@@ -356,6 +352,7 @@ const Component = (props) => (
               </a>
               <p className="mt-6 text-center text-base font-medium text-gray-500">
                 Existing customer?
+                {/* space */}
                 <a href="/" className="text-indigo-600 hover:text-indigo-500">
                   Sign in
                 </a>
@@ -368,6 +365,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

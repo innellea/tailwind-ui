@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 648px;">
       <div class="flex items-center justify-center p-8">
       
@@ -68,6 +69,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

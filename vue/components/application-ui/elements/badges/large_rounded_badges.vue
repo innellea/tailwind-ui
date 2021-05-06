@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="p-8 flex items-center justify-center bg-white">
       <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
       
@@ -29,6 +30,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

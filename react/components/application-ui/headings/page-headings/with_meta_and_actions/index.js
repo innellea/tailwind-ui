@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="p-8 bg-white" style={{minHeight: "384px"}}>
+<div className="" style={{}}>
+  <div className="p-8 bg-white" style={{minHeight: "384px"}}>
     <div className="max-w-7xl mx-auto">
       
   <div className="lg:flex lg:items-center lg:justify-between">
@@ -89,6 +90,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

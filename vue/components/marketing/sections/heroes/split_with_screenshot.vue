@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;">
     
     <div class="bg-white pb-8 sm:pb-12 lg:pb-12">
@@ -87,6 +88,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

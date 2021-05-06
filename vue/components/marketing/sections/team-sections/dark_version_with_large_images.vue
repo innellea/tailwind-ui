@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-gray-900">
       <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div class="space-y-12">
@@ -198,6 +200,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

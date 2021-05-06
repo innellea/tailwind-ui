@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<footer className="bg-white">
+<div className="" style={{}}>
+  
+  <footer className="bg-white">
     <div className="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
       <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
         
@@ -87,6 +89,8 @@ const Component = (props) => (
       </p>
     </div>
   </footer>
+
+</div>
 </>
 );
 

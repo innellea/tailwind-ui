@@ -3,18 +3,19 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white py-8">
+<div className="" style={{}}>
+  <div className="bg-white py-8">
     <div className="max-w-lg mx-auto px-6">
       
   <div className="flow-root">
     <ul className="-mb-8">
       
         <li>
-          
-            <div className="relative pb-8">
+          <div className="relative pb-8">
+            
+              <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+            <div className="relative flex items-start space-x-3">
               
-                <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-              <div className="relative flex items-start space-x-3">
                 <div className="relative">
                   <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
@@ -40,15 +41,15 @@ const Component = (props) => (
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+          </div>
+        </li>
       
         <li>
-          
-            <div className="relative pb-8">
+          <div className="relative pb-8">
+            
+              <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+            <div className="relative flex items-start space-x-3">
               
-                <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-              <div className="relative flex items-start space-x-3">
                 <div>
                   <div className="relative px-1">
                     <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
@@ -70,15 +71,15 @@ const Component = (props) => (
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+          </div>
+        </li>
       
         <li>
-          
-            <div className="relative pb-8">
+          <div className="relative pb-8">
+            
+              <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+            <div className="relative flex items-start space-x-3">
               
-                <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-              <div className="relative flex items-start space-x-3">
                 <div>
                   <div className="relative px-1">
                     <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
@@ -98,36 +99,34 @@ const Component = (props) => (
                     {/* space */}
                     <span className="mr-0.5">
                       
-                        
-                          <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
-                            <span className="absolute flex-shrink-0 flex items-center justify-center">
-                              <span className="h-1.5 w-1.5 rounded-full bg-rose-500" aria-hidden="true"></span>
-                            </span>
-                            <span className="ml-3.5 font-medium text-gray-900">Bug</span>
-                          </a>
-                          {/* space */}
-                        
-                        
-                          <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
-                            <span className="absolute flex-shrink-0 flex items-center justify-center">
-                              <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" aria-hidden="true"></span>
-                            </span>
-                            <span className="ml-3.5 font-medium text-gray-900">Accessibility</span>
-                          </a>
-                          {/* space */}
-                        
+                        <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                          <span className="absolute flex-shrink-0 flex items-center justify-center">
+                            <span className="h-1.5 w-1.5 rounded-full bg-rose-500" aria-hidden="true"></span>
+                          </span>
+                          <span className="ml-3.5 font-medium text-gray-900">Bug</span>
+                        </a>
+                        {/* space */}
+                      
+                        <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                          <span className="absolute flex-shrink-0 flex items-center justify-center">
+                            <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" aria-hidden="true"></span>
+                          </span>
+                          <span className="ml-3.5 font-medium text-gray-900">Accessibility</span>
+                        </a>
+                        {/* space */}
+                      
                     </span>
                     <span className="whitespace-nowrap">6h ago</span>
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+          </div>
+        </li>
       
         <li>
-          
-            <div className="relative pb-8">
-              <div className="relative flex items-start space-x-3">
+          <div className="relative pb-8">
+            <div className="relative flex items-start space-x-3">
+              
                 <div className="relative">
                   <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
@@ -153,14 +152,15 @@ const Component = (props) => (
                   </div>
                 </div>
               </div>
-            </div>
-          </li>
+          </div>
+        </li>
       
     </ul>
   </div>
 
     </div>
   </div>
+</div>
 </>
 );
 

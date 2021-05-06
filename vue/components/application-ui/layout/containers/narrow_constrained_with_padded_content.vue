@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100">
       <div class="max-w-7xl mx-auto bg-pink-100 px-4 sm:px-6 lg:px-8">
         <div class="bg-white">
@@ -10,6 +11,7 @@
         </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

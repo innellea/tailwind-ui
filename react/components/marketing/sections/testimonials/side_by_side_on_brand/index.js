@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<section className="bg-indigo-800">
+<div className="" style={{}}>
+  
+  <section className="bg-indigo-800">
     <div className="max-w-7xl mx-auto md:grid md:grid-cols-2 md:px-6 lg:px-8">
       <div className="py-12 px-4 sm:px-6 md:flex md:flex-col md:py-16 md:pl-0 md:pr-10 md:border-r md:border-indigo-900 lg:pr-16">
         <div className="md:flex-shrink-0">
@@ -21,7 +23,7 @@ const Component = (props) => (
           <footer className="mt-8">
             <div className="flex items-start">
               <div className="flex-shrink-0 inline-flex rounded-full border-2 border-white">
-                <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
               </div>
               <div className="ml-4">
                 <div className="text-base font-medium text-white">Judith Black</div>
@@ -47,7 +49,7 @@ const Component = (props) => (
           <footer className="mt-8">
             <div className="flex items-start">
               <div className="flex-shrink-0 inline-flex rounded-full border-2 border-white">
-                <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
+                <img className="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
               </div>
               <div className="ml-4">
                 <div className="text-base font-medium text-white">Joseph Rodriguez</div>
@@ -59,6 +61,8 @@ const Component = (props) => (
       </div>
     </div>
   </section>
+
+</div>
 </>
 );
 

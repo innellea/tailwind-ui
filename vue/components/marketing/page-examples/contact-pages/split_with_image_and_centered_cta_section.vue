@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="min-h-screen bg-white">
@@ -8,7 +9,7 @@
             <div class="flex items-center justify-between w-full lg:w-auto">
               <a href="#">
                 <span class="sr-only">Workflow</span>
-                <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-grape-600.svg" alt="">
+                <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;shade=600" alt="">
               </a>
               <div class="-mr-2 flex items-center lg:hidden">
                 <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-grape-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
@@ -43,7 +44,7 @@
             <div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
-                  <img class="h-8 w-auto" src="ttps://tailwindui.com/img/logos/workflow-mark-grape-600.svg" alt="">
+                  <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=purple&amp;shade=600" alt="">
                 </div>
                 <div class="-mr-2">
                   <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-grape-500" @click="toggle">
@@ -88,7 +89,7 @@
         <div class="relative bg-white">
           <div class="lg:absolute lg:inset-0">
             <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-              <img class="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80" alt="">
+              <img class="h-56 w-full object-cover lg:absolute lg:h-full" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1567&amp;q=80" alt="">
             </div>
           </div>
           <div class="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
@@ -402,6 +403,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

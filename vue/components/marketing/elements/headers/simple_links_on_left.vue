@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="min-h-screen bg-white" style="min-height: 830px;">
     
     <div class="relative bg-white" x-data="Components.popover({ open: true, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
@@ -312,22 +313,17 @@
             </div>
             <div class="py-6 px-5">
               <div class="grid grid-cols-2 gap-4">
-              
-                  <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Pricing
-                  </a>
-              
-                  <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Docs
-                  </a>
-              
-                  <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Enterprise
-                  </a>
-              
-                  <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Blog
-                  </a>
+                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Pricing
+                </a>
+
+                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Docs
+                </a>
+
+                <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                  Enterprise
+                </a>
               
                   <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
                     Help Center
@@ -338,11 +334,11 @@
                   </a>
               
                   <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Security
+                    Events
                   </a>
               
                   <a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
-                    Events
+                    Security
                   </a>
               
               </div>
@@ -352,6 +348,7 @@
                 </a>
                 <p class="mt-6 text-center text-base font-medium text-gray-500">
                   Existing customer?
+                  <!-- space -->
                   <a href="#" class="text-indigo-600 hover:text-indigo-500">
                     Sign in
                   </a>
@@ -364,6 +361,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

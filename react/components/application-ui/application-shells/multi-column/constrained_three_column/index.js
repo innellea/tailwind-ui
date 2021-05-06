@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="overflow-y-auto" style={{minHeight: "768px"}}>
+<div className="" style={{}}>
+  <div className="overflow-y-auto" style={{minHeight: "768px"}}>
     
   {/* Background color split screen for large screens */}
   <div className="fixed top-0 left-0 w-1/2 h-full bg-white" aria-hidden="true"></div>
@@ -62,7 +63,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
                 <div>
                   <button type="button" className="bg-indigo-700 flex text-sm rounded-full text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-700 focus:ring-white" id="user-menu" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                     <span className="sr-only">Open user menu</span>
-                    <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=80" alt="">
+                    <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=256&amp;h=256&amp;q=80" alt="">
                   </button>
                 </div>
                 
@@ -131,6 +132,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
   </div>
 
   </div>
+</div>
 </>
 );
 

@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="relative bg-gray-800 overflow-hidden">
       <div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
         <svg class="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
@@ -200,6 +202,8 @@
         </main>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

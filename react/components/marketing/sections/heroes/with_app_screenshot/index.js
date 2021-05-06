@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-50">
+<div className="" style={{}}>
+  
+  <div className="bg-gray-50">
     <div className="relative overflow-hidden">
       <div className="absolute inset-y-0 h-full w-full" aria-hidden="true">
         <div className="relative h-full">
@@ -145,6 +147,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

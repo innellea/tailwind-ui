@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 875px;">
       <div class="flex items-center justify-center p-8">
       
@@ -106,7 +107,7 @@
                       Reports
                     </p>
                     <p class="mt-1 text-sm text-gray-500">
-                      Get detailed reports that will help you make more informed decisions 
+                      Get detailed reports that will help you make more informed decisions
                     </p>
                   </div>
                 </a>
@@ -134,6 +135,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

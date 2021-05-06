@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white" style={{minHeight: "875px"}}>
+<div className="" style={{}}>
+  <div className="bg-white" style={{minHeight: "875px"}}>
     <div className="flex items-center justify-center p-8">
       
   <div className="relative" data-todo-x-data="Components.popover({ open: true, focus: false })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -110,7 +111,7 @@ const Component = (props) => (
                     Reports
                   </p>
                   <p className="mt-1 text-sm text-gray-500">
-                    Get detailed reports that will help you make more informed decisions 
+                    Get detailed reports that will help you make more informed decisions
                   </p>
                 </div>
               </a>
@@ -138,6 +139,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

@@ -1,0 +1,2279 @@
+<html>
+  <head>
+    <title>Tailwind UI Components</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=auto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/darkula.css" rel="stylesheet"/>
+    <link href="/css/app.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/combine/npm/highlightjs@9.16.2/highlight.pack.min.js,npm/axios@0.19.2/dist/axios.min.js,npm/dlv@1.1.3/dist/dlv.umd.min.js,gh/alpinejs/alpine@v2.2.1/dist/alpine.js,npm/fuse.js@5.0.9-beta/dist/fuse.min.js"></script>    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
+    <style>
+      * { box-sizing: border-box; }
+      .hljs {
+        background: #252f3f;
+        color: white;
+      }
+      .hljs-tag {
+        color: white;
+      }
+      .hljs-name {
+        color: #ff8383;
+      }
+      .hljs-attr {
+        color: #ffe484;
+        font-style: italic;
+      }
+      .hljs-string {
+        color: #b5f4a5;
+      }
+    </style>
+  </head>
+
+  <body class="font-sans antialiased text-gray-900">
+<main>
+<div class="py-4 sm:py-12">
+  <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="pb-2">
+      <nav class="flex items-center text-sm leading-5 font-medium">
+        <a href="/#marketing" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Marketing
+        </a>
+        <svg class="flex-shrink-0 mx-2 h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+        <a href="/#marketing-page-sections" class="text-gray-500 hover:text-gray-700 focus:outline-none focus:underline transition duration-150 ease-in-out">
+          Page Sections
+        </a>
+      </nav>
+    </div>
+    <h2 class="text-2xl leading-8 font-semibold font-display text-gray-900 sm:text-3xl sm:leading-9">
+      Hero Sections
+    </h2>
+  </div>
+  <div class="mt-6 bg-white max-w-8xl mx-auto sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto">
+    
+    <div id="component-e1b334db76a993f05dc3b8be547d9cb630b2b1c5" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-e1b334db76a993f05dc3b8be547d9cb630b2b1c5">Simple centered</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="relative bg-gray-50 overflow-hidden">
+    &lt;div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+      &lt;div class="relative h-full max-w-7xl mx-auto">
+        &lt;svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
+          &lt;defs>
+            &lt;pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+            &lt;/pattern>
+          &lt;/defs>
+          &lt;rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)">&lt;/rect>
+        &lt;/svg>
+        &lt;svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
+          &lt;defs>
+            &lt;pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+            &lt;/pattern>
+          &lt;/defs>
+          &lt;rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)">&lt;/rect>
+        &lt;/svg>
+      &lt;/div>
+    &lt;/div>
+
+    &lt;div class="relative pt-6 pb-16 sm:pb-24" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;div class="max-w-7xl mx-auto px-4 sm:px-6">
+        &lt;nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+          &lt;div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+            &lt;div class="flex items-center justify-between w-full md:w-auto">
+              &lt;a href="#">
+                &lt;span class="sr-only">Workflow&lt;/span>
+                &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+              &lt;/a>
+              &lt;div class="-mr-2 flex items-center md:hidden">
+                &lt;button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                  &lt;span class="sr-only">Open main menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden md:flex md:space-x-10">
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company&lt;/a>
+            
+          &lt;/div>
+          &lt;div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+            &lt;span class="inline-flex rounded-md shadow">
+              &lt;a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
+                Log in
+              &lt;/a>
+            &lt;/span>
+          &lt;/div>
+        &lt;/nav>
+      &lt;/div>
+
+      
+        &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            &lt;div class="px-5 pt-4 flex items-center justify-between">
+              &lt;div>
+                &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+              &lt;/div>
+              &lt;div class="-mr-2">
+                &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                  &lt;span class="sr-only">Close menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="px-2 pt-2 pb-3">
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company&lt;/a>
+              
+            &lt;/div>
+            &lt;a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+              Log in
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+
+      &lt;main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+        &lt;div class="text-center">
+          &lt;h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+            &lt;span class="block xl:inline">Data to enrich your&lt;/span>
+            &lt;!-- space -->
+            &lt;span class="block text-indigo-600 xl:inline">online business&lt;/span>
+          &lt;/h1>
+          &lt;p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+          &lt;/p>
+          &lt;div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            &lt;div class="rounded-md shadow">
+              &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                Get started
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                Live demo
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/main>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="e1b334db76a993f05dc3b8be547d9cb630b2b1c5" src="/components/marketing/sections/heroes/simple_centered.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-0a2fcfd2a3be6e38d6acbd26b68adde1509679c5" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-0a2fcfd2a3be6e38d6acbd26b68adde1509679c5">Split with navbar</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="relative bg-gray-50">
+    &lt;div class="relative bg-white shadow" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;div class="max-w-7xl mx-auto px-4 sm:px-6">
+        &lt;div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+          &lt;div class="flex justify-start lg:w-0 lg:flex-1">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+            &lt;/a>
+          &lt;/div>
+          &lt;div class="-mr-2 -my-2 md:hidden">
+            &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+              &lt;span class="sr-only">Open menu&lt;/span>
+              &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+            &lt;/button>
+          &lt;/div>
+          &lt;nav class="hidden md:flex space-x-10" x-data="Components.popoverGroup()" x-init="init()">
+            &lt;div class="relative" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+              &lt;button type="button" x-state:on="Item active" x-state:off="Item inactive" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="{ 'text-gray-900': open, 'text-gray-500': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span>Solutions&lt;/span>
+                &lt;svg x-state:on="Item active" x-state:off="Item inactive" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" :class="{ 'text-gray-600': open, 'text-gray-400': !(open) }" x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+
+              
+                &lt;transition enter-active-class="transition ease-out duration-200" enter-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">&lt;div x-show="open" x-description="'Solutions' flyout menu, show/hide based on flyout menu state." class="absolute -ml-4 mt-3 transform z-10 px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-ref="panel" @click.away="open = false">
+                  &lt;div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    &lt;div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/chart-bar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Analytics
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Get a better understanding of where your traffic is coming from.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/cursor-click" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Engagement
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Speak directly to your customers in a more meaningful way.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/shield-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Security
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Your customers' data will be safe and secure.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/view-grid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Integrations
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Connect with third-party tools that you're already using.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/refresh" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Automations
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Build strategic funnels that will drive your customers to convert
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                    &lt;/div>
+                    &lt;div class="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
+                      
+                        &lt;div class="flow-root">
+                          &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                            &lt;svg class="flex-shrink-0 h-6 w-6 text-gray-400" x-description="Heroicon name: outline/play" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z">&lt;/path>
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z">&lt;/path>
+&lt;/svg>
+                            &lt;span class="ml-3">Watch Demo&lt;/span>
+                          &lt;/a>
+                        &lt;/div>
+                      
+                        &lt;div class="flow-root">
+                          &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-100">
+                            &lt;svg class="flex-shrink-0 h-6 w-6 text-gray-400" x-description="Heroicon name: outline/phone" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">&lt;/path>
+&lt;/svg>
+                            &lt;span class="ml-3">Contact Sales&lt;/span>
+                          &lt;/a>
+                        &lt;/div>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>&lt;/transition>
+              
+            &lt;/div>
+
+            &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              Pricing
+            &lt;/a>
+            &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              Docs
+            &lt;/a>
+
+            &lt;div class="relative" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+              &lt;button type="button" x-state:on="Item active" x-state:off="Item inactive" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="{ 'text-gray-900': open, 'text-gray-500': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span>More&lt;/span>
+                &lt;svg x-state:on="Item active" x-state:off="Item inactive" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" :class="{ 'text-gray-600': open, 'text-gray-400': !(open) }" x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+
+              
+                &lt;transition enter-active-class="transition ease-out duration-200" enter-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">&lt;div x-show="open" x-description="'More' flyout menu, show/hide based on flyout menu state." class="absolute left-1/2 z-10 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0" x-ref="panel" @click.away="open = false">
+                  &lt;div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    &lt;div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/support" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Help Center
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Get all of your questions answered in our forums or contact support.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/bookmark-alt" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Guides
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Learn how to maximize our platform to get the most out of it.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/calendar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Events
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              See what meet-ups and other events we might be planning near you.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/shield-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">&lt;/path>
+&lt;/svg>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Security
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Understand how we take your privacy seriously.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                    &lt;/div>
+                    &lt;div class="px-5 py-5 bg-gray-50 sm:px-8 sm:py-8">
+                      &lt;div>
+                        &lt;h3 class="text-sm tracking-wide font-medium text-gray-500 uppercase">
+                          Recent Posts
+                        &lt;/h3>
+                        &lt;ul class="mt-4 space-y-4">
+                          
+                            &lt;li class="text-base truncate">
+                              &lt;a href="#" class="font-medium text-gray-900 hover:text-gray-700">
+                                Boost your conversion rate
+                              &lt;/a>
+                            &lt;/li>
+                          
+                            &lt;li class="text-base truncate">
+                              &lt;a href="#" class="font-medium text-gray-900 hover:text-gray-700">
+                                How to use search engine optimization to drive traffic to your site
+                              &lt;/a>
+                            &lt;/li>
+                          
+                            &lt;li class="text-base truncate">
+                              &lt;a href="#" class="font-medium text-gray-900 hover:text-gray-700">
+                                Improve your customer experience
+                              &lt;/a>
+                            &lt;/li>
+                          
+                        &lt;/ul>
+                      &lt;/div>
+                      &lt;div class="mt-5 text-sm">
+                        &lt;a href="#" class="font-medium text-indigo-600 hover:text-indigo-500"> View all posts &lt;span aria-hidden="true">→&lt;/span>&lt;/a>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>&lt;/transition>
+              
+            &lt;/div>
+          &lt;/nav>
+          &lt;div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            &lt;a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+              Sign in
+            &lt;/a>
+            &lt;a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+              Sign up
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      
+        &lt;transition enter-active-class="duration-200 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on mobile menu state." class="absolute top-0 inset-x-0 z-10 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+            &lt;div class="pt-5 pb-6 px-5">
+              &lt;div class="flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                    &lt;span class="sr-only">Close menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="mt-6">
+                &lt;nav class="grid gap-y-8">
+                  
+                    &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                      &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/chart-bar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="ml-3 text-base font-medium text-gray-900">
+                        Analytics
+                      &lt;/span>
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                      &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/cursor-click" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122">&lt;/path>
+&lt;/svg>
+                      &lt;span class="ml-3 text-base font-medium text-gray-900">
+                        Engagement
+                      &lt;/span>
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                      &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/shield-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="ml-3 text-base font-medium text-gray-900">
+                        Security
+                      &lt;/span>
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                      &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/view-grid" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">&lt;/path>
+&lt;/svg>
+                      &lt;span class="ml-3 text-base font-medium text-gray-900">
+                        Integrations
+                      &lt;/span>
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+                      &lt;svg class="flex-shrink-0 h-6 w-6 text-indigo-600" x-description="Heroicon name: outline/refresh" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">&lt;/path>
+&lt;/svg>
+                      &lt;span class="ml-3 text-base font-medium text-gray-900">
+                        Automations
+                      &lt;/span>
+                    &lt;/a>
+                  
+                &lt;/nav>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="py-6 px-5 space-y-6">
+              &lt;div class="grid grid-cols-2 gap-y-4 gap-x-8">
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Pricing
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Docs
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Enterprise
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Blog
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Help Center
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Guides
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Security
+                  &lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                    Events
+                  &lt;/a>
+                
+              &lt;/div>
+              &lt;div>
+                &lt;a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                  Sign up
+                &lt;/a>
+                &lt;p class="mt-6 text-center text-base font-medium text-gray-500">
+                  Existing customer?
+                  &lt;a href="#" class="text-indigo-600 hover:text-indigo-500">
+                    Sign in
+                  &lt;/a>
+                &lt;/p>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+    &lt;/div>
+
+    &lt;main class="lg:relative">
+      &lt;div class="mx-auto max-w-7xl w-full pt-16 pb-20 text-center lg:py-48 lg:text-left">
+        &lt;div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
+          &lt;h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
+            &lt;span class="block xl:inline">Data to enrich your&lt;/span>
+            &lt;!-- space -->
+            &lt;span class="block text-indigo-600 xl:inline">online business&lt;/span>
+          &lt;/h1>
+          &lt;p class="mt-3 max-w-md mx-auto text-lg text-gray-500 sm:text-xl md:mt-5 md:max-w-3xl">
+            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+          &lt;/p>
+          &lt;div class="mt-10 sm:flex sm:justify-center lg:justify-start">
+            &lt;div class="rounded-md shadow">
+              &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                Get started
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+              &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                Live demo
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="relative w-full h-64 sm:h-72 md:h-96 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+        &lt;img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2102&amp;amp;q=80" alt="">
+      &lt;/div>
+    &lt;/main>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="0a2fcfd2a3be6e38d6acbd26b68adde1509679c5" src="/components/marketing/sections/heroes/split_with_navbar.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-af4ae52875fc7e70d8ce45f0d51a0b1de97f7539" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-af4ae52875fc7e70d8ce45f0d51a0b1de97f7539">With angled image on right</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="relative bg-white overflow-hidden" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+    &lt;div class="max-w-7xl mx-auto">
+      &lt;div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        &lt;svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          &lt;polygon points="50,0 100,0 50,100 0,100">&lt;/polygon>
+        &lt;/svg>
+
+        &lt;div class="relative pt-6 px-4 sm:px-6 lg:px-8">
+          &lt;nav class="relative flex items-center justify-between sm:h-10 lg:justify-start" aria-label="Global">
+            &lt;div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+              &lt;div class="flex items-center justify-between w-full md:w-auto">
+                &lt;a href="#">
+                  &lt;span class="sr-only">Workflow&lt;/span>
+                  &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg">
+                &lt;/a>
+                &lt;div class="-mr-2 flex items-center md:hidden">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                    &lt;span class="sr-only">Open main menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company&lt;/a>
+              
+              &lt;a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">Log in&lt;/a>
+            &lt;/div>
+          &lt;/nav>
+        &lt;/div>
+
+        
+          &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              &lt;div class="px-5 pt-4 flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                    &lt;span class="sr-only">Close main menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="px-2 pt-2 pb-3 space-y-1">
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company&lt;/a>
+                
+              &lt;/div>
+              &lt;a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+                Log in
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+
+        &lt;main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+          &lt;div class="sm:text-center lg:text-left">
+            &lt;h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              &lt;span class="block xl:inline">Data to enrich your&lt;/span>
+              &lt;!-- space -->
+              &lt;span class="block text-indigo-600 xl:inline">online business&lt;/span>
+            &lt;/h1>
+            &lt;p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+            &lt;/p>
+            &lt;div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+              &lt;div class="rounded-md shadow">
+                &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                  Get started
+                &lt;/a>
+              &lt;/div>
+              &lt;div class="mt-3 sm:mt-0 sm:ml-3">
+                &lt;a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10">
+                  Live demo
+                &lt;/a>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/main>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+      &lt;img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&amp;amp;ixqx=cII20c177f&amp;amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2850&amp;amp;q=80" alt="">
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="af4ae52875fc7e70d8ce45f0d51a0b1de97f7539" src="/components/marketing/sections/heroes/with_angled_image_on_right.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-3ba19976ba16632ab9c1739740991cd930cea7d8" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-3ba19976ba16632ab9c1739740991cd930cea7d8">With app screenshot</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="bg-gray-50">
+    &lt;div class="relative overflow-hidden">
+      &lt;div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        &lt;div class="relative h-full">
+          &lt;svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            &lt;defs>
+              &lt;pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+              &lt;/pattern>
+            &lt;/defs>
+            &lt;rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)">&lt;/rect>
+          &lt;/svg>
+          &lt;svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            &lt;defs>
+              &lt;pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+              &lt;/pattern>
+            &lt;/defs>
+            &lt;rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)">&lt;/rect>
+          &lt;/svg>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="relative pt-6 pb-16 sm:pb-24" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+        &lt;div class="max-w-7xl mx-auto px-4 sm:px-6">
+          &lt;nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+            &lt;div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+              &lt;div class="flex items-center justify-between w-full md:w-auto">
+                &lt;a href="#">
+                  &lt;span class="sr-only">Workflow&lt;/span>
+                  &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                &lt;/a>
+                &lt;div class="-mr-2 flex items-center md:hidden">
+                  &lt;button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                    &lt;span class="sr-only">Open main menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="hidden md:flex md:space-x-10">
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace&lt;/a>
+              
+                &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company&lt;/a>
+              
+            &lt;/div>
+            &lt;div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+              &lt;span class="inline-flex rounded-md shadow">
+                &lt;a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:text-indigo-500">
+                  Log in
+                &lt;/a>
+              &lt;/span>
+            &lt;/div>
+          &lt;/nav>
+        &lt;/div>
+
+        
+          &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-description="Mobile menu, show/hide based on menu open state." x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              &lt;div class="px-5 pt-4 flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                    &lt;span class="sr-only">Close main menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="px-2 pt-2 pb-3 space-y-1">
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+                
+                  &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company&lt;/a>
+                
+              &lt;/div>
+              &lt;a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100 hover:text-indigo-700">
+                Log in
+              &lt;/a>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+
+        &lt;div class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
+          &lt;div class="text-center">
+            &lt;h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              &lt;span class="block">Data to enrich your&lt;/span>
+              &lt;span class="block text-indigo-600">online business&lt;/span>
+            &lt;/h1>
+            &lt;p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+            &lt;/p>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+      &lt;div class="relative">
+        &lt;div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          &lt;div class="flex-1">&lt;/div>
+          &lt;div class="flex-1 w-full bg-gray-800">&lt;/div>
+        &lt;/div>
+        &lt;div class="max-w-7xl mx-auto px-4 sm:px-6">
+          &lt;img class="relative rounded-lg shadow-lg" src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg" alt="App screenshot">
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+    &lt;div class="bg-gray-800">
+      &lt;div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+        &lt;h2 class="text-center text-gray-400 text-sm font-semibold uppercase tracking-wide">Trusted by over 26,000 forward-thinking companies&lt;/h2>
+        &lt;div class="mt-8 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+          &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            &lt;img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+          &lt;/div>
+          &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            &lt;img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+          &lt;/div>
+          &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+            &lt;img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+          &lt;/div>
+          &lt;div class="col-span-1 flex justify-center md:col-span-3 lg:col-span-1">
+            &lt;img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
+          &lt;/div>
+          &lt;div class="col-span-2 flex justify-center md:col-span-3 lg:col-span-1">
+            &lt;img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="3ba19976ba16632ab9c1739740991cd930cea7d8" src="/components/marketing/sections/heroes/with_app_screenshot.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-6b2b782d99add57f51c7093282bad79f1e14f533" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-6b2b782d99add57f51c7093282bad79f1e14f533">With sign-in form</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="relative bg-gray-800 overflow-hidden">
+    &lt;div class="hidden sm:block sm:absolute sm:inset-0" aria-hidden="true">
+      &lt;svg class="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
+        &lt;defs>
+          &lt;pattern id="eab71dd9-9d7a-47bd-8044-256344ee00d0" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            &lt;rect x="0" y="0" width="4" height="4" fill="currentColor">&lt;/rect>
+          &lt;/pattern>
+        &lt;/defs>
+        &lt;rect width="364" height="384" fill="url(#eab71dd9-9d7a-47bd-8044-256344ee00d0)">&lt;/rect>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="relative pt-6 pb-16 sm:pb-24" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+        &lt;div class="flex items-center flex-1">
+          &lt;div class="flex items-center justify-between w-full md:w-auto">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="">
+            &lt;/a>
+            &lt;div class="-mr-2 flex items-center md:hidden">
+              &lt;button type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span class="sr-only">Open main menu&lt;/span>
+                &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden space-x-10 md:flex md:ml-10">
+            
+              &lt;a href="#" class="font-medium text-white hover:text-gray-300">Product&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-white hover:text-gray-300">Features&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-white hover:text-gray-300">Marketplace&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-white hover:text-gray-300">Company&lt;/a>
+            
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="hidden md:flex">
+          &lt;a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
+            Log in
+          &lt;/a>
+        &lt;/div>
+      &lt;/nav>
+
+      
+        &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            &lt;div class="px-5 pt-4 flex items-center justify-between">
+              &lt;div>
+                &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+              &lt;/div>
+              &lt;div class="-mr-2">
+                &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                  &lt;span class="sr-only">Close menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="px-2 pt-2 pb-3 space-y-1">
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company&lt;/a>
+              
+            &lt;/div>
+            &lt;a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+              Log in
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+
+      &lt;main class="mt-16 sm:mt-24">
+        &lt;div class="mx-auto max-w-7xl">
+          &lt;div class="lg:grid lg:grid-cols-12 lg:gap-8">
+            &lt;div class="px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left lg:flex lg:items-center">
+              &lt;div>
+                &lt;a href="#" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                  &lt;span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">We're hiring&lt;/span>
+                  &lt;span class="ml-4 text-sm">Visit our careers page&lt;/span>
+                  &lt;svg class="ml-2 w-5 h-5 text-gray-500" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/a>
+                &lt;h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
+                  &lt;span class="md:block">Data to enrich your&lt;/span>
+                  &lt;!-- space -->
+                  &lt;span class="text-indigo-400 md:block">online business&lt;/span>
+                &lt;/h1>
+                &lt;p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+                &lt;/p>
+                &lt;p class="mt-8 text-sm text-white uppercase tracking-wide font-semibold sm:mt-10">Used by&lt;/p>
+                &lt;div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
+                  &lt;div class="flex flex-wrap items-start justify-between">
+                    &lt;div class="flex justify-center px-1">
+                      &lt;img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+                    &lt;/div>
+                    &lt;div class="flex justify-center px-1">
+                      &lt;img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+                    &lt;/div>
+                    &lt;div class="flex justify-center px-1">
+                      &lt;img class="h-9 sm:h-10" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+              &lt;div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+                &lt;div class="px-4 py-8 sm:px-10">
+                  &lt;div>
+                    &lt;p class="text-sm font-medium text-gray-700">
+                      Sign in with
+                    &lt;/p>
+
+                    &lt;div class="mt-1 grid grid-cols-3 gap-3">
+                      &lt;div>
+                        &lt;a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                          &lt;span class="sr-only">Sign in with Facebook&lt;/span>
+                          &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M20 10c0-5.523-4.477-10-10-10S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                        &lt;/a>
+                      &lt;/div>
+
+                      &lt;div>
+                        &lt;a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                          &lt;span class="sr-only">Sign in with Twitter&lt;/span>
+                          &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">&lt;/path>
+&lt;/svg>
+                        &lt;/a>
+                      &lt;/div>
+
+                      &lt;div>
+                        &lt;a href="#" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+                          &lt;span class="sr-only">Sign in with GitHub&lt;/span>
+                          &lt;svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                        &lt;/a>
+                      &lt;/div>
+                    &lt;/div>
+                  &lt;/div>
+
+                  &lt;div class="mt-6 relative">
+                    &lt;div class="absolute inset-0 flex items-center" aria-hidden="true">
+                      &lt;div class="w-full border-t border-gray-300">&lt;/div>
+                    &lt;/div>
+                    &lt;div class="relative flex justify-center text-sm">
+                      &lt;span class="px-2 bg-white text-gray-500">
+                        Or
+                      &lt;/span>
+                    &lt;/div>
+                  &lt;/div>
+
+                  &lt;div class="mt-6">
+                    &lt;form action="#" method="POST" class="space-y-6">
+                      &lt;div>
+                        &lt;label for="name" class="sr-only">Full name&lt;/label>
+                        &lt;input type="text" name="name" id="name" autocomplete="name" placeholder="Full name" required="" class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                      &lt;/div>
+
+                      &lt;div>
+                        &lt;label for="mobile-or-email" class="sr-only">Mobile number or email&lt;/label>
+                        &lt;input type="text" name="mobile-or-email" id="mobile-or-email" autocomplete="email" placeholder="Mobile number or email" required="" class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                      &lt;/div>
+
+                      &lt;div>
+                        &lt;label for="password" class="sr-only">Password&lt;/label>
+                        &lt;input id="password" name="password" type="password" placeholder="Password" autocomplete="current-password" required="" class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+                      &lt;/div>
+
+                      &lt;div>
+                        &lt;button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                          Create your account
+                        &lt;/button>
+                      &lt;/div>
+                    &lt;/form>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="px-4 py-6 bg-gray-50 border-t-2 border-gray-200 sm:px-10">
+                  &lt;p class="text-xs leading-5 text-gray-500">By signing up, you agree to our &lt;a href="#" class="font-medium text-gray-900 hover:underline">Terms&lt;/a>, &lt;a href="#" class="font-medium text-gray-900 hover:underline">Data Policy&lt;/a> and &lt;a href="#" class="font-medium text-gray-900 hover:underline">Cookies Policy&lt;/a>.&lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/main>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="6b2b782d99add57f51c7093282bad79f1e14f533" src="/components/marketing/sections/heroes/with_sign_in_form.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-716eca59bd1b36b9dedcd828fd85c8b0dbe089b5" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-716eca59bd1b36b9dedcd828fd85c8b0dbe089b5">With sign up and media content</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div class="relative bg-white overflow-hidden">
+    &lt;div class="hidden lg:block lg:absolute lg:inset-0" aria-hidden="true">
+      &lt;svg class="absolute top-0 left-1/2 transform translate-x-64 -translate-y-8" width="640" height="784" fill="none" viewBox="0 0 640 784">
+        &lt;defs>
+          &lt;pattern id="9ebea6f4-a1f5-4d96-8c4e-4c2abf658047" x="118" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+          &lt;/pattern>
+        &lt;/defs>
+        &lt;rect y="72" width="640" height="640" class="text-gray-50" fill="currentColor">&lt;/rect>
+        &lt;rect x="118" width="404" height="784" fill="url(#9ebea6f4-a1f5-4d96-8c4e-4c2abf658047)">&lt;/rect>
+      &lt;/svg>
+    &lt;/div>
+    &lt;div class="relative pt-6 pb-16 sm:pb-24 lg:pb-32" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+        &lt;div class="flex items-center flex-1">
+          &lt;div class="flex items-center justify-between w-full md:w-auto">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+            &lt;/a>
+            &lt;div class="-mr-2 flex items-center md:hidden">
+              &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span class="sr-only">Open main menu&lt;/span>
+                &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="hidden md:block md:ml-10 md:space-x-10">
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Product&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Features&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Marketplace&lt;/a>
+            
+              &lt;a href="#" class="font-medium text-gray-500 hover:text-gray-900">Company&lt;/a>
+            
+          &lt;/div>
+        &lt;/div>
+        &lt;div class="hidden md:block text-right">
+          &lt;span class="inline-flex rounded-md shadow-md ring-1 ring-black ring-opacity-5">
+            &lt;a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50">
+              Log in
+            &lt;/a>
+          &lt;/span>
+        &lt;/div>
+      &lt;/nav>
+
+      
+        &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+          &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+            &lt;div class="px-5 pt-4 flex items-center justify-between">
+              &lt;div>
+                &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+              &lt;/div>
+              &lt;div class="-mr-2">
+                &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                  &lt;span class="sr-only">Close main menu&lt;/span>
+                  &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                &lt;/button>
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="px-2 pt-2 pb-3 space-y-1">
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+              
+                &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company&lt;/a>
+              
+            &lt;/div>
+            &lt;a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
+              Log in
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>&lt;/transition>
+      
+
+      &lt;main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 lg:mt-32">
+        &lt;div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          &lt;div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+            &lt;h1>
+              &lt;span class="block text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">Coming soon&lt;/span>
+              &lt;span class="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
+                &lt;span class="block text-gray-900">Data to enrich your&lt;/span>
+                &lt;span class="block text-indigo-600">online business&lt;/span>
+              &lt;/span>
+            &lt;/h1>
+            &lt;p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua ad ad non deserunt sunt.
+            &lt;/p>
+            &lt;div class="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+              &lt;p class="text-base font-medium text-gray-900">
+                Sign up to get notified when it’s ready.
+              &lt;/p>
+              &lt;form action="#" method="POST" class="mt-3 sm:flex">
+                &lt;label for="email" class="sr-only">Email&lt;/label>
+                &lt;input type="text" name="email" id="email" class="block w-full py-3 text-base rounded-md placeholder-gray-500 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:flex-1 border-gray-300" placeholder="Enter your email">
+                &lt;button type="submit" class="mt-3 w-full px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 shadow-sm hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  Notify me
+                &lt;/button>
+              &lt;/form>
+              &lt;p class="mt-3 text-sm text-gray-500">
+                We care about the protection of your data. Read our
+                &lt;a href="#" class="font-medium text-gray-900 underline">Privacy Policy&lt;/a>.
+              &lt;/p>
+            &lt;/div>
+          &lt;/div>
+          &lt;div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+            &lt;svg class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-8 scale-75 origin-top sm:scale-100 lg:hidden" width="640" height="784" fill="none" viewBox="0 0 640 784" aria-hidden="true">
+              &lt;defs>
+                &lt;pattern id="4f4f415c-a0e9-44c2-9601-6ded5a34a13e" x="118" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+                &lt;/pattern>
+              &lt;/defs>
+              &lt;rect y="72" width="640" height="640" class="text-gray-50" fill="currentColor">&lt;/rect>
+              &lt;rect x="118" width="404" height="784" fill="url(#4f4f415c-a0e9-44c2-9601-6ded5a34a13e)">&lt;/rect>
+            &lt;/svg>
+            &lt;div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md">
+              &lt;button type="button" class="relative block w-full bg-white rounded-lg overflow-hidden focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                &lt;span class="sr-only">Watch our video to learn more&lt;/span>
+                &lt;img class="w-full" src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=1350&amp;amp;q=80" alt="">
+                &lt;div class="absolute inset-0 w-full h-full flex items-center justify-center" aria-hidden="true">
+                  &lt;svg class="h-20 w-20 text-indigo-500" fill="currentColor" viewBox="0 0 84 84">
+                    &lt;circle opacity="0.9" cx="42" cy="42" r="42" fill="white">&lt;/circle>
+                    &lt;path d="M55.5039 40.3359L37.1094 28.0729C35.7803 27.1869 34 28.1396 34 29.737V54.263C34 55.8604 35.7803 56.8131 37.1094 55.9271L55.5038 43.6641C56.6913 42.8725 56.6913 41.1275 55.5039 40.3359Z">&lt;/path>
+                  &lt;/svg>
+                &lt;/div>
+              &lt;/button>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/main>
+    &lt;/div>
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="716eca59bd1b36b9dedcd828fd85c8b0dbe089b5" src="/components/marketing/sections/heroes/with_sign_up_and_media_content.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-d980ede18ecd28f26e5975489e3c5930ba3e140f" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-d980ede18ecd28f26e5975489e3c5930ba3e140f">Card with background image</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div>
+    
+  &lt;div class="min-h-screen bg-white">
+    &lt;header>
+      &lt;div class="relative bg-white" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+        &lt;div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+          &lt;div class="flex justify-start lg:w-0 lg:flex-1">
+            &lt;a href="#">
+              &lt;span class="sr-only">Workflow&lt;/span>
+              &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+            &lt;/a>
+          &lt;/div>
+          &lt;div class="-mr-2 -my-2 md:hidden">
+            &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+              &lt;span class="sr-only">Open menu&lt;/span>
+              &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+            &lt;/button>
+          &lt;/div>
+          &lt;nav class="hidden md:flex space-x-10" x-data="Components.popoverGroup()" x-init="init()">
+            &lt;div class="relative" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+              &lt;button type="button" x-state:on="Item active" x-state:off="Item inactive" class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" :class="{ 'text-gray-900': open, 'text-gray-500': !(open) }" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                &lt;span>Solutions&lt;/span>
+                &lt;svg x-state:on="Item active" x-state:off="Item inactive" class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" :class="{ 'text-gray-600': open, 'text-gray-400': !(open) }" x-description="Heroicon name: solid/chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+              &lt;/button>
+
+              
+                &lt;transition enter-active-class="transition ease-out duration-200" enter-class="opacity-0 translate-y-1" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-class="opacity-100 translate-y-0" leave-to-class="opacity-0 translate-y-1">&lt;div x-show="open" x-description="'Solutions' flyout menu, show/hide based on flyout menu state." class="absolute z-10 -ml-4 mt-3 transform w-screen max-w-md lg:max-w-2xl lg:ml-0 lg:left-1/2 lg:-translate-x-1/2" x-ref="panel" @click.away="open = false">
+                  &lt;div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+                    &lt;div class="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8 lg:grid-cols-2">
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/inbox" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">&lt;/path>
+&lt;/svg>
+                          &lt;/div>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Inbox
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Get a better understanding of where your traffic is coming from.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/annotation" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">&lt;/path>
+&lt;/svg>
+                          &lt;/div>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Messaging
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Speak directly to your customers in a more meaningful way.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">&lt;/path>
+&lt;/svg>
+                          &lt;/div>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Live Chat
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Your customers' data will be safe and secure.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                        &lt;a href="#" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-50">
+                          &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white sm:h-12 sm:w-12">
+                            &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">&lt;/path>
+&lt;/svg>
+                          &lt;/div>
+                          &lt;div class="ml-4">
+                            &lt;p class="text-base font-medium text-gray-900">
+                              Knowledge Base
+                            &lt;/p>
+                            &lt;p class="mt-1 text-sm text-gray-500">
+                              Connect with third-party tools that you're already using.
+                            &lt;/p>
+                          &lt;/div>
+                        &lt;/a>
+                      
+                    &lt;/div>
+                  &lt;/div>
+                &lt;/div>&lt;/transition>
+              
+            &lt;/div>
+
+            &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              Pricing
+            &lt;/a>
+            &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              Partners
+            &lt;/a>
+            &lt;a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+              Company
+            &lt;/a>
+          &lt;/nav>
+          &lt;div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+            &lt;a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+              Sign in
+            &lt;/a>
+            &lt;a href="#" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+              Sign up
+            &lt;/a>
+          &lt;/div>
+        &lt;/div>
+
+        
+          &lt;transition enter-active-class="duration-200 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on mobile menu state." class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+              &lt;div class="pt-5 pb-6 px-5">
+                &lt;div class="flex items-center justify-between">
+                  &lt;div>
+                    &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="Workflow">
+                  &lt;/div>
+                  &lt;div class="-mr-2">
+                    &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle">
+                      &lt;span class="sr-only">Close menu&lt;/span>
+                      &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                    &lt;/button>
+                  &lt;/div>
+                &lt;/div>
+                &lt;div class="mt-6">
+                  &lt;nav class="grid grid-cols-1 gap-7">
+                    
+                      &lt;a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                        &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                          &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/inbox" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4">&lt;/path>
+&lt;/svg>
+                        &lt;/div>
+                        &lt;div class="ml-4 text-base font-medium text-gray-900">
+                          Inbox
+                        &lt;/div>
+                      &lt;/a>
+                    
+                      &lt;a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                        &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                          &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/annotation" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z">&lt;/path>
+&lt;/svg>
+                        &lt;/div>
+                        &lt;div class="ml-4 text-base font-medium text-gray-900">
+                          Messaging
+                        &lt;/div>
+                      &lt;/a>
+                    
+                      &lt;a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                        &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                          &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/chat-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">&lt;/path>
+&lt;/svg>
+                        &lt;/div>
+                        &lt;div class="ml-4 text-base font-medium text-gray-900">
+                          Live Chat
+                        &lt;/div>
+                      &lt;/a>
+                    
+                      &lt;a href="#" class="-m-3 p-3 flex items-center rounded-lg hover:bg-gray-50">
+                        &lt;div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-indigo-600 text-white">
+                          &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/question-mark-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">&lt;/path>
+&lt;/svg>
+                        &lt;/div>
+                        &lt;div class="ml-4 text-base font-medium text-gray-900">
+                          Knowledge Base
+                        &lt;/div>
+                      &lt;/a>
+                    
+                  &lt;/nav>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="py-6 px-5">
+                &lt;div class="grid grid-cols-2 gap-4">
+                  
+                    &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Pricing
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Partners
+                    &lt;/a>
+                  
+                    &lt;a href="#" class="text-base font-medium text-gray-900 hover:text-gray-700">
+                      Company
+                    &lt;/a>
+                  
+                &lt;/div>
+                &lt;div class="mt-6">
+                  &lt;a href="#" class="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                    Sign up
+                  &lt;/a>
+                  &lt;p class="mt-6 text-center text-base font-medium text-gray-500">
+                    Existing customer?
+                    &lt;a href="#" class="text-gray-900">
+                      Sign in
+                    &lt;/a>
+                  &lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+      &lt;/div>
+    &lt;/header>
+
+    &lt;main>
+      &lt;div>
+        &lt;!-- Hero card -->
+        &lt;div class="relative">
+          &lt;div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100">&lt;/div>
+          &lt;div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            &lt;div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+              &lt;div class="absolute inset-0">
+                &lt;img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;amp;ixlib=rb-1.2.1&amp;amp;auto=format&amp;amp;fit=crop&amp;amp;w=2830&amp;amp;q=80&amp;amp;sat=-100" alt="People working on laptops">
+                &lt;div class="absolute inset-0 bg-indigo-700" style="mix-blend-mode: multiply;">&lt;/div>
+              &lt;/div>
+              &lt;div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
+                &lt;h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+                  &lt;span class="block text-white">Take control of your&lt;/span>
+                  &lt;span class="block text-indigo-200">customer support&lt;/span>
+                &lt;/h1>
+                &lt;p class="mt-6 max-w-lg mx-auto text-center text-xl text-indigo-200 sm:max-w-3xl">
+                  Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+                &lt;/p>
+                &lt;div class="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
+                  &lt;div class="space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5">
+                    &lt;a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-indigo-700 bg-white hover:bg-indigo-50 sm:px-8">
+                      Get started
+                    &lt;/a>
+                    &lt;a href="#" class="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-500 bg-opacity-60 hover:bg-opacity-70 sm:px-8">
+                      Live demo
+                    &lt;/a>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+
+        &lt;!-- Logo cloud -->
+        &lt;div class="bg-gray-100">
+          &lt;div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            &lt;p class="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+              Trusted by over 5 very average small businesses
+            &lt;/p>
+            &lt;div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+              &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                &lt;img class="h-12" src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg" alt="Tuple">
+              &lt;/div>
+              &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                &lt;img class="h-12" src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg" alt="Mirage">
+              &lt;/div>
+              &lt;div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+                &lt;img class="h-12" src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg" alt="StaticKit">
+              &lt;/div>
+              &lt;div class="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
+                &lt;img class="h-12" src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg" alt="Transistor">
+              &lt;/div>
+              &lt;div class="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
+                &lt;img class="h-12" src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg" alt="Workcation">
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;!-- More main page content here... -->
+    &lt;/main>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="d980ede18ecd28f26e5975489e3c5930ba3e140f" src="/components/marketing/sections/heroes/card_with_background_image.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-ed12eae489e392e9832e1b5b1e2035ac045f68c1" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-ed12eae489e392e9832e1b5b1e2035ac045f68c1">Dark with illustration</a>
+        </h3>
+        <a href="http://tailwindui.com/documentation#integrating-with-javascript-frameworks" class="ml-4 bg-pink-100 rounded-full px-2 py-0.5 flex items-center text-xs leading-4 tracking-wide uppercase font-semibold"><span class="text-pink-700">Requires JS</span></a>
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;" class="overflow-y-auto">
+    
+  &lt;div class="min-h-screen">
+    &lt;div class="relative overflow-hidden">
+      &lt;header class="relative" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+        &lt;div class="bg-gray-900 pt-6">
+          &lt;nav class="relative max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6" aria-label="Global">
+            &lt;div class="flex items-center flex-1">
+              &lt;div class="flex items-center justify-between w-full md:w-auto">
+                &lt;a href="#">
+                  &lt;span class="sr-only">Workflow&lt;/span>
+                  &lt;img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="">
+                &lt;/a>
+                &lt;div class="-mr-2 flex items-center md:hidden">
+                  &lt;button type="button" class="bg-gray-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
+                    &lt;span class="sr-only">Open main menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="hidden space-x-8 md:flex md:ml-10">
+                
+                  &lt;a href="#" class="text-base font-medium text-white hover:text-gray-300">Product&lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-white hover:text-gray-300">Features&lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-white hover:text-gray-300">Marketplace&lt;/a>
+                
+                  &lt;a href="#" class="text-base font-medium text-white hover:text-gray-300">Company&lt;/a>
+                
+              &lt;/div>
+            &lt;/div>
+            &lt;div class="hidden md:flex md:items-center md:space-x-6">
+              &lt;a href="#" class="text-base font-medium text-white hover:text-gray-300">
+                Log in
+              &lt;/a>
+              &lt;a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
+                Start free trial
+              &lt;/a>
+            &lt;/div>
+          &lt;/nav>
+        &lt;/div>
+
+        
+          &lt;transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95">&lt;div x-show="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top md:hidden" x-ref="panel" @click.away="open = false">
+            &lt;div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+              &lt;div class="px-5 pt-4 flex items-center justify-between">
+                &lt;div>
+                  &lt;img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg" alt="">
+                &lt;/div>
+                &lt;div class="-mr-2">
+                  &lt;button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-600" @click="toggle">
+                    &lt;span class="sr-only">Close menu&lt;/span>
+                    &lt;svg class="h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  &lt;path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">&lt;/path>
+&lt;/svg>
+                  &lt;/button>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="pt-5 pb-6">
+                &lt;div class="px-2 space-y-1">
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Product&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Features&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Marketplace&lt;/a>
+                  
+                    &lt;a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-900 hover:bg-gray-50">Company&lt;/a>
+                  
+                &lt;/div>
+                &lt;div class="mt-6 px-5">
+                  &lt;a href="#" class="block text-center w-full py-3 px-4 rounded-md shadow bg-indigo-600 text-white font-medium hover:bg-indigo-700">Start free trial&lt;/a>
+                &lt;/div>
+                &lt;div class="mt-6 px-5">
+                  &lt;p class="text-center text-base font-medium text-gray-500">Existing customer? &lt;a href="#" class="text-gray-900 hover:underline">Login&lt;/a>&lt;/p>
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>&lt;/transition>
+        
+      &lt;/header>
+
+      &lt;main>
+        &lt;div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
+          &lt;div class="mx-auto max-w-7xl lg:px-8">
+            &lt;div class="lg:grid lg:grid-cols-2 lg:gap-8">
+              &lt;div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+                &lt;div class="lg:py-24">
+                  &lt;a href="#" class="inline-flex items-center text-white bg-black rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+                    &lt;span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">We're hiring&lt;/span>
+                    &lt;span class="ml-4 text-sm">Visit our careers page&lt;/span>
+                    &lt;svg class="ml-2 w-5 h-5 text-gray-500" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                  &lt;/a>
+                  &lt;h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:text-6xl lg:mt-6 xl:text-6xl">
+                    &lt;span class="block">A better way to&lt;/span>
+                    &lt;span class="block text-indigo-400">ship web apps&lt;/span>
+                  &lt;/h1>
+                  &lt;p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat.
+                  &lt;/p>
+                  &lt;div class="mt-10 sm:mt-12">
+                    &lt;form action="#" class="sm:max-w-xl sm:mx-auto lg:mx-0">
+                      &lt;div class="sm:flex">
+                        &lt;div class="min-w-0 flex-1">
+                          &lt;label for="email" class="sr-only">Email address&lt;/label>
+                          &lt;input id="email" type="email" placeholder="Enter your email" class="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">
+                        &lt;/div>
+                        &lt;div class="mt-3 sm:mt-0 sm:ml-3">
+                          &lt;button type="submit" class="block w-full py-3 px-4 rounded-md shadow bg-indigo-500 text-white font-medium hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900">Start free trial&lt;/button>
+                        &lt;/div>
+                      &lt;/div>
+                      &lt;p class="mt-3 text-sm text-gray-300 sm:mt-4">Start your free 14-day trial, no credit card necessary. By providing your email, you agree to our &lt;a href="#" class="font-medium text-white">terms or service&lt;/a>.&lt;/p>
+                    &lt;/form>
+                  &lt;/div>
+                &lt;/div>
+              &lt;/div>
+              &lt;div class="mt-12 -mb-16 sm:-mb-48 lg:m-0 lg:relative">
+                &lt;div class="mx-auto max-w-md px-4 sm:max-w-2xl sm:px-6 lg:max-w-none lg:px-0">
+                  &lt;!-- Illustration taken from Lucid Illustrations: https://lucid.pixsellz.io/ -->
+                  &lt;img class="w-full lg:absolute lg:inset-y-0 lg:left-0 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/cloud-illustration-indigo-400.svg" alt="">
+                &lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+
+        &lt;!-- More main page content here... -->
+      &lt;/main>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="ed12eae489e392e9832e1b5b1e2035ac045f68c1" src="/components/marketing/sections/heroes/dark_with_illustration.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    <div id="component-d851aaffd69d22f2ff49af5e77620ee967ed1852" x-data="{ activeTab: 'preview' }" class="border-b border-t border-gray-200 sm:border sm:rounded-lg overflow-hidden mb-16">
+      <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white sm:py-4 sm:px-6 sm:items-baseline">
+      <div class="flex-shrink min-w-0 flex items-center">
+        <h3 class="flex-shrink min-w-0 font-regular text-base md:text-lg leading-snug truncate">
+          <a href="#component-d851aaffd69d22f2ff49af5e77620ee967ed1852">Split with screenshot</a>
+        </h3>
+        
+      </div>
+      <div class="ml-4 flex flex-shrink-0 items-center">
+        <div class="flex items-center text-sm sm:hidden">
+          <button type="button" @click="activeTab === 'preview' ? (activeTab = 'code') : (activeTab = 'preview')" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-400 hover:text-gray-600 focus:text-gray-600': activeTab !== 'code'}" class="inline-block rounded-lg font-medium leading-none py-3 px-3 focus:outline-none text-gray-400 hover:text-gray-600 focus:text-gray-600">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="hidden sm:flex items-center text-sm md:text-base">
+          <button type="button" @click="activeTab = 'preview'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'preview', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'preview'}" class="inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none bg-indigo-50 text-indigo-700">
+            Preview
+          </button>
+          <button type="button" @click="activeTab = 'code'" :class="{'bg-indigo-50 text-indigo-700': activeTab === 'code', 'text-gray-500 hover:text-indigo-600 focus:text-indigo-600': activeTab !== 'code'}" class="ml-2 inline-block rounded-lg font-medium leading-none py-2 px-3 focus:outline-none text-gray-500 hover:text-indigo-600 focus:text-indigo-600">
+            Code
+          </button>
+          <textarea class="hidden">&lt;div _style="max-height: 800px;">
+    
+  &lt;div class="bg-white pb-8 sm:pb-12 lg:pb-12">
+    &lt;div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
+      &lt;div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
+        &lt;div>
+          &lt;div>
+            &lt;img class="h-11 w-auto" src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&amp;amp;shade=600" alt="Workflow">
+          &lt;/div>
+          &lt;div class="mt-20">
+            &lt;div>
+              &lt;a href="#" class="inline-flex space-x-4">
+                &lt;span class="rounded bg-indigo-50 px-2.5 py-1 text-xs font-semibold text-indigo-600 tracking-wide uppercase">
+                  What's new
+                &lt;/span>
+                &lt;span class="inline-flex items-center text-sm font-medium text-indigo-600 space-x-1">
+                  &lt;span>Just shipped version 0.1.0&lt;/span>
+                  &lt;svg class="h-5 w-5" x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd">&lt;/path>
+&lt;/svg>
+                &lt;/span>
+              &lt;/a>
+            &lt;/div>
+            &lt;div class="mt-6 sm:max-w-xl">
+              &lt;h1 class="text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl">
+                Server management for growing teams
+              &lt;/h1>
+              &lt;p class="mt-6 text-xl text-gray-500">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.
+              &lt;/p>
+            &lt;/div>
+            &lt;form action="#" class="mt-12 sm:max-w-lg sm:w-full sm:flex">
+              &lt;div class="min-w-0 flex-1">
+                &lt;label for="hero_email" class="sr-only">Email address&lt;/label>
+                &lt;input id="hero_email" type="email" class="block w-full border border-gray-300 rounded-md px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500" placeholder="Enter your email">
+              &lt;/div>
+              &lt;div class="mt-4 sm:mt-0 sm:ml-3">
+                &lt;button type="submit" class="block w-full rounded-md border border-transparent px-5 py-3 bg-indigo-600 text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10">Notify me&lt;/button>
+              &lt;/div>
+            &lt;/form>
+            &lt;div class="mt-6">
+              &lt;div class="inline-flex items-center divide-x divide-gray-300">
+                &lt;div class="flex-shrink-0 flex pr-5">
+                  &lt;svg class="h-5 w-5 text-yellow-400" x-description="Heroicon name: solid/star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">&lt;/path>
+&lt;/svg>
+                  &lt;svg class="h-5 w-5 text-yellow-400" x-description="Heroicon name: solid/star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">&lt;/path>
+&lt;/svg>
+                  &lt;svg class="h-5 w-5 text-yellow-400" x-description="Heroicon name: solid/star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">&lt;/path>
+&lt;/svg>
+                  &lt;svg class="h-5 w-5 text-yellow-400" x-description="Heroicon name: solid/star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">&lt;/path>
+&lt;/svg>
+                  &lt;svg class="h-5 w-5 text-yellow-400" x-description="Heroicon name: solid/star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+  &lt;path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">&lt;/path>
+&lt;/svg>
+                &lt;/div>
+                &lt;div class="min-w-0 flex-1 pl-5 py-1 text-sm text-gray-500 sm:py-3">&lt;span class="font-medium text-gray-900">Rated 5 stars&lt;/span> by over &lt;span class="font-medium text-indigo-600">500 beta users&lt;/span>&lt;/div>
+              &lt;/div>
+            &lt;/div>
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+
+      &lt;div class="sm:mx-auto sm:max-w-3xl sm:px-6">
+        &lt;div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          &lt;div class="hidden sm:block">
+            &lt;div class="absolute inset-y-0 left-1/2 w-screen bg-gray-50 rounded-l-3xl lg:left-80 lg:right-0 lg:w-full">&lt;/div>
+            &lt;svg class="absolute top-8 right-1/2 -mr-3 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392">
+              &lt;defs>
+                &lt;pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  &lt;rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor">&lt;/rect>
+                &lt;/pattern>
+              &lt;/defs>
+              &lt;rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)">&lt;/rect>
+            &lt;/svg>
+          &lt;/div>
+          &lt;div class="relative pl-4 -mr-40 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-12">
+            &lt;img class="w-full rounded-md shadow-xl ring-1 ring-black ring-opacity-5 lg:h-full lg:w-auto lg:max-w-none" src="https://tailwindui.com/img/component-images/top-nav-with-multi-column-layout-screenshot.jpg" alt="">
+          &lt;/div>
+        &lt;/div>
+      &lt;/div>
+    &lt;/div>
+  &lt;/div>
+
+  &lt;/div></textarea>
+        </div>
+        <div class="hidden sm:flex sm:items-center">
+          <div class="pl-4 pr-4 self-stretch">
+            <div class="h-5 border-l border-gray-200"></div>
+          </div>
+          <button type="button" @click="$refs.clipboardCode.select(); document.execCommand('copy')" class="ml-3 text-gray-400 hover:text-gray-500">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <title>Copy</title>
+              <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path>
+              <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="relative bg-gray-500">
+      <div :class="{ 'block': activeTab === 'preview', 'hidden': activeTab !== 'preview' }" class="block">
+        <div x-data="resizableIFrame()" x-init="init()" x-ref="root" :style="'max-width: 100%; width: ' + width" class="sm:min-w-preview-mobile relative sm:pr-4" style="max-width: 100%; width: 100%">
+          <iframe class="w-full" data-id="d851aaffd69d22f2ff49af5e77620ee967ed1852" src="/components/marketing/sections/heroes/split_with_screenshot.html" style="height: 265px;"></iframe>
+          <div :class="{ 'pointer-events-none': !resizing }" class="absolute opacity-0 inset-0 pointer-events-none"></div>
+          <div x-ref="handle" style="cursor: ew-resize;" class="sr-only sm:not-sr-only sm:border-l sm:bg-gray-100 sm:absolute sm:right-0 sm:inset-y-0 sm:flex sm:items-center sm:w-4">
+            <svg class="h-4 w-4 text-gray-600 pointer-events-none" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5h2v14H8zM14 5h2v14h-2z"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div :class="{ 'block': activeTab === 'code', 'hidden': activeTab !== 'code' }" class="hidden">
+        <pre class="block scrollbar-none m-0 p-0 overflow-auto text-white text-sm bg-gray-800 leading-normal"><code class="inline-block p-4 scrolling-touch subpixel-antialiased"></code></pre>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+</div>
+</main>
+<script>
+;(function() {
+  const getDocHeight = doc => {
+    doc = doc || document
+    const body = doc.body
+    const html = doc.documentElement
+    const height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight,
+    )
+    return height
+  }
+
+  window.resizableIFrame = function() {
+    return {
+      resizing: !1,
+      width: '100%',
+      init: function() {},
+    }
+  }
+  const iframes = document.querySelectorAll('iframe')
+  Array.from(iframes).forEach(iframe => {
+    iframe.addEventListener('load', e => {
+      const iframe = e.srcElement
+      const doc = iframe.contentDocument || iframe.contentWindow.document
+      doc.body.classList.add('antialiased', 'font-sans', 'bg-white')
+      iframe.style.visibility = 'hidden'
+      iframe.style.height = '10px'
+      const height = Math.max(getDocHeight(doc), 256) + 'px'
+      iframe.style.height = height
+      iframe.style.visibility = 'visible'
+      const container = iframe.parentElement.parentElement.parentElement
+      const textarea = container.parentElement.querySelector('textarea')
+      const html = textarea.innerText.trim()
+      hljs.configure({ useBR: false, tabReplace: '  ' })
+      const highlighted = hljs.highlight('html', html)
+      const codeElem = container.children[1].querySelector('code')
+      codeElem.innerHTML = highlighted.value
+    })
+  })
+  Array.from(document.querySelectorAll('[x-ref=handle]')).forEach(
+    function(handle, index) {
+      handle.addEventListener('mousedown', createDragHandlers())
+    },
+  )
+
+  function createDragHandlers() {
+    return function(event) {
+      // capture initial screenX
+      var target = event.target
+      var parent = target.parentElement
+      var iframe = parent.childNodes[1]
+
+      var screenX = event.screenX
+      var moveListener = function(event) {
+        event.stopPropagation()
+        dragMoveListener(event, target, event.screenX - screenX)
+      }
+      var elements = [document, iframe.contentWindow]
+
+      elements.forEach(e => {
+        e.addEventListener('mousemove', moveListener)
+        e.addEventListener('mouseup', cleanup)
+      })
+
+      function cleanup() {
+        elements.forEach(e =>
+          e.removeEventListener('mousemove', moveListener),
+        )
+      }
+    }
+  }
+  function dragMoveListener(event, target, dx) {
+    var parent = target.parentElement
+    var iframe = parent.childNodes[1]
+    var maxWidth = parent.offsetWidth - target.offsetWidth
+    var width = Math.max(376, Math.min(maxWidth + dx, maxWidth))
+    iframe.style.width = width + 'px'
+    target.style.left = width + 'px'
+  }
+})()
+</script>
+</body>
+</html>

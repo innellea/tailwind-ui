@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  <div className="bg-white">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       
   <div className="md:flex md:items-center md:justify-between md:space-x-5">
@@ -35,6 +36,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

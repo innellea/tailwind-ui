@@ -3,105 +3,103 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div style={{minHeight: "940px"}} className="bg-gray-100">
+<div className="" style={{}}>
+  <div style={{minHeight: "940px"}} className="bg-gray-100">
     
-  <div className="h-screen flex overflow-hidden bg-white" data-todo-x-data="{ sidebarOpen: false }" data-todo-at-keydown-window-escape="sidebarOpen = false">
-    <div data-todo-x-show="sidebarOpen" className="lg:hidden" data-todo-x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state.">
-      <div className="fixed inset-0 flex z-40">
-        <div data-todo-at-click="sidebarOpen = false" data-todo-x-show="sidebarOpen" data-todo-x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." data-todo-x-transition-enter="transition-opacity ease-linear duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="transition-opacity ease-linear duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" className="fixed inset-0" aria-hidden="true">
-          <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
-        </div>
-        <div data-todo-x-show="sidebarOpen" data-todo-x-description="Off-canvas menu, show/hide based on off-canvas menu state." data-todo-x-transition-enter="transition ease-in-out duration-300 transform" data-todo-x-transition-enter-start="-translate-x-full" data-todo-x-transition-enter-end="translate-x-0" data-todo-x-transition-leave="transition ease-in-out duration-300 transform" data-todo-x-transition-leave-start="translate-x-0" data-todo-x-transition-leave-end="-translate-x-full" className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-800">
-          <div className="absolute top-0 right-0 -mr-12 pt-2">
-            <button type="button" data-todo-x-show="sidebarOpen" data-todo-at-click="sidebarOpen = false" className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-              <span className="sr-only">Close sidebar</span>
-              <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+  <div data-todo-x-data="{ open: false }" data-todo-at-keydown-window-escape="open = false" className="h-screen flex overflow-hidden bg-white">
+    
+      <div data-todo-x-show="open" className="fixed inset-0 flex z-40 lg:hidden" data-todo-x-description="Off-canvas menu for mobile, show/hide based on off-canvas menu state." data-todo-x-ref="dialog" role="dialog" aria-modal="true">
+        
+          <div data-todo-x-show="open" data-todo-x-transition-enter="transition-opacity ease-linear duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="transition-opacity ease-linear duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" data-todo-x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." className="fixed inset-0 bg-gray-600 bg-opacity-75" data-todo-at-click="open = false" aria-hidden="true"></div>
+        
+        
+          <div data-todo-x-show="open" data-todo-x-transition-enter="transition ease-in-out duration-300 transform" data-todo-x-transition-enter-start="-translate-x-full" data-todo-x-transition-enter-end="translate-x-0" data-todo-x-transition-leave="transition ease-in-out duration-300 transform" data-todo-x-transition-leave-start="translate-x-0" data-todo-x-transition-leave-end="-translate-x-full" data-todo-x-description="Off-canvas menu, show/hide based on off-canvas menu state." className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-800">
+            
+              <div data-todo-x-show="open" data-todo-x-transition-enter="ease-in-out duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="ease-in-out duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" data-todo-x-description="Close button, show/hide based on off-canvas menu state." className="absolute top-0 right-0 -mr-12 pt-2">
+                <button type="button" className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" data-todo-at-click="open = false">
+                  <span className="sr-only">Close sidebar</span>
+                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
-            </button>
-          </div>
-          <div className="flex-shrink-0 flex items-center px-4">
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-rose-500-mark-white-text.svg" alt="Workflow">
-          </div>
-          <div className="mt-5 flex-1 h-0 overflow-y-auto">
-            <nav className="px-2">
-              <div className="space-y-1">
-                
+                </button>
+              </div>
+            
+            <div className="flex-shrink-0 flex items-center px-4">
+              <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-rose-500-mark-white-text.svg" alt="Workflow">
+            </div>
+            <div className="mt-5 flex-1 h-0 overflow-y-auto">
+              <nav className="px-2">
+                <div className="space-y-1">
                   
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
-                    <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      {/* Current: "text-gray-300", Default: "text-gray-400 group-hover:text-gray-300" */}
-                      <svg className="text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" data-todo-x-state-on="Current" data-todo-x-state-off="Default" aria-current="page" data-todo-x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                      <svg className="text-gray-300 mr-4 h-6 w-6" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;text-gray-300&quot;, Default: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
 </svg>
                       All Issues
                     </a>
                   
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
 </svg>
                       My Issues
                     </a>
                   
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Assigned
                     </a>
                   
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
 </svg>
                       Closed
                     </a>
                   
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Recent
                     </a>
                   
-              </div>
-              <div className="mt-10">
-                <p className="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-                  Projects
-                </p>
-                <div className="mt-2 space-y-1">
-                  
-                    <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
-                      <span className="truncate">GraphQL API</span>
-                    </a>
-                  
-                    <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
-                      <span className="truncate">iOS App</span>
-                    </a>
-                  
-                    <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
-                      <span className="truncate">Marketing Site Redesign</span>
-                    </a>
-                  
-                    <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
-                      <span className="truncate">Customer Portal</span>
-                    </a>
-                  
                 </div>
-              </div>
-            </nav>
+                <div className="mt-10">
+                  <p className="px-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                    Projects
+                  </p>
+                  <div className="mt-2 space-y-1">
+                    
+                      <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
+                        <span className="truncate">GraphQL API</span>
+                      </a>
+                    
+                      <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
+                        <span className="truncate">iOS App</span>
+                      </a>
+                    
+                      <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
+                        <span className="truncate">Marketing Site Redesign</span>
+                      </a>
+                    
+                      <a href="/" className="flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-2 py-2 text-base font-medium rounded-md">
+                        <span className="truncate">Customer Portal</span>
+                      </a>
+                    
+                  </div>
+                </div>
+              </nav>
+            </div>
           </div>
-        </div>
+        
         <div className="flex-shrink-0 w-14" aria-hidden="true">
           {/* Dummy element to force sidebar to shrink to fit close icon */}
         </div>
       </div>
-    </div>
+    
 
     {/* Static sidebar for desktop */}
     <div className="hidden lg:flex lg:flex-shrink-0">
@@ -115,48 +113,41 @@ const Component = (props) => (
             <nav className="flex-1 px-2 py-4 bg-gray-800">
               <div className="space-y-1">
                 
-                  
-                    {/* Current: "bg-gray-200 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" */}
-                    <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      {/* Current: "text-gray-300", Default: "text-gray-400 group-hover:text-gray-300" */}
-                      <svg className="text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" data-todo-x-state-on="Current" data-todo-x-state-off="Default" aria-current="page" data-todo-x-state-description="Current: &quot;bg-gray-900 text-white&quot;, Default: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    <svg className="text-gray-300 mr-3 h-6 w-6" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;text-gray-300&quot;, Default: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
 </svg>
-                      All Issues
-                    </a>
-                  
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    All Issues
+                  </a>
+                
+                  <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
 </svg>
-                      My Issues
-                    </a>
-                  
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    My Issues
+                  </a>
+                
+                  <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
-                      Assigned
-                    </a>
-                  
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Assigned
+                  </a>
+                
+                  <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
 </svg>
-                      Closed
-                    </a>
-                  
-                  
-                    <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    Closed
+                  </a>
+                
+                  <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md" data-todo-x-state-description="undefined: &quot;bg-gray-900 text-white&quot;, undefined: &quot;text-gray-300 hover:bg-gray-700 hover:text-white&quot;">
+                    <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-state-description="undefined: &quot;text-gray-300&quot;, undefined: &quot;text-gray-400 group-hover:text-gray-300&quot;" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
-                      Recent
-                    </a>
-                  
+                    Recent
+                  </a>
+                
               </div>
               <div className="mt-10">
                 <p className="px-3 text-xs font-semibold text-gray-400 uppercase tracking-wider">
@@ -197,7 +188,7 @@ const Component = (props) => (
     </div>
     <div className="flex flex-col w-0 flex-1 overflow-hidden">
       <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200">
-        <button type="button" data-todo-at-click-stop="sidebarOpen = true" className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-900 lg:hidden">
+        <button type="button" className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-900 lg:hidden" data-todo-at-click="open = true">
           <span className="sr-only">Open sidebar</span>
           <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/menu-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7"></path>
@@ -236,8 +227,11 @@ const Component = (props) => (
                       <h1 className="text-2xl font-bold text-gray-900">ARIA attribute misspelled</h1>
                       <p className="mt-2 text-sm text-gray-500">
                         #400 opened by
+                        {/* space */}
                         <a href="/" className="font-medium text-gray-900">Hilary Mahy</a>
+                        {/* space */}
                         in
+                        {/* space */}
                         <a href="/" className="font-medium text-gray-900">Customer Portal</a>
                       </p>
                     </div>
@@ -302,6 +296,7 @@ const Component = (props) => (
                               </div>
                               <div className="ml-3.5 text-sm font-medium text-gray-900">Bug</div>
                             </a>
+                            {/* space */}
                           </li>
                           <li className="inline">
                             <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5">
@@ -310,6 +305,7 @@ const Component = (props) => (
                               </div>
                               <div className="ml-3.5 text-sm font-medium text-gray-900">Accessibility</div>
                             </a>
+                            {/* space */}
                           </li>
                         </ul>
                       </div>
@@ -348,11 +344,11 @@ const Component = (props) => (
                         <ul className="-mb-8">
                           
                             <li>
-                              
-                                <div className="relative pb-8">
+                              <div className="relative pb-8">
+                                
+                                  <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                                <div className="relative flex items-start space-x-3">
                                   
-                                    <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                                  <div className="relative flex items-start space-x-3">
                                     <div className="relative">
                                       <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
@@ -378,15 +374,15 @@ const Component = (props) => (
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </li>
+                              </div>
+                            </li>
                           
                             <li>
-                              
-                                <div className="relative pb-8">
+                              <div className="relative pb-8">
+                                
+                                  <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                                <div className="relative flex items-start space-x-3">
                                   
-                                    <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                                  <div className="relative flex items-start space-x-3">
                                     <div>
                                       <div className="relative px-1">
                                         <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
@@ -399,21 +395,24 @@ const Component = (props) => (
                                     <div className="min-w-0 flex-1 py-1.5">
                                       <div className="text-sm text-gray-500">
                                         <a href="/" className="font-medium text-gray-900">Hilary Mahy</a>
+                                        {/* space */}
                                         assigned
+                                        {/* space */}
                                         <a href="/" className="font-medium text-gray-900">Kristin Watson</a>
+                                        {/* space */}
                                         <span className="whitespace-nowrap">2d ago</span>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </li>
+                              </div>
+                            </li>
                           
                             <li>
-                              
-                                <div className="relative pb-8">
+                              <div className="relative pb-8">
+                                
+                                  <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                                <div className="relative flex items-start space-x-3">
                                   
-                                    <span className="absolute top-5 left-5 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
-                                  <div className="relative flex items-start space-x-3">
                                     <div>
                                       <div className="relative px-1">
                                         <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
@@ -427,38 +426,40 @@ const Component = (props) => (
                                       <div className="text-sm leading-8 text-gray-500">
                                         <span className="mr-0.5">
                                           <a href="/" className="font-medium text-gray-900">Hilary Mahy</a>
+                                          {/* space */}
                                           added tags
                                         </span>
+                                        {/* space */}
                                         <span className="mr-0.5">
                                           
-                                            
-                                              <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
-                                                <span className="absolute flex-shrink-0 flex items-center justify-center">
-                                                  <span className="h-1.5 w-1.5 rounded-full bg-rose-500" aria-hidden="true"></span>
-                                                </span>
-                                                <span className="ml-3.5 font-medium text-gray-900">Bug</span>
-                                              </a>
-                                            
-                                            
-                                              <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
-                                                <span className="absolute flex-shrink-0 flex items-center justify-center">
-                                                  <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" aria-hidden="true"></span>
-                                                </span>
-                                                <span className="ml-3.5 font-medium text-gray-900">Accessibility</span>
-                                              </a>
-                                            
+                                            <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                                              <span className="absolute flex-shrink-0 flex items-center justify-center">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-rose-500" aria-hidden="true"></span>
+                                              </span>
+                                              <span className="ml-3.5 font-medium text-gray-900">Bug</span>
+                                            </a>
+                                            {/* space */}
+                                          
+                                            <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
+                                              <span className="absolute flex-shrink-0 flex items-center justify-center">
+                                                <span className="h-1.5 w-1.5 rounded-full bg-indigo-500" aria-hidden="true"></span>
+                                              </span>
+                                              <span className="ml-3.5 font-medium text-gray-900">Accessibility</span>
+                                            </a>
+                                            {/* space */}
+                                          
                                         </span>
                                         <span className="whitespace-nowrap">6h ago</span>
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </li>
+                              </div>
+                            </li>
                           
                             <li>
-                              
-                                <div className="relative pb-8">
-                                  <div className="relative flex items-start space-x-3">
+                              <div className="relative pb-8">
+                                <div className="relative flex items-start space-x-3">
+                                  
                                     <div className="relative">
                                       <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
@@ -484,8 +485,8 @@ const Component = (props) => (
                                       </div>
                                     </div>
                                   </div>
-                                </div>
-                              </li>
+                              </div>
+                            </li>
                           
                         </ul>
                       </div>
@@ -574,6 +575,7 @@ const Component = (props) => (
                         </div>
                         <div className="ml-3.5 text-sm font-medium text-gray-900">Bug</div>
                       </a>
+                      {/* space */}
                     </li>
                     <li className="inline">
                       <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5">
@@ -582,6 +584,7 @@ const Component = (props) => (
                         </div>
                         <div className="ml-3.5 text-sm font-medium text-gray-900">Accessibility</div>
                       </a>
+                      {/* space */}
                     </li>
                   </ul>
                 </div>
@@ -594,6 +597,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

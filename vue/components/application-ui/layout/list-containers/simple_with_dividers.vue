@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white p-8">
       <div class="max-w-md mx-auto">
       
@@ -20,6 +21,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

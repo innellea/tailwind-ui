@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100" style={{minHeight: "1032px"}}>
+<div className="" style={{}}>
+  <div className="bg-gray-100" style={{minHeight: "1032px"}}>
     
   <div className="z-0 relative" data-todo-x-data="Components.popover({ open: true, focus: false })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
     <div className="relative z-10 bg-white shadow">
@@ -130,36 +131,39 @@ const Component = (props) => (
                 From the blog
               </h3>
               <ul className="mt-6 space-y-6">
-                <li className="flow-root">
-                  <a href="/" className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                    <div className="hidden sm:block flex-shrink-0">
-                      <img className="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2849&amp;q=80" alt="">
-                    </div>
-                    <div className="min-w-0 flex-1 sm:ml-8">
-                      <h4 className="text-base font-medium text-gray-900 truncate">
-                        Boost your conversion rate
-                      </h4>
-                      <p className="mt-1 text-sm text-gray-500">
-                        Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li className="flow-root">
-                  <a href="/" className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
-                    <div className="hidden sm:block flex-shrink-0">
-                      <img className="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="">
-                    </div>
-                    <div className="min-w-0 flex-1 sm:ml-8">
-                      <h4 className="text-base font-medium text-gray-900 truncate">
-                        How to use search engine optimization to drive traffic to your site
-                      </h4>
-                      <p className="mt-1 text-sm text-gray-500">
-                        Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
-                      </p>
-                    </div>
-                  </a>
-                </li>
+                
+                  <li className="flow-root">
+                    <a href="/" className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                      <div className="hidden sm:block flex-shrink-0">
+                        <img className="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/photo-1558478551-1a378f63328e?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2849&amp;q=80" alt="">
+                      </div>
+                      <div className="min-w-0 flex-1 sm:ml-8">
+                        <h4 className="text-base font-medium text-gray-900 truncate">
+                          Boost your conversion rate
+                        </h4>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                
+                  <li className="flow-root">
+                    <a href="/" className="-m-3 p-3 flex rounded-lg hover:bg-gray-100 transition ease-in-out duration-150">
+                      <div className="hidden sm:block flex-shrink-0">
+                        <img className="w-32 h-20 object-cover rounded-md" src="https://images.unsplash.com/1/apple-gear-looking-pretty.jpg?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2850&amp;q=80" alt="">
+                      </div>
+                      <div className="min-w-0 flex-1 sm:ml-8">
+                        <h4 className="text-base font-medium text-gray-900 truncate">
+                          How to use search engine optimization to drive traffic to your site
+                        </h4>
+                        <p className="mt-1 text-sm text-gray-500">
+                          Eget ullamcorper ac ut vulputate fames nec mattis pellentesque elementum. Viverra tempor id mus.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                
               </ul>
             </div>
             <div className="mt-6 text-sm font-medium">
@@ -172,6 +176,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

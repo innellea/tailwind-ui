@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white" style="min-height: 16rem;">
     
     <div class="relative bg-indigo-600">
@@ -28,6 +29,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

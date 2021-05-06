@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div class="bg-white py-8">
       <div class="max-w-2xl mx-auto px-4">
       
@@ -21,6 +22,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

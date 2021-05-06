@@ -1,4 +1,5 @@
 <template>
+    <div class="" style="">
     <div>
     
     <div class="min-h-screen bg-white">
@@ -290,6 +291,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

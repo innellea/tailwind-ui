@@ -1,8 +1,9 @@
 <template>
+    <div class="" style="">
     <div _style="max-height: 800px;" class="overflow-y-auto">
     
     <div class="min-h-screen bg-white">
-      <header class="relative z-10" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
+      <header class="relative" x-data="Components.popover({ open: false, focus: true })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
         <div class="bg-warm-gray-50">
           <nav class="relative max-w-7xl mx-auto flex items-center justify-between pt-6 px-6 xl:px-8" aria-label="Global">
             <div class="flex items-center flex-1">
@@ -41,7 +42,7 @@
         </div>
 
       
-          <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95"><div v-if="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
+          <transition enter-active-class="duration-150 ease-out" enter-class="opacity-0 scale-95" enter-to-class="opacity-100 scale-100" leave-active-class="duration-100 ease-in" leave-class="opacity-100 scale-100" leave-to-class="opacity-0 scale-95"><div v-if="open" x-description="Mobile menu, show/hide based on menu open state." class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top lg:hidden" x-ref="panel" @click.away="open = false">
             <div class="rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
               <div class="px-5 pt-4 flex items-center justify-between">
                 <div>
@@ -80,7 +81,7 @@
       <main>
         <!-- Header -->
         <div class="bg-warm-gray-50">
-          <div class="relative z-10 overflow-hidden py-24 lg:py-32">
+          <div class="py-24 lg:py-32">
             <div class="max-w-7xl mx-auto pl-4 pr-8 sm:px-6 lg:px-8">
               <h1 class="text-4xl font-extrabold tracking-tight text-warm-gray-900 sm:text-5xl lg:text-6xl">Get in touch</h1>
               <p class="mt-6 text-xl text-warm-gray-500 max-w-3xl">Vel nunc non ut montes, viverra tempor. Proin lectus nibh phasellus morbi non morbi. In elementum urna ut volutpat. Sagittis et vel et fermentum amet consequat.</p>
@@ -163,25 +164,25 @@
                     <li>
                       <a class="text-teal-200 hover:text-teal-100" href="#">
                         <span class="sr-only">Facebook</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true">
-                          <path d="M22.258 1H2.242C1.556 1 1 1.556 1 2.242v20.016c0 .686.556 1.242 1.242 1.242h10.776v-8.713h-2.932V11.39h2.932V8.887c0-2.906 1.775-4.489 4.367-4.489 1.242 0 2.31.093 2.62.134v3.037l-1.797.001c-1.41 0-1.683.67-1.683 1.653v2.168h3.362l-.438 3.396h-2.924V23.5h5.733c.686 0 1.242-.556 1.242-1.242V2.242C23.5 1.556 22.944 1 22.258 1" fill="currentColor"></path>
-                        </svg>
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path>
+  </svg>
                       </a>
                     </li>
                     <li>
                       <a class="text-teal-200 hover:text-teal-100" href="#">
                         <span class="sr-only">GitHub</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true">
-                          <path d="M11.999 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.386.6.11.819-.26.819-.578 0-.284-.01-1.04-.017-2.04-3.337.724-4.042-1.61-4.042-1.61-.545-1.386-1.332-1.755-1.332-1.755-1.09-.744.082-.73.082-.73 1.205.086 1.838 1.238 1.838 1.238 1.07 1.833 2.81 1.304 3.493.996.109-.775.419-1.303.762-1.603C7.145 17 4.343 15.97 4.343 11.373c0-1.31.468-2.382 1.236-3.22-.124-.304-.536-1.524.118-3.176 0 0 1.007-.323 3.3 1.23.956-.266 1.983-.4 3.003-.404 1.02.005 2.046.138 3.005.404 2.29-1.553 3.296-1.23 3.296-1.23.655 1.652.243 2.872.12 3.176.77.838 1.233 1.91 1.233 3.22 0 4.61-2.806 5.624-5.478 5.921.43.37.814 1.103.814 2.223 0 1.603-.015 2.898-.015 3.291 0 .321.217.695.825.578C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12.001-12" fill="currentColor"></path>
-                        </svg>
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+  </svg>
                       </a>
                     </li>
                     <li>
                       <a class="text-teal-200 hover:text-teal-100" href="#">
                         <span class="sr-only">Twitter</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" aria-hidden="true">
-                          <path d="M7.548 22.501c9.056 0 14.01-7.503 14.01-14.01 0-.213 0-.425-.015-.636A10.02 10.02 0 0024 5.305a9.828 9.828 0 01-2.828.776 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.195 4.929 4.929 0 00-8.391 4.491A13.98 13.98 0 011.67 3.9a4.928 4.928 0 001.525 6.573A4.887 4.887 0 01.96 9.855v.063a4.926 4.926 0 003.95 4.827 4.917 4.917 0 01-2.223.084 4.93 4.93 0 004.6 3.42A9.88 9.88 0 010 20.289a13.941 13.941 0 007.548 2.209" fill="currentColor"></path>
-                        </svg>
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+  </svg>
                       </a>
                     </li>
                   </ul>
@@ -251,34 +252,51 @@
             <h2 id="officesHeading" class="text-3xl font-extrabold text-warm-gray-900">Our offices</h2>
             <p class="mt-6 text-lg text-warm-gray-500 max-w-3xl">Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.</p>
             <div class="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Los Angeles</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                  <span class="block">4556 Brendan Ferry</span>
-                  <span class="block">Los Angeles, CA 90210</span>
-                </p>
-              </div>
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">New York</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                  <span class="block">886 Walter Streets</span>
-                  <span class="block">New York, NY 12345</span>
-                </p>
-              </div>
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">Toronto</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                  <span class="block">7363 Cynthia Pass</span>
-                  <span class="block">Toronto, ON N3Y 4H8</span>
-                </p>
-              </div>
-              <div>
-                <h3 class="text-lg font-medium text-warm-gray-900">London</h3>
-                <p class="mt-2 text-base text-warm-gray-500">
-                  <span class="block">114 Cobble Lane</span>
-                  <span class="block">London N1 2EF</span>
-                </p>
-              </div>
+            
+                <div>
+                  <h3 class="text-lg font-medium text-warm-gray-900">Los Angeles</h3>
+                  <p class="mt-2 text-base text-warm-gray-500">
+                  
+                      <span class="block">4556 Brendan Ferry</span>
+                  
+                      <span class="block">Los Angeles, CA 90210</span>
+                  
+                  </p>
+                </div>
+            
+                <div>
+                  <h3 class="text-lg font-medium text-warm-gray-900">New York</h3>
+                  <p class="mt-2 text-base text-warm-gray-500">
+                  
+                      <span class="block">886 Walter Streets</span>
+                  
+                      <span class="block">New York, NY 12345</span>
+                  
+                  </p>
+                </div>
+            
+                <div>
+                  <h3 class="text-lg font-medium text-warm-gray-900">Toronto</h3>
+                  <p class="mt-2 text-base text-warm-gray-500">
+                  
+                      <span class="block">7363 Cynthia Pass</span>
+                  
+                      <span class="block">Toronto, ON N3Y 4H8</span>
+                  
+                  </p>
+                </div>
+            
+                <div>
+                  <h3 class="text-lg font-medium text-warm-gray-900">London</h3>
+                  <p class="mt-2 text-base text-warm-gray-500">
+                  
+                      <span class="block">114 Cobble Lane</span>
+                  
+                      <span class="block">London N1 2EF</span>
+                  
+                  </p>
+                </div>
+            
             </div>
           </div>
         </section>
@@ -477,6 +495,7 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>

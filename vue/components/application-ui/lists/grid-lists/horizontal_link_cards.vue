@@ -1,8 +1,9 @@
 <template>
+    <div class="" style="">
     <div class="bg-gray-100 py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2" x-max="1">
     
         <div class="relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
           <div class="flex-shrink-0">
@@ -76,6 +77,7 @@
 
       </div>
     </div>
+  </div>
 </template>
 
 <script>

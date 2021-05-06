@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  <div className="bg-white">
     <div className="mx-auto py-12">
       
   <nav className="flex items-center justify-center" aria-label="Progress">
@@ -12,16 +13,14 @@ const Component = (props) => (
       
         <li>
           
-            {/* Completed Step */}
-            <a href="/" className="block w-2.5 h-2.5 bg-indigo-600 rounded-full hover:bg-indigo-900">
+            <a href="/" className="block w-2.5 h-2.5 bg-indigo-600 rounded-full hover:bg-indigo-900" data-todo-x-description="Completed Step">
               <span className="sr-only">Step 1</span>
             </a>
           </li>
       
         <li>
           
-            {/* Current Step */}
-            <a href="/" className="relative flex items-center justify-center" aria-current="step">
+            <a href="/" className="relative flex items-center justify-center" aria-current="step" data-todo-x-description="Current Step">
               <span className="absolute w-5 h-5 p-px flex" aria-hidden="true">
                 <span className="w-full h-full rounded-full bg-indigo-200"></span>
               </span>
@@ -32,16 +31,14 @@ const Component = (props) => (
       
         <li>
           
-            {/* Upcoming Step */}
-            <a href="/" className="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400">
+            <a href="/" className="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400" data-todo-x-description="Upcoming Step">
               <span className="sr-only">Step 3</span>
             </a>
           </li>
       
         <li>
           
-            {/* Upcoming Step */}
-            <a href="/" className="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400">
+            <a href="/" className="block w-2.5 h-2.5 bg-gray-200 rounded-full hover:bg-gray-400" data-todo-x-description="Upcoming Step">
               <span className="sr-only">Step 4</span>
             </a>
           </li>
@@ -51,6 +48,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

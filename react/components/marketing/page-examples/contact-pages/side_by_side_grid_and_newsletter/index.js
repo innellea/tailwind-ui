@@ -3,12 +3,13 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}}>
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}}>
     
   <div className="min-h-screen bg-white">
     <header className="relative pb-24 bg-light-blue-800 sm:pb-32">
       <div className="absolute inset-0">
-        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
+        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;&amp;sat=-100" alt="">
         <div className="absolute inset-0 bg-gradient-to-l from-light-blue-800 to-cyan-700" style={{mixBlendMode: "multiply"}} aria-hidden="true"></div>
       </div>
       <div className="relative z-10" data-todo-x-data="Components.popover({ open: false, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -33,7 +34,7 @@ const Component = (props) => (
             
               <a href="/" className="text-base font-medium text-white hover:text-cyan-100">About</a>
             
-              <a href="/" className="text-base font-medium text-white hover:text-cyan-100">Parnters</a>
+              <a href="/" className="text-base font-medium text-white hover:text-cyan-100">Partners</a>
             
               <a href="/" className="text-base font-medium text-white hover:text-cyan-100">News</a>
             
@@ -98,98 +99,103 @@ const Component = (props) => (
                 Get in touch
               </h2>
               <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Collaborate
-                  </h3>
-                  <dl className="mt-2 text-base text-warm-gray-500">
-                    <div>
-                      <dt className="sr-only">
-                        Email
-                      </dt>
-                      <dd>
-                        support@example.com
-                      </dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">
-                        Phone number
-                      </dt>
-                      <dd>
-                        +1 (555) 123-4567
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Press
-                  </h3>
-                  <dl className="mt-2 text-base text-warm-gray-500">
-                    <div>
-                      <dt className="sr-only">
-                        Email
-                      </dt>
-                      <dd>
-                        support@example.com
-                      </dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">
-                        Phone number
-                      </dt>
-                      <dd>
-                        +1 (555) 123-4567
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Join our team
-                  </h3>
-                  <dl className="mt-2 text-base text-warm-gray-500">
-                    <div>
-                      <dt className="sr-only">
-                        Email
-                      </dt>
-                      <dd>
-                        support@example.com
-                      </dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">
-                        Phone number
-                      </dt>
-                      <dd>
-                        +1 (555) 123-4567
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Say hello
-                  </h3>
-                  <dl className="mt-2 text-base text-warm-gray-500">
-                    <div>
-                      <dt className="sr-only">
-                        Email
-                      </dt>
-                      <dd>
-                        support@example.com
-                      </dd>
-                    </div>
-                    <div className="mt-1">
-                      <dt className="sr-only">
-                        Phone number
-                      </dt>
-                      <dd>
-                        +1 (555) 123-4567
-                      </dd>
-                    </div>
-                  </dl>
-                </div>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Collaborate
+                    </h3>
+                    <dl className="mt-2 text-base text-warm-gray-500">
+                      <div>
+                        <dt className="sr-only">
+                          Email
+                        </dt>
+                        <dd>
+                          support@example.com
+                        </dd>
+                      </div>
+                      <div className="mt-1">
+                        <dt className="sr-only">
+                          Phone number
+                        </dt>
+                        <dd>
+                          +1 (555) 123-4567
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Press
+                    </h3>
+                    <dl className="mt-2 text-base text-warm-gray-500">
+                      <div>
+                        <dt className="sr-only">
+                          Email
+                        </dt>
+                        <dd>
+                          support@example.com
+                        </dd>
+                      </div>
+                      <div className="mt-1">
+                        <dt className="sr-only">
+                          Phone number
+                        </dt>
+                        <dd>
+                          +1 (555) 123-4567
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Join our team
+                    </h3>
+                    <dl className="mt-2 text-base text-warm-gray-500">
+                      <div>
+                        <dt className="sr-only">
+                          Email
+                        </dt>
+                        <dd>
+                          support@example.com
+                        </dd>
+                      </div>
+                      <div className="mt-1">
+                        <dt className="sr-only">
+                          Phone number
+                        </dt>
+                        <dd>
+                          +1 (555) 123-4567
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Say hello
+                    </h3>
+                    <dl className="mt-2 text-base text-warm-gray-500">
+                      <div>
+                        <dt className="sr-only">
+                          Email
+                        </dt>
+                        <dd>
+                          support@example.com
+                        </dd>
+                      </div>
+                      <div className="mt-1">
+                        <dt className="sr-only">
+                          Phone number
+                        </dt>
+                        <dd>
+                          +1 (555) 123-4567
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                
               </div>
             </section>
             <section className="mt-16 pt-16 lg:grid lg:grid-cols-3 lg:gap-8" aria-labelledby="locationHeading">
@@ -197,58 +203,75 @@ const Component = (props) => (
                 Locations
               </h2>
               <div className="mt-8 grid grid-cols-1 gap-12 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 lg:mt-0 lg:col-span-2">
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Los Angeles
-                  </h3>
-                  <div className="mt-2 text-base text-warm-gray-500">
-                    <p>
-                      4556 Brendan Ferry
-                    </p>
-                    <p className="mt-1">
-                      Los Angeles, CA 90210
-                    </p>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Los Angeles
+                    </h3>
+                    <div className="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        <p>
+                          4556 Brendan Ferry
+                        </p>
+                      
+                        <p>
+                          Los Angeles, CA 90210
+                        </p>
+                      
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    New York
-                  </h3>
-                  <div className="mt-2 text-base text-warm-gray-500">
-                    <p>
-                      886 Walter Streets
-                    </p>
-                    <p className="mt-1">
-                      New York, NY 12345
-                    </p>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      New York
+                    </h3>
+                    <div className="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        <p>
+                          886 Walter Streets
+                        </p>
+                      
+                        <p>
+                          New York, NY 12345
+                        </p>
+                      
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Toronto
-                  </h3>
-                  <div className="mt-2 text-base text-warm-gray-500">
-                    <p>
-                      7363 Cynthia Pass
-                    </p>
-                    <p className="mt-1">
-                      Toronto, ON N3Y 4H8
-                    </p>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Toronto
+                    </h3>
+                    <div className="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        <p>
+                          7363 Cynthia Pass
+                        </p>
+                      
+                        <p>
+                          Toronto, ON N3Y 4H8
+                        </p>
+                      
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-medium text-warm-gray-900">
-                    Chicago
-                  </h3>
-                  <div className="mt-2 text-base text-warm-gray-500">
-                    <p>
-                      726 Mavis Island
-                    </p>
-                    <p className="mt-1">
-                      Chicago, IL 60601
-                    </p>
+                
+                  <div>
+                    <h3 className="text-lg font-medium text-warm-gray-900">
+                      Chicago
+                    </h3>
+                    <div className="mt-2 text-base text-warm-gray-500 space-y-1">
+                      
+                        <p>
+                          726 Mavis Island
+                        </p>
+                      
+                        <p>
+                          Chicago, IL 60601
+                        </p>
+                      
+                    </div>
                   </div>
-                </div>
+                
               </div>
             </section>
           </div>
@@ -537,6 +560,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

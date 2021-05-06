@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div style={{maxHeight: "800px"}} className="overflow-y-auto">
+<div className="" style={{}}>
+  <div style={{maxHeight: "800px"}} className="overflow-y-auto">
     
   <div className="min-h-screen bg-gray-100">
     <header className="pb-24 bg-gradient-to-r from-light-blue-800 to-cyan-600" data-todo-x-data="Components.popover({ open: false, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -39,9 +40,13 @@ const Component = (props) => (
               </div>
               
                 <div data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-show="open" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right z-40 absolute -right-2 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                  <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                  
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                  
                 </div>
               
             </div>
@@ -57,19 +62,19 @@ const Component = (props) => (
                       Home
                     </a>
                   
-                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                       Profile
                     </a>
                   
-                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                       Resources
                     </a>
                   
-                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                       Company Directory
                     </a>
                   
-                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10" aria-current="false">
+                    <a href="/" className="text-cyan-100 text-sm font-medium rounded-md bg-white bg-opacity-0 px-3 py-2 hover:bg-opacity-10">
                       Openings
                     </a>
                   
@@ -132,11 +137,17 @@ const Component = (props) => (
                     </div>
                   </div>
                   <div className="mt-3 px-2 space-y-1">
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Home</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Profile</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Resources</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company Directory</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Openings</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Home</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Profile</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Resources</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Company Directory</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Openings</a>
+                    
                   </div>
                 </div>
                 <div className="pt-4 pb-2">
@@ -145,8 +156,8 @@ const Component = (props) => (
                       <img className="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                     </div>
                     <div className="ml-3 min-w-0 flex-1">
-                      <div className="text-base font-medium text-gray-800 truncate">Rebecca Nicholas</div>
-                      <div className="text-sm font-medium text-gray-500 truncate">rebecca.nicholas@example.com</div>
+                      <div className="text-base font-medium text-gray-800 truncate">Chelsea Hagon</div>
+                      <div className="text-sm font-medium text-gray-500 truncate">chelseahagon@example.com</div>
                     </div>
                     <button className="ml-auto flex-shrink-0 bg-white p-1 text-gray-400 rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500">
                       <span className="sr-only">View notifications</span>
@@ -156,9 +167,13 @@ const Component = (props) => (
                     </button>
                   </div>
                   <div className="mt-3 px-2 space-y-1">
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
-                    <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Your Profile</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Settings</a>
+                    
+                      <a href="/" className="block rounded-md px-3 py-2 text-base text-gray-900 font-medium hover:bg-gray-100 hover:text-gray-800">Sign out</a>
+                    
                   </div>
                 </div>
               </div>
@@ -186,8 +201,8 @@ const Component = (props) => (
                       </div>
                       <div className="mt-4 text-center sm:mt-0 sm:pt-1 sm:text-left">
                         <p className="text-sm font-medium text-gray-600">Welcome back,</p>
-                        <p className="text-xl font-bold text-gray-900 sm:text-2xl">Rebecca Nicholas</p>
-                        <p className="text-sm font-medium text-gray-600">Product Designer</p>
+                        <p className="text-xl font-bold text-gray-900 sm:text-2xl">Chelsea Hagon</p>
+                        <p className="text-sm font-medium text-gray-600">Human Resources Manager</p>
                       </div>
                     </div>
                     <div className="mt-5 flex justify-center sm:mt-0">
@@ -574,6 +589,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

@@ -3,9 +3,11 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="relative bg-gray-800">
+<div className="" style={{}}>
+  
+  <div className="relative bg-gray-800">
     <div className="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
-      <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;blend=6366F1&amp;sat=-100&amp;blend-mode=multiply" alt="">
+      <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&amp;ixqx=cII20c177f&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=60&amp;blend=6366F1&amp;sat=-100&amp;blend-mode=multiply" alt="">
     </div>
     <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
       <div className="md:ml-auto md:w-1/2 md:pl-10">
@@ -32,6 +34,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

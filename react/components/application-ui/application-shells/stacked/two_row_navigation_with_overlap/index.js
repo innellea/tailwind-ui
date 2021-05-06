@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div style={{minHeight: "712px"}} className="overflow-y-auto">
+<div className="" style={{}}>
+  <div style={{minHeight: "712px"}} className="overflow-y-auto">
     
   <div className="min-h-screen bg-gray-100">
     <header className="pb-24 bg-indigo-600" data-todo-x-data="Components.popover({ open: false, focus: true })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -219,6 +220,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 

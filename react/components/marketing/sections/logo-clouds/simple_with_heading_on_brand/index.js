@@ -3,7 +3,9 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-indigo-700">
+<div className="" style={{}}>
+  
+  <div className="bg-indigo-700">
     <div className="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-extrabold text-white">
         The world's most innovative companies use Workflow
@@ -29,6 +31,8 @@ const Component = (props) => (
       </div>
     </div>
   </div>
+
+</div>
 </>
 );
 

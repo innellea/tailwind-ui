@@ -1,9 +1,9 @@
 <template>
+    <div class="" style="">
     <div style="max-height: 800px;" _class="overflow-y-auto">
     
     <div class="min-h-screen bg-gray-100">
-      <!-- When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars -->
-      <header :class="{'fixed inset-0 z-40 overflow-y-auto': open, '': !open}" class="bg-white shadow-sm lg:static lg:overflow-y-visible">
+      <header class="bg-white shadow-sm lg:static lg:overflow-y-visible" x-description="When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars" x-state:on="Open" x-state:off="Closed" :class="{ 'fixed inset-0 z-40 overflow-y-auto': open }" x-data="Components.popover({ open: false, focus: false })" x-init="init()" @keydown.escape="onEscape" @close-popover-group.window="onClosePopoverGroup">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="relative flex justify-between xl:grid xl:grid-cols-12 lg:gap-8">
             <div class="flex md:absolute md:left-0 md:inset-y-0 lg:static xl:col-span-2">
@@ -30,14 +30,16 @@
             </div>
             <div class="flex items-center md:absolute md:right-0 md:inset-y-0 lg:hidden">
               <!-- Mobile menu button -->
-              <button type="button" @click="open = !open" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" x-bind:aria-expanded="open" aria-expanded="false">
+              <button type="button" class="-mx-2 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" @click="toggle" @mousedown="if (open) $event.preventDefault()" aria-expanded="false" :aria-expanded="open.toString()">
                 <span class="sr-only">Open menu</span>
-                <!-- Icon when menu is closed. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg x-description="Icon when menu is closed.
+
+  Heroicon name: outline/menu" x-state:on="Menu open" x-state:off="Menu closed" class="block h-6 w-6" :class="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
   </svg>
-                <!-- Icon when menu is open. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg x-description="Icon when menu is open.
+
+  Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class="hidden h-6 w-6" :class="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
   </svg>
               </button>
@@ -78,16 +80,16 @@
           </div>
         </div>
 
-        <nav x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="hidden lg:hidden" aria-label="Global">
+        <nav x-description="Mobile menu, show/hide based on menu state." class="lg:hidden" aria-label="Global" x-ref="panel" v-if="open" @click.away="open = false">
           <div class="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4">
           
-              <a href="#" aria-current="page" class="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Dashboard</a>
+              <a href="#" aria-current="page" class="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900" x-state:on="Current" x-state:off="Default" x-state-description="Current: &quot;bg-gray-100 text-gray-900&quot;, Default: &quot;hover:bg-gray-50&quot;">Dashboard</a>
           
-              <a href="#" aria-current="false" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Calendar</a>
+              <a href="#" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Calendar</a>
           
-              <a href="#" aria-current="false" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Teams</a>
+              <a href="#" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Teams</a>
           
-              <a href="#" aria-current="false" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Directory</a>
+              <a href="#" class="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Directory</a>
           
           </div>
           <div class="border-t border-gray-200 pt-4 pb-3">
@@ -147,13 +149,13 @@
     </div>
 
     </div>
+  </div>
 </template>
 
 <script>
 export default {
   data: () => ({
 	open: false,
-    open: false,
   })
 }
 </script>

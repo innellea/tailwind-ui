@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-white">
+<div className="" style={{}}>
+  <div className="bg-white">
     <div className="flex justify-center mx-auto py-12">
       
   <nav aria-label="Progress">
@@ -11,8 +12,7 @@ const Component = (props) => (
       
         <li className="relative pr-8 sm:pr-20">
           
-            {/* Completed Step */}
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-todo-x-description="Completed Step">
               <div className="h-0.5 w-full bg-indigo-600"></div>
             </div>
             <a href="/" className="relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900">
@@ -25,8 +25,7 @@ const Component = (props) => (
       
         <li className="relative pr-8 sm:pr-20">
           
-            {/* Completed Step */}
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-todo-x-description="Completed Step">
               <div className="h-0.5 w-full bg-indigo-600"></div>
             </div>
             <a href="/" className="relative w-8 h-8 flex items-center justify-center bg-indigo-600 rounded-full hover:bg-indigo-900">
@@ -39,8 +38,7 @@ const Component = (props) => (
       
         <li className="relative pr-8 sm:pr-20">
           
-            {/* Current Step */}
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-todo-x-description="Current Step">
               <div className="h-0.5 w-full bg-gray-200"></div>
             </div>
             <a href="/" className="relative w-8 h-8 flex items-center justify-center bg-white border-2 border-indigo-600 rounded-full" aria-current="step">
@@ -51,8 +49,7 @@ const Component = (props) => (
       
         <li className="relative pr-8 sm:pr-20">
           
-            {/* Upcoming Step */}
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-todo-x-description="Upcoming Step">
               <div className="h-0.5 w-full bg-gray-200"></div>
             </div>
             <a href="/" className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400">
@@ -63,8 +60,7 @@ const Component = (props) => (
       
         <li className="relative ">
           
-            {/* Upcoming Step */}
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true" data-todo-x-description="Upcoming Step">
               <div className="h-0.5 w-full bg-gray-200"></div>
             </div>
             <a href="/" className="group relative w-8 h-8 flex items-center justify-center bg-white border-2 border-gray-300 rounded-full hover:border-gray-400">
@@ -78,6 +74,7 @@ const Component = (props) => (
 
     </div>
   </div>
+</div>
 </>
 );
 

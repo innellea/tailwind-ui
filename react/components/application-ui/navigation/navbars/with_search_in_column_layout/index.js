@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div className="bg-gray-100" style={{minHeight: "192px"}}>
+<div className="" style={{}}>
+  <div className="bg-gray-100" style={{minHeight: "192px"}}>
     
   {/* When the mobile menu is open, add `overflow-hidden` to the `body` element to prevent double scrollbars */}
   <header className="bg-white shadow-sm lg:static lg:overflow-y-visible" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-colon-className="{ 'fixed inset-0 z-40 overflow-y-auto': open }" data-todo-x-data="Components.popover({ open: false, focus: false })" data-todo-x-init="init()" data-todo-at-keydown-escape="onEscape" data-todo-at-close-popover-group-window="onClosePopoverGroup">
@@ -86,13 +87,13 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
     <nav data-todo-x-description="Mobile menu, show/hide based on menu state." className="lg:hidden" aria-label="Global" data-todo-x-ref="panel" data-todo-x-show="open" data-todo-at-click-away="open = false">
       <div className="max-w-3xl mx-auto px-2 pt-2 pb-3 space-y-1 sm:px-4">
         
-          <a href="/" aria-current="page" className="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Dashboard</a>
+          <a href="/" aria-current="page" className="bg-gray-100 text-gray-900 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-on="Current" data-todo-x-state-off="Default" data-todo-x-state-description="Current: &quot;bg-gray-100 text-gray-900&quot;, Default: &quot;hover:bg-gray-50&quot;">Dashboard</a>
         
-          <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Calendar</a>
+          <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Calendar</a>
         
-          <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Teams</a>
+          <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Teams</a>
         
-          <a href="/" aria-current="false" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900">Directory</a>
+          <a href="/" className="hover:bg-gray-50 block rounded-md py-2 px-3 text-base font-medium text-gray-900" data-todo-x-state-description="undefined: &quot;bg-gray-100 text-gray-900&quot;, undefined: &quot;hover:bg-gray-50&quot;">Directory</a>
         
       </div>
       <div className="border-t border-gray-200 pt-4 pb-3">
@@ -125,6 +126,7 @@ Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off
   </header>
 
   </div>
+</div>
 </>
 );
 

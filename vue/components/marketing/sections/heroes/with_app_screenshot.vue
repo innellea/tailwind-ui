@@ -1,4 +1,6 @@
 <template>
+    <div class="" style="">
+  
     <div class="bg-gray-50">
       <div class="relative overflow-hidden">
         <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
@@ -141,6 +143,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 </template>
 
 <script>

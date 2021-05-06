@@ -3,7 +3,8 @@ import ReactDOM from "react-dom";
 
 const Component = (props) => (
 <>
-<div _style={{maxHeight: "800px"}} className="overflow-y-auto">
+<div className="" style={{}}>
+  <div _style={{maxHeight: "800px"}} className="overflow-y-auto">
     
   <div className="relative bg-white pt-16 pb-32 overflow-hidden">
     <div className="relative">
@@ -94,6 +95,7 @@ const Component = (props) => (
   </div>
 
   </div>
+</div>
 </>
 );
 
