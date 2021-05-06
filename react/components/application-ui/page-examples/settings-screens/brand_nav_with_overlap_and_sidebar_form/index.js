@@ -7,7 +7,7 @@ const Component = (props) => (
     
   <div>
     <div data-todo-x-data="{ open: false }" className="relative bg-light-blue-700 pb-32 overflow-hidden">
-      <nav data-todo-colon-className="{ 'bg-light-blue-900': open, 'bg-transparent': !open }" className="relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-none">
+      <nav className="bg-transparent relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-none" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'bg-light-blue-900': open, 'bg-transparent': !(open) }">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
           <div className="relative h-16 flex items-center justify-between lg:border-b lg:border-light-blue-800">
             <div className="px-2 flex items-center lg:px-0">
@@ -48,14 +48,16 @@ const Component = (props) => (
             </div>
             <div className="flex lg:hidden">
               {/* Mobile menu button */}
-              <button data-todo-at-click="open = !open" className="p-2 rounded-md inline-flex items-center justify-center text-light-blue-200 hover:text-white hover:bg-light-blue-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
+              <button type="button" className="p-2 rounded-md inline-flex items-center justify-center text-light-blue-200 hover:text-white hover:bg-light-blue-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" data-todo-at-click="open = !open" aria-expanded="false" data-todo-x-bind-aria-expanded="open.toString()">
                 <span className="sr-only">Open main menu</span>
-                {/* Icon when menu is closed. */}
-                <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': open, 'block': !open }" className="block flex-shrink-0 h-6 w-6" data-todo-x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg data-todo-x-description="Icon when menu is closed.
+
+Heroicon name: outline/menu" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" className="block flex-shrink-0 h-6 w-6" data-todo-colon-className="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
 </svg>
-                {/* Icon when menu is open. */}
-                <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': !open, 'block': open }" className="hidden flex-shrink-0 h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg data-todo-x-description="Icon when menu is open.
+
+Heroicon name: outline/x" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" className="hidden flex-shrink-0 h-6 w-6" data-todo-colon-className="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
               </button>
@@ -70,29 +72,31 @@ const Component = (props) => (
                 </button>
 
                 {/* Profile dropdown */}
-                <div data-todo-at-click-away="open = false" className="relative flex-shrink-0 ml-4" data-todo-x-data="{ open: false }">
+                <div data-todo-x-data="{ open: false }" data-todo-at-keydown-escape-stop="open = false" data-todo-at-click-away="open = false" className="relative flex-shrink-0 ml-4">
                   <div>
-                    <button data-todo-at-click="open = !open" className="rounded-full flex text-sm text-white focus:outline-none focus:bg-light-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-900 focus:ring-white" id="user-menu" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
+                    <button type="button" className="rounded-full flex text-sm text-white focus:outline-none focus:bg-light-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-900 focus:ring-white" id="user-menu" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                       <span className="sr-only">Open user menu</span>
                       <img className="rounded-full h-8 w-8" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="">
                     </button>
                   </div>
-                  <div data-todo-x-show="open" data-todo-x-description="Profile dropdown panel, show/hide based on dropdown state." data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                    
-                      <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                    
-                      <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                    
-                      <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-                    
-                  </div>
+                  
+                    <div data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-show="open" data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                      
+                        <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                      
+                        <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                      
+                        <a href="/" className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                      
+                    </div>
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div data-todo-x-description="Mobile menu, toggle classes based on menu state." data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'block': open, 'hidden': !open }" className="bg-light-blue-900 hidden lg:hidden">
+        <div data-todo-x-description="Mobile menu, show/hide based on menu state." className="bg-light-blue-900 lg:hidden" id="mobile-menu" data-todo-x-show="open">
           <div className="pt-2 pb-3 px-2 space-y-1">
             
               
@@ -137,7 +141,7 @@ const Component = (props) => (
           </div>
         </div>
       </nav>
-      <div data-todo-colon-className="{ 'bottom-0': open, 'inset-y-0': !open }" className="absolute flex justify-center inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" aria-hidden="true">
+      <div className="inset-y-0 absolute flex justify-center inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" aria-hidden="true" data-todo-colon-className="{ 'bottom-0': open, 'inset-y-0': !(open) }">
         <div className="flex-grow bg-light-blue-900 bg-opacity-75"></div>
         <svg className="flex-shrink-0" width="1750" height="308" viewBox="0 0 1750 308" xmlns="http://www.w3.org/2000/svg">
           <path opacity=".75" d="M1465.84 308L16.816 0H1750v308h-284.16z" fill="#075985"></path>

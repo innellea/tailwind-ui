@@ -25,7 +25,7 @@ const Component = (props) => (
                       </span>
                     </span>
                     <span className="mt-0.5 ml-4 min-w-0 flex flex-col">
-                      <span className="text-xs font-semibold uppercase tracking-wide">Job Details</span>
+                      <span className="text-xs font-semibold tracking-wide uppercase">Job Details</span>
                       <span className="text-sm font-medium text-gray-500">Vitae sed mi luctus laoreet.</span>
                     </span>
                   </span>
@@ -46,7 +46,7 @@ const Component = (props) => (
                       </span>
                     </span>
                     <span className="mt-0.5 ml-4 min-w-0 flex flex-col">
-                      <span className="text-xs font-semibold text-indigo-600 uppercase tracking-wide">Application form</span>
+                      <span className="text-xs font-semibold text-indigo-600 tracking-wide uppercase">Application form</span>
                       <span className="text-sm font-medium text-gray-500">Cursus semper viverra.</span>
                     </span>
                   </span>
@@ -73,7 +73,7 @@ const Component = (props) => (
                       </span>
                     </span>
                     <span className="mt-0.5 ml-4 min-w-0 flex flex-col">
-                      <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide">Preview</span>
+                      <span className="text-xs font-semibold text-gray-500 tracking-wide uppercase">Preview</span>
                       <span className="text-sm font-medium text-gray-500">Penatibus eu quis ante.</span>
                     </span>
                   </span>

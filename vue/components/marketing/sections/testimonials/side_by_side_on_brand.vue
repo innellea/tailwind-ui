@@ -15,7 +15,7 @@
               </p>
             </div>
             <footer class="mt-8">
-              <div class="flex">
+              <div class="flex items-start">
                 <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                   <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                 </div>
@@ -41,7 +41,7 @@
               </p>
             </div>
             <footer class="mt-8">
-              <div class="flex">
+              <div class="flex items-start">
                 <div class="flex-shrink-0 inline-flex rounded-full border-2 border-white">
                   <img class="h-12 w-12 rounded-full" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
                 </div>

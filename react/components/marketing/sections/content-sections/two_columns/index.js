@@ -45,7 +45,7 @@ const Component = (props) => (
               <p>Eu eu mauris bibendum scelerisque adipiscing et. Justo, elementum consectetur morbi eros, posuere ipsum tortor. Eget cursus massa sed velit feugiat sed ut. Faucibus eros mauris morbi aliquam nullam. Scelerisque elementum sit magna ullamcorper dignissim pretium.</p>
             </div>
           </div>
-          <div className="inline-flex rounded-md shadow md:mt-8">
+          <div className="mt-8 inline-flex rounded-md shadow">
             <a href="/" className="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
               Contact sales
             </a>

@@ -23,7 +23,7 @@ const Component = (props) => (
         </dt>
         <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
           <span className="flex-grow">Margot Foster</span>
-          <span className="ml-4flex-shrink-0">
+          <span className="ml-4 flex-shrink-0">
             <button type="button" className="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Update
             </button>
@@ -36,7 +36,7 @@ const Component = (props) => (
         </dt>
         <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
           <span className="flex-grow">Backend Developer</span>
-          <span className="ml-4flex-shrink-0">
+          <span className="ml-4 flex-shrink-0">
             <button type="button" className="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Update
             </button>
@@ -49,7 +49,7 @@ const Component = (props) => (
         </dt>
         <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
           <span className="flex-grow">margotfoster@example.com</span>
-          <span className="ml-4flex-shrink-0">
+          <span className="ml-4 flex-shrink-0">
             <button type="button" className="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Update
             </button>
@@ -62,7 +62,7 @@ const Component = (props) => (
         </dt>
         <dd className="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
           <span className="flex-grow"> $120,000</span>
-          <span className="ml-4flex-shrink-0">
+          <span className="ml-4 flex-shrink-0">
             <button type="button" className="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               Update
             </button>

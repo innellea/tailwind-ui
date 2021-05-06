@@ -5,7 +5,7 @@
           <h2 class="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
             Pricing
           </h2>
-          <p class="mt- text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+          <p class="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
             The right price for you, whoever you are
           </p>
           <p class="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">

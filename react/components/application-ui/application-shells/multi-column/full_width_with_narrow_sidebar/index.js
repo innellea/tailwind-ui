@@ -82,7 +82,7 @@ const Component = (props) => (
               </a>
             </span>
 
-            <div data-todo-x-data="{ open: false }" data-todo-at-keydown-window-escape="open = false" data-todo-at-click-away="open = false" className="relative inline-block text-left">
+            <div data-todo-x-data="{ open: false }" data-todo-at-keydown-escape-stop="open = false" data-todo-at-click-away="open = false" className="relative inline-block text-left">
               <button type="button" className="bg-white rounded-full flex text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-600" id="menu-1" aria-expanded="false" data-todo-at-click="open = !open" aria-haspopup="true" data-todo-x-bind-aria-expanded="open">
                 <span className="sr-only">Open user menu</span>
                 <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=2&amp;w=256&amp;h=256&amp;q=80" alt="">
@@ -90,11 +90,11 @@ const Component = (props) => (
 
               
                 <div data-todo-x-show="open" data-todo-x-description="Dropdown menu, show/hide based on menu state." data-todo-x-transition-enter="transition ease-out duration-100" data-todo-x-transition-enter-start="transform opacity-0 scale-95" data-todo-x-transition-enter-end="transform opacity-100 scale-100" data-todo-x-transition-leave="transition ease-in duration-75" data-todo-x-transition-leave-start="transform opacity-100 scale-100" data-todo-x-transition-leave-end="transform opacity-0 scale-95" className="origin-top-right absolute z-30 right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-1">
-                  <div className="py-1">
-                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100" role="menuitem">
+                  <div className="py-1" role="none">
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                         Your Profile
                       </a>
-                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100" role="menuitem">
+                    <a href="/" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                         Sign Out
                       </a>
                   </div>
@@ -106,7 +106,7 @@ const Component = (props) => (
       </div>
 
       {/* Mobile menu, show/hide this `div` based on menu open/closed state */}
-      <div data-todo-x-show="open" className="fixed inset-0 z-40">
+      <div data-todo-x-show="open" className="fixed inset-0 z-40 md:hidden">
         <div data-todo-at-click="open = false" data-todo-x-show="open" data-todo-x-description="Off-canvas menu overlay, show/hide based on off-canvas menu state." data-todo-x-transition-enter="transition-opacity ease-linear duration-300" data-todo-x-transition-enter-start="opacity-0" data-todo-x-transition-enter-end="opacity-100" data-todo-x-transition-leave="transition-opacity ease-linear duration-300" data-todo-x-transition-leave-start="opacity-100" data-todo-x-transition-leave-end="opacity-0" className="hidden sm:block sm:fixed sm:inset-0 md:hidden" aria-hidden="true">
           <div className="absolute inset-0 bg-gray-600 opacity-75"></div>
         </div>

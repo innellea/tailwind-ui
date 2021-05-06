@@ -29,7 +29,7 @@
               <div :class="{ 'border-gray-200': !(active === 1), 'bg-indigo-50 border-indigo-200 z-10': active === 1 }" class="relative border border-gray-200 p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                 <label class="flex items-center text-sm cursor-pointer">
                   <input name="pricing_plan" type="radio" @click="select(1)" @keydown.space="select(1)" @keydown.arrow-up="onArrowUp(1)" @keydown.arrow-down="onArrowDown(1)" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 cursor-pointer border-gray-300" aria-describedby="plan-option-pricing-1 plan-option-limit-1" checked="">
-                  <span class="ml-3 font-medium text-gray-900">Business</span>
+                  <span :class="{ 'text-indigo-900': active === 1, 'text-gray-900': !(active === 1) }" class="ml-3 font-medium">Business</span>
                 </label>
                 <p id="plan-option-pricing-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                   <span :class="{ 'text-indigo-900': active === 1, 'text-gray-900': !(active === 1) }" class="font-medium">$99 / mo</span>

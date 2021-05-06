@@ -19,7 +19,7 @@
                   </span>
                 </span>
                 <span class="ml-4 min-w-0 flex flex-col">
-                  <span class="text-xs font-semibold uppercase tracking-wide">Create account</span>
+                  <span class="text-xs font-semibold tracking-wide uppercase">Create account</span>
                   <span class="text-sm text-gray-500">Vitae sed mi luctus laoreet.</span>
                 </span>
               </a>
@@ -36,7 +36,7 @@
                   </span>
                 </span>
                 <span class="ml-4 min-w-0 flex flex-col">
-                  <span class="text-xs font-semibold uppercase tracking-wide text-indigo-600">Profile information</span>
+                  <span class="text-xs font-semibold tracking-wide uppercase text-indigo-600">Profile information</span>
                   <span class="text-sm text-gray-500">Cursus semper viverra facilisis et et some more.</span>
                 </span>
               </a>
@@ -53,7 +53,7 @@
                   </span>
                 </span>
                 <span class="ml-4 min-w-0 flex flex-col">
-                  <span class="text-xs font-semibold uppercase tracking-wide text-gray-500">Business information</span>
+                  <span class="text-xs font-semibold tracking-wide uppercase text-gray-500">Business information</span>
                   <span class="text-sm text-gray-500">Penatibus eu quis ante.</span>
                 </span>
               </a>
@@ -70,7 +70,7 @@
                   </span>
                 </span>
                 <span class="ml-4 min-w-0 flex flex-col">
-                  <span class="text-xs font-semibold uppercase tracking-wide text-gray-500">Theme</span>
+                  <span class="text-xs font-semibold tracking-wide uppercase text-gray-500">Theme</span>
                   <span class="text-sm text-gray-500">Faucibus nec enim leo et.</span>
                 </span>
               </a>
@@ -85,7 +85,7 @@
                   </span>
                 </span>
                 <span class="ml-4 min-w-0 flex flex-col">
-                  <span class="text-xs font-semibold uppercase tracking-wide text-gray-500">Preview</span>
+                  <span class="text-xs font-semibold tracking-wide uppercase text-gray-500">Preview</span>
                   <span class="text-sm text-gray-500">Iusto et officia maiores porro ad non quas.</span>
                 </span>
               </a>

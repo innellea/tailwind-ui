@@ -9,7 +9,7 @@ const Component = (props) => (
         <h2 className="text-lg leading-6 font-semibold text-gray-300 uppercase tracking-wider">
           Pricing
         </h2>
-        <p className="mt- text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
+        <p className="mt-2 text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
           The right price for you, whoever you are
         </p>
         <p className="mt-3 max-w-4xl mx-auto text-xl text-gray-300 sm:mt-5 sm:text-2xl">

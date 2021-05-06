@@ -3,7 +3,7 @@
     
     <div>
       <div class="relative bg-light-blue-700 pb-32 overflow-hidden">
-        <nav :class="{ 'bg-light-blue-900': open, 'bg-transparent': !open }" class="relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-none">
+        <nav class="bg-transparent relative z-10 border-b border-teal-500 border-opacity-25 lg:bg-transparent lg:border-none" x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'bg-light-blue-900': open, 'bg-transparent': !(open) }">
           <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
             <div class="relative h-16 flex items-center justify-between lg:border-b lg:border-light-blue-800">
               <div class="px-2 flex items-center lg:px-0">
@@ -44,14 +44,16 @@
               </div>
               <div class="flex lg:hidden">
                 <!-- Mobile menu button -->
-                <button @click="open = !open" class="p-2 rounded-md inline-flex items-center justify-center text-light-blue-200 hover:text-white hover:bg-light-blue-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" x-bind:aria-expanded="open" aria-expanded="false">
+                <button type="button" class="p-2 rounded-md inline-flex items-center justify-center text-light-blue-200 hover:text-white hover:bg-light-blue-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" @click="open = !open" aria-expanded="false" x-bind:aria-expanded="open.toString()">
                   <span class="sr-only">Open main menu</span>
-                  <!-- Icon when menu is closed. -->
-                  <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block flex-shrink-0 h-6 w-6" x-description="Heroicon name: outline/menu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg x-description="Icon when menu is closed.
+
+  Heroicon name: outline/menu" x-state:on="Menu open" x-state:off="Menu closed" class="block flex-shrink-0 h-6 w-6" :class="{ 'hidden': open, 'block': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
   </svg>
-                  <!-- Icon when menu is open. -->
-                  <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden flex-shrink-0 h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg x-description="Icon when menu is open.
+
+  Heroicon name: outline/x" x-state:on="Menu open" x-state:off="Menu closed" class="hidden flex-shrink-0 h-6 w-6" :class="{ 'block': open, 'hidden': !(open) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
   </svg>
                 </button>
@@ -66,29 +68,31 @@
                   </button>
 
                   <!-- Profile dropdown -->
-                  <div @click.away="open = false" class="relative flex-shrink-0 ml-4">
+                  <div @keydown.escape.stop="open = false" @click.away="open = false" class="relative flex-shrink-0 ml-4">
                     <div>
-                      <button @click="open = !open" class="rounded-full flex text-sm text-white focus:outline-none focus:bg-light-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-900 focus:ring-white" id="user-menu" aria-haspopup="true" x-bind:aria-expanded="open">
+                      <button type="button" class="rounded-full flex text-sm text-white focus:outline-none focus:bg-light-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-light-blue-900 focus:ring-white" id="user-menu" aria-expanded="false" @click="open = !open" aria-haspopup="true" x-bind:aria-expanded="open">
                         <span class="sr-only">Open user menu</span>
                         <img class="rounded-full h-8 w-8" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=80" alt="">
                       </button>
                     </div>
-                    <transition enter-active-class="transition ease-out duration-100" enter-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95"><div v-if="open" x-description="Profile dropdown panel, show/hide based on dropdown state." class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                    
-                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
-                    
-                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
-                    
-                        <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
-                    
-                    </div></transition>
+                  
+                      <transition enter-active-class="transition ease-out duration-100" enter-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95"><div x-description="Dropdown menu, show/hide based on menu state." v-if="open" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+                      
+                          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Your Profile</a>
+                      
+                          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                      
+                          <a href="#" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Sign out</a>
+                      
+                      </div></transition>
+                  
                   </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div x-description="Mobile menu, toggle classes based on menu state." x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'block': open, 'hidden': !open }" class="bg-light-blue-900 hidden lg:hidden">
+          <div x-description="Mobile menu, show/hide based on menu state." class="bg-light-blue-900 lg:hidden" id="mobile-menu" v-if="open">
             <div class="pt-2 pb-3 px-2 space-y-1">
             
               
@@ -133,7 +137,7 @@
             </div>
           </div>
         </nav>
-        <div :class="{ 'bottom-0': open, 'inset-y-0': !open }" class="absolute flex justify-center inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" aria-hidden="true">
+        <div class="inset-y-0 absolute flex justify-center inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0" x-state:on="Menu open" x-state:off="Menu closed" aria-hidden="true" :class="{ 'bottom-0': open, 'inset-y-0': !(open) }">
           <div class="flex-grow bg-light-blue-900 bg-opacity-75"></div>
           <svg class="flex-shrink-0" width="1750" height="308" viewBox="0 0 1750 308" xmlns="http://www.w3.org/2000/svg">
             <path opacity=".75" d="M1465.84 308L16.816 0H1750v308h-284.16z" fill="#075985"></path>

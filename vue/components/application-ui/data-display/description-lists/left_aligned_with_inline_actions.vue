@@ -19,7 +19,7 @@
           </dt>
           <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
             <span class="flex-grow">Margot Foster</span>
-            <span class="ml-4flex-shrink-0">
+            <span class="ml-4 flex-shrink-0">
               <button type="button" class="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Update
               </button>
@@ -32,7 +32,7 @@
           </dt>
           <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
             <span class="flex-grow">Backend Developer</span>
-            <span class="ml-4flex-shrink-0">
+            <span class="ml-4 flex-shrink-0">
               <button type="button" class="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Update
               </button>
@@ -45,7 +45,7 @@
           </dt>
           <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
             <span class="flex-grow">margotfoster@example.com</span>
-            <span class="ml-4flex-shrink-0">
+            <span class="ml-4 flex-shrink-0">
               <button type="button" class="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Update
               </button>
@@ -58,7 +58,7 @@
           </dt>
           <dd class="mt-1 flex text-sm text-gray-900 sm:mt-0 sm:col-span-2">
             <span class="flex-grow"> $120,000</span>
-            <span class="ml-4flex-shrink-0">
+            <span class="ml-4 flex-shrink-0">
               <button type="button" class="bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                 Update
               </button>
