@@ -23,7 +23,7 @@
             </span>
           </span>
           <span class="ml-3 absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-            <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: selector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/selector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
   </svg>
           </span>
@@ -41,7 +41,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 0" :class="{ 'text-white': selected === 0, 'text-indigo-600': !(selected === 0) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -56,7 +56,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 1" :class="{ 'text-white': selected === 1, 'text-indigo-600': !(selected === 1) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -71,7 +71,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 2" :class="{ 'text-white': selected === 2, 'text-indigo-600': !(selected === 2) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -86,7 +86,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 3" :class="{ 'text-white': selected === 3, 'text-indigo-600': !(selected === 3) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -101,7 +101,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 4" :class="{ 'text-white': selected === 4, 'text-indigo-600': !(selected === 4) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -116,7 +116,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 5" :class="{ 'text-white': selected === 5, 'text-indigo-600': !(selected === 5) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -131,7 +131,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 6" :class="{ 'text-white': selected === 6, 'text-indigo-600': !(selected === 6) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -146,7 +146,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 7" :class="{ 'text-white': selected === 7, 'text-indigo-600': !(selected === 7) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -161,7 +161,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 8" :class="{ 'text-white': selected === 8, 'text-indigo-600': !(selected === 8) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>
@@ -176,7 +176,7 @@
                 </div>
 
                 <span x-description="Checkmark, only display for selected option." x-state:on="Highlighted" x-state:off="Not Highlighted" v-if="value === 9" :class="{ 'text-white': selected === 9, 'text-indigo-600': !(selected === 9) }" class="absolute inset-y-0 right-0 flex items-center pr-4">
-                  <svg class="h-5 w-5" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg class="h-5 w-5" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                 </span>

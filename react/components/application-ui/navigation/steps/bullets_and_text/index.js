@@ -15,7 +15,7 @@ const Component = (props) => (
               <a href="/" className="group">
                 <span className="flex items-start">
                   <span className="flex-shrink-0 relative h-5 w-5 flex items-center justify-center">
-                    <svg className="h-full w-full text-indigo-600 group-hover:text-indigo-800" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="h-full w-full text-indigo-600 group-hover:text-indigo-800" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                   </span>

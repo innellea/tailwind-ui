@@ -59,6 +59,7 @@
                 </div>
                 <span class="relative ml-4 text-indigo-300 font-semibold leading-6 sm:ml-24 sm:pl-1">
                   <p class="text-white font-semibold sm:inline">Judith Black</p>
+                  <!-- space -->
                   <p class="sm:inline">CEO at Workcation</p>
                 </span>
               </cite>

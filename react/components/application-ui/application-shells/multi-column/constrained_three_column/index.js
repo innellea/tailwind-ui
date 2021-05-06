@@ -26,7 +26,7 @@ const Component = (props) => (
               <label htmlFor="search" className="sr-only">Search projects</label>
               <div className="relative text-indigo-200 focus-within:text-gray-400">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5" data-todo-x-description="Heroicon name: search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
 </svg>
                 </div>
@@ -39,11 +39,11 @@ const Component = (props) => (
             <button data-todo-at-click="open = !open" className="bg-indigo-600 inline-flex items-center justify-center p-2 rounded-md text-indigo-400 hover:text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" data-todo-x-bind-aria-expanded="open" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               {/* Icon when menu is closed. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': open, 'block': !open }" className="block h-6 w-6" data-todo-x-description="Heroicon name: menu-alt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': open, 'block': !open }" className="block h-6 w-6" data-todo-x-description="Heroicon name: outline/menu-alt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16"></path>
 </svg>
               {/* Icon when menu is open. */}
-              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': !open, 'block': open }" className="hidden h-6 w-6" data-todo-x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg data-todo-x-state-on="Menu open" data-todo-x-state-off="Menu closed" data-todo-colon-className="{ 'hidden': !open, 'block': open }" className="hidden h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
             </button>
@@ -97,7 +97,7 @@ const Component = (props) => (
           <div className="h-full pl-4 pr-6 py-6 sm:pl-6 lg:pl-8 xl:pl-0">
             {/* Start left column area */}
             <div className="h-full relative" style={{minHeight: "12rem"}}>
-              <div className="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+              <div className="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
             </div>
             {/* End left column area */}
           </div>
@@ -107,7 +107,7 @@ const Component = (props) => (
           <div className="h-full py-6 px-4 sm:px-6 lg:px-8">
             <!-- Start main area-->
             <div className="relative h-full" style={{minHeight: "36rem"}}>
-              <div className="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+              <div className="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
             </div>
             {/* End main area */}
           </div>
@@ -118,7 +118,7 @@ const Component = (props) => (
         <div className="h-full pl-6 py-6 lg:w-80">
           {/* Start right column area */}
           <div className="h-full relative" style={{minHeight: "16rem"}}>
-            <div className="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+            <div className="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
           </div>
           {/* End right column area */}
         </div>

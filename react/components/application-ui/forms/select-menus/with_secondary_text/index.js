@@ -29,7 +29,7 @@ const Component = (props) => (
           </span>
         </span>
         <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
-          <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: selector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/selector" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 3a1 1 0 01.707.293l3 3a1 1 0 01-1.414 1.414L10 5.414 7.707 7.707a1 1 0 01-1.414-1.414l3-3A1 1 0 0110 3zm-3.707 9.293a1 1 0 011.414 0L10 14.586l2.293-2.293a1 1 0 011.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd"></path>
 </svg>
         </span>
@@ -49,7 +49,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 0" data-todo-colon-className="{ 'text-white': selected === 0, 'text-indigo-600': !(selected === 0) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -66,7 +66,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 1" data-todo-colon-className="{ 'text-white': selected === 1, 'text-indigo-600': !(selected === 1) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -83,7 +83,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 2" data-todo-colon-className="{ 'text-white': selected === 2, 'text-indigo-600': !(selected === 2) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -100,7 +100,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 3" data-todo-colon-className="{ 'text-white': selected === 3, 'text-indigo-600': !(selected === 3) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -117,7 +117,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 4" data-todo-colon-className="{ 'text-white': selected === 4, 'text-indigo-600': !(selected === 4) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -134,7 +134,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 5" data-todo-colon-className="{ 'text-white': selected === 5, 'text-indigo-600': !(selected === 5) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -151,7 +151,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 6" data-todo-colon-className="{ 'text-white': selected === 6, 'text-indigo-600': !(selected === 6) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -168,7 +168,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 7" data-todo-colon-className="{ 'text-white': selected === 7, 'text-indigo-600': !(selected === 7) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -185,7 +185,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 8" data-todo-colon-className="{ 'text-white': selected === 8, 'text-indigo-600': !(selected === 8) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>
@@ -202,7 +202,7 @@ const Component = (props) => (
               </div>
 
               <span data-todo-x-description="Checkmark, only display for selected option." data-todo-x-state-on="Highlighted" data-todo-x-state-off="Not Highlighted" data-todo-x-show="value === 9" data-todo-colon-className="{ 'text-white': selected === 9, 'text-indigo-600': !(selected === 9) }" className="absolute inset-y-0 right-0 flex items-center pr-4">
-                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
               </span>

@@ -18,7 +18,7 @@ const Component = (props) => (
                     What's the best thing about Switzerland?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 0, 'rotate-0': !(openPanel === 0) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 0, 'rotate-0': !(openPanel === 0) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>
@@ -38,7 +38,7 @@ const Component = (props) => (
                     How do you make holy water?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 1, 'rotate-0': !(openPanel === 1) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 1, 'rotate-0': !(openPanel === 1) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>
@@ -58,7 +58,7 @@ const Component = (props) => (
                     What do you call someone with no body and no nose?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 2, 'rotate-0': !(openPanel === 2) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 2, 'rotate-0': !(openPanel === 2) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>
@@ -78,7 +78,7 @@ const Component = (props) => (
                     Why do you never see elephants hiding in trees?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 3, 'rotate-0': !(openPanel === 3) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 3, 'rotate-0': !(openPanel === 3) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>
@@ -98,7 +98,7 @@ const Component = (props) => (
                     Why can't you hear a pterodactyl go to the bathroom?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 4, 'rotate-0': !(openPanel === 4) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 4, 'rotate-0': !(openPanel === 4) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>
@@ -118,7 +118,7 @@ const Component = (props) => (
                     Why did the invisible man turn down the job offer?
                   </span>
                   <span className="ml-6 h-7 flex items-center">
-                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 5, 'rotate-0': !(openPanel === 5) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="-rotate-180 h-6 w-6 transform" data-todo-x-description="Heroicon name: outline/chevron-down" data-todo-x-state-on="Open" data-todo-x-state-off="Closed" data-todo-x-bind-className="{ '-rotate-180': openPanel === 5, 'rotate-0': !(openPanel === 5) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
 </svg>
                   </span>

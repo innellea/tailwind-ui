@@ -32,8 +32,7 @@ const Component = (props) => (
             </thead>
             <tbody data-todo-x-max="2">
               
-                {/* Odd row */}
-                <tr className="bg-white">
+                <tr className="bg-white" data-todo-x-description="Odd row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Jane Cooper
                   </td>
@@ -51,8 +50,7 @@ const Component = (props) => (
                   </td>
                 </tr>
               
-                {/* Even row */}
-                <tr className="bg-gray-50">
+                <tr className="bg-gray-50" data-todo-x-description="Even row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Cody Fisher
                   </td>
@@ -70,8 +68,7 @@ const Component = (props) => (
                   </td>
                 </tr>
               
-                {/* Odd row */}
-                <tr className="bg-white">
+                <tr className="bg-white" data-todo-x-description="Odd row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Esther Howard
                   </td>
@@ -89,8 +86,7 @@ const Component = (props) => (
                   </td>
                 </tr>
               
-                {/* Even row */}
-                <tr className="bg-gray-50">
+                <tr className="bg-gray-50" data-todo-x-description="Even row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Jenny Wilson
                   </td>
@@ -108,8 +104,7 @@ const Component = (props) => (
                   </td>
                 </tr>
               
-                {/* Odd row */}
-                <tr className="bg-white">
+                <tr className="bg-white" data-todo-x-description="Odd row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Kristin Watson
                   </td>
@@ -127,8 +122,7 @@ const Component = (props) => (
                   </td>
                 </tr>
               
-                {/* Even row */}
-                <tr className="bg-gray-50">
+                <tr className="bg-gray-50" data-todo-x-description="Even row">
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                     Cameron Williamson
                   </td>

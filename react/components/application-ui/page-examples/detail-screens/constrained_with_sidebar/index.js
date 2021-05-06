@@ -15,7 +15,7 @@ const Component = (props) => (
           <div className="absolute top-0 right-0 -mr-12 pt-2">
             <button type="button" data-todo-x-show="sidebarOpen" data-todo-at-click="sidebarOpen = false" className="ml-1 flex items-center justify-center h-10 w-10 rounded-full focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
               <span className="sr-only">Close sidebar</span>
-              <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
             </button>
@@ -31,7 +31,7 @@ const Component = (props) => (
                     {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
                       {/* Current: "text-gray-300", Default: "text-gray-400 group-hover:text-gray-300" */}
-                      <svg className="text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
 </svg>
                       All Issues
@@ -39,7 +39,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
 </svg>
                       My Issues
@@ -47,7 +47,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Assigned
@@ -55,7 +55,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
 </svg>
                       Closed
@@ -63,7 +63,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-4 h-6 w-6" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Recent
@@ -119,7 +119,7 @@ const Component = (props) => (
                     {/* Current: "bg-gray-200 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" */}
                     <a href="/" className="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
                       {/* Current: "text-gray-300", Default: "text-gray-400 group-hover:text-gray-300" */}
-                      <svg className="text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
 </svg>
                       All Issues
@@ -127,7 +127,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
 </svg>
                       My Issues
@@ -135,7 +135,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/user-circle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Assigned
@@ -143,7 +143,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/archive" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
 </svg>
                       Closed
@@ -151,7 +151,7 @@ const Component = (props) => (
                   
                   
                     <a href="/" className="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
-                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg className="text-gray-400 group-hover:text-gray-300 mr-3 h-6 w-6" data-todo-x-description="Heroicon name: outline/clock" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
 </svg>
                       Recent
@@ -199,7 +199,7 @@ const Component = (props) => (
       <div className="relative z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200">
         <button type="button" data-todo-at-click-stop="sidebarOpen = true" className="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-900 lg:hidden">
           <span className="sr-only">Open sidebar</span>
-          <svg className="h-6 w-6" data-todo-x-description="Heroicon name: menu-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/menu-alt-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7"></path>
 </svg>
         </button>
@@ -209,7 +209,7 @@ const Component = (props) => (
               <label htmlFor="search_field" className="sr-only">Search</label>
               <div className="relative w-full text-gray-400 focus-within:text-gray-600">
                 <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                  <svg className="h-5 w-5" data-todo-x-description="Heroicon name: search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd"></path>
 </svg>
                 </div>
@@ -243,13 +243,13 @@ const Component = (props) => (
                     </div>
                     <div className="mt-4 flex space-x-3 md:mt-0">
                       <button type="button" className="inline-flex justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                        <svg className="-ml-1 mr-2 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: pencil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="-ml-1 mr-2 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/pencil" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"></path>
 </svg>
                         <span>Edit</span>
                       </button>
                       <button type="button" className="inline-flex justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                        <svg className="-ml-1 mr-2 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="-ml-1 mr-2 h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/bell" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
 </svg>
                         <span>Subscribe</span>
@@ -260,19 +260,19 @@ const Component = (props) => (
                     <h2 className="sr-only">Details</h2>
                     <div className="space-y-5">
                       <div className="flex items-center space-x-2">
-                        <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: lock-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/lock-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z"></path>
 </svg>
                         <span className="text-green-700 text-sm font-medium">Open Issue</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                         <span className="text-gray-900 text-sm font-medium">4 comments</span>
                       </div>
                       <div className="flex items-center space-x-2">
-                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
 </svg>
                         <span className="text-gray-900 text-sm font-medium">Created on <time dateTime="2020-12-02">Dec 2, 2020</time></span>
@@ -357,7 +357,7 @@ const Component = (props) => (
                                       <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
                                       <span className="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
-                                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                                       </span>
@@ -390,7 +390,7 @@ const Component = (props) => (
                                     <div>
                                       <div className="relative px-1">
                                         <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                                          <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: user-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/user-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd"></path>
 </svg>
                                         </div>
@@ -417,7 +417,7 @@ const Component = (props) => (
                                     <div>
                                       <div className="relative px-1">
                                         <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                                          <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                          <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
 </svg>
                                         </div>
@@ -463,7 +463,7 @@ const Component = (props) => (
                                       <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
                                       <span className="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
-                                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                                       </span>
@@ -496,7 +496,7 @@ const Component = (props) => (
                               <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
                               <span className="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
-                                <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                               </span>
@@ -510,7 +510,7 @@ const Component = (props) => (
                               </div>
                               <div className="mt-6 flex items-center justify-end space-x-4">
                                 <button type="button" className="inline-flex justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                                  <svg className="-ml-1 mr-2 h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                  <svg className="-ml-1 mr-2 h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                                   <span>Close issue</span>
@@ -532,19 +532,19 @@ const Component = (props) => (
               <h2 className="sr-only">Details</h2>
               <div className="space-y-5">
                 <div className="flex items-center space-x-2">
-                  <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: lock-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/lock-open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 2a5 5 0 00-5 5v2a2 2 0 00-2 2v5a2 2 0 002 2h10a2 2 0 002-2v-5a2 2 0 00-2-2H7V7a3 3 0 015.905-.75 1 1 0 001.937-.5A5.002 5.002 0 0010 2z"></path>
 </svg>
                   <span className="text-green-700 text-sm font-medium">Open Issue</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                   <span className="text-gray-900 text-sm font-medium">4 comments</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
 </svg>
                   <span className="text-gray-900 text-sm font-medium">Created on <time dateTime="2020-12-02">Dec 2, 2020</time></span>

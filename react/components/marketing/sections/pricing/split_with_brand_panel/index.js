@@ -18,7 +18,7 @@ const Component = (props) => (
             
               <div className="flex">
                 <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-indigo-500 rounded-md">
-                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/view-list" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 10h16M4 14h16M4 18h16"></path>
 </svg>
                 </div>
@@ -34,7 +34,7 @@ const Component = (props) => (
             
               <div className="flex">
                 <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-indigo-500 rounded-md">
-                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: view-boards" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/view-boards" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path>
 </svg>
                 </div>
@@ -50,7 +50,7 @@ const Component = (props) => (
             
               <div className="flex">
                 <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-indigo-500 rounded-md">
-                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: calendar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/calendar" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
 </svg>
                 </div>
@@ -66,7 +66,7 @@ const Component = (props) => (
             
               <div className="flex">
                 <div className="flex-shrink-0 h-12 w-12 flex items-center justify-center bg-indigo-500 rounded-md">
-                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="h-6 w-6 text-white" data-todo-x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
 </svg>
                 </div>
@@ -94,7 +94,7 @@ const Component = (props) => (
                 <span className="sr-only">plus</span>
               </span>
               <span className="pointer-events-none absolute h-12 w-full flex items-center justify-center" aria-hidden="true">
-                <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: plus" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/plus" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
 </svg>
               </span>
@@ -108,37 +108,37 @@ const Component = (props) => (
           </div>
           <ul className="bg-indigo-800 bg-opacity-50 rounded sm:grid sm:grid-cols-2 sm:grid-rows-3 sm:grid-flow-col">
             <li className="py-4 px-4 flex items-center space-x-3 text-base text-white">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>Unlimited Projects</span>
             </li>
             <li className="border-t border-indigo-400 border-opacity-25 py-4 px-4 flex items-center space-x-3 text-base text-white">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>Unlimited storage</span>
             </li>
             <li className="border-t border-indigo-400 border-opacity-25 py-4 px-4 flex items-center space-x-3 text-base text-white">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>Cancel anytime</span>
             </li>
             <li className="border-t border-indigo-400 border-opacity-25 py-4 px-4 flex items-center space-x-3 text-base text-white sm:border-t-0 sm:border-l">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>No per user fees</span>
             </li>
             <li className="border-t border-indigo-400 border-opacity-25 py-4 px-4 flex items-center space-x-3 text-base text-white sm:border-l">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>24/7 support</span>
             </li>
             <li className="border-t border-indigo-400 border-opacity-25 py-4 px-4 flex items-center space-x-3 text-base text-white sm:border-l">
-              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg className="h-6 w-6 text-indigo-300" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
               <span>Cancel anytime</span>

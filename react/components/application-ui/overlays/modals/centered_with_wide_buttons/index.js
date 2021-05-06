@@ -21,7 +21,7 @@ const Component = (props) => (
       <div data-todo-x-show="open" data-todo-x-description="Modal panel, show/hide based on modal state." data-todo-x-transition-enter="ease-out duration-300" data-todo-x-transition-enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" data-todo-x-transition-enter-end="opacity-100 translate-y-0 sm:scale-100" data-todo-x-transition-leave="ease-in duration-200" data-todo-x-transition-leave-start="opacity-100 translate-y-0 sm:scale-100" data-todo-x-transition-leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6" role="dialog" aria-modal="true" aria-labelledby="modal-headline">
         <div>
           <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-            <svg className="h-6 w-6 text-green-600" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <svg className="h-6 w-6 text-green-600" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
           </div>

@@ -12,7 +12,7 @@
             <div class="flex-grow px-4 py-5 sm:p-6">
               <div class="flex items-center">
                 <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
-                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/users" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
   </svg>
                 </div>
@@ -49,7 +49,7 @@
             <div class="flex-grow px-4 py-5 sm:p-6">
               <div class="flex items-center">
                 <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
-                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: mail-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/mail-open" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 19v-8.93a2 2 0 01.89-1.664l7-4.666a2 2 0 012.22 0l7 4.666A2 2 0 0121 10.07V19M3 19a2 2 0 002 2h14a2 2 0 002-2M3 19l6.75-4.5M21 19l-6.75-4.5M3 10l6.75 4.5M21 10l-6.75 4.5m0 0l-1.14.76a2 2 0 01-2.22 0l-1.14-.76"></path>
   </svg>
                 </div>
@@ -86,7 +86,7 @@
             <div class="flex-grow px-4 py-5 sm:p-6">
               <div class="flex items-center">
                 <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
-                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: cursor-click" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg class="h-6 w-6 text-white" x-description="Heroicon name: outline/cursor-click" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"></path>
   </svg>
                 </div>

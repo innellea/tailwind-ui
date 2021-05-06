@@ -26,7 +26,7 @@ const Component = (props) => (
             
               
                 <li className="py-4 flex md:py-0 md:pb-4">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Vitae in pulvinar odio id utobortis in inter.</span>
@@ -34,7 +34,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Sed sed id viverra viverra augue eget massa.</span>
@@ -42,7 +42,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Urna, gravida amet, a, integer venenatis.</span>
@@ -50,7 +50,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Lobortis sed pharetra amet vitae eleifend.</span>
@@ -58,7 +58,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Ullamcorper blandit a consequat donec elit aoreet.</span>
@@ -69,7 +69,7 @@ const Component = (props) => (
             
               
                 <li className="py-4 flex md:border-t-0 md:py-0 md:pb-4">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Vitae in pulvinar odio id utobortis in inter.</span>
@@ -77,7 +77,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Sed sed id viverra viverra augue eget massa.</span>
@@ -85,7 +85,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Urna, gravida amet, a, integer venenatis.</span>
@@ -93,7 +93,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Lobortis sed pharetra amet vitae eleifend.</span>
@@ -101,7 +101,7 @@ const Component = (props) => (
               
               
                 <li className="py-4 flex">
-                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg className="flex-shrink-0 h-6 w-6 text-green-500" data-todo-x-description="Heroicon name: outline/check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
 </svg>
                   <span className="ml-3 text-base text-gray-500">Ullamcorper blandit a consequat donec elit aoreet.</span>

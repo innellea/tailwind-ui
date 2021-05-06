@@ -35,7 +35,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -47,7 +47,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -59,7 +59,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -71,7 +71,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -98,7 +98,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -110,7 +110,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -122,7 +122,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -134,7 +134,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -161,7 +161,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -173,7 +173,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -185,7 +185,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -197,7 +197,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -238,7 +238,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -250,7 +250,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -262,7 +262,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -297,7 +297,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -309,7 +309,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -321,7 +321,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -333,7 +333,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -360,7 +360,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -372,7 +372,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -384,7 +384,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -396,7 +396,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">No</span>
@@ -437,7 +437,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -449,7 +449,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -461,7 +461,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -496,7 +496,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -508,7 +508,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -520,7 +520,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -532,7 +532,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -559,7 +559,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -571,7 +571,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -583,7 +583,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -595,7 +595,7 @@ const Component = (props) => (
                   <td className="py-5 pr-4">
                     
                       
-                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="ml-auto h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                       <span className="sr-only">Yes</span>
@@ -679,7 +679,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Basic</span>
@@ -687,7 +687,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -695,7 +695,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -707,7 +707,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Basic</span>
@@ -715,7 +715,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -723,7 +723,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -735,7 +735,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -743,7 +743,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -751,7 +751,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -763,7 +763,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -787,7 +787,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Basic</span>
@@ -795,7 +795,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -803,7 +803,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -815,7 +815,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -823,7 +823,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -831,7 +831,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -843,7 +843,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -851,7 +851,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Essential</span>
@@ -859,7 +859,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -871,7 +871,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -879,7 +879,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Essential</span>
@@ -887,7 +887,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -903,7 +903,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Basic</span>
@@ -911,7 +911,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -919,7 +919,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -931,7 +931,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -939,7 +939,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -947,7 +947,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -959,7 +959,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -967,7 +967,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Essential</span>
@@ -975,7 +975,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>
@@ -987,7 +987,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Basic</span>
@@ -995,7 +995,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Not included in Essential</span>
@@ -1003,7 +1003,7 @@ const Component = (props) => (
                 <td className="py-5 px-6">
                   
                     
-                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-green-500" data-todo-x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
                     <span className="sr-only">Included in Premium</span>

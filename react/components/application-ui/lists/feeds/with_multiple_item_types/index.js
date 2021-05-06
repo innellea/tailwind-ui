@@ -19,7 +19,7 @@ const Component = (props) => (
                   <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1520785643438-5bf77931f493?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
                   <span className="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
-                    <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                   </span>
@@ -52,7 +52,7 @@ const Component = (props) => (
                 <div>
                   <div className="relative px-1">
                     <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                      <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: user-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/user-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clipRule="evenodd"></path>
 </svg>
                     </div>
@@ -61,8 +61,11 @@ const Component = (props) => (
                 <div className="min-w-0 flex-1 py-1.5">
                   <div className="text-sm text-gray-500">
                     <a href="/" className="font-medium text-gray-900">Hilary Mahy</a>
+                    {/* space */}
                     assigned
+                    {/* space */}
                     <a href="/" className="font-medium text-gray-900">Kristin Watson</a>
+                    {/* space */}
                     <span className="whitespace-nowrap">2d ago</span>
                   </div>
                 </div>
@@ -79,7 +82,7 @@ const Component = (props) => (
                 <div>
                   <div className="relative px-1">
                     <div className="h-8 w-8 bg-gray-100 rounded-full ring-8 ring-white flex items-center justify-center">
-                      <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <svg className="h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/tag" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
 </svg>
                     </div>
@@ -89,8 +92,10 @@ const Component = (props) => (
                   <div className="text-sm leading-8 text-gray-500">
                     <span className="mr-0.5">
                       <a href="/" className="font-medium text-gray-900">Hilary Mahy</a>
+                      {/* space */}
                       added tags
                     </span>
+                    {/* space */}
                     <span className="mr-0.5">
                       
                         
@@ -100,6 +105,7 @@ const Component = (props) => (
                             </span>
                             <span className="ml-3.5 font-medium text-gray-900">Bug</span>
                           </a>
+                          {/* space */}
                         
                         
                           <a href="/" className="relative inline-flex items-center rounded-full border border-gray-300 px-3 py-0.5 text-sm">
@@ -108,6 +114,7 @@ const Component = (props) => (
                             </span>
                             <span className="ml-3.5 font-medium text-gray-900">Accessibility</span>
                           </a>
+                          {/* space */}
                         
                     </span>
                     <span className="whitespace-nowrap">6h ago</span>
@@ -125,7 +132,7 @@ const Component = (props) => (
                   <img className="h-10 w-10 rounded-full bg-gray-400 flex items-center justify-center ring-8 ring-white" src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=8&amp;w=256&amp;h=256&amp;q=80" alt="">
 
                   <span className="absolute -bottom-0.5 -right-1 bg-white rounded-tl px-0.5 py-px">
-                    <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg className="h-5 w-5 text-gray-400" data-todo-x-description="Heroicon name: solid/chat-alt" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2zM7 8H5v2h2V8zm2 0h2v2H9V8zm6 0h-2v2h2V8z" clipRule="evenodd"></path>
 </svg>
                   </span>

@@ -10,7 +10,7 @@ const Component = (props) => (
     <div>
       <nav className="sm:hidden" aria-label="Back">
         <a href="/" className="flex items-center text-sm font-medium text-gray-400 hover:text-gray-200">
-          <svg className="flex-shrink-0 -ml-1 mr-1 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <svg className="flex-shrink-0 -ml-1 mr-1 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clipRule="evenodd"></path>
 </svg>
           Back
@@ -27,7 +27,7 @@ const Component = (props) => (
           </li>
           <li>
             <div className="flex items-center">
-              <svg className="flex-shrink-0 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <svg className="flex-shrink-0 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
 </svg>
               <a href="/" className="ml-4 text-sm font-medium text-gray-400 hover:text-gray-200">Engineering</a>
@@ -35,7 +35,7 @@ const Component = (props) => (
           </li>
           <li>
             <div className="flex items-center">
-              <svg className="flex-shrink-0 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <svg className="flex-shrink-0 h-5 w-5 text-gray-500" data-todo-x-description="Heroicon name: solid/chevron-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd"></path>
 </svg>
               <a href="/" aria-current="page" className="ml-4 text-sm font-medium text-gray-400 hover:text-gray-200">Back End Developer</a>

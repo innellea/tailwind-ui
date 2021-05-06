@@ -18,7 +18,7 @@ const Component = (props) => (
                 <div className="ml-3 h-7 flex items-center">
                   <button data-todo-at-click="open = false; setTimeout(() => open = true, 1000);" className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
                     <span className="sr-only">Close panel</span>
-                    <svg className="h-6 w-6" data-todo-x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
                   </button>
@@ -58,7 +58,7 @@ const Component = (props) => (
                         <div data-todo-x-data="{ open: false }" data-todo-at-keydown-window-escape="open = false" data-todo-at-click-away="open = false" className="relative inline-block text-left">
                           <button id="options-menu" data-todo-at-click="open = !open" type="button" className="inline-flex items-center p-2 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-400 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
                             <span className="sr-only">Open options menu</span>
-                            <svg className="h-5 w-5" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <svg className="h-5 w-5" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                           </button>

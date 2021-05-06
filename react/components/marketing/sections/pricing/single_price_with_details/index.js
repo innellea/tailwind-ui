@@ -39,7 +39,7 @@ const Component = (props) => (
                   
                     <li className="flex items-start lg:col-span-1">
                       <div className="flex-shrink-0">
-                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                       </div>
@@ -50,7 +50,7 @@ const Component = (props) => (
                   
                     <li className="flex items-start lg:col-span-1">
                       <div className="flex-shrink-0">
-                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                       </div>
@@ -61,7 +61,7 @@ const Component = (props) => (
                   
                     <li className="flex items-start lg:col-span-1">
                       <div className="flex-shrink-0">
-                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                       </div>
@@ -72,7 +72,7 @@ const Component = (props) => (
                   
                     <li className="flex items-start lg:col-span-1">
                       <div className="flex-shrink-0">
-                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg className="h-5 w-5 text-green-400" data-todo-x-description="Heroicon name: solid/check-circle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
 </svg>
                       </div>
@@ -111,6 +111,7 @@ const Component = (props) => (
               <div className="mt-4 text-sm">
                 <a href="/" className="font-medium text-gray-900">
                   Get a free sample
+                  {/* space */}
                   <span className="font-normal text-gray-500">
                     (20MB)
                   </span>

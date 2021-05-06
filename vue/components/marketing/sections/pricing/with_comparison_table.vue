@@ -31,7 +31,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -43,7 +43,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -55,7 +55,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -67,7 +67,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -94,7 +94,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -106,7 +106,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -118,7 +118,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -130,7 +130,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -157,7 +157,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -169,7 +169,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -181,7 +181,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -193,7 +193,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -234,7 +234,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -246,7 +246,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -258,7 +258,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -293,7 +293,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -305,7 +305,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -317,7 +317,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -329,7 +329,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -356,7 +356,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -368,7 +368,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -380,7 +380,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -392,7 +392,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">No</span>
@@ -433,7 +433,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -445,7 +445,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -457,7 +457,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -492,7 +492,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -504,7 +504,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -516,7 +516,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -528,7 +528,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -555,7 +555,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -567,7 +567,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -579,7 +579,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -591,7 +591,7 @@
                     <td class="py-5 pr-4">
                     
                       
-                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg class="ml-auto h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                         <span class="sr-only">Yes</span>
@@ -675,7 +675,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Basic</span>
@@ -683,7 +683,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -691,7 +691,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -703,7 +703,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Basic</span>
@@ -711,7 +711,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -719,7 +719,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -731,7 +731,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -739,7 +739,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -747,7 +747,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -759,7 +759,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -783,7 +783,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Basic</span>
@@ -791,7 +791,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -799,7 +799,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -811,7 +811,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -819,7 +819,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -827,7 +827,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -839,7 +839,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -847,7 +847,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Essential</span>
@@ -855,7 +855,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -867,7 +867,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -875,7 +875,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Essential</span>
@@ -883,7 +883,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -899,7 +899,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Basic</span>
@@ -907,7 +907,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -915,7 +915,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -927,7 +927,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -935,7 +935,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -943,7 +943,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -955,7 +955,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -963,7 +963,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Essential</span>
@@ -971,7 +971,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>
@@ -983,7 +983,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Basic</span>
@@ -991,7 +991,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-gray-400" x-description="Heroicon name: solid/minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Not included in Essential</span>
@@ -999,7 +999,7 @@
                   <td class="py-5 px-6">
                   
                     
-                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <svg class="h-5 w-5 text-green-500" x-description="Heroicon name: solid/check" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
   </svg>
                       <span class="sr-only">Included in Premium</span>

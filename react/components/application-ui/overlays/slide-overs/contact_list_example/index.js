@@ -18,7 +18,7 @@ const Component = (props) => (
                 <div className="ml-3 h-7 flex items-center">
                   <button data-todo-at-click="open = false; setTimeout(() => open = true, 1000);" className="bg-white rounded-md text-gray-400 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500">
                     <span className="sr-only">Close panel</span>
-                    <svg className="h-6 w-6" data-todo-x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="h-6 w-6" data-todo-x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
 </svg>
                   </button>
@@ -63,7 +63,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-0" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -98,7 +98,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-1" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -133,7 +133,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-2" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -168,7 +168,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-3" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -203,7 +203,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-4" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -238,7 +238,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-5" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -273,7 +273,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-6" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -308,7 +308,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-7" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -343,7 +343,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-8" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -378,7 +378,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-9" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -413,7 +413,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-10" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -448,7 +448,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-11" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -483,7 +483,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-12" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -518,7 +518,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-13" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -553,7 +553,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-14" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -588,7 +588,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-15" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -623,7 +623,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-16" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>
@@ -658,7 +658,7 @@ const Component = (props) => (
                       <button data-todo-at-click="open = !open" className="group relative w-8 h-8 bg-white rounded-full inline-flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="options-menu-17" aria-haspopup="true" aria-expanded="false" data-todo-x-bind-aria-expanded="open">
                         <span className="sr-only">Open options menu</span>
                         <span className="flex items-center justify-center h-full w-full rounded-full">
-                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                          <svg className="w-5 h-5 text-gray-400 group-hover:text-gray-500" data-todo-x-description="Heroicon name: solid/dots-vertical" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
   <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
 </svg>
                         </span>

@@ -14,7 +14,7 @@
                       What's the best thing about Switzerland?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 0, 'rotate-0': !(openPanel === 0) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 0, 'rotate-0': !(openPanel === 0) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>
@@ -34,7 +34,7 @@
                       How do you make holy water?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 1, 'rotate-0': !(openPanel === 1) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 1, 'rotate-0': !(openPanel === 1) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>
@@ -54,7 +54,7 @@
                       What do you call someone with no body and no nose?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 2, 'rotate-0': !(openPanel === 2) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 2, 'rotate-0': !(openPanel === 2) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>
@@ -74,7 +74,7 @@
                       Why do you never see elephants hiding in trees?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 3, 'rotate-0': !(openPanel === 3) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 3, 'rotate-0': !(openPanel === 3) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>
@@ -94,7 +94,7 @@
                       Why can't you hear a pterodactyl go to the bathroom?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 4, 'rotate-0': !(openPanel === 4) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 4, 'rotate-0': !(openPanel === 4) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>
@@ -114,7 +114,7 @@
                       Why did the invisible man turn down the job offer?
                     </span>
                     <span class="ml-6 h-7 flex items-center">
-                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 5, 'rotate-0': !(openPanel === 5) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <svg class="-rotate-180 h-6 w-6 transform" x-description="Heroicon name: outline/chevron-down" x-state:on="Open" x-state:off="Closed" x-bind:class="{ '-rotate-180': openPanel === 5, 'rotate-0': !(openPanel === 5) }" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
   </svg>
                     </span>

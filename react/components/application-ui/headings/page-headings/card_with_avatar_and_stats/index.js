@@ -31,16 +31,19 @@ const Component = (props) => (
       
         <div className="px-6 py-5 text-sm font-medium text-center">
           <span className="text-gray-900">12</span>
+          {/* space */}
           <span className="text-gray-600">Vacation days left</span>
         </div>
       
         <div className="px-6 py-5 text-sm font-medium text-center">
           <span className="text-gray-900">4</span>
+          {/* space */}
           <span className="text-gray-600">Sick days left</span>
         </div>
       
         <div className="px-6 py-5 text-sm font-medium text-center">
           <span className="text-gray-900">2</span>
+          {/* space */}
           <span className="text-gray-600">Personal days left</span>
         </div>
       

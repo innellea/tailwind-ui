@@ -25,6 +25,7 @@ const Component = (props) => (
         </form>
         <p className="mt-3 text-sm text-gray-300">
           We care about the protection of your data. Read our
+          {/* space */}
           <a href="/" className="text-white font-medium underline">
             Privacy Policy.
           </a>

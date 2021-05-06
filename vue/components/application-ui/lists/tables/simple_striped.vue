@@ -28,8 +28,7 @@
               </thead>
               <tbody x-max="2">
               
-                  <!-- Odd row -->
-                  <tr class="bg-white">
+                  <tr class="bg-white" x-description="Odd row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Jane Cooper
                     </td>
@@ -47,8 +46,7 @@
                     </td>
                   </tr>
               
-                  <!-- Even row -->
-                  <tr class="bg-gray-50">
+                  <tr class="bg-gray-50" x-description="Even row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Cody Fisher
                     </td>
@@ -66,8 +64,7 @@
                     </td>
                   </tr>
               
-                  <!-- Odd row -->
-                  <tr class="bg-white">
+                  <tr class="bg-white" x-description="Odd row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Esther Howard
                     </td>
@@ -85,8 +82,7 @@
                     </td>
                   </tr>
               
-                  <!-- Even row -->
-                  <tr class="bg-gray-50">
+                  <tr class="bg-gray-50" x-description="Even row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Jenny Wilson
                     </td>
@@ -104,8 +100,7 @@
                     </td>
                   </tr>
               
-                  <!-- Odd row -->
-                  <tr class="bg-white">
+                  <tr class="bg-white" x-description="Odd row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Kristin Watson
                     </td>
@@ -123,8 +118,7 @@
                     </td>
                   </tr>
               
-                  <!-- Even row -->
-                  <tr class="bg-gray-50">
+                  <tr class="bg-gray-50" x-description="Even row">
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       Cameron Williamson
                     </td>

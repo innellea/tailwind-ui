@@ -22,7 +22,7 @@
                 <label for="search" class="sr-only">Search projects</label>
                 <div class="relative text-indigo-200 focus-within:text-gray-400">
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="h-5 w-5" x-description="Heroicon name: search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <svg class="h-5 w-5" x-description="Heroicon name: solid/search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
   </svg>
                   </div>
@@ -35,11 +35,11 @@
               <button @click="open = !open" class="bg-indigo-600 inline-flex items-center justify-center p-2 rounded-md text-indigo-400 hover:text-white hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-indigo-600 focus:ring-white" x-bind:aria-expanded="open" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <!-- Icon when menu is closed. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block h-6 w-6" x-description="Heroicon name: menu-alt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': open, 'block': !open }" class="block h-6 w-6" x-description="Heroicon name: outline/menu-alt-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16"></path>
   </svg>
                 <!-- Icon when menu is open. -->
-                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden h-6 w-6" x-description="Heroicon name: x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <svg x-state:on="Menu open" x-state:off="Menu closed" :class="{ 'hidden': !open, 'block': open }" class="hidden h-6 w-6" x-description="Heroicon name: outline/x" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
   </svg>
               </button>
@@ -93,7 +93,7 @@
             <div class="h-full pl-4 pr-6 py-6 sm:pl-6 lg:pl-8 xl:pl-0">
               <!-- Start left column area -->
               <div class="h-full relative" style="min-height: 12rem;">
-                <div class="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+                <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
               </div>
               <!-- End left column area -->
             </div>
@@ -103,7 +103,7 @@
             <div class="h-full py-6 px-4 sm:px-6 lg:px-8">
               <!-- Start main area-->
               <div class="relative h-full" style="min-height: 36rem;">
-                <div class="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+                <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
               </div>
               <!-- End main area -->
             </div>
@@ -114,7 +114,7 @@
           <div class="h-full pl-6 py-6 lg:w-80">
             <!-- Start right column area -->
             <div class="h-full relative" style="min-height: 16rem;">
-              <div class="absolute inset-0 border-4 border-gray-200 border-dashed rounded-lg"></div>
+              <div class="absolute inset-0 border-2 border-gray-200 border-dashed rounded-lg"></div>
             </div>
             <!-- End right column area -->
           </div>
