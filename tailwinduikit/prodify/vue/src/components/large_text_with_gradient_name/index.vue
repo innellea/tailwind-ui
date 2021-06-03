@@ -1,0 +1,13 @@
+<template>
+    <div class="mx-auto px-4 xl:px-0 container pt-10 lg:pt-56">
+        <div class="text-color f-f-l">
+            <h1 class="text-xl lg:text-6xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center">
+                "Thanks guys, keep up the good work! <br />
+                I'd be lost without Prodify. The very <br />
+                best. Prodify is both attractive and <br />
+                highly adaptable.
+            </h1>
+            <h1 class="text-color-gradient text-xl lg:text-6xl tracking-tighter leading-relaxed lg:leading-snug f-f-l font-black text-center pt-5 lg:pt-20">- Ben P.</h1>
+        </div>
+    </div>
+</template>

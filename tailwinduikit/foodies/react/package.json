@@ -1,0 +1,21 @@
+{
+  "name": "foodies",
+  "description": "Foodies template",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "next": "10.0.3",
+    "pure-react-carousel": "^1.27.6",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "postcss": "8.2.1",
+    "tailwindcss": "2.0.2"
+  }
+}

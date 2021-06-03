@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+
+body {
+    font-family: "Lato", sans-serif;
+}
+.checkbox:checked + .check-icon {
+    display: flex;
+}
+
+.text-gray-dark{
+    color: #2D3748;
+}
+.text-gray-light{
+    color: #718096;
+}
+.text-dark{
+    color: #1A202C;
+}
+.text-light-dark{
+    color: #4A5568;
+}
+.text-custom-1{
+    color: #353F47;
+}
+.text-custom-2{
+    color: #637280;
+}
+.text-custom-3{
+    color: #848688;
+}
+.text-custom-4{
+    color: #AAADB9;
+}
+.text-custom-blue{
+    color: #0029FF;
+}
+.text-orange{
+    color: #F6AD55;
+}
+.bg-custom-orange-2{
+    background-color: #F6AD55;
+}
+.bg-custom-yellow{
+    Background: #B8C819
+    ;
+}
+.bg-custom-gray-1{
+    background: #FAFAFA;
+}
+.bg-custom-gray-2{
+    background: #DEDEDE;
+}
+.bg-custom-orange{
+    background: #FFFAF0;
+    box-shadow: inset -1px  0px #D0D5D9;
+}
+.bg-custom-gray{
+    background: #F1F1F1;
+}
+.border-custom-green{
+    border-left: 4px solid #19C89A ;
+    border-radius: 4px;
+}
+.border-custom-green-light{
+    border-left: 12px solid #B8C819 ;
+    border-radius: 4px;
+}
+.border-custom-orange{
+    border: 1px solid #F6AD55;
+    border-radius: 4px;
+}
+
+hr.new1 {
+    border-top: 1px solid #F6AD55;
+  }
+  .vl {
+    border-left: 1px solid #F6AD55;
+    height: 400px;
+  }
+  .right-100{
+    animation: slideLeft 0.5s ease-in-out;
+  }
+  @keyframes slideLeft {
+    0% {
+        right: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+ 
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+@media screen and (min-width: 375px) {
+    .custom-width{
+        width: 40rem;
+    }
+  }
+  @media screen and (min-width: 1300px) {
+    .custom-width{
+        width: 50%;
+    }
+  }
+

@@ -1,0 +1,69 @@
+.custom-gray-800 {
+    color: #1b1b1b;
+}
+.bg-custom-gray-800 {
+    background-color: #1b1b1b;
+}
+.custom-gray-900 {
+    color: #212121;
+}
+.text-40px {
+    font-size: 40px;
+}
+@media (min-width: 320px) and (max-width: 667px) {
+    .text-80px {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .text-40px {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+.line {
+    border-bottom: 1px solid #1b1b1b;
+}
+.bg-gold {
+    background-color: #ffac2f;
+}
+
+/* Slider css below */
+.slider2 {
+    width: 100%;
+    height: 428px;
+    padding-top: 14px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide-ana2 {
+    height: 100%;
+}
+
+.slide-ana2 > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    .slider2 {
+        height: 570px;
+    }
+}
+@media (min-width: 320px) and (max-width: 391px) {
+    .slider2 {
+        height: 600px;
+    }
+}
+@media (min-width: 392px) and (max-width: 598px) {
+    .slider2 {
+        height: 490px;
+    }
+}
+@media (min-width: 599px) and (max-width: 1023px) {
+    .slider2 {
+        height: 370px;
+    }
+}

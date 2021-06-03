@@ -1,0 +1,12 @@
+.text-40px {
+    font-size: 40px;
+}
+.custom-gray-800 {
+    color: #1b1b1b;
+}
+@media (min-width: 320px) and (max-width: 667px) {
+    .text-40px {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}

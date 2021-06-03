@@ -1,0 +1,25 @@
+.custom-gray-800 {
+    color: #1b1b1b;
+}
+.bg-gold {
+    background-color: #ffac2f;
+}
+.clr-dark-blue {
+    color: #0036b4;
+}
+.border-gray {
+    border: 1px solid #ebebeb;
+}
+.text-40px {
+    font-size: 40px;
+}
+@media (min-width: 320px) and (max-width: 667px) {
+    .text-80px {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .text-40px {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}

@@ -1,0 +1,29 @@
+.width-custom-l {
+    width: 6.2rem;
+}
+
+.width-custom-sr {
+    width: 7.5rem;
+}
+
+.width-custom-b {
+    width: 6rem;
+}
+
+.width-custom {
+    width: 6rem;
+}
+
+.width-custom-r {
+    width: 4.5rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}

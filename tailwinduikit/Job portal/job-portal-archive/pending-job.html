@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pending Offers</title>
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="border border-gray-200 w-full bg-white px-5 sm:px-10">
+        <div class="container h-16 flex justify-between items-center lg:items-stretch mx-auto">
+            <div class="flex items-center">
+                <div class="mr-10 flex items-center">
+                    <svg width="35px" height="40px" viewBox="0 0 35 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <defs>
+                                                <linearGradient x1="100%" y1="8.84384054%" x2="0%" y2="64.2775985%" id="linearGradient-1">
+                                                    <stop stop-color="#3182CE" offset="0%"></stop>
+                                                    <stop stop-color="#3182CE" offset="100%"></stop>
+                                                </linearGradient>
+                                                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+                                                    <stop stop-color="#2A4365" offset="0%"></stop>
+                                                    <stop stop-color="#2C5282" offset="100%"></stop>
+                                                </linearGradient>
+                                                <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+                                                    <stop stop-color="#2A4365" offset="0%"></stop>
+                                                    <stop stop-color="#2C5282" offset="100%"></stop>
+                                                </linearGradient>
+                                            </defs>
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                <g id="7.-Job-Portal---History-(Calling-For-Interview)" transform="translate(-152.000000, -15.000000)">
+                                                    <g id="Group-11" transform="translate(152.000000, 15.000000)">
+                                                        <g id="Group-15">
+                                                            <path d="M2.45978947,28.4037895 L17.2185263,36.9250526 L31.9776842,28.4037895 L31.9776842,12.7818947 L17.2185263,21.3027368 L2.45978947,12.7818947 L2.45978947,28.4037895 Z M17.2185263,39.7650526 L0,29.824 L0,8.52126316 L17.2185263,18.4627368 L34.4374737,8.52126316 L34.4374737,29.824 L17.2185263,39.7650526 L17.2185263,39.7650526 Z" id="Fill-28" fill="url(#linearGradient-1)"></path>
+                                                            <polyline id="Fill-29" fill="url(#linearGradient-2)" points="8.64336842 7.79157895 17.2185263 2.84042105 25.7945263 7.79157895 30.7136842 7.79157895 17.2185263 0 3.72421053 7.79157895 8.64336842 7.79157895"></polyline>
+                                                            <polyline id="Fill-30" fill="url(#linearGradient-3)" points="14.6324211 10.8842105 17.2185263 9.39115789 19.8054737 10.8842105 24.6741053 10.8842105 24.6871579 10.8627368 17.2185263 6.55073684 9.71284211 10.8842105 14.6324211 10.8842105"></polyline>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                            </g>
+                                        </svg>
+                    <h3 class="text-base text-gray-800 font-bold tracking-normal leading-tight ml-3 hidden lg:block">
+                        Work-Shop
+                    </h3>
+                </div>
+                <ul class="hidden lg:flex items-center h-full">
+                    <li class="cursor-pointer h-full flex items-center text-sm text-gray-800 tracking-normal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 icon icon-tabler icon-tabler-grid" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <rect x="4" y="4" width="6" height="6" rx="1" />
+                                                <rect x="14" y="4" width="6" height="6" rx="1" />
+                                                <rect x="4" y="14" width="6" height="6" rx="1" />
+                                                <rect x="14" y="14" width="6" height="6" rx="1" />
+                                            </svg>
+                        <a href="index.html">Dashboard</a>
+                    </li>
+                    <li class="cursor-pointer h-full flex items-center text-sm text-gray-800 mx-10 tracking-normal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 icon icon-tabler icon-tabler-puzzle" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1" />
+                                            </svg>
+                        <a href="find-jobs.html">Find Jobs</a>
+                    </li>
+                    <li class="cursor-pointer h-full flex items-center text-sm text-blue-600 mr-10 tracking-normal">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 icon icon-tabler icon-tabler-compass" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <polyline points="8 16 10 10 16 8 14 14 8 16" />
+                                                <circle cx="12" cy="12" r="9" />
+                                            </svg>
+                        <a href="applied-job.html">History</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="h-full hidden lg:flex items-center justify-end">
+                <div class="h-full flex">
+                    <div class="w-20 h-full flex items-center justify-center border-l border-gray-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 icon icon-tabler icon-tabler-search cursor-pointer" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <circle cx="10" cy="10" r="7" />
+                                                <line x1="21" y1="21" x2="15" y2="15" />
+                                            </svg>
+                    </div>
+                    <div class="w-20 h-full flex items-center justify-center border-l border-r border-gray-300 cursor-pointer">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 icon icon-tabler icon-tabler-messages" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10" />
+                                                <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2" />
+                                            </svg>
+                    </div>
+                    <div class="w-20 h-full flex items-center justify-center border-r border-gray-300 cursor-pointer">
+                        <div class="relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-600 icon icon-tabler icon-tabler-bell" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                                                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                                                </svg>
+                            <div class="w-2 h-2 rounded-full bg-red-400 absolute inset-0 mt-1 mr-1 m-auto"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center pl-8 cursor-pointer relative" onclick="dropdownHandler(this)">
+                        <ul class="p-2 w-40 border-r bg-white absolute rounded left-0 shadow mt-16 top-0 hidden">
+                            <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                                            <circle cx="12" cy="7" r="4" />
+                                                            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                                        </svg>
+                                    <span class="ml-2">My Profile</span>
+                                </div>
+                            </li>
+                            <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <circle cx="12" cy="12" r="9" />
+                                                        <line x1="12" y1="17" x2="12" y2="17.01" />
+                                                        <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                                                    </svg>
+                                <span class="ml-2">Help Center</span>
+                            </li>
+                            <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z" />
+                                                        <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                                        <circle cx="12" cy="12" r="3" />
+                                                    </svg>
+                                <span class="ml-2">Account Settings</span>
+                            </li>
+                        </ul>
+                        <img class="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/image-rounded.png" alt="logo" />
+                        <p class="text-gray-800 text-sm ml-2">Jane Doe</p>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:hidden cursor-pointer text-gray-700 hover:text-gray-700 focus:outline-none transition duration-150 ease-in-out">
+                <ul class="top-0 z-40 p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-16 md:mt-16 hidden">
+                    <li class="flex lg:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                        <div class="flex items-center">
+                            <span class="ml-2 font-bold"><a href="index.html">Dashboard</a></span>
+                        </div>
+                    </li>
+                    <li class="flex lg:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                        <div class="flex items-center">
+                            <span class="ml-2 font-bold"><a href="find-jobs.html">Find Jobs</a></span>
+                        </div>
+                    </li>
+                    <li class="flex lg:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                        <div class="flex items-center">
+                            <span class="ml-2 font-bold"><a href="applied-job.html">History</a></span>
+                        </div>
+                    </li>
+                    <li class="ml-2 cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                        <input class="text-gray-800 border-b border-gray-300 w-64 pb-1" placeholder="Search" />
+                    </li>
+                    <li class="ml-2 cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                        <div class="flex items-center">
+                            <div class="w-12 cursor-pointer flex text-sm border-2 border-transparent rounded focus:outline-none focus:border-white transition duration-150 ease-in-out">
+                                <img class="rounded h-10 w-10 object-cover" src="https://tuk-cdn.s3.amazonaws.com/assets/components/horizontal_navigation/hn_1.png" alt="logo" />
+                            </div>
+                            <p class="leading-6 text-base ml-1 cursor-pointer">Jane Doe</p>
+                            <div class="sm:ml-2 text-white relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down cursor-pointer" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                        <path stroke="none" d="M0 0h24v24H0z"></path>
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div>
+                    <div class="show-m-menu lg:hidden" onclick="MenuHandler(this,true)">
+                        <svg aria-haspopup="true" aria-label="Main Menu" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2C3E50" fill="none" stroke-linecap="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="4" y1="8" x2="20" y2="8" />
+                                                <line x1="4" y1="16" x2="20" y2="16" />
+                                            </svg>
+                    </div>
+                    <div onclick="MenuHandler(this,false)" class="hidden close-m-menu">
+                        <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Remove class [ hidden ] to show menu -->
+        <div class="sm:hidden w-full h-full pl-4 border-r bg-white hidden">
+            <ul class="py-8">
+                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pl-2 py-2 hover:text-blue-600 focus:text-blue-600 focus:outline-none">
+                    <div class="flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <circle cx="12" cy="7" r="4" />
+                                                <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                                            </svg>
+                        <span class="ml-2">My Profile</span>
+                    </div>
+                </li>
+                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pl-2 mt-6 py-2 hover:text-blue-600 focus:text-blue-600 focus:outline-none flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <circle cx="12" cy="12" r="9" />
+                                            <line x1="12" y1="17" x2="12" y2="17.01" />
+                                            <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                                        </svg>
+                    <span class="ml-2">Help Center</span>
+                </li>
+                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pl-2 mt-6 py-2 hover:text-blue-600 flex items-center focus:text-blue-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg>
+                    <span class="ml-2">Account Settings</span>
+                </li>
+                <li class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pl-2 mt-6 py-2 hover:text-blue-600 flex items-center focus:text-blue-600 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" />
+                                            <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                            <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                                        </svg>
+                    <span class="ml-2">Sign out</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bg-white px-5 sm:px-10">
+        <div class="py-6 container mx-auto flex flex-col md:flex-row items-start md:items-center justify-between">
+            <div>
+                <p class="flex items-center text-blue-500 text-xs">
+                    <span>Portal</span>
+                    <span class="mx-2">&gt;</span>
+                    <span>Dashboard</span>
+                    <span class="mx-2">&gt;</span>
+                    <span>KPIs</span>
+                </p>
+                <h4 class="text-2xl font-bold leading-tight text-gray-800">Job History</h4>
+            </div>
+            <div class="mt-6 md:mt-0">
+                <button class="mr-3 bg-gray-100 focus:outline-none transition duration-150 ease-in-out rounded hover:bg-gray-300 text-blue-500 px-5 py-2 text-sm">Back</button>
+                <button class="transition focus:outline-none duration-150 ease-in-out hover:bg-blue-700 bg-blue-600 rounded text-white px-8 py-2 text-sm">Edit View</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-6 mx-auto px-5 sm:px-10">
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <div class="w-full container mx-auto bg-white py-2 flex flex-col xl:flex-row items-start xl:items-center justify-between px-5 xl:px-10 shadow rounded-md">
+                    <!-- <div class="lg:hidden w-full relative mt-2 md:pt-2 md:pb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="absolute inset-0 m-auto mr-4 z-0 icon icon-tabler icon-tabler-selector" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a0aec0" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" />
+                                <polyline points="8 9 12 5 16 9" />
+                                <polyline points="16 15 12 19 8 15" />
+                            </svg>
+                        <select aria-label="Selected tab" class="form-select block w-full p-3 border border-gray-300 rounded text-gray-600 appearance-none bg-transparent relative z-10">
+                                <option class="text-sm text-gray-600">Inactive </option>
+                                <option class="text-sm text-gray-600">Inactive </option>
+                                <option selected="" class="text-sm text-blue-600">Applied to </option>
+                                <option class="text-sm text-gray-600">Inactive </option>
+                                <option class="text-sm text-gray-600">Inactive </option>
+                            </select>
+                    </div> -->
+                    <ul class="flex flex-col sm:flex-row items-start  sm:items-center">
+                        <li class="font-normal flex justify-center items-center py-2 px-4 rounded mr-4 xl:mr-0 xl:ml-0 text-gray-500 hover:bg-gray-200  text-sm">
+                            <a href="applied-job.html">Applied to</a>
+                        </li>
+                        <li class="cursor-pointer font-normal flex justify-center items-center py-2 px-4 rounded mr-4 sm:mr-0 md:mr-0 lg:mr-0 xl:mr-0 sm:ml-4 md:ml-4 lg:ml-4 xl:ml-4 hover:bg-gray-200 text-gray-500  text-sm">
+                            <a href="saved-job.html">Saved</a>
+                        </li>
+                        <li class="cursor-pointer font-normal flex justify-center items-center py-2 px-4 rounded mr-4 sm:mr-0 md:mr-0 lg:mr-0 xl:mr-0 sm:ml-4 md:ml-4 lg:ml-4 xl:ml-4 hover:bg-gray-200 text-blue-500 sm:bg-gray-100 text-sm">
+                            <a href="pending-job.html">Pending Offers</a>
+                        </li>
+                        <li class="cursor-pointer font-normal flex justify-center items-center py-2 px-4 rounded  mr-4 sm:mr-0 md:mr-0 lg:mr-0 xl:mr-0 sm:ml-4 md:ml-4 lg:ml-4 xl:ml-4 text-gray-500 text-sm">
+                            <a href="interviews.html">Calling for Interview</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container pt-6 mx-auto px-5 sm:px-10">
+        <div class="flex flex-wrap">
+            <div class="w-full">
+                <div class="container mb-10 mx-auto bg-white px-5 sm:px-10 py-6 shadow rounded">
+                    <div class="w-full bg-white py-2 flex items-start sm:items-center justify-between">
+                        <h2 class="text-gray-800 text-2xl">Pending Offers</h2>
+                    </div>
+                    <div>
+                        <div class="border border-gray-300 mt-6 flex md:flex-row sm:flex-col flex-col justify-between rounded">
+                            <div class="md:w-3/4 xl:w-3/5 sm:w-full w-full flex p-5">
+                                <div class="h-12 w-12 rounded bg-center bg-cover bg-no-repeat">
+                                    <img class="w-full object-cover rounded border-2 border-white shadow" src="https://tuk-cdn.s3.amazonaws.com/assets/templates/Job-Portal/jp_5.png" alt="" />
+                                </div>
+                                <div class="w-full ml-3">
+                                    <p class="text-base text-gray-800 font-semibold">The Cannabis Company</p>
+                                    <p class="text-xs text-gray-600">65k-75k - Full Time - New York, NY</p>
+                                    <div class="flex lg:flex-row sm:flex-col flex-col justify-between">
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Job: <span class="text-gray-800 font-bold">Front-end developer</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Contract Duration: <span class="text-gray-800 font-bold">6 Months</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Basic Salary: <span class="text-gray-800 font-bold">70K annually</span></p>
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="mr-3 mt-2 transition focus:outline-none duration-150 ease-in-out hover:bg-blue-700 bg-blue-600 rounded text-white px-8 py-2 text-sm">Accept Offer</button>
+                                        <button class="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-6 py-2 text-sm">Decline Offer</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 rounded sm:w-full w-full bg-gray-100">
+                                <div class="p-5">
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Health Insurance Coverage</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Annual Company Vacation</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Remote Work Option</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f56565" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Paid Annual Leaves</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-300 mt-6 flex md:flex-row sm:flex-col flex-col justify-between rounded">
+                            <div class="md:w-3/4 xl:w-3/5 sm:w-full w-full flex p-5">
+                                <div class="h-12 w-12 rounded bg-center bg-cover bg-no-repeat">
+                                    <img class="w-full object-cover rounded border-2 border-white shadow" src="https://tuk-cdn.s3.amazonaws.com/assets/templates/Job-Portal/jp_6.png" alt="" />
+                                </div>
+                                <div class="w-full ml-3">
+                                    <p class="text-base text-gray-800 font-semibold">WIFI Chat Company</p>
+                                    <p class="text-xs text-gray-600">65k-75k - Full Time - New York, NY</p>
+                                    <div class="flex lg:flex-row sm:flex-col flex-col justify-between">
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Job: <span class="text-gray-800 font-bold">Front-end developer</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Contract Duration: <span class="text-gray-800 font-bold">6 Months</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Basic Salary: <span class="text-gray-800 font-bold">70K annually</span></p>
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="mr-3 mt-2 transition focus:outline-none duration-150 ease-in-out hover:bg-blue-700 bg-blue-600 rounded text-white px-8 py-2 text-sm">Accept Offer</button>
+                                        <button class="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-6 py-2 text-sm">Decline Offer</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 rounded-tr rounded-br sm:w-full w-full bg-gray-100">
+                                <div class="p-5">
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Health Insurance Coverage</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Annual Company Vacation</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Remote Work Option</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f56565" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Paid Annual Leaves</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-300 mt-6 flex md:flex-row sm:flex-col flex-col justify-between rounded">
+                            <div class="md:w-3/4 xl:w-3/5 sm:w-full w-full flex p-5">
+                                <div class="h-12 w-12 rounded bg-center bg-cover bg-no-repeat">
+                                    <img class="w-full object-cover rounded border-2 border-white shadow" src="https://tuk-cdn.s3.amazonaws.com/assets/templates/Job-Portal/jp_7.png" alt="" />
+                                </div>
+                                <div class="w-full ml-3">
+                                    <p class="text-base text-gray-800 font-semibold">Artistry Studio</p>
+                                    <p class="text-xs text-gray-600">65k-75k - Full Time - New York, NY</p>
+                                    <div class="flex lg:flex-row sm:flex-col flex-col justify-between">
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Job: <span class="text-gray-800 font-bold">Front-end developer</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Contract Duration: <span class="text-gray-800 font-bold">6 Months</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Basic Salary: <span class="text-gray-800 font-bold">70K annually</span></p>
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="mr-3 mt-2 transition focus:outline-none duration-150 ease-in-out hover:bg-blue-700 bg-blue-600 rounded text-white px-8 py-2 text-sm">Accept Offer</button>
+                                        <button class="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-6 py-2 text-sm">Decline Offer</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 rounded-tr rounded-br sm:w-full w-full bg-gray-100">
+                                <div class="p-5">
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Health Insurance Coverage</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Annual Company Vacation</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Remote Work Option</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f56565" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Paid Annual Leaves</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border border-gray-300 mt-6 flex md:flex-row sm:flex-col flex-col justify-between rounded">
+                            <div class="md:w-3/4 xl:w-3/5 sm:w-full w-full flex p-5">
+                                <div class="h-12 w-12 rounded bg-center bg-cover bg-no-repeat">
+                                    <img class="w-full object-cover rounded border-2 border-white shadow" src="https://tuk-cdn.s3.amazonaws.com/assets/templates/Job-Portal/jp_17.png" alt="" />
+                                </div>
+                                <div class="w-full ml-3">
+                                    <p class="text-base text-gray-800 font-semibold">Bolt Inc</p>
+                                    <p class="text-xs text-gray-600">65k-75k - Full Time - New York, NY</p>
+                                    <div class="flex lg:flex-row sm:flex-col flex-col justify-between">
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Job: <span class="text-gray-800 font-bold">Front-end developer</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Contract Duration: <span class="text-gray-800 font-bold">6 Months</span></p>
+                                        <p class="pb-1 pt-3 text-sm text-gray-800 mb-2 xl:mb-0 lg:mb-0">Basic Salary: <span class="text-gray-800 font-bold">70K annually</span></p>
+                                    </div>
+                                    <div class="mt-2">
+                                        <button class="mr-3 mt-2 transition focus:outline-none duration-150 ease-in-out hover:bg-blue-700 bg-blue-600 rounded text-white px-8 py-2 text-sm">Accept Offer</button>
+                                        <button class="mx-2 my-2 bg-gray-100 transition duration-150 ease-in-out hover:bg-gray-200 rounded border border-gray-300 text-gray-600 px-6 py-2 text-sm">Decline Offer</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="md:w-1/4 rounded-tr rounded-br sm:w-full w-full bg-gray-100">
+                                <div class="p-5">
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Health Insurance Coverage</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Annual Company Vacation</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Remote Work Option</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#f56565" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <line x1="18" y1="6" x2="6" y2="18" />
+                                                <line x1="6" y1="6" x2="18" y2="18" />
+                                            </svg>
+                                    </div>
+                                    <div class="flex pt-2 justify-between">
+                                        <p class="text-sm text-gray-800">Paid Annual Leaves</p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#68d391" fill="#fff" stroke-linecap="round" stroke-linejoin="round">
+                                                <path stroke="none" d="M0 0h24v24H0z" />
+                                                <path d="M5 12l5 5l10 -10" />
+                                            </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Avatar dropdown
+        function dropdownHandler(element) {
+            let single = element.getElementsByTagName("ul")[0];
+            single.classList.toggle("hidden");
+        }
+        //Hamburger and mobile menu
+        function MenuHandler(el, val) {
+            let MainList = el.parentElement.parentElement.getElementsByTagName("ul")[0];
+            let closeIcon = el.parentElement.parentElement.getElementsByClassName("close-m-menu")[0];
+            let showIcon = el.parentElement.parentElement.getElementsByClassName("show-m-menu")[0];
+            if (val) {
+                MainList.classList.remove("hidden");
+                el.classList.add("hidden");
+                closeIcon.classList.remove("hidden");
+            } else {
+                showIcon.classList.remove("hidden");
+                MainList.classList.add("hidden");
+                el.classList.add("hidden");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
+.light-blue {
+    color: #4c51bf;
+}
+.border-light-blue {
+    border-color: #4c51bf;
+}
+.border-dark-blue {
+    border-color: #4c51bf;
+}
+.bg-light-blue {
+    background-color: #4c51bf;
+}
+.dark-blue {
+    color: #434190;
+}
+.URL {
+    color: #4299e1;
+}
+.bg-chat {
+    background-color: #f7fafc;
+}
+.bg-dark-blue {
+    background-color: #434190;
+}
+.dark-gray {
+    color: #4a5568;
+}
+.light-gray {
+    color: #718096;
+}
+.bg-light-gray {
+    background-color: #f7fafc;
+}
+.bg-dark-gray {
+    background-color: #edf2f7;
+}
+.dark-yellow {
+    color: #ed8936;
+}
+.light-yellow {
+    background-color: #feebc8;
+}
+.purple {
+    color: #4c51bf;
+}
+.bg-purple {
+    background-color: #4c51bf;
+}
+.border-light-gray {
+    border-color: #e2e8f0;
+}
+
+/* scrollbar */
+/* width */
+#search::-webkit-scrollbar {
+    width: 0px;
+}
+
+/* Navbar */
+.top-100 {
+    animation: slideDown 0.5s ease-in-out;
+}
+@keyframes slideDown {
+    0% {
+        top: -50%;
+    }
+    100% {
+        top: 0;
+    }
+}
+* {
+    outline: none !important;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}

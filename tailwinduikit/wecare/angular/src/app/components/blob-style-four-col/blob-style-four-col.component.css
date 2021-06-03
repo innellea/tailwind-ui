@@ -1,0 +1,23 @@
+.clr-gold {
+    color: #ffac2f;
+}
+.bg-gold {
+    background-color: #ffac2f;
+}
+.custom-gray-800 {
+    color: #1b1b1b;
+}
+.text-40px {
+    font-size: 40px;
+}
+
+@media (min-width: 320px) and (max-width: 667px) {
+    .text-80px {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .text-40px {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}

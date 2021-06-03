@@ -1,0 +1,24 @@
+/* Slider css below */
+.slider {
+    width: 100%;
+    padding-top: 14px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.slide-ana {
+    height: 100%;
+}
+
+.slide-ana > div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 1s;
+}
+
+@media (min-width: 320px) and (max-width: 1023px) {
+    .slider {
+        height: 450px;
+    }
+}
